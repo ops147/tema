@@ -26,3 +26,10 @@ https://raw.githubusercontent.com/<org>/tema/main
 Leave it empty to use the templates bundled with the plugin (if any). On every
 import the plugin pulls the repo's current state; downloaded files are cached
 under `uploads/arc-st-remote/` between requests.
+
+## Private repositories
+
+If this repo is private, raw.githubusercontent.com answers 404 without auth —
+either make the repo public, or paste a GitHub personal access token with
+`repo` scope into the plugin's **Access token** field (sent as a Bearer
+header; it is never echoed back in the UI).
