@@ -11,7 +11,10 @@ templates/manifest.json            # demo + page registry
 templates/<demo>/<page>.html       # one HTML document per page
 assets/img/<file>                  # images referenced by the templates and manifest
 assets/css/tailwind.css            # shared runtime stylesheet
-assets/js/site.js                  # shared runtime script
+assets/js/site.js                  # shared runtime script (template pages)
+site.json                          # all site content/config for the Pages mirror
+assets/js/app.js                   # shared renderer (header, footer, data loading)
+assets/js/{index,browse,preview}.js # per-page controllers — all content is data-driven
 ```
 
 ## Pointing the plugin at this repo

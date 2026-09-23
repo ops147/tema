@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ARC Starter Templates — One-click site demos for WordPress</title>
+    <title>tema</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -29,38 +29,16 @@
   </head>
   <body>
 
-    <!-- ============ header ============ -->
-    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-line">
-      <nav class="max-w-6xl mx-auto px-6 py-3.5 flex items-center gap-3">
-        <a href="index.html" class="flex items-center gap-2.5 no-underline">
-          <span class="w-8 h-8 rounded-lg bg-blue grid place-items-center font-extrabold text-sm text-white">T</span>
-          <span class="font-bold tracking-tight text-navy">tema</span>
-        </a>
-        <span class="flex-1"></span>
-        <a href="index.html" class="hidden sm:block text-sm font-semibold text-blue no-underline transition">Home</a>
-        <a href="browse.html" class="hidden sm:block text-sm font-medium text-ink hover:text-blue no-underline transition ml-6">Browse Template</a>
-        <a href="#setup" class="hidden sm:block text-sm font-medium text-ink hover:text-blue no-underline transition ml-6">Setup</a>
-        <a href="https://github.com/ops147/tema" target="_blank" rel="noopener"
-           class="ml-6 text-sm font-semibold bg-navy hover:bg-blue text-white rounded-lg px-4 py-2 no-underline transition">GitHub ↗</a>
-      </nav>
-    </header>
+    <!-- ============ header (rendered from site.json) ============ -->
+    <header id="site-header" class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-line"></header>
 
     <!-- ============ hero ============ -->
     <section class="bg-soft border-b border-line">
       <div class="max-w-6xl mx-auto px-6 pt-20 pb-14 text-center">
-        <span class="inline-block text-[11px] font-bold uppercase tracking-widest text-blue bg-blue/10 rounded-full px-3.5 py-1.5 mb-5">WordPress plugin · v1.6</span>
-        <h1 class="text-4xl sm:text-5xl lg:text-[3.4rem] font-extrabold text-navy tracking-tight leading-[1.08]">
-          Effortless Website Creation<br class="hidden sm:block" /> Starts Here.
-        </h1>
-        <p class="mt-5 text-base sm:text-lg text-ink/90 max-w-2xl mx-auto">
-          <strong class="text-navy">ARC Starter Templates</strong> imports complete Tailwind sites into
-          WordPress in one click — Elementor-editable or Gutenberg blocks, images in your Media
-          Library, menus and front page wired automatically.
-        </p>
-        <div class="mt-8 flex flex-wrap justify-center gap-3">
-          <a href="browse.html" class="btn-primary">Browse templates</a>
-          <a href="#setup" class="btn-ghost">Setup guide</a>
-        </div>
+        <span id="hero-badge" class="inline-block text-[11px] font-bold uppercase tracking-widest text-blue bg-blue/10 rounded-full px-3.5 py-1.5 mb-5"></span>
+        <h1 id="hero-title" class="text-4xl sm:text-5xl lg:text-[3.4rem] font-extrabold text-navy tracking-tight leading-[1.08]"></h1>
+        <p id="hero-lead" class="mt-5 text-base sm:text-lg text-ink/90 max-w-2xl mx-auto"></p>
+        <div id="hero-ctas" class="mt-8 flex flex-wrap justify-center gap-3"></div>
       </div>
 
       <!-- marquee of demo names -->
@@ -71,154 +49,51 @@
 
     <!-- ============ intro strip ============ -->
     <section class="max-w-4xl mx-auto px-6 py-14 text-center">
-      <p class="text-base sm:text-lg text-ink/90 leading-relaxed">
-        Pick a demo, run the step-by-step wizard and get a full site — pages, images,
-        menus and settings — in under a minute. The plugin stays lightweight: template
-        documents and images live in this repository and download on demand at import time.
-      </p>
+      <p id="intro" class="text-base sm:text-lg text-ink/90 leading-relaxed"></p>
     </section>
 
     <!-- ============ featured templates ============ -->
     <section id="demos" class="max-w-6xl mx-auto px-6 pb-8 scroll-mt-20">
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-navy tracking-tight text-center">
-        <span id="stat-tpl">…</span> Free Templates for All Purposes.
-      </h2>
-      <p class="mt-4 text-ink/90 max-w-2xl mx-auto text-center">
-        Corporate, e-commerce, blog, nonprofit and more — each design is a complete
-        multi-page site, tailored for one-click import.
-      </p>
+      <h2 id="demos-title" class="text-3xl sm:text-4xl font-extrabold text-navy tracking-tight text-center"></h2>
+      <p id="demos-lead" class="mt-4 text-ink/90 max-w-2xl mx-auto text-center"></p>
 
-      <div id="grid" class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="col-span-full py-12 text-center text-ink/60">Loading manifest…</div>
-      </div>
+      <div id="grid" class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
 
       <div class="mt-10 text-center">
-        <a href="browse.html" class="btn-ghost">Browse all templates</a>
+        <a id="demos-more" href="browse.html" class="btn-ghost"></a>
       </div>
     </section>
 
     <!-- ============ key features ============ -->
     <section class="bg-soft border-y border-line mt-16">
       <div class="max-w-6xl mx-auto px-6 py-16">
-        <h2 class="text-3xl font-extrabold text-navy tracking-tight text-center">Key Features.</h2>
-        <p class="mt-3 text-ink/90 text-center max-w-xl mx-auto">Everything a starter-template plugin should do — and nothing it shouldn't.</p>
+        <h2 id="feat-title" class="text-3xl font-extrabold text-navy tracking-tight text-center"></h2>
+        <p id="feat-lead" class="mt-3 text-ink/90 text-center max-w-xl mx-auto"></p>
         <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-5" id="features"></div>
       </div>
     </section>
 
     <!-- ============ setup ============ -->
     <section id="setup" class="max-w-6xl mx-auto px-6 py-16 scroll-mt-20">
-      <h2 class="text-3xl font-extrabold text-navy tracking-tight text-center">Connect the plugin to this repo.</h2>
-      <p class="mt-3 text-ink/90 text-center max-w-xl mx-auto">
-        wp-admin → <b class="text-navy">ARC Templates → Templates repository → Remote base URL</b>.
-        This repo is public — leave the access token empty and every import pulls the latest state.
-      </p>
-      <div class="mt-8 max-w-3xl mx-auto bg-white border border-line rounded-2xl p-6 shadow-sm">
-        <div class="flex flex-wrap items-center gap-2.5 py-2">
-          <span class="text-xs font-semibold text-ink/70 w-36 uppercase tracking-wide">Remote base URL</span>
-          <code class="flex-1 min-w-64 text-[13px] bg-soft border border-line rounded-lg px-3 py-2 text-navy overflow-x-auto whitespace-nowrap">https://raw.githubusercontent.com/ops147/tema/main</code>
-          <button class="copy text-xs font-semibold px-3 py-2 rounded-lg border border-line text-ink hover:border-blue hover:text-blue transition cursor-pointer bg-white"
-                  data-copy="https://raw.githubusercontent.com/ops147/tema/main">Copy</button>
-        </div>
-        <div class="flex flex-wrap items-center gap-2.5 py-2">
-          <span class="text-xs font-semibold text-ink/70 w-36 uppercase tracking-wide">Pages mirror</span>
-          <code id="pages-url" class="flex-1 min-w-64 text-[13px] bg-soft border border-line rounded-lg px-3 py-2 text-navy overflow-x-auto whitespace-nowrap"></code>
-          <button id="copy-pages" class="copy text-xs font-semibold px-3 py-2 rounded-lg border border-line text-ink hover:border-blue hover:text-blue transition cursor-pointer bg-white">Copy</button>
-        </div>
-      </div>
+      <h2 id="setup-title" class="text-3xl font-extrabold text-navy tracking-tight text-center"></h2>
+      <p id="setup-lead" class="mt-3 text-ink/90 text-center max-w-xl mx-auto"></p>
+      <div id="setup-urls" class="mt-8 max-w-3xl mx-auto bg-white border border-line rounded-2xl p-6 shadow-sm"></div>
       <ol class="mt-8 max-w-3xl mx-auto grid sm:grid-cols-3 gap-5 text-sm" id="steps"></ol>
     </section>
 
     <!-- ============ cta ============ -->
     <section class="bg-navy">
       <div class="max-w-6xl mx-auto px-6 py-14 text-center">
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Experience the power of one-click starter sites.</h2>
-        <p class="mt-3 text-white/70 max-w-xl mx-auto">Activate ARC Starter Templates, point it at this repository and import your first demo today.</p>
-        <a href="#setup" class="btn-primary mt-7 !bg-white !text-navy hover:!bg-soft">Get the remote URL</a>
+        <h2 id="cta-title" class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight"></h2>
+        <p id="cta-text" class="mt-3 text-white/70 max-w-xl mx-auto"></p>
+        <a id="cta-btn" href="#setup" class="btn-primary mt-7 !bg-white !text-navy hover:!bg-soft"></a>
       </div>
     </section>
 
-    <footer class="border-t border-line px-6 py-6 text-center text-xs text-ink/70">
-      tema — remote payload for <a class="text-blue hover:underline" href="https://ashrivercollective.com" target="_blank" rel="noopener">ARC Starter Templates</a> ·
-      <a class="text-blue hover:underline" href="browse.html">Browse templates</a> ·
-      <a class="text-blue hover:underline" href="https://github.com/ops147/tema" target="_blank" rel="noopener">GitHub</a> ·
-      <a class="text-blue hover:underline" href="templates/manifest.json">manifest.json</a>
-    </footer>
+    <!-- ============ footer (rendered from site.json) ============ -->
+    <footer id="site-footer" class="border-t border-line px-6 py-6 text-center text-xs text-ink/70"></footer>
 
-    <script>
-      const root = new URL(".", location.href).href.replace(/\/$/, "");
-      const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-      document.getElementById("pages-url").textContent = root;
-      document.getElementById("copy-pages").dataset.copy = root;
-
-      for (const btn of document.querySelectorAll(".copy")) {
-        btn.addEventListener("click", async () => {
-          try { await navigator.clipboard.writeText(btn.dataset.copy); } catch (e) {}
-          btn.textContent = "Copied ✓";
-          btn.classList.add("!text-blue", "!border-blue");
-          setTimeout(() => { btn.textContent = "Copy"; btn.classList.remove("!text-blue", "!border-blue"); }, 1600);
-        });
-      }
-
-      const FEATURES = [
-        ["M13 10V3L4 14h7v7l9-11h-7z", "One-click import wizard", "Step-by-step Media → Pages → Setup flow with live progress, per-page selection, dry-run and optional reset."],
-        ["M4 5h16v14H4z M4 9h16 M9 9v10", "Elementor or Gutenberg", "With Elementor pages import as native container/widget layouts; without it they land as editable block pages."],
-        ["M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-2", "Remote payload", "Manifest, documents and images live in this repo — the plugin stays light and every import pulls the latest state."],
-        ["M4 16l4.6-6.2a1 1 0 0 1 1.6 0L16 17l2-2.5a1 1 0 0 1 1.6 0L22 18M4 5h16v14H4z", "Media Library images", "Every image downloads into your Media Library on import and template URLs are rewritten to it."],
-        ["M4 6h16M4 12h16M4 18h10", "Menus & front page", "Home is set as the front page and the demo's Main + Footer menus are assigned to the theme locations."],
-        ["M4 4h16v12H8l-4 4z", "Working contact form", "Configurable recipient, honeypot, consent checkbox and a Form Entries panel storing every submission."],
-        ["M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 7.7l5.4-.8z", "Block patterns", "Every imported page is also registered under the ARC Starter Templates pattern category."],
-        ["M8 9l-4 3 4 3m8-6 4 3-4 3M13 5l-2 14", "WP-CLI ready", "wp arc-st import, reset and status — provision headless sites from the command line."],
-      ];
-      document.getElementById("features").innerHTML = FEATURES.map(([d, t, x]) =>
-        '<div class="bg-white border border-line rounded-2xl p-6 hover:border-blue hover:shadow-md transition">' +
-          '<svg class="w-7 h-7 stroke-blue" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="' + d + '"/></svg>' +
-          '<h3 class="mt-4 text-sm font-bold text-navy">' + t + '</h3>' +
-          '<p class="mt-2 text-xs leading-relaxed text-ink/80">' + x + "</p></div>").join("");
-
-      const STEPS = [
-        ["1", "Install & activate", "Copy the plugin to wp-content/plugins and activate ARC Starter Templates."],
-        ["2", "Paste the remote URL", "ARC Templates → Templates repository → Remote base URL."],
-        ["3", "Import a demo", "Open the library, click a card and run the wizard — done in under a minute."],
-      ];
-      document.getElementById("steps").innerHTML = STEPS.map(([n, t, x]) =>
-        '<li class="bg-white border border-line rounded-2xl p-5 list-none">' +
-          '<span class="w-7 h-7 rounded-full bg-blue text-white text-xs font-bold grid place-items-center">' + n + "</span>" +
-          '<h3 class="mt-3 text-sm font-bold text-navy">' + t + '</h3>' +
-          '<p class="mt-1.5 text-xs leading-relaxed text-ink/80">' + x + "</p></li>").join("");
-
-      fetch("templates/manifest.json")
-        .then((r) => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
-        .then((m) => {
-          const DEMOS = m.demos || {};
-          document.getElementById("stat-tpl").textContent = Object.keys(DEMOS).length;
-
-          const names = Object.values(DEMOS).map((d) => d.title || "");
-          const strip = names.map((n) => '<span class="flex items-center gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-blue"></span>' + esc(n) + "</span>").join("");
-          document.getElementById("marquee").innerHTML = strip + strip;
-
-          // Featured grid — first 6 demos, cards deep-link into the browse viewer.
-          const grid = document.getElementById("grid");
-          grid.innerHTML = "";
-          for (const [id, d] of Object.entries(DEMOS).slice(0, 6)) {
-            const a = document.createElement("a");
-            a.href = "browse.html?d=" + encodeURIComponent(id);
-            a.className = "group bg-white border border-line rounded-2xl overflow-hidden flex flex-col transition duration-300 hover:-translate-y-1 hover:border-blue hover:shadow-lg no-underline";
-            a.innerHTML =
-              '<div class="relative aspect-[16/10] overflow-hidden bg-soft">' +
-                (d.image ? '<img loading="lazy" src="' + esc(d.image) + '" alt="" class="w-full h-full object-cover object-top transition duration-500 group-hover:scale-105" />' : "") +
-              "</div>" +
-              '<div class="flex flex-col gap-2 flex-1 px-5 pt-4 pb-5">' +
-                '<div class="flex items-center gap-2">' +
-                  '<h3 class="text-base font-bold tracking-tight text-navy group-hover:text-blue transition">' + esc(d.title || id) + "</h3>" +
-                  '<span class="text-[10px] font-bold uppercase tracking-wide bg-blue/10 text-blue rounded-full px-2 py-0.5">Free</span>' +
-                "</div>" +
-                '<p class="text-xs leading-relaxed text-ink/80 line-clamp-3"><strong class="text-navy">Ideal for: </strong>' + esc(d.desc || "") + "</p>" +
-              "</div>";
-            grid.appendChild(a);
-          }
-        })
-        .catch((e) => { document.getElementById("grid").innerHTML = '<div class="col-span-full py-12 text-center text-red-500">Could not load templates/manifest.json — ' + esc(e.message) + "</div>"; });
-    </script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/index.js"></script>
   </body>
 </html>
