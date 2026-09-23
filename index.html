@@ -28,8 +28,10 @@
         line-height: 1.5;
         -webkit-font-smoothing: antialiased;
       }
+      body.locked { overflow: hidden; }
       a { color: inherit; }
       code { font-family: "JetBrains Mono", ui-monospace, monospace; }
+      button { font-family: inherit; }
 
       /* ---------- ambient background ---------- */
       .glow { position: fixed; inset: 0; z-index: -1; overflow: hidden; }
@@ -91,9 +93,7 @@
       .stat span { font-size: .78rem; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; }
 
       /* ---------- setup card ---------- */
-      .setup {
-        max-width: 1180px; margin: 0 auto 1rem; padding: 0 1.5rem;
-      }
+      .setup { max-width: 1180px; margin: 0 auto 1rem; padding: 0 1.5rem; }
       .setup-inner {
         background: linear-gradient(180deg, var(--surface), var(--surface-2));
         border: 1px solid var(--border); border-radius: var(--radius);
@@ -142,10 +142,7 @@
         transition: .18s;
       }
       .chip:hover { color: var(--text); border-color: var(--muted); }
-      .chip.on {
-        background: var(--accent); border-color: var(--accent);
-        color: #06110a;
-      }
+      .chip.on { background: var(--accent); border-color: var(--accent); color: #06110a; }
 
       /* ---------- grid ---------- */
       .grid {
@@ -163,7 +160,7 @@
         transform: translateY(-4px); border-color: #3a4b60;
         box-shadow: 0 18px 40px -18px rgba(0, 0, 0, .7);
       }
-      .thumb { position: relative; aspect-ratio: 16/9; overflow: hidden; background: var(--surface-2); }
+      .thumb { position: relative; aspect-ratio: 16/9; overflow: hidden; background: var(--surface-2); cursor: pointer; }
       .thumb img {
         width: 100%; height: 100%; object-fit: cover; object-position: top;
         display: block; transition: transform .5s ease;
@@ -177,8 +174,22 @@
         backdrop-filter: blur(6px);
         border-radius: 999px; padding: .25rem .65rem;
       }
+      .thumb .play {
+        position: absolute; inset: 0; display: grid; place-items: center;
+        background: rgba(6, 12, 9, 0); transition: background .25s;
+      }
+      .thumb .play span {
+        opacity: 0; transform: translateY(6px); transition: .25s;
+        background: var(--accent); color: #06110a;
+        font: 700 .8rem "Inter", sans-serif;
+        border-radius: 999px; padding: .55rem 1.2rem;
+        box-shadow: 0 8px 24px rgba(0,0,0,.5);
+      }
+      .card:hover .play { background: rgba(6, 12, 9, .45); }
+      .card:hover .play span { opacity: 1; transform: none; }
       .body { padding: 1.05rem 1.15rem 1.15rem; display: flex; flex-direction: column; gap: .55rem; flex: 1; }
-      .body h2 { font-size: 1.05rem; font-weight: 700; letter-spacing: -.015em; }
+      .body h2 { font-size: 1.05rem; font-weight: 700; letter-spacing: -.015em; cursor: pointer; }
+      .body h2:hover { color: var(--accent); }
       .desc { font-size: .8rem; color: var(--muted); line-height: 1.5; flex: 1; }
       .cats { display: flex; gap: .35rem; flex-wrap: wrap; }
       .cats span {
@@ -196,11 +207,77 @@
         text-decoration: none; transition: color .15s;
       }
       .pages a:hover { color: var(--accent); }
-      .pages a::after { content: " ↗"; font-size: .68em; opacity: 0; transition: opacity .15s; }
-      .pages a:hover::after { opacity: 1; }
 
       .empty, .err { grid-column: 1 / -1; padding: 3rem 1rem; text-align: center; color: var(--muted); }
       .err { color: #f87171; }
+
+      /* ---------- demo viewer modal ---------- */
+      .modal { position: fixed; inset: 0; z-index: 50; display: none; }
+      .modal.open { display: block; }
+      .modal-backdrop { position: absolute; inset: 0; background: rgba(4, 7, 10, .8); backdrop-filter: blur(4px); }
+      .modal-box {
+        position: absolute; inset: 2.5vh 2vw;
+        background: var(--bg); border: 1px solid var(--border);
+        border-radius: 16px; overflow: hidden;
+        display: flex; box-shadow: 0 30px 80px rgba(0,0,0,.6);
+      }
+      .m-side {
+        width: 250px; flex-shrink: 0; display: flex; flex-direction: column;
+        border-right: 1px solid var(--border); background: var(--surface);
+      }
+      .m-head { padding: 1.1rem 1.1rem .9rem; border-bottom: 1px solid var(--border); }
+      .m-head h2 { font-size: .98rem; font-weight: 700; letter-spacing: -.01em; }
+      .m-head .cats { margin-top: .5rem; }
+      .m-pages { overflow-y: auto; padding: .6rem; display: flex; flex-direction: column; gap: .15rem; }
+      .m-pages button {
+        text-align: left; cursor: pointer; border: 0; background: transparent;
+        color: var(--muted); font: 500 .82rem "Inter", sans-serif;
+        padding: .5rem .7rem; border-radius: 8px; transition: .15s;
+        display: flex; align-items: center; gap: .5rem;
+      }
+      .m-pages button:hover { background: var(--surface-2); color: var(--text); }
+      .m-pages button.on { background: rgba(74, 222, 128, .12); color: var(--accent); }
+      .m-pages button.on::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+      .m-import {
+        margin-top: auto; padding: .9rem 1.1rem; border-top: 1px solid var(--border);
+        font-size: .72rem; color: var(--muted); line-height: 1.5;
+      }
+      .m-import b { color: var(--text); }
+
+      .m-main { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+      .m-bar {
+        display: flex; align-items: center; gap: .8rem;
+        padding: .55rem .9rem; border-bottom: 1px solid var(--border);
+        background: var(--surface);
+      }
+      .m-file { font-size: .76rem; color: var(--muted); font-family: "JetBrains Mono", monospace; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; }
+      .devices { display: flex; gap: .3rem; background: #0b1118; border: 1px solid var(--border); border-radius: 8px; padding: .2rem; }
+      .dev {
+        cursor: pointer; border: 0; background: transparent; color: var(--muted);
+        font: 600 .72rem "Inter", sans-serif; padding: .35rem .7rem; border-radius: 6px; transition: .15s;
+      }
+      .dev:hover { color: var(--text); }
+      .dev.on { background: var(--surface-2); color: var(--accent); }
+      .m-open {
+        font-size: .76rem; font-weight: 600; color: var(--muted); text-decoration: none;
+        border: 1px solid var(--border); border-radius: 8px; padding: .4rem .75rem; transition: .15s;
+      }
+      .m-open:hover { color: var(--text); border-color: var(--muted); }
+      .m-close {
+        cursor: pointer; border: 0; background: transparent; color: var(--muted);
+        font-size: 1rem; padding: .3rem .55rem; border-radius: 6px; transition: .15s;
+      }
+      .m-close:hover { color: var(--text); background: var(--surface-2); }
+      .m-view { flex: 1; overflow: auto; display: flex; justify-content: center; background: #0a0e13; padding: 1rem; }
+      .m-frame-wrap { width: 100%; height: 100%; transition: width .3s ease; }
+      .m-frame-wrap.tablet { width: 768px; max-width: 100%; }
+      .m-frame-wrap.mobile { width: 390px; max-width: 100%; }
+      .m-frame-wrap iframe { width: 100%; height: 100%; border: 0; border-radius: 10px; background: #fff; box-shadow: 0 10px 40px rgba(0,0,0,.5); }
+
+      @media (max-width: 760px) {
+        .m-side { display: none; }
+        .modal-box { inset: 0; border-radius: 0; border: 0; }
+      }
 
       footer {
         border-top: 1px solid var(--border);
@@ -238,7 +315,7 @@
         <h2>Point the plugin at this repo</h2>
         <div class="urlrow">
           <span class="label">Remote base URL</span>
-          <code id="raw-url">https://raw.githubusercontent.com/ops147/tema/main</code>
+          <code>https://raw.githubusercontent.com/ops147/tema/main</code>
           <button class="copy" data-copy="https://raw.githubusercontent.com/ops147/tema/main">Copy</button>
         </div>
         <div class="urlrow">
@@ -268,6 +345,40 @@
       <code>Img/ · Css/ · Js/</code> rewrites in-browser.
     </footer>
 
+    <!-- Demo viewer -->
+    <div class="modal" id="modal">
+      <div class="modal-backdrop" data-close></div>
+      <div class="modal-box">
+        <aside class="m-side">
+          <div class="m-head">
+            <h2 id="m-title"></h2>
+            <div class="cats" id="m-cats"></div>
+          </div>
+          <nav class="m-pages" id="m-pages"></nav>
+          <div class="m-import">
+            Import with the plugin: <b>Starter Templates → Library</b> in wp-admin, or browse every page here first.
+          </div>
+        </aside>
+        <div class="m-main">
+          <div class="m-bar">
+            <span class="m-file" id="m-file"></span>
+            <div class="devices">
+              <button class="dev on" data-dev="desktop">Desktop</button>
+              <button class="dev" data-dev="tablet">Tablet</button>
+              <button class="dev" data-dev="mobile">Mobile</button>
+            </div>
+            <a class="m-open" id="m-open" href="#" target="_blank" rel="noopener">Open ↗</a>
+            <button class="m-close" data-close title="Close">✕</button>
+          </div>
+          <div class="m-view">
+            <div class="m-frame-wrap" id="m-wrap">
+              <iframe id="m-frame" title="Template preview"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script>
       const root = new URL(".", location.href).href.replace(/\/$/, "");
       const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -282,14 +393,56 @@
         });
       }
 
-      let DEMOS = [];
-      let activeCat = "All";
+      let DEMOS = {}, TPL = {}, activeCat = "All";
       const grid = document.getElementById("grid");
       const chipsEl = document.getElementById("chips");
 
+      /* ---------- demo viewer ---------- */
+      const modal = document.getElementById("modal");
+      const frame = document.getElementById("m-frame");
+      const wrap = document.getElementById("m-wrap");
+      let curDemo = null, curPage = null;
+
+      function openDemo(id, pageSlug) {
+        const d = DEMOS[id];
+        if (!d) return;
+        curDemo = id; curPage = pageSlug;
+        document.getElementById("m-title").textContent = d.title || id;
+        document.getElementById("m-cats").innerHTML =
+          (d.categories || []).map((c) => "<span>" + esc(c) + "</span>").join("");
+        const nav = document.getElementById("m-pages");
+        nav.innerHTML = "";
+        for (const p of d.pages || []) {
+          if (!TPL[p]) continue;
+          const b = document.createElement("button");
+          b.textContent = TPL[p].name || p;
+          b.classList.toggle("on", p === pageSlug);
+          b.addEventListener("click", () => openDemo(id, p));
+          nav.appendChild(b);
+        }
+        const file = TPL[pageSlug] ? TPL[pageSlug].file : "";
+        document.getElementById("m-file").textContent = "templates/" + file;
+        frame.src = "preview.html?f=templates/" + encodeURIComponent(file) + "&embed=1";
+        document.getElementById("m-open").href = "preview.html?f=templates/" + encodeURIComponent(file);
+        modal.classList.add("open");
+        document.body.classList.add("locked");
+      }
+      function closeDemo() {
+        modal.classList.remove("open");
+        document.body.classList.remove("locked");
+        frame.src = "about:blank";
+      }
+      modal.addEventListener("click", (e) => { if (e.target.dataset.close !== undefined) closeDemo(); });
+      document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeDemo(); });
+      document.querySelectorAll(".dev").forEach((b) => b.addEventListener("click", () => {
+        document.querySelectorAll(".dev").forEach((x) => x.classList.toggle("on", x === b));
+        wrap.className = "m-frame-wrap" + (b.dataset.dev === "desktop" ? "" : " " + b.dataset.dev);
+      }));
+
+      /* ---------- library grid ---------- */
       function render() {
         const q = document.getElementById("q").value.trim().toLowerCase();
-        const shown = DEMOS.filter(([, d]) => {
+        const shown = Object.entries(DEMOS).filter(([, d]) => {
           const catOk = activeCat === "All" || (d.categories || []).includes(activeCat);
           const qOk = !q || (d.title + " " + (d.desc || "")).toLowerCase().includes(q);
           return catOk && qOk;
@@ -302,35 +455,40 @@
       function card(id, d) {
         const el = document.createElement("article");
         el.className = "card";
-        const links = (d._pageLinks || []).join("");
+        const home = d.home || (d.pages || [])[0];
+        const links = (d.pages || [])
+          .filter((p) => TPL[p])
+          .map((p) => '<a href="#" data-demo="' + esc(id) + '" data-page="' + esc(p) + '">' + esc(TPL[p].name || p) + "</a>")
+          .join("");
         el.innerHTML =
           '<div class="thumb">' + (d.image ? '<img loading="lazy" src="' + esc(d.image) + '" alt="" />' : "") +
+          '<div class="play"><span>Preview site</span></div>' +
           '<span class="pages-badge">' + (d.pages || []).length + " pages</span></div>" +
           '<div class="body"><h2>' + esc(d.title || id) + "</h2>" +
           '<p class="desc">' + esc(d.desc || "") + "</p>" +
           '<div class="cats">' + (d.categories || []).map((c) => "<span>" + esc(c) + "</span>").join("") + "</div>" +
           '<nav class="pages">' + links + "</nav></div>";
+        el.querySelector(".thumb").addEventListener("click", () => openDemo(id, home));
+        el.querySelector("h2").addEventListener("click", () => openDemo(id, home));
+        el.querySelectorAll(".pages a").forEach((a) => a.addEventListener("click", (e) => {
+          e.preventDefault();
+          openDemo(a.dataset.demo, a.dataset.page);
+        }));
         return el;
       }
 
       fetch("templates/manifest.json")
         .then((r) => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
         .then((m) => {
-          const tpl = m.templates || {};
-          DEMOS = Object.entries(m.demos || {});
-          let pages = 0;
-          for (const [, d] of DEMOS) {
-            d._pageLinks = (d.pages || [])
-              .filter((p) => tpl[p])
-              .map((p) => '<a href="preview.html?f=templates/' + encodeURIComponent(tpl[p].file) + '">' + esc(tpl[p].name || p) + "</a>");
-            pages += (d.pages || []).length;
-          }
+          TPL = m.templates || {};
+          DEMOS = m.demos || {};
+          const pages = Object.values(DEMOS).reduce((n, d) => n + (d.pages || []).length, 0);
           document.getElementById("stats").innerHTML =
-            '<div class="stat"><b>' + DEMOS.length + "</b><span>demos</span></div>" +
+            '<div class="stat"><b>' + Object.keys(DEMOS).length + "</b><span>demos</span></div>" +
             '<div class="stat"><b>' + pages + "</b><span>pages</span></div>" +
-            '<div class="stat"><b>' + Object.keys(tpl).length + "</b><span>templates</span></div>";
+            '<div class="stat"><b>' + Object.keys(TPL).length + "</b><span>templates</span></div>";
 
-          const cats = ["All", ...new Set(DEMOS.flatMap(([, d]) => d.categories || []))];
+          const cats = ["All", ...new Set(Object.values(DEMOS).flatMap((d) => d.categories || []))];
           chipsEl.innerHTML = "";
           for (const c of cats) {
             const b = document.createElement("button");

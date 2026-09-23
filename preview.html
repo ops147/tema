@@ -26,6 +26,7 @@
     <iframe id="frame" title="Template preview"></iframe>
     <script>
       const params = new URLSearchParams(location.search);
+      if (params.get("embed") === "1") document.getElementById("bar").style.display = "none";
       const f = params.get("f") || "";
       const err = (msg) => { const e = document.getElementById("err"); e.style.display = "block"; e.textContent = msg; };
       if (!/^templates\/[\w.\/-]+\.html$/.test(f) || f.includes("..")) {
