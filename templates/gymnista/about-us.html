@@ -1,0 +1,315 @@
+<!-- ARC Starter Templates: bundled template document. Edit this file directly, then re-import in wp-admin. -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us – Gymnista</title>
+    <meta name="description" content="Gym &amp; fitness brand — Home, About Us, Collections, Shop, Membership, FAQ, Testimonials, Style Guide, Coming Soon, Blog, Contact Us." />
+    <script src="Js/site.js" defer></script>
+    <link rel="stylesheet" href="Css/tailwind.css" onerror="this.onerror=null;var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4';document.head.appendChild(s);" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style type="text/tailwindcss">
+@import "tailwindcss";
+
+@theme {
+  /* ===== Design tokens — global "site settings". Change here, applies everywhere. ===== */
+  --color-brand: #1d70db;
+  --color-brand-dark: #1258ad;
+  --color-accent: #5b9ff0;
+  --color-navy: #101828;
+  --color-mint: #eef4fd;
+  --color-cream: #f6f9fe;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+
+/* ===== Entrance animations — picked per element via data-reveal="<name>" =====
+     up | down | left | right | zoom | fade | blur | flip | bounce (default: up) */
+  --animate-fade-in: fade-in 0.7s ease-out both;
+  --animate-fade-in-up: fade-in-up 0.7s ease-out both;
+  --animate-fade-in-down: fade-in-down 0.7s ease-out both;
+  --animate-fade-in-left: fade-in-left 0.7s ease-out both;
+  --animate-fade-in-right: fade-in-right 0.7s ease-out both;
+  --animate-zoom-in: zoom-in 0.6s ease-out both;
+  --animate-blur-in: blur-in 0.8s ease-out both;
+  --animate-flip-in: flip-in 0.8s ease-out both;
+  --animate-bounce-in: bounce-in 0.8s ease-out both;
+
+  /* ===== Ambient / looping — plain classes, e.g. motion-safe:animate-float ===== */
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-slow: float 9s ease-in-out infinite;
+  --animate-pulse-slow: pulse-slow 7s ease-in-out infinite;
+  --animate-spin-slow: spin-slow 14s linear infinite;
+  --animate-bounce-soft: bounce-soft 2.4s ease-in-out infinite;
+  --animate-marquee: marquee 32s linear infinite;
+
+  @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes fade-in-up { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fade-in-down { from { opacity: 0; transform: translateY(-24px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fade-in-left { from { opacity: 0; transform: translateX(-24px); } to { opacity: 1; transform: translateX(0); } }
+  @keyframes fade-in-right { from { opacity: 0; transform: translateX(24px); } to { opacity: 1; transform: translateX(0); } }
+  @keyframes zoom-in { from { opacity: 0; transform: scale(0.94); } to { opacity: 1; transform: scale(1); } }
+  @keyframes blur-in { from { opacity: 0; filter: blur(10px); } to { opacity: 1; filter: blur(0); } }
+  @keyframes flip-in { from { opacity: 0; transform: perspective(700px) rotateX(14deg) translateY(24px); } to { opacity: 1; transform: perspective(700px) rotateX(0) translateY(0); } }
+  @keyframes bounce-in { 0% { opacity: 0; transform: scale(0.4); } 55% { opacity: 1; transform: scale(1.06); } 75% { transform: scale(0.96); } 100% { opacity: 1; transform: scale(1); } }
+  @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+  @keyframes pulse-slow { 0%, 100% { opacity: 0.55; transform: scale(1); } 50% { opacity: 1; transform: scale(1.08); } }
+  @keyframes spin-slow { to { transform: rotate(360deg); } }
+  @keyframes bounce-soft { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+  @keyframes marquee { to { transform: translateX(-50%); } }
+}
+
+/* Scroll reveal: elements start hidden only when Js/site.js enables html.js.
+   Once the entrance finishes, site.js swaps the animation class for
+   .is-revealed so hover transforms (e.g. .card-lift) are free to run. */
+@layer base {
+  html.js [data-reveal],
+  html.js [data-reveal-stagger] > * { opacity: 0; }
+  html.js .is-revealed { opacity: 1; }
+}
+
+/* Shared component layer — single source for all pages. Do not redeclare in page <style> blocks. */
+@layer components {
+  .btn-primary { display:inline-flex; align-items:center; gap:.5rem; border-radius:9999px; background:var(--color-brand); padding:.8rem 1.75rem; font-size:.9rem; font-weight:600; color:#fff; transition:all .2s; }
+  .btn-primary:hover { background:var(--color-brand-dark); transform:translateY(-2px); box-shadow:0 10px 15px -3px rgb(20 42 30 / .25); }
+  .btn-outline { display:inline-flex; align-items:center; gap:.5rem; border-radius:9999px; border:1px solid #cbd5e1; padding:.8rem 1.75rem; font-size:.9rem; font-weight:600; color:var(--color-navy); transition:all .2s; }
+  .btn-outline:hover { border-color:var(--color-brand); color:var(--color-brand); transform:translateY(-2px); }
+  .btn-ghost-light { display:inline-flex; align-items:center; gap:.5rem; border-radius:9999px; border:1px solid rgba(255,255,255,.25); padding:.8rem 1.75rem; font-size:.9rem; font-weight:600; color:#fff; transition:all .2s; }
+  .btn-ghost-light:hover { border-color:#fff; transform:translateY(-2px); }
+  .eyebrow { font-size:.8rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--color-brand); }
+  .field { width:100%; border-radius:.6rem; border:1px solid #e2e8f0; background:#fff; padding:.8rem 1rem; font-size:.9rem; color:var(--color-navy); outline:none; transition:border-color .2s, box-shadow .2s; }
+  .field:focus { border-color:var(--color-brand); box-shadow:0 0 0 3px rgb(76 148 100 / .18); }
+  /* Hover-lift card — shared replacement for "transition hover:-translate-y-1 hover:shadow-lg". */
+  .card-lift { transition:transform .25s ease, box-shadow .25s ease; }
+  .card-lift:hover { transform:translateY(-4px); box-shadow:0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1); }
+}
+    
+    </style>
+  </head>
+  <body class="font-sans text-slate-600 antialiased">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&display=swap');:root{--color-brand:#1d70db;--color-brand-dark:#1258ad;--color-accent:#5b9ff0;--color-navy:#101828;--color-mint:#eef4fd;--color-cream:#f6f9fe;--font-sans:"Inter",ui-sans-serif,system-ui,sans-serif;--font-display:"Montserrat",ui-sans-serif,system-ui,sans-serif;}</style>
+    <!-- ===== Header ===== -->
+    <header class="sticky top-0 z-50 border-b border-slate-100 bg-white/95 backdrop-blur" data-reveal="down">
+      <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 py-4 lg:px-8">
+        <a href="gymnista-home.html" class="flex min-w-0 shrink-0 items-center gap-2.5"><span class="leading-none">
+            <span class="block text-lg font-extrabold tracking-tight text-navy font-display">Gymnista</span>
+            <span class="block text-[10px] font-bold tracking-[0.3em] text-brand">FITNESS</span>
+          </span></a>
+        <nav class="hidden items-center gap-3 whitespace-nowrap text-[12px] font-medium text-slate-700 lg:flex xl:gap-5 xl:text-[13px]">
+          <a href="gymnista-home.html" class="transition hover:text-brand">Home</a>
+          <a href="gymnista-about-us.html" class="font-semibold text-brand">About Us</a>
+          <a href="gymnista-all-collections.html" class="transition hover:text-brand">All Collections</a>
+          <a href="gymnista-shop-page.html" class="transition hover:text-brand">Shop</a>
+          <a href="gymnista-membership.html" class="transition hover:text-brand">Membership</a>
+          <a href="gymnista-faq.html" class="transition hover:text-brand">FAQ</a>
+          <a href="gymnista-blog.html" class="transition hover:text-brand">Blog</a>
+          <a href="gymnista-contact-us.html" class="transition hover:text-brand">Contact Us</a>
+        </nav>
+        <a href="gymnista-membership.html" class="btn-primary hidden lg:inline-flex">Join now</a>
+        <button type="button" class="inline-flex rounded-lg p-2 text-slate-700 hover:bg-slate-100 lg:hidden" aria-label="Toggle menu" aria-expanded="false" onclick="toggleMobileNav(this)">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+      <div id="mnav" class="hidden border-t border-slate-100 bg-white lg:hidden">
+        <nav class="flex flex-col px-4 sm:px-6 py-3 text-[15px] font-medium text-slate-700">
+          <a href="gymnista-home.html" class="border-b border-slate-50 py-3">Home</a>
+          <a href="gymnista-about-us.html" class="border-b border-slate-50 py-3 font-semibold text-brand">About Us</a>
+          <a href="gymnista-all-collections.html" class="border-b border-slate-50 py-3">All Collections</a>
+          <a href="gymnista-shop-page.html" class="border-b border-slate-50 py-3">Shop</a>
+          <a href="gymnista-membership.html" class="border-b border-slate-50 py-3">Membership</a>
+          <a href="gymnista-faq.html" class="border-b border-slate-50 py-3">FAQ</a>
+          <a href="gymnista-blog.html" class="border-b border-slate-50 py-3">Blog</a>
+          <a href="gymnista-contact-us.html" class="py-3">Contact Us</a>
+          <a href="gymnista-membership.html" class="btn-primary mt-2 mb-3 justify-center">Join now</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ===== Page header ===== -->
+    <section class="relative overflow-hidden bg-navy">
+      <div class="pointer-events-none absolute -top-32 -right-24 h-80 w-80 rounded-full bg-brand/20 blur-3xl"></div>
+      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 py-16 lg:px-8 lg:py-20">
+        <p class="eyebrow" data-reveal>Our story</p>
+        <h1 class="mt-3 max-w-3xl text-4xl font-bold text-white font-display sm:text-5xl" data-reveal data-reveal-delay="80">About Gymnista</h1>
+        <p class="mt-5 max-w-2xl text-lg leading-8 text-slate-300" data-reveal data-reveal-delay="160">Gymnista started in a garage gym. Today we outfit 40,000 members with gear tested by real athletes, not just models.</p>
+      </div>
+    </section>
+
+<section class="bg-mint py-16 sm:py-20 lg:py-24">
+      <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+<div class="relative" data-reveal="left">
+            <img src="Img/gymnista-img-1.jpg" alt="Gymnista" class="w-full rounded-3xl object-cover shadow-xl lg:aspect-[4/3]" loading="lazy" />
+          </div>
+          <div data-reveal="right">
+            <p class="eyebrow">Who we are</p>
+            <h2 class="mt-3 text-3xl font-bold font-display text-navy sm:text-4xl">Gymnista in a few words</h2>
+            <p class="mt-5 leading-8 text-slate-500">Gymnista started in a garage gym. Today we outfit 40,000 members with gear tested by real athletes, not just models.</p>
+            <ul class="mt-6 space-y-3 text-[15px] text-slate-600">
+              <li class="flex gap-3"><span class="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand/10 text-brand"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span>Performance Apparel</span></li>
+              <li class="flex gap-3"><span class="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand/10 text-brand"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span>Home Gym Gear</span></li>
+              <li class="flex gap-3"><span class="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand/10 text-brand"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span>Coached Programs</span></li>
+              <li class="flex gap-3"><span class="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand/10 text-brand"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span>Lifetime Warranty</span></li>
+            </ul>
+            
+          </div>
+      </div>
+    </section>
+
+    <section class="bg-navy py-14 sm:py-16">
+      <div class="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-4 sm:px-6 lg:grid-cols-4 lg:px-8" data-reveal-stagger="120">
+        <div class="text-center">
+          <p class="text-4xl font-extrabold text-brand font-display sm:text-5xl">120+</p>
+          <p class="mt-2 text-sm font-medium uppercase tracking-wide text-slate-400">Happy clients</p>
+        </div>
+        <div class="text-center">
+          <p class="text-4xl font-extrabold text-brand font-display sm:text-5xl">8yr</p>
+          <p class="mt-2 text-sm font-medium uppercase tracking-wide text-slate-400">In business</p>
+        </div>
+        <div class="text-center">
+          <p class="text-4xl font-extrabold text-brand font-display sm:text-5xl">4.9</p>
+          <p class="mt-2 text-sm font-medium uppercase tracking-wide text-slate-400">Average rating</p>
+        </div>
+        <div class="text-center">
+          <p class="text-4xl font-extrabold text-brand font-display sm:text-5xl">24h</p>
+          <p class="mt-2 text-sm font-medium uppercase tracking-wide text-slate-400">Reply time</p>
+        </div>
+      </div>
+    </section>
+
+<section class="py-16 sm:py-20 lg:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center" data-reveal>
+          <p class="eyebrow">Values</p>
+          <h2 class="mt-3 text-3xl font-bold font-display text-navy sm:text-4xl">What we stand for</h2>
+          
+        </div>
+        <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-reveal-stagger="120">
+          <div class="card-lift rounded-2xl border border-slate-100 bg-white p-7 shadow-sm">
+            <span class="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand/10 text-brand"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></span>
+            <h3 class="mt-5 text-lg font-bold text-navy font-display">Performance Apparel</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-500">Sweat-wicking, squat-proof fabrics tested for 500+ sessions.</p>
+          </div>
+          <div class="card-lift rounded-2xl border border-slate-100 bg-white p-7 shadow-sm">
+            <span class="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand/10 text-brand"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8l-9-5-9 5v8l9 5 9-5V8z"/><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 5 9-5M12 13v8"/></svg></span>
+            <h3 class="mt-5 text-lg font-bold text-navy font-display">Home Gym Gear</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-500">Adjustable dumbbells, benches and racks that fit real rooms.</p>
+          </div>
+          <div class="card-lift rounded-2xl border border-slate-100 bg-white p-7 shadow-sm">
+            <span class="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand/10 text-brand"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 21v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2M23 21v-2a4 4 0 00-3-3.9M16 3.1a4 4 0 010 7.8"/><circle cx="9" cy="7" r="4"/></svg></span>
+            <h3 class="mt-5 text-lg font-bold text-navy font-display">Coached Programs</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-500">Membership includes programming from certified coaches.</p>
+          </div>
+          <div class="card-lift rounded-2xl border border-slate-100 bg-white p-7 shadow-sm">
+            <span class="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand/10 text-brand"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3l8 4v5c0 5-3.4 8.4-8 9-4.6-.6-8-4-8-9V7l8-4z"/></svg></span>
+            <h3 class="mt-5 text-lg font-bold text-navy font-display">Lifetime Warranty</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-500">Equipment failures covered — forever, no receipt needed.</p>
+          </div>
+          <div class="card-lift rounded-2xl border border-slate-100 bg-white p-7 shadow-sm">
+            <span class="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand/10 text-brand"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7.5-4.7-10-9.3C.4 8.6 2.4 5 5.7 5c2 0 3.4 1 4.3 2.4h4C15 6 16.4 5 18.4 5c3.3 0 5.3 3.6 3.7 6.7C19.5 16.3 12 21 12 21z"/></svg></span>
+            <h3 class="mt-5 text-lg font-bold text-navy font-display">Recovery Tools</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-500">Mobility kits, bands and guides to keep you training longer.</p>
+          </div>
+          <div class="card-lift rounded-2xl border border-slate-100 bg-white p-7 shadow-sm">
+            <span class="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand/10 text-brand"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path stroke-linecap="round" stroke-linejoin="round" d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg></span>
+            <h3 class="mt-5 text-lg font-bold text-navy font-display">Athlete Tested</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-500">Every product passes a 90-day panel of working athletes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section class="py-16 sm:py-20 lg:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center" data-reveal>
+          <p class="eyebrow">Kind words</p>
+          <h2 class="mt-3 text-3xl font-bold font-display text-navy sm:text-4xl">What people say</h2>
+          
+        </div>
+        <div class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3" data-reveal-stagger="120">
+          <figure class="card-lift flex flex-col rounded-2xl border border-slate-100 bg-white p-7 shadow-sm">
+            <div class="flex gap-0.5 text-brand"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg></div>
+            <blockquote class="mt-4 flex-1 text-[15px] leading-7 text-slate-600">“Working with the team was the easiest part of the project — everything was clear, fast and exactly as promised.”</blockquote>
+            <figcaption class="mt-5 border-t border-slate-100 pt-4">
+              <p class="text-sm font-bold text-navy">Maya R.</p>
+              <p class="text-xs text-slate-400">Customer</p>
+            </figcaption>
+          </figure>
+          <figure class="card-lift flex flex-col rounded-2xl border border-slate-100 bg-white p-7 shadow-sm">
+            <div class="flex gap-0.5 text-brand"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg></div>
+            <blockquote class="mt-4 flex-1 text-[15px] leading-7 text-slate-600">“The quality exceeded what we expected at this price point. We’ll be back for the next phase.”</blockquote>
+            <figcaption class="mt-5 border-t border-slate-100 pt-4">
+              <p class="text-sm font-bold text-navy">Daniel K.</p>
+              <p class="text-xs text-slate-400">Repeat client</p>
+            </figcaption>
+          </figure>
+          <figure class="card-lift flex flex-col rounded-2xl border border-slate-100 bg-white p-7 shadow-sm">
+            <div class="flex gap-0.5 text-brand"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg></div>
+            <blockquote class="mt-4 flex-1 text-[15px] leading-7 text-slate-600">“Responsive, honest and genuinely good at what they do. Recommended without hesitation.”</blockquote>
+            <figcaption class="mt-5 border-t border-slate-100 pt-4">
+              <p class="text-sm font-bold text-navy">Sofia L.</p>
+              <p class="text-xs text-slate-400">Partner</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative overflow-hidden bg-navy py-16 sm:py-20">
+      <div class="pointer-events-none absolute -top-40 right-0 h-96 w-96 rounded-full bg-brand/25 blur-3xl motion-safe:animate-pulse-slow"></div>
+      <div class="relative mx-auto max-w-4xl px-4 text-center sm:px-6">
+        <h2 class="text-3xl font-bold text-white font-display sm:text-4xl" data-reveal>Want to work with Gymnista?</h2>
+        <p class="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-300" data-reveal data-reveal-delay="100">Tell us what you’re planning — we’ll take it from there.</p>
+        <div class="mt-8 flex flex-wrap justify-center gap-4" data-reveal data-reveal-delay="200">
+          <a href="gymnista-contact-us.html" class="btn-primary">Get in touch <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="bg-navy text-slate-300">
+      <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 py-16 md:grid-cols-2 lg:grid-cols-4 lg:px-8" data-reveal-stagger="120">
+        <div>
+          <a href="gymnista-home.html" class="flex items-center gap-2.5">
+            <span class="text-lg font-extrabold tracking-tight text-white font-display">Gymnista</span>
+          </a>
+          <p class="mt-5 text-sm leading-6 text-slate-400">Training gear and a gym community built for consistency — not perfection.</p>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-white">Pages</h4>
+          <ul class="mt-5 space-y-3 text-sm">
+              <li><a href="gymnista-home.html" class="transition hover:text-brand">Home</a></li>
+              <li><a href="gymnista-about-us.html" class="transition hover:text-brand">About Us</a></li>
+              <li><a href="gymnista-all-collections.html" class="transition hover:text-brand">All Collections</a></li>
+              <li><a href="gymnista-shop-page.html" class="transition hover:text-brand">Shop</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-white">Explore</h4>
+          <ul class="mt-5 space-y-3 text-sm">
+              <li><a href="gymnista-membership.html" class="transition hover:text-brand">Membership</a></li>
+              <li><a href="gymnista-faq.html" class="transition hover:text-brand">FAQ</a></li>
+              <li><a href="gymnista-blog.html" class="transition hover:text-brand">Blog</a></li>
+              <li><a href="gymnista-contact-us.html" class="transition hover:text-brand">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-white">Contact</h4>
+          <ul class="mt-5 space-y-3 text-sm text-slate-400 [&_svg]:mt-0.5 [&_svg]:h-5 [&_svg]:w-5 [&_svg]:shrink-0 [&_svg]:text-brand">
+            <li class="flex gap-3"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1116 0z"/><circle cx="12" cy="10" r="3"/></svg><span>10 Franklin Street Apex, NY 27502</span></li>
+            <li class="flex gap-3"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path stroke-linecap="round" stroke-linejoin="round" d="M3 7l9 6 9-6"/></svg><a href="mailto:hello@gymnista.com" class="transition hover:text-brand">hello@gymnista.com</a></li>
+            <li class="flex gap-3"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 2 .7 2.9a2 2 0 01-.5 2.1L8 10a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.5c.9.3 1.9.6 2.9.7a2 2 0 011.7 2z"/></svg><span>+1 514 313 5060</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/10">
+        <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 sm:px-6 py-6 text-xs text-slate-500 sm:flex-row lg:px-8">
+          <p>© 2026 Gymnista. All rights reserved.</p>
+          <p>Starter template · Built with ARC Starter Templates</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,1732 @@
+{
+  "generated": "2026-09-23T14:05:31.718Z",
+  "templates": {
+    "index": {
+      "name": "Home",
+      "title": "Ash River Collective — Elite Talent. Bulletproof Systems.",
+      "description": "Ash River Collective places trained accounting and administrative professionals inside growing businesses, then helps document the processes they run so execution becomes repeatable.",
+      "file": "arc-site/index.html",
+      "thumb": "assets/img/file.png"
+    },
+    "services": {
+      "name": "Services",
+      "title": "Services – Ash River Collective",
+      "description": "ARC combines trained talent, documented processes and operational systems to help growing companies execute consistently.",
+      "file": "arc-site/services.html",
+      "thumb": "assets/img/business-people-sitting-together-on-couch-2023-11-27-04-52-21-utc.jpg"
+    },
+    "finance-accounting-talent": {
+      "name": "Finance & Accounting Talent",
+      "title": "Finance &amp; Accounting Talent – Ash River Collective",
+      "description": "Add trained accounting professionals who work your hours, speak fluent English and operate inside your existing systems.",
+      "file": "arc-site/finance-accounting-talent.html",
+      "thumb": "assets/img/handsome-european-males-are-discussing-something-i-FNFHBT4.jpg"
+    },
+    "virtual-assistants": {
+      "name": "Virtual Assistants",
+      "title": "Virtual Assistants – Ash River Collective",
+      "description": "Trained virtual assistants who handle the recurring administrative work consuming your team’s time.",
+      "file": "arc-site/virtual-assistants.html",
+      "thumb": "assets/img/two-businessmen-working-together-in-office-2024-09-23-03-08-53-utc.jpg"
+    },
+    "about": {
+      "name": "About",
+      "title": "About – Ash River Collective",
+      "description": "Ash River Collective helps companies add trained financial and administrative talent without adding unnecessary overhead or operational complexity.",
+      "file": "arc-site/about.html",
+      "thumb": "assets/img/looking-good-and-feeling-confident-XJ79UJL.png"
+    },
+    "partners": {
+      "name": "Partners",
+      "title": "Partners – Ash River Collective",
+      "description": "Partner with Ash River Collective to provide trained accounting and administrative talent without building your own recruiting infrastructure.",
+      "file": "arc-site/partners.html",
+      "thumb": "assets/img/happy-business-people-handshake-and-interview-in-m-6FPDS75.jpg"
+    },
+    "ash-river-foundation": {
+      "name": "Ash River Foundation",
+      "title": "Ash River Foundation – Ash River Collective",
+      "description": "Ash River Foundation trains and prepares Venezuelan professionals for sustainable remote careers.",
+      "file": "arc-site/ash-river-foundation.html",
+      "thumb": "assets/img/teamwork-with-business-people-analysis-cost-graph-3JFK4U7.jpg"
+    },
+    "contact": {
+      "name": "Contact",
+      "title": "Contact – Ash River Collective",
+      "description": "Whether you need one person, an accounting team, administrative support or a strategic staffing partner, start here.",
+      "file": "arc-site/contact.html",
+      "thumb": "assets/img/logo-green.png"
+    },
+    "blogify-home": {
+      "name": "Home",
+      "title": "Blogify — Stories from the road",
+      "description": "Travel & lifestyle blog — Home, About, Gallery, Subscribe, Inspiration, Contact.",
+      "file": "blogify/home.html",
+      "thumb": "assets/img/blogify-img-1.png"
+    },
+    "blogify-about": {
+      "name": "About",
+      "title": "About – Blogify",
+      "description": "Travel & lifestyle blog — Home, About, Gallery, Subscribe, Inspiration, Contact.",
+      "file": "blogify/about.html",
+      "thumb": "assets/img/blogify-img-1.png"
+    },
+    "blogify-gallery": {
+      "name": "Gallery",
+      "title": "Gallery – Blogify",
+      "description": "Travel & lifestyle blog — Home, About, Gallery, Subscribe, Inspiration, Contact.",
+      "file": "blogify/gallery.html",
+      "thumb": "assets/img/blogify-img-1.png"
+    },
+    "blogify-subscribe": {
+      "name": "Subscribe",
+      "title": "Subscribe – Blogify",
+      "description": "Travel & lifestyle blog — Home, About, Gallery, Subscribe, Inspiration, Contact.",
+      "file": "blogify/subscribe.html",
+      "thumb": "assets/img/blogify-img-1.png"
+    },
+    "blogify-inspiration": {
+      "name": "Inspiration",
+      "title": "Inspiration – Blogify",
+      "description": "Travel & lifestyle blog — Home, About, Gallery, Subscribe, Inspiration, Contact.",
+      "file": "blogify/inspiration.html",
+      "thumb": "assets/img/blogify-img-1.png"
+    },
+    "blogify-contact": {
+      "name": "Contact",
+      "title": "Contact – Blogify",
+      "description": "Travel & lifestyle blog — Home, About, Gallery, Subscribe, Inspiration, Contact.",
+      "file": "blogify/contact.html",
+      "thumb": "assets/img/blogify-img-1.png"
+    },
+    "commercecraft-home": {
+      "name": "Home",
+      "title": "CommerceCraft — Crafted for living",
+      "description": "Furniture & home-decor store — Home, Shop, Accessories, Gift, Designers, Sale, Contact.",
+      "file": "commercecraft/home.html",
+      "thumb": "assets/img/commercecraft-img-1.png"
+    },
+    "commercecraft-shop-2": {
+      "name": "Shop",
+      "title": "Shop – CommerceCraft",
+      "description": "Furniture & home-decor store — Home, Shop, Accessories, Gift, Designers, Sale, Contact.",
+      "file": "commercecraft/shop-2.html",
+      "thumb": "assets/img/commercecraft-img-1.png"
+    },
+    "commercecraft-accessories": {
+      "name": "Accessories",
+      "title": "Accessories – CommerceCraft",
+      "description": "Furniture & home-decor store — Home, Shop, Accessories, Gift, Designers, Sale, Contact.",
+      "file": "commercecraft/accessories.html",
+      "thumb": "assets/img/commercecraft-img-1.png"
+    },
+    "commercecraft-gift": {
+      "name": "Gift",
+      "title": "Gift – CommerceCraft",
+      "description": "Furniture & home-decor store — Home, Shop, Accessories, Gift, Designers, Sale, Contact.",
+      "file": "commercecraft/gift.html",
+      "thumb": "assets/img/commercecraft-img-1.png"
+    },
+    "commercecraft-designers": {
+      "name": "Designers",
+      "title": "Designers – CommerceCraft",
+      "description": "Furniture & home-decor store — Home, Shop, Accessories, Gift, Designers, Sale, Contact.",
+      "file": "commercecraft/designers.html",
+      "thumb": "assets/img/commercecraft-img-1.png"
+    },
+    "commercecraft-sale": {
+      "name": "Sale",
+      "title": "Sale – CommerceCraft",
+      "description": "Furniture & home-decor store — Home, Shop, Accessories, Gift, Designers, Sale, Contact.",
+      "file": "commercecraft/sale.html",
+      "thumb": "assets/img/commercecraft-img-1.png"
+    },
+    "commercecraft-contact": {
+      "name": "Contact",
+      "title": "Contact – CommerceCraft",
+      "description": "Furniture & home-decor store — Home, Shop, Accessories, Gift, Designers, Sale, Contact.",
+      "file": "commercecraft/contact.html",
+      "thumb": "assets/img/commercecraft-img-1.png"
+    },
+    "retailridge-home": {
+      "name": "Home",
+      "title": "RetailRidge — Wear the season",
+      "description": "Fashion retail store — Home, About, Our Brand, New Arrivals, Flash Sale, Blog, Contact.",
+      "file": "retailridge/home.html",
+      "thumb": "assets/img/retailridge-img-1.png"
+    },
+    "retailridge-about": {
+      "name": "About",
+      "title": "About – RetailRidge",
+      "description": "Fashion retail store — Home, About, Our Brand, New Arrivals, Flash Sale, Blog, Contact.",
+      "file": "retailridge/about.html",
+      "thumb": "assets/img/retailridge-img-1.png"
+    },
+    "retailridge-our-brand": {
+      "name": "Our Brand",
+      "title": "Our Brand – RetailRidge",
+      "description": "Fashion retail store — Home, About, Our Brand, New Arrivals, Flash Sale, Blog, Contact.",
+      "file": "retailridge/our-brand.html",
+      "thumb": "assets/img/retailridge-img-1.png"
+    },
+    "retailridge-new-arrivals": {
+      "name": "New Arrivals",
+      "title": "New Arrivals – RetailRidge",
+      "description": "Fashion retail store — Home, About, Our Brand, New Arrivals, Flash Sale, Blog, Contact.",
+      "file": "retailridge/new-arrivals.html",
+      "thumb": "assets/img/retailridge-img-1.png"
+    },
+    "retailridge-flash-sale": {
+      "name": "Flash Sale",
+      "title": "Flash Sale – RetailRidge",
+      "description": "Fashion retail store — Home, About, Our Brand, New Arrivals, Flash Sale, Blog, Contact.",
+      "file": "retailridge/flash-sale.html",
+      "thumb": "assets/img/retailridge-img-1.png"
+    },
+    "retailridge-blog": {
+      "name": "Blog",
+      "title": "Blog – RetailRidge",
+      "description": "Fashion retail store — Home, About, Our Brand, New Arrivals, Flash Sale, Blog, Contact.",
+      "file": "retailridge/blog.html",
+      "thumb": "assets/img/retailridge-img-1.png"
+    },
+    "retailridge-contact": {
+      "name": "Contact",
+      "title": "Contact – RetailRidge",
+      "description": "Fashion retail store — Home, About, Our Brand, New Arrivals, Flash Sale, Blog, Contact.",
+      "file": "retailridge/contact.html",
+      "thumb": "assets/img/retailridge-img-1.png"
+    },
+    "flexiweb-home": {
+      "name": "Home",
+      "title": "Flexiweb — Digital agency",
+      "description": "Web design agency — Home, About, Career, Testimonials, Contact Us, Blog.",
+      "file": "flexiweb/home.html",
+      "thumb": "assets/img/flexiweb-img-1.jpg"
+    },
+    "flexiweb-about": {
+      "name": "About",
+      "title": "About – Flexiweb",
+      "description": "Web design agency — Home, About, Career, Testimonials, Contact Us, Blog.",
+      "file": "flexiweb/about.html",
+      "thumb": "assets/img/flexiweb-img-1.jpg"
+    },
+    "flexiweb-career": {
+      "name": "Career",
+      "title": "Career – Flexiweb",
+      "description": "Web design agency — Home, About, Career, Testimonials, Contact Us, Blog.",
+      "file": "flexiweb/career.html",
+      "thumb": "assets/img/flexiweb-img-1.jpg"
+    },
+    "flexiweb-testimonials": {
+      "name": "Testimonials",
+      "title": "Testimonials – Flexiweb",
+      "description": "Web design agency — Home, About, Career, Testimonials, Contact Us, Blog.",
+      "file": "flexiweb/testimonials.html",
+      "thumb": "assets/img/flexiweb-img-1.jpg"
+    },
+    "flexiweb-blog": {
+      "name": "Blog",
+      "title": "Blog – Flexiweb",
+      "description": "Web design agency — Home, About, Career, Testimonials, Contact Us, Blog.",
+      "file": "flexiweb/blog.html",
+      "thumb": "assets/img/flexiweb-img-6.jpg"
+    },
+    "flexiweb-contact-us": {
+      "name": "Contact Us",
+      "title": "Contact Us – Flexiweb",
+      "description": "Web design agency — Home, About, Career, Testimonials, Contact Us, Blog.",
+      "file": "flexiweb/contact-us.html",
+      "thumb": "assets/img/flexiweb-img-1.jpg"
+    },
+    "edinburgh-home": {
+      "name": "Home",
+      "title": "Edinburgh — Creative studio",
+      "description": "Creative agency — Home, About, Pricing, Career, Contact, Blog.",
+      "file": "edinburgh/home.html",
+      "thumb": "assets/img/edinburgh-img-1.png"
+    },
+    "edinburgh-about": {
+      "name": "About",
+      "title": "About – Edinburgh",
+      "description": "Creative agency — Home, About, Pricing, Career, Contact, Blog.",
+      "file": "edinburgh/about.html",
+      "thumb": "assets/img/edinburgh-img-1.png"
+    },
+    "edinburgh-pricing": {
+      "name": "Pricing",
+      "title": "Pricing – Edinburgh",
+      "description": "Creative agency — Home, About, Pricing, Career, Contact, Blog.",
+      "file": "edinburgh/pricing.html",
+      "thumb": "assets/img/edinburgh-img-1.png"
+    },
+    "edinburgh-career": {
+      "name": "Career",
+      "title": "Career – Edinburgh",
+      "description": "Creative agency — Home, About, Pricing, Career, Contact, Blog.",
+      "file": "edinburgh/career.html",
+      "thumb": "assets/img/edinburgh-img-12.jpg"
+    },
+    "edinburgh-blog": {
+      "name": "Blog",
+      "title": "Blog – Edinburgh",
+      "description": "Creative agency — Home, About, Pricing, Career, Contact, Blog.",
+      "file": "edinburgh/blog.html",
+      "thumb": "assets/img/edinburgh-img-6.jpg"
+    },
+    "edinburgh-contact": {
+      "name": "Contact",
+      "title": "Contact – Edinburgh",
+      "description": "Creative agency — Home, About, Pricing, Career, Contact, Blog.",
+      "file": "edinburgh/contact.html",
+      "thumb": "assets/img/edinburgh-img-1.png"
+    },
+    "printifix-home": {
+      "name": "Home",
+      "title": "Printifix — 3D printing services",
+      "description": "3D printing services — Home, About, Industries, Testimonials, Contact Us, Blog.",
+      "file": "printifix/home.html",
+      "thumb": "assets/img/printifix-img-1.png"
+    },
+    "printifix-about": {
+      "name": "About",
+      "title": "About – Printifix",
+      "description": "3D printing services — Home, About, Industries, Testimonials, Contact Us, Blog.",
+      "file": "printifix/about.html",
+      "thumb": "assets/img/printifix-img-1.png"
+    },
+    "printifix-industries": {
+      "name": "Industries",
+      "title": "Industries – Printifix",
+      "description": "3D printing services — Home, About, Industries, Testimonials, Contact Us, Blog.",
+      "file": "printifix/industries.html",
+      "thumb": "assets/img/printifix-img-1.png"
+    },
+    "printifix-testimonials": {
+      "name": "Testimonials",
+      "title": "Testimonials – Printifix",
+      "description": "3D printing services — Home, About, Industries, Testimonials, Contact Us, Blog.",
+      "file": "printifix/testimonials.html",
+      "thumb": "assets/img/printifix-img-1.png"
+    },
+    "printifix-blog": {
+      "name": "Blog",
+      "title": "Blog – Printifix",
+      "description": "3D printing services — Home, About, Industries, Testimonials, Contact Us, Blog.",
+      "file": "printifix/blog.html",
+      "thumb": "assets/img/printifix-img-1.png"
+    },
+    "printifix-contact-us": {
+      "name": "Contact Us",
+      "title": "Contact Us – Printifix",
+      "description": "3D printing services — Home, About, Industries, Testimonials, Contact Us, Blog.",
+      "file": "printifix/contact-us.html",
+      "thumb": "assets/img/printifix-img-1.png"
+    },
+    "kelion-home": {
+      "name": "Home",
+      "title": "Kelion — Content creator",
+      "description": "Influencer & creator portfolio — Home, About, Services, Portfolios, Events, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "kelion/home.html",
+      "thumb": "assets/img/kelion-img-1.png"
+    },
+    "kelion-about": {
+      "name": "About",
+      "title": "About – Kelion",
+      "description": "Influencer & creator portfolio — Home, About, Services, Portfolios, Events, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "kelion/about.html",
+      "thumb": "assets/img/kelion-img-1.png"
+    },
+    "kelion-our-services": {
+      "name": "Our Services",
+      "title": "Our Services – Kelion",
+      "description": "Influencer & creator portfolio — Home, About, Services, Portfolios, Events, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "kelion/our-services.html",
+      "thumb": "assets/img/kelion-img-1.png"
+    },
+    "kelion-portfolios": {
+      "name": "Portfolios",
+      "title": "Portfolios – Kelion",
+      "description": "Influencer & creator portfolio — Home, About, Services, Portfolios, Events, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "kelion/portfolios.html",
+      "thumb": "assets/img/kelion-img-1.png"
+    },
+    "kelion-events": {
+      "name": "Events",
+      "title": "Events – Kelion",
+      "description": "Influencer & creator portfolio — Home, About, Services, Portfolios, Events, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "kelion/events.html",
+      "thumb": "assets/img/kelion-img-1.png"
+    },
+    "kelion-testimonials": {
+      "name": "Testimonials",
+      "title": "Testimonials – Kelion",
+      "description": "Influencer & creator portfolio — Home, About, Services, Portfolios, Events, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "kelion/testimonials.html",
+      "thumb": "assets/img/kelion-img-1.png"
+    },
+    "kelion-blog": {
+      "name": "Blog",
+      "title": "Blog – Kelion",
+      "description": "Influencer & creator portfolio — Home, About, Services, Portfolios, Events, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "kelion/blog.html",
+      "thumb": "assets/img/kelion-img-1.png"
+    },
+    "kelion-contact-us": {
+      "name": "Contact Us",
+      "title": "Contact Us – Kelion",
+      "description": "Influencer & creator portfolio — Home, About, Services, Portfolios, Events, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "kelion/contact-us.html",
+      "thumb": "assets/img/kelion-img-1.png"
+    },
+    "kindora-home": {
+      "name": "Home",
+      "title": "Kindora — Nonprofit organization",
+      "description": "Nonprofit & charity — Home, About, What We Do, Disasters, Careers, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "kindora/home.html",
+      "thumb": "assets/img/kindora-img-1.png"
+    },
+    "kindora-about": {
+      "name": "About",
+      "title": "About – Kindora",
+      "description": "Nonprofit & charity — Home, About, What We Do, Disasters, Careers, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "kindora/about.html",
+      "thumb": "assets/img/kindora-img-1.png"
+    },
+    "kindora-what-we-do": {
+      "name": "What We Do",
+      "title": "What We Do – Kindora",
+      "description": "Nonprofit & charity — Home, About, What We Do, Disasters, Careers, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "kindora/what-we-do.html",
+      "thumb": "assets/img/kindora-img-1.png"
+    },
+    "kindora-disasters": {
+      "name": "Disasters",
+      "title": "Disasters – Kindora",
+      "description": "Nonprofit & charity — Home, About, What We Do, Disasters, Careers, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "kindora/disasters.html",
+      "thumb": "assets/img/kindora-img-1.png"
+    },
+    "kindora-careers": {
+      "name": "Careers",
+      "title": "Careers – Kindora",
+      "description": "Nonprofit & charity — Home, About, What We Do, Disasters, Careers, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "kindora/careers.html",
+      "thumb": "assets/img/kindora-img-1.png"
+    },
+    "kindora-blog": {
+      "name": "Blog",
+      "title": "Blog – Kindora",
+      "description": "Nonprofit & charity — Home, About, What We Do, Disasters, Careers, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "kindora/blog.html",
+      "thumb": "assets/img/kindora-img-1.png"
+    },
+    "kindora-contact-us": {
+      "name": "Contact Us",
+      "title": "Contact Us – Kindora",
+      "description": "Nonprofit & charity — Home, About, What We Do, Disasters, Careers, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "kindora/contact-us.html",
+      "thumb": "assets/img/kindora-img-1.png"
+    },
+    "gymnista-home": {
+      "name": "Home",
+      "title": "Gymnista — Train for life",
+      "description": "Gym & fitness brand — Home, About Us, Collections, Shop, Membership, FAQ, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "gymnista/home.html",
+      "thumb": "assets/img/gymnista-img-1.jpg"
+    },
+    "gymnista-about-us": {
+      "name": "About Us",
+      "title": "About Us – Gymnista",
+      "description": "Gym & fitness brand — Home, About Us, Collections, Shop, Membership, FAQ, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "gymnista/about-us.html",
+      "thumb": "assets/img/gymnista-img-1.jpg"
+    },
+    "gymnista-all-collections": {
+      "name": "All Collections",
+      "title": "All Collections – Gymnista",
+      "description": "Gym & fitness brand — Home, About Us, Collections, Shop, Membership, FAQ, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "gymnista/all-collections.html",
+      "thumb": "assets/img/gymnista-img-10.jpg"
+    },
+    "gymnista-shop-page": {
+      "name": "Shop",
+      "title": "Shop – Gymnista",
+      "description": "Gym & fitness brand — Home, About Us, Collections, Shop, Membership, FAQ, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "gymnista/shop-page.html",
+      "thumb": "assets/img/gymnista-img-1.jpg"
+    },
+    "gymnista-membership": {
+      "name": "Membership",
+      "title": "Membership – Gymnista",
+      "description": "Gym & fitness brand — Home, About Us, Collections, Shop, Membership, FAQ, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "gymnista/membership.html",
+      "thumb": "assets/img/gymnista-img-1.jpg"
+    },
+    "gymnista-faq": {
+      "name": "FAQ",
+      "title": "FAQ – Gymnista",
+      "description": "Gym & fitness brand — Home, About Us, Collections, Shop, Membership, FAQ, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "gymnista/faq.html",
+      "thumb": "assets/img/gymnista-img-1.jpg"
+    },
+    "gymnista-blog": {
+      "name": "Blog",
+      "title": "Blog – Gymnista",
+      "description": "Gym & fitness brand — Home, About Us, Collections, Shop, Membership, FAQ, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "gymnista/blog.html",
+      "thumb": "assets/img/gymnista-img-1.jpg"
+    },
+    "gymnista-contact-us": {
+      "name": "Contact Us",
+      "title": "Contact Us – Gymnista",
+      "description": "Gym & fitness brand — Home, About Us, Collections, Shop, Membership, FAQ, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "gymnista/contact-us.html",
+      "thumb": "assets/img/gymnista-img-12.jpg"
+    },
+    "nerra-home": {
+      "name": "Home",
+      "title": "Nerra — Clean energy, made simple",
+      "description": "Solar energy company — Home, About Us, Services, Products, Projects, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "nerra/home.html",
+      "thumb": "assets/img/nerra-img-1.png"
+    },
+    "nerra-about-us": {
+      "name": "About Us",
+      "title": "About Us – Nerra",
+      "description": "Solar energy company — Home, About Us, Services, Products, Projects, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "nerra/about-us.html",
+      "thumb": "assets/img/nerra-img-1.png"
+    },
+    "nerra-services": {
+      "name": "Services",
+      "title": "Services – Nerra",
+      "description": "Solar energy company — Home, About Us, Services, Products, Projects, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "nerra/services.html",
+      "thumb": "assets/img/nerra-img-1.png"
+    },
+    "nerra-products": {
+      "name": "Products",
+      "title": "Products – Nerra",
+      "description": "Solar energy company — Home, About Us, Services, Products, Projects, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "nerra/products.html",
+      "thumb": "assets/img/nerra-img-1.png"
+    },
+    "nerra-projects": {
+      "name": "Projects",
+      "title": "Projects – Nerra",
+      "description": "Solar energy company — Home, About Us, Services, Products, Projects, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "nerra/projects.html",
+      "thumb": "assets/img/nerra-img-1.png"
+    },
+    "nerra-careers": {
+      "name": "Careers",
+      "title": "Careers – Nerra",
+      "description": "Solar energy company — Home, About Us, Services, Products, Projects, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "nerra/careers.html",
+      "thumb": "assets/img/nerra-img-1.png"
+    },
+    "nerra-blog": {
+      "name": "Blog",
+      "title": "Blog – Nerra",
+      "description": "Solar energy company — Home, About Us, Services, Products, Projects, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "nerra/blog.html",
+      "thumb": "assets/img/nerra-img-1.png"
+    },
+    "nerra-contact-us": {
+      "name": "Contact Us",
+      "title": "Contact Us – Nerra",
+      "description": "Solar energy company — Home, About Us, Services, Products, Projects, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "nerra/contact-us.html",
+      "thumb": "assets/img/nerra-img-1.png"
+    },
+    "ossian-home": {
+      "name": "Home",
+      "title": "Ossian — Naturally better",
+      "description": "Organic goods shop — Home, About Us, Shop, Testimonials, Contact Us.",
+      "file": "ossian/home.html",
+      "thumb": "assets/img/ossian-img-1.jpg"
+    },
+    "ossian-about-us": {
+      "name": "About Us",
+      "title": "About Us – Ossian",
+      "description": "Organic goods shop — Home, About Us, Shop, Testimonials, Contact Us.",
+      "file": "ossian/about-us.html",
+      "thumb": "assets/img/ossian-img-1.jpg"
+    },
+    "ossian-shop": {
+      "name": "Shop",
+      "title": "Shop – Ossian",
+      "description": "Organic goods shop — Home, About Us, Shop, Testimonials, Contact Us.",
+      "file": "ossian/shop.html",
+      "thumb": "assets/img/ossian-img-11.webp"
+    },
+    "ossian-testimonials": {
+      "name": "Testimonials",
+      "title": "Testimonials – Ossian",
+      "description": "Organic goods shop — Home, About Us, Shop, Testimonials, Contact Us.",
+      "file": "ossian/testimonials.html",
+      "thumb": "assets/img/ossian-img-12.png"
+    },
+    "ossian-contact-us": {
+      "name": "Contact Us",
+      "title": "Contact Us – Ossian",
+      "description": "Organic goods shop — Home, About Us, Shop, Testimonials, Contact Us.",
+      "file": "ossian/contact-us.html",
+      "thumb": "assets/img/ossian-img-1.jpg"
+    },
+    "avira-home": {
+      "name": "Home",
+      "title": "Avira — Work-life balance coaching",
+      "description": "Work-life balance coaching — Home, About, Solutions, Case Studies, Find Your Coach, Pricing, FAQ, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "avira/home.html",
+      "thumb": "assets/img/avira-img-1.png"
+    },
+    "avira-about": {
+      "name": "About",
+      "title": "About – Avira",
+      "description": "Work-life balance coaching — Home, About, Solutions, Case Studies, Find Your Coach, Pricing, FAQ, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "avira/about.html",
+      "thumb": "assets/img/avira-img-1.png"
+    },
+    "avira-solutions": {
+      "name": "Solutions",
+      "title": "Solutions – Avira",
+      "description": "Work-life balance coaching — Home, About, Solutions, Case Studies, Find Your Coach, Pricing, FAQ, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "avira/solutions.html",
+      "thumb": "assets/img/avira-img-1.png"
+    },
+    "avira-case-studies": {
+      "name": "Case Studies",
+      "title": "Case Studies – Avira",
+      "description": "Work-life balance coaching — Home, About, Solutions, Case Studies, Find Your Coach, Pricing, FAQ, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "avira/case-studies.html",
+      "thumb": "assets/img/avira-img-1.png"
+    },
+    "avira-find-your-coach": {
+      "name": "Find Your Coach",
+      "title": "Find Your Coach – Avira",
+      "description": "Work-life balance coaching — Home, About, Solutions, Case Studies, Find Your Coach, Pricing, FAQ, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "avira/find-your-coach.html",
+      "thumb": "assets/img/avira-img-1.png"
+    },
+    "avira-pricing": {
+      "name": "Pricing",
+      "title": "Pricing – Avira",
+      "description": "Work-life balance coaching — Home, About, Solutions, Case Studies, Find Your Coach, Pricing, FAQ, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "avira/pricing.html",
+      "thumb": "assets/img/avira-img-1.png"
+    },
+    "avira-faq": {
+      "name": "FAQs",
+      "title": "FAQs – Avira",
+      "description": "Work-life balance coaching — Home, About, Solutions, Case Studies, Find Your Coach, Pricing, FAQ, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "avira/faq.html",
+      "thumb": "assets/img/avira-img-1.png"
+    },
+    "avira-blog": {
+      "name": "Blog",
+      "title": "Blog – Avira",
+      "description": "Work-life balance coaching — Home, About, Solutions, Case Studies, Find Your Coach, Pricing, FAQ, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "avira/blog.html",
+      "thumb": "assets/img/avira-img-1.png"
+    },
+    "avira-contact-us": {
+      "name": "Contact Us",
+      "title": "Contact Us – Avira",
+      "description": "Work-life balance coaching — Home, About, Solutions, Case Studies, Find Your Coach, Pricing, FAQ, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+      "file": "avira/contact-us.html",
+      "thumb": "assets/img/avira-img-1.png"
+    },
+    "consultant-home": {
+      "name": "Home",
+      "title": "Consultant — Business consulting",
+      "description": "Business consulting — Home, About, Services, Blog, Contact.",
+      "file": "consultant/home.html",
+      "thumb": "assets/img/consultant-img-1.jpg"
+    },
+    "consultant-about": {
+      "name": "About",
+      "title": "About – Consultant",
+      "description": "Business consulting — Home, About, Services, Blog, Contact.",
+      "file": "consultant/about.html",
+      "thumb": "assets/img/consultant-img-1.jpg"
+    },
+    "consultant-services": {
+      "name": "Services",
+      "title": "Services – Consultant",
+      "description": "Business consulting — Home, About, Services, Blog, Contact.",
+      "file": "consultant/services.html",
+      "thumb": "assets/img/consultant-img-1.jpg"
+    },
+    "consultant-blog": {
+      "name": "Blog",
+      "title": "Blog – Consultant",
+      "description": "Business consulting — Home, About, Services, Blog, Contact.",
+      "file": "consultant/blog.html",
+      "thumb": "assets/img/consultant-img-1.jpg"
+    },
+    "consultant-contact": {
+      "name": "Contact",
+      "title": "Contact – Consultant",
+      "description": "Business consulting — Home, About, Services, Blog, Contact.",
+      "file": "consultant/contact.html",
+      "thumb": "assets/img/consultant-img-1.jpg"
+    },
+    "smile-dent-home": {
+      "name": "Home",
+      "title": "Smile Dent — Family dental clinic",
+      "description": "Dental clinic — Home, About, Services, Blog, Contact.",
+      "file": "smile-dent/home.html",
+      "thumb": "assets/img/smile-dent-img-1.jpg"
+    },
+    "smile-dent-about": {
+      "name": "About",
+      "title": "About – Smile Dent",
+      "description": "Dental clinic — Home, About, Services, Blog, Contact.",
+      "file": "smile-dent/about.html",
+      "thumb": "assets/img/smile-dent-img-1.jpg"
+    },
+    "smile-dent-services": {
+      "name": "Services",
+      "title": "Services – Smile Dent",
+      "description": "Dental clinic — Home, About, Services, Blog, Contact.",
+      "file": "smile-dent/services.html",
+      "thumb": "assets/img/smile-dent-img-1.jpg"
+    },
+    "smile-dent-blog": {
+      "name": "Blog",
+      "title": "Blog – Smile Dent",
+      "description": "Dental clinic — Home, About, Services, Blog, Contact.",
+      "file": "smile-dent/blog.html",
+      "thumb": "assets/img/smile-dent-img-1.jpg"
+    },
+    "smile-dent-contact": {
+      "name": "Contact",
+      "title": "Contact – Smile Dent",
+      "description": "Dental clinic — Home, About, Services, Blog, Contact.",
+      "file": "smile-dent/contact.html",
+      "thumb": "assets/img/smile-dent-img-1.jpg"
+    },
+    "renovation-home": {
+      "name": "Home",
+      "title": "Renovation — Home remodeling",
+      "description": "Home renovation contractor — Home, About, Services, Projects, Contact.",
+      "file": "renovation/home.html",
+      "thumb": "assets/img/renovation-img-1.jpg"
+    },
+    "renovation-about": {
+      "name": "About",
+      "title": "About – Renovation",
+      "description": "Home renovation contractor — Home, About, Services, Projects, Contact.",
+      "file": "renovation/about.html",
+      "thumb": "assets/img/renovation-img-1.jpg"
+    },
+    "renovation-services": {
+      "name": "Services",
+      "title": "Services – Renovation",
+      "description": "Home renovation contractor — Home, About, Services, Projects, Contact.",
+      "file": "renovation/services.html",
+      "thumb": "assets/img/renovation-img-1.jpg"
+    },
+    "renovation-projects": {
+      "name": "Projects",
+      "title": "Projects – Renovation",
+      "description": "Home renovation contractor — Home, About, Services, Projects, Contact.",
+      "file": "renovation/projects.html",
+      "thumb": "assets/img/renovation-img-1.jpg"
+    },
+    "renovation-contact": {
+      "name": "Contact",
+      "title": "Contact – Renovation",
+      "description": "Home renovation contractor — Home, About, Services, Projects, Contact.",
+      "file": "renovation/contact.html",
+      "thumb": "assets/img/renovation-img-1.jpg"
+    }
+  },
+  "demos": {
+    "arc-site": {
+      "title": "Ash River Collective",
+      "desc": "Complete marketing site — 8 pages (Home, Services, Finance & Accounting Talent, Virtual Assistants, About, Partners, Foundation, Contact).",
+      "categories": [
+        "Business",
+        "Marketing"
+      ],
+      "image": "assets/img/file.png",
+      "home": "index",
+      "pages": [
+        "index",
+        "services",
+        "finance-accounting-talent",
+        "virtual-assistants",
+        "about",
+        "partners",
+        "ash-river-foundation",
+        "contact"
+      ],
+      "footer": [
+        "about",
+        "partners",
+        "ash-river-foundation",
+        "contact"
+      ],
+      "logo": "logo-green.png"
+    },
+    "blogify": {
+      "title": "Blogify",
+      "desc": "Travel & lifestyle blog — Home, About, Gallery, Subscribe, Inspiration, Contact.",
+      "categories": [
+        "Blog"
+      ],
+      "image": "assets/img/blogify-img-1.png",
+      "home": "blogify-home",
+      "pages": [
+        "blogify-home",
+        "blogify-about",
+        "blogify-gallery",
+        "blogify-subscribe",
+        "blogify-inspiration",
+        "blogify-contact"
+      ],
+      "footer": [
+        "blogify-about",
+        "blogify-contact"
+      ],
+      "source": "https://solacewp.com/blogify/",
+      "kit": {
+        "colors": [
+          {
+            "_id": "blogify_brand",
+            "title": "Blogify Brand",
+            "color": "#d69346"
+          },
+          {
+            "_id": "blogify_dark",
+            "title": "Blogify Dark",
+            "color": "#b57a35"
+          },
+          {
+            "_id": "blogify_navy",
+            "title": "Blogify Navy",
+            "color": "#16233b"
+          },
+          {
+            "_id": "blogify_mint",
+            "title": "Blogify Mint",
+            "color": "#faf3ea"
+          }
+        ],
+        "fonts": [
+          {
+            "_id": "blogify_body",
+            "title": "Blogify Body",
+            "typography_typography": "custom",
+            "typography_font_family": "DM Sans",
+            "typography_font_weight": "400"
+          },
+          {
+            "_id": "blogify_heading",
+            "title": "Blogify Heading",
+            "typography_typography": "custom",
+            "typography_font_family": "Libre Baskerville",
+            "typography_font_weight": "700"
+          }
+        ]
+      }
+    },
+    "commercecraft": {
+      "title": "CommerceCraft",
+      "desc": "Furniture & home-decor store — Home, Shop, Accessories, Gift, Designers, Sale, Contact.",
+      "categories": [
+        "Ecommerce"
+      ],
+      "image": "assets/img/commercecraft-img-1.png",
+      "home": "commercecraft-home",
+      "pages": [
+        "commercecraft-home",
+        "commercecraft-shop-2",
+        "commercecraft-accessories",
+        "commercecraft-gift",
+        "commercecraft-designers",
+        "commercecraft-sale",
+        "commercecraft-contact"
+      ],
+      "footer": [
+        "commercecraft-contact"
+      ],
+      "source": "https://solacewp.com/commercecraft/",
+      "kit": {
+        "colors": [
+          {
+            "_id": "commercecraft_brand",
+            "title": "CommerceCraft Brand",
+            "color": "#756ec2"
+          },
+          {
+            "_id": "commercecraft_dark",
+            "title": "CommerceCraft Dark",
+            "color": "#160e6d"
+          },
+          {
+            "_id": "commercecraft_navy",
+            "title": "CommerceCraft Navy",
+            "color": "#14122b"
+          },
+          {
+            "_id": "commercecraft_mint",
+            "title": "CommerceCraft Mint",
+            "color": "#efecf4"
+          }
+        ],
+        "fonts": [
+          {
+            "_id": "commercecraft_body",
+            "title": "CommerceCraft Body",
+            "typography_typography": "custom",
+            "typography_font_family": "Manrope",
+            "typography_font_weight": "400"
+          },
+          {
+            "_id": "commercecraft_heading",
+            "title": "CommerceCraft Heading",
+            "typography_typography": "custom",
+            "typography_font_family": "DM Sans",
+            "typography_font_weight": "700"
+          }
+        ]
+      }
+    },
+    "retailridge": {
+      "title": "RetailRidge",
+      "desc": "Fashion retail store — Home, About, Our Brand, New Arrivals, Flash Sale, Blog, Contact.",
+      "categories": [
+        "Ecommerce",
+        "Fashion"
+      ],
+      "image": "assets/img/retailridge-img-1.png",
+      "home": "retailridge-home",
+      "pages": [
+        "retailridge-home",
+        "retailridge-about",
+        "retailridge-our-brand",
+        "retailridge-new-arrivals",
+        "retailridge-flash-sale",
+        "retailridge-blog",
+        "retailridge-contact"
+      ],
+      "footer": [
+        "retailridge-about",
+        "retailridge-contact"
+      ],
+      "source": "https://solacewp.com/retailridge/",
+      "kit": {
+        "colors": [
+          {
+            "_id": "retailridge_brand",
+            "title": "RetailRidge Brand",
+            "color": "#c67242"
+          },
+          {
+            "_id": "retailridge_dark",
+            "title": "RetailRidge Dark",
+            "color": "#6d3312"
+          },
+          {
+            "_id": "retailridge_navy",
+            "title": "RetailRidge Navy",
+            "color": "#131210"
+          },
+          {
+            "_id": "retailridge_mint",
+            "title": "RetailRidge Mint",
+            "color": "#faf1ea"
+          }
+        ],
+        "fonts": [
+          {
+            "_id": "retailridge_body",
+            "title": "RetailRidge Body",
+            "typography_typography": "custom",
+            "typography_font_family": "Quattrocento Sans",
+            "typography_font_weight": "400"
+          },
+          {
+            "_id": "retailridge_heading",
+            "title": "RetailRidge Heading",
+            "typography_typography": "custom",
+            "typography_font_family": "DM Sans",
+            "typography_font_weight": "700"
+          }
+        ]
+      }
+    },
+    "flexiweb": {
+      "title": "Flexiweb",
+      "desc": "Web design agency — Home, About, Career, Testimonials, Contact Us, Blog.",
+      "categories": [
+        "Business",
+        "Agency"
+      ],
+      "image": "assets/img/flexiweb-img-1.jpg",
+      "home": "flexiweb-home",
+      "pages": [
+        "flexiweb-home",
+        "flexiweb-about",
+        "flexiweb-career",
+        "flexiweb-testimonials",
+        "flexiweb-blog",
+        "flexiweb-contact-us"
+      ],
+      "footer": [
+        "flexiweb-about",
+        "flexiweb-contact-us"
+      ],
+      "source": "https://solacewp.com/flexiweb/",
+      "kit": {
+        "colors": [
+          {
+            "_id": "flexiweb_brand",
+            "title": "Flexiweb Brand",
+            "color": "#377dff"
+          },
+          {
+            "_id": "flexiweb_dark",
+            "title": "Flexiweb Dark",
+            "color": "#1b59f5"
+          },
+          {
+            "_id": "flexiweb_navy",
+            "title": "Flexiweb Navy",
+            "color": "#000f4d"
+          },
+          {
+            "_id": "flexiweb_mint",
+            "title": "Flexiweb Mint",
+            "color": "#eef5ff"
+          }
+        ],
+        "fonts": [
+          {
+            "_id": "flexiweb_body",
+            "title": "Flexiweb Body",
+            "typography_typography": "custom",
+            "typography_font_family": "Plus Jakarta Sans",
+            "typography_font_weight": "400"
+          },
+          {
+            "_id": "flexiweb_heading",
+            "title": "Flexiweb Heading",
+            "typography_typography": "custom",
+            "typography_font_family": "DM Sans",
+            "typography_font_weight": "700"
+          }
+        ]
+      }
+    },
+    "edinburgh": {
+      "title": "Edinburgh",
+      "desc": "Creative agency — Home, About, Pricing, Career, Contact, Blog.",
+      "categories": [
+        "Business",
+        "Agency"
+      ],
+      "image": "assets/img/edinburgh-img-1.png",
+      "home": "edinburgh-home",
+      "pages": [
+        "edinburgh-home",
+        "edinburgh-about",
+        "edinburgh-pricing",
+        "edinburgh-career",
+        "edinburgh-blog",
+        "edinburgh-contact"
+      ],
+      "footer": [
+        "edinburgh-about",
+        "edinburgh-pricing",
+        "edinburgh-contact"
+      ],
+      "source": "https://solacewp.com/edinburgh/",
+      "kit": {
+        "colors": [
+          {
+            "_id": "edinburgh_brand",
+            "title": "Edinburgh Brand",
+            "color": "#ed0033"
+          },
+          {
+            "_id": "edinburgh_dark",
+            "title": "Edinburgh Dark",
+            "color": "#c50831"
+          },
+          {
+            "_id": "edinburgh_navy",
+            "title": "Edinburgh Navy",
+            "color": "#201a1b"
+          },
+          {
+            "_id": "edinburgh_mint",
+            "title": "Edinburgh Mint",
+            "color": "#fdf0f2"
+          }
+        ],
+        "fonts": [
+          {
+            "_id": "edinburgh_body",
+            "title": "Edinburgh Body",
+            "typography_typography": "custom",
+            "typography_font_family": "Manrope",
+            "typography_font_weight": "400"
+          },
+          {
+            "_id": "edinburgh_heading",
+            "title": "Edinburgh Heading",
+            "typography_typography": "custom",
+            "typography_font_family": "Montserrat",
+            "typography_font_weight": "700"
+          }
+        ]
+      }
+    },
+    "printifix": {
+      "title": "Printifix",
+      "desc": "3D printing services — Home, About, Industries, Testimonials, Contact Us, Blog.",
+      "categories": [
+        "Business",
+        "Technology"
+      ],
+      "image": "assets/img/printifix-img-1.png",
+      "home": "printifix-home",
+      "pages": [
+        "printifix-home",
+        "printifix-about",
+        "printifix-industries",
+        "printifix-testimonials",
+        "printifix-blog",
+        "printifix-contact-us"
+      ],
+      "footer": [
+        "printifix-about",
+        "printifix-contact-us"
+      ],
+      "source": "https://solacewp.com/printifix/",
+      "kit": {
+        "colors": [
+          {
+            "_id": "printifix_brand",
+            "title": "Printifix Brand",
+            "color": "#377dff"
+          },
+          {
+            "_id": "printifix_dark",
+            "title": "Printifix Dark",
+            "color": "#1b59f5"
+          },
+          {
+            "_id": "printifix_navy",
+            "title": "Printifix Navy",
+            "color": "#1f2937"
+          },
+          {
+            "_id": "printifix_mint",
+            "title": "Printifix Mint",
+            "color": "#eef5ff"
+          }
+        ],
+        "fonts": [
+          {
+            "_id": "printifix_body",
+            "title": "Printifix Body",
+            "typography_typography": "custom",
+            "typography_font_family": "Readex Pro",
+            "typography_font_weight": "400"
+          },
+          {
+            "_id": "printifix_heading",
+            "title": "Printifix Heading",
+            "typography_typography": "custom",
+            "typography_font_family": "DM Sans",
+            "typography_font_weight": "700"
+          }
+        ]
+      }
+    },
+    "kelion": {
+      "title": "Kelion",
+      "desc": "Influencer & creator portfolio — Home, About, Services, Portfolios, Events, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+      "categories": [
+        "Portfolio",
+        "Marketing"
+      ],
+      "image": "assets/img/kelion-img-1.png",
+      "home": "kelion-home",
+      "pages": [
+        "kelion-home",
+        "kelion-about",
+        "kelion-our-services",
+        "kelion-portfolios",
+        "kelion-events",
+        "kelion-testimonials",
+        "kelion-blog",
+        "kelion-contact-us"
+      ],
+      "footer": [
+        "kelion-about",
+        "kelion-our-services",
+        "kelion-contact-us"
+      ],
+      "source": "https://solacewp.com/kelion/",
+      "kit": {
+        "colors": [
+          {
+            "_id": "kelion_brand",
+            "title": "Kelion Brand",
+            "color": "#cea503"
+          },
+          {
+            "_id": "kelion_dark",
+            "title": "Kelion Dark",
+            "color": "#a88402"
+          },
+          {
+            "_id": "kelion_navy",
+            "title": "Kelion Navy",
+            "color": "#1c1a12"
+          },
+          {
+            "_id": "kelion_mint",
+            "title": "Kelion Mint",
+            "color": "#faf5e3"
+          }
+        ],
+        "fonts": [
+          {
+            "_id": "kelion_body",
+            "title": "Kelion Body",
+            "typography_typography": "custom",
+            "typography_font_family": "Mukta",
+            "typography_font_weight": "400"
+          },
+          {
+            "_id": "kelion_heading",
+            "title": "Kelion Heading",
+            "typography_typography": "custom",
+            "typography_font_family": "DM Sans",
+            "typography_font_weight": "700"
+          }
+        ]
+      }
+    },
+    "kindora": {
+      "title": "Kindora",
+      "desc": "Nonprofit & charity — Home, About, What We Do, Disasters, Careers, Style Guide, Coming Soon, Blog, Contact Us.",
+      "categories": [
+        "Nonprofit"
+      ],
+      "image": "assets/img/kindora-img-1.png",
+      "home": "kindora-home",
+      "pages": [
+        "kindora-home",
+        "kindora-about",
+        "kindora-what-we-do",
+        "kindora-disasters",
+        "kindora-careers",
+        "kindora-blog",
+        "kindora-contact-us"
+      ],
+      "footer": [
+        "kindora-about",
+        "kindora-what-we-do",
+        "kindora-contact-us"
+      ],
+      "source": "https://solacewp.com/kindora/",
+      "kit": {
+        "colors": [
+          {
+            "_id": "kindora_brand",
+            "title": "Kindora Brand",
+            "color": "#5b67b5"
+          },
+          {
+            "_id": "kindora_dark",
+            "title": "Kindora Dark",
+            "color": "#3a4380"
+          },
+          {
+            "_id": "kindora_navy",
+            "title": "Kindora Navy",
+            "color": "#191d33"
+          },
+          {
+            "_id": "kindora_mint",
+            "title": "Kindora Mint",
+            "color": "#eef0fa"
+          }
+        ],
+        "fonts": [
+          {
+            "_id": "kindora_body",
+            "title": "Kindora Body",
+            "typography_typography": "custom",
+            "typography_font_family": "Work Sans",
+            "typography_font_weight": "400"
+          },
+          {
+            "_id": "kindora_heading",
+            "title": "Kindora Heading",
+            "typography_typography": "custom",
+            "typography_font_family": "Tinos",
+            "typography_font_weight": "700"
+          }
+        ]
+      }
+    },
+    "gymnista": {
+      "title": "Gymnista",
+      "desc": "Gym & fitness brand — Home, About Us, Collections, Shop, Membership, FAQ, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+      "categories": [
+        "Ecommerce",
+        "Sports"
+      ],
+      "image": "assets/img/gymnista-img-1.jpg",
+      "home": "gymnista-home",
+      "pages": [
+        "gymnista-home",
+        "gymnista-about-us",
+        "gymnista-all-collections",
+        "gymnista-shop-page",
+        "gymnista-membership",
+        "gymnista-faq",
+        "gymnista-blog",
+        "gymnista-contact-us"
+      ],
+      "footer": [
+        "gymnista-about-us",
+        "gymnista-faq",
+        "gymnista-contact-us"
+      ],
+      "source": "https://solacewp.com/gymnista/",
+      "kit": {
+        "colors": [
+          {
+            "_id": "gymnista_brand",
+            "title": "Gymnista Brand",
+            "color": "#1d70db"
+          },
+          {
+            "_id": "gymnista_dark",
+            "title": "Gymnista Dark",
+            "color": "#1258ad"
+          },
+          {
+            "_id": "gymnista_navy",
+            "title": "Gymnista Navy",
+            "color": "#101828"
+          },
+          {
+            "_id": "gymnista_mint",
+            "title": "Gymnista Mint",
+            "color": "#eef4fd"
+          }
+        ],
+        "fonts": [
+          {
+            "_id": "gymnista_body",
+            "title": "Gymnista Body",
+            "typography_typography": "custom",
+            "typography_font_family": "Inter",
+            "typography_font_weight": "400"
+          },
+          {
+            "_id": "gymnista_heading",
+            "title": "Gymnista Heading",
+            "typography_typography": "custom",
+            "typography_font_family": "Montserrat",
+            "typography_font_weight": "700"
+          }
+        ]
+      }
+    },
+    "nerra": {
+      "title": "Nerra",
+      "desc": "Solar energy company — Home, About Us, Services, Products, Projects, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+      "categories": [
+        "Business",
+        "Technology"
+      ],
+      "image": "assets/img/nerra-img-1.png",
+      "home": "nerra-home",
+      "pages": [
+        "nerra-home",
+        "nerra-about-us",
+        "nerra-services",
+        "nerra-products",
+        "nerra-projects",
+        "nerra-careers",
+        "nerra-blog",
+        "nerra-contact-us"
+      ],
+      "footer": [
+        "nerra-about-us",
+        "nerra-services",
+        "nerra-contact-us"
+      ],
+      "source": "https://solacewp.com/nerra/",
+      "kit": {
+        "colors": [
+          {
+            "_id": "nerra_brand",
+            "title": "Nerra Brand",
+            "color": "#0456d9"
+          },
+          {
+            "_id": "nerra_dark",
+            "title": "Nerra Dark",
+            "color": "#003ea2"
+          },
+          {
+            "_id": "nerra_navy",
+            "title": "Nerra Navy",
+            "color": "#0b1f3f"
+          },
+          {
+            "_id": "nerra_mint",
+            "title": "Nerra Mint",
+            "color": "#eef4fe"
+          }
+        ],
+        "fonts": [
+          {
+            "_id": "nerra_body",
+            "title": "Nerra Body",
+            "typography_typography": "custom",
+            "typography_font_family": "Figtree",
+            "typography_font_weight": "400"
+          },
+          {
+            "_id": "nerra_heading",
+            "title": "Nerra Heading",
+            "typography_typography": "custom",
+            "typography_font_family": "DM Sans",
+            "typography_font_weight": "700"
+          }
+        ]
+      }
+    },
+    "ossian": {
+      "title": "Ossian",
+      "desc": "Organic goods shop — Home, About Us, Shop, Testimonials, Contact Us.",
+      "categories": [
+        "Ecommerce"
+      ],
+      "image": "assets/img/ossian-img-1.jpg",
+      "home": "ossian-home",
+      "pages": [
+        "ossian-home",
+        "ossian-about-us",
+        "ossian-shop",
+        "ossian-testimonials",
+        "ossian-contact-us"
+      ],
+      "footer": [
+        "ossian-about-us",
+        "ossian-contact-us"
+      ],
+      "source": "https://solacewp.com/ossian/",
+      "kit": {
+        "colors": [
+          {
+            "_id": "ossian_brand",
+            "title": "Ossian Brand",
+            "color": "#6e9938"
+          },
+          {
+            "_id": "ossian_dark",
+            "title": "Ossian Dark",
+            "color": "#557a28"
+          },
+          {
+            "_id": "ossian_navy",
+            "title": "Ossian Navy",
+            "color": "#0b0f06"
+          },
+          {
+            "_id": "ossian_mint",
+            "title": "Ossian Mint",
+            "color": "#f0f6e8"
+          }
+        ],
+        "fonts": [
+          {
+            "_id": "ossian_body",
+            "title": "Ossian Body",
+            "typography_typography": "custom",
+            "typography_font_family": "Albert Sans",
+            "typography_font_weight": "400"
+          },
+          {
+            "_id": "ossian_heading",
+            "title": "Ossian Heading",
+            "typography_typography": "custom",
+            "typography_font_family": "DM Sans",
+            "typography_font_weight": "700"
+          }
+        ]
+      }
+    },
+    "avira": {
+      "title": "Avira",
+      "desc": "Work-life balance coaching — Home, About, Solutions, Case Studies, Find Your Coach, Pricing, FAQ, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+      "categories": [
+        "Business",
+        "Coaching"
+      ],
+      "image": "assets/img/avira-img-1.png",
+      "home": "avira-home",
+      "pages": [
+        "avira-home",
+        "avira-about",
+        "avira-solutions",
+        "avira-case-studies",
+        "avira-find-your-coach",
+        "avira-pricing",
+        "avira-faq",
+        "avira-blog",
+        "avira-contact-us"
+      ],
+      "footer": [
+        "avira-about",
+        "avira-pricing",
+        "avira-faq",
+        "avira-contact-us"
+      ],
+      "source": "https://solacewp.com/avira/",
+      "kit": {
+        "colors": [
+          {
+            "_id": "avira_brand",
+            "title": "Avira Brand",
+            "color": "#a37d66"
+          },
+          {
+            "_id": "avira_dark",
+            "title": "Avira Dark",
+            "color": "#976f57"
+          },
+          {
+            "_id": "avira_navy",
+            "title": "Avira Navy",
+            "color": "#26211d"
+          },
+          {
+            "_id": "avira_mint",
+            "title": "Avira Mint",
+            "color": "#f7f2ee"
+          }
+        ],
+        "fonts": [
+          {
+            "_id": "avira_body",
+            "title": "Avira Body",
+            "typography_typography": "custom",
+            "typography_font_family": "Manrope",
+            "typography_font_weight": "400"
+          },
+          {
+            "_id": "avira_heading",
+            "title": "Avira Heading",
+            "typography_typography": "custom",
+            "typography_font_family": "Radio Canada Big",
+            "typography_font_weight": "700"
+          }
+        ]
+      }
+    },
+    "consultant": {
+      "title": "Consultant",
+      "desc": "Business consulting — Home, About, Services, Blog, Contact.",
+      "categories": [
+        "Business"
+      ],
+      "image": "assets/img/consultant-img-1.jpg",
+      "home": "consultant-home",
+      "pages": [
+        "consultant-home",
+        "consultant-about",
+        "consultant-services",
+        "consultant-blog",
+        "consultant-contact"
+      ],
+      "footer": [
+        "consultant-about",
+        "consultant-services",
+        "consultant-contact"
+      ],
+      "source": "https://startersites.io/blocksy/consultant/",
+      "kit": {
+        "colors": [
+          {
+            "_id": "consultant_brand",
+            "title": "Consultant Brand",
+            "color": "#2563eb"
+          },
+          {
+            "_id": "consultant_dark",
+            "title": "Consultant Dark",
+            "color": "#1e40af"
+          },
+          {
+            "_id": "consultant_navy",
+            "title": "Consultant Navy",
+            "color": "#0f1c33"
+          },
+          {
+            "_id": "consultant_mint",
+            "title": "Consultant Mint",
+            "color": "#eef4fe"
+          }
+        ],
+        "fonts": [
+          {
+            "_id": "consultant_body",
+            "title": "Consultant Body",
+            "typography_typography": "custom",
+            "typography_font_family": "Public Sans",
+            "typography_font_weight": "400"
+          },
+          {
+            "_id": "consultant_heading",
+            "title": "Consultant Heading",
+            "typography_typography": "custom",
+            "typography_font_family": "DM Sans",
+            "typography_font_weight": "700"
+          }
+        ]
+      }
+    },
+    "smile-dent": {
+      "title": "Smile Dent",
+      "desc": "Dental clinic — Home, About, Services, Blog, Contact.",
+      "categories": [
+        "Health"
+      ],
+      "image": "assets/img/smile-dent-img-1.jpg",
+      "home": "smile-dent-home",
+      "pages": [
+        "smile-dent-home",
+        "smile-dent-about",
+        "smile-dent-services",
+        "smile-dent-blog",
+        "smile-dent-contact"
+      ],
+      "footer": [
+        "smile-dent-about",
+        "smile-dent-services",
+        "smile-dent-contact"
+      ],
+      "source": "https://startersites.io/blocksy/smile-dent/",
+      "kit": {
+        "colors": [
+          {
+            "_id": "smile-dent_brand",
+            "title": "Smile Dent Brand",
+            "color": "#0ea5e9"
+          },
+          {
+            "_id": "smile-dent_dark",
+            "title": "Smile Dent Dark",
+            "color": "#0284c7"
+          },
+          {
+            "_id": "smile-dent_navy",
+            "title": "Smile Dent Navy",
+            "color": "#0c2432"
+          },
+          {
+            "_id": "smile-dent_mint",
+            "title": "Smile Dent Mint",
+            "color": "#eef9ff"
+          }
+        ],
+        "fonts": [
+          {
+            "_id": "smile-dent_body",
+            "title": "Smile Dent Body",
+            "typography_typography": "custom",
+            "typography_font_family": "Public Sans",
+            "typography_font_weight": "400"
+          },
+          {
+            "_id": "smile-dent_heading",
+            "title": "Smile Dent Heading",
+            "typography_typography": "custom",
+            "typography_font_family": "DM Sans",
+            "typography_font_weight": "700"
+          }
+        ]
+      }
+    },
+    "renovation": {
+      "title": "Renovation",
+      "desc": "Home renovation contractor — Home, About, Services, Projects, Contact.",
+      "categories": [
+        "Business",
+        "Construction"
+      ],
+      "image": "assets/img/renovation-img-1.jpg",
+      "home": "renovation-home",
+      "pages": [
+        "renovation-home",
+        "renovation-about",
+        "renovation-services",
+        "renovation-projects",
+        "renovation-contact"
+      ],
+      "footer": [
+        "renovation-about",
+        "renovation-services",
+        "renovation-contact"
+      ],
+      "source": "https://startersites.io/blocksy/renovation/",
+      "kit": {
+        "colors": [
+          {
+            "_id": "renovation_brand",
+            "title": "Renovation Brand",
+            "color": "#ea8a21"
+          },
+          {
+            "_id": "renovation_dark",
+            "title": "Renovation Dark",
+            "color": "#c16f10"
+          },
+          {
+            "_id": "renovation_navy",
+            "title": "Renovation Navy",
+            "color": "#1f1a14"
+          },
+          {
+            "_id": "renovation_mint",
+            "title": "Renovation Mint",
+            "color": "#fdf4e8"
+          }
+        ],
+        "fonts": [
+          {
+            "_id": "renovation_body",
+            "title": "Renovation Body",
+            "typography_typography": "custom",
+            "typography_font_family": "Public Sans",
+            "typography_font_weight": "400"
+          },
+          {
+            "_id": "renovation_heading",
+            "title": "Renovation Heading",
+            "typography_typography": "custom",
+            "typography_font_family": "DM Sans",
+            "typography_font_weight": "700"
+          }
+        ]
+      }
+    }
+  }
+}
