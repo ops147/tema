@@ -3,78 +3,350 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>tema — ARC Starter Templates payload</title>
+    <title>tema — ARC Starter Templates</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
     <style>
+      :root {
+        --bg: #0b0f14;
+        --surface: #12181f;
+        --surface-2: #18212b;
+        --border: #243040;
+        --text: #e8edf2;
+        --muted: #8b98a5;
+        --accent: #4ade80;
+        --accent-2: #38bdf8;
+        --radius: 14px;
+      }
       * { box-sizing: border-box; margin: 0; }
-      body { font-family: ui-sans-serif, system-ui, sans-serif; background: #f6f7f8; color: #1d2327; }
-      header { background: #142a1e; color: #fff; padding: 2rem 1.5rem; }
-      header .wrap, main { max-width: 1100px; margin: 0 auto; }
-      h1 { font-size: 1.4rem; font-weight: 700; }
-      header p { margin-top: .4rem; color: #b8c4bd; font-size: .9rem; max-width: 60ch; }
-      code { background: #e8eaec; border-radius: 4px; padding: .1em .4em; font-size: .85em; }
-      header code { background: #234437; color: #cdebd8; }
-      .setup { background: #fff; border: 1px solid #e2e5e8; border-radius: 8px; padding: 1rem 1.25rem; margin: 1.5rem 0; font-size: .9rem; line-height: 1.7; }
-      .setup b { font-weight: 600; }
-      .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.25rem; padding-bottom: 3rem; }
-      .card { background: #fff; border: 1px solid #e2e5e8; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; }
-      .card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; object-position: top; display: block; background: #e8eaec; }
-      .card .body { padding: .9rem 1rem 1rem; display: flex; flex-direction: column; gap: .5rem; flex: 1; }
-      .card h2 { font-size: 1rem; font-weight: 650; }
-      .card .desc { font-size: .8rem; color: #5c666e; line-height: 1.45; flex: 1; }
+      html { scroll-behavior: smooth; }
+      body {
+        font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+      }
+      a { color: inherit; }
+      code { font-family: "JetBrains Mono", ui-monospace, monospace; }
+
+      /* ---------- ambient background ---------- */
+      .glow { position: fixed; inset: 0; z-index: -1; overflow: hidden; }
+      .glow::before, .glow::after {
+        content: ""; position: absolute; width: 55vw; height: 55vw;
+        border-radius: 50%; filter: blur(120px); opacity: .14;
+      }
+      .glow::before { background: #22c55e; top: -25vw; left: -15vw; }
+      .glow::after { background: #0ea5e9; top: -20vw; right: -20vw; }
+
+      /* ---------- header ---------- */
+      header {
+        position: sticky; top: 0; z-index: 10;
+        backdrop-filter: blur(12px);
+        background: rgba(11, 15, 20, .72);
+        border-bottom: 1px solid var(--border);
+      }
+      .nav {
+        max-width: 1180px; margin: 0 auto; padding: .8rem 1.5rem;
+        display: flex; align-items: center; gap: .75rem;
+      }
+      .logo {
+        width: 30px; height: 30px; border-radius: 8px;
+        background: linear-gradient(135deg, var(--accent), var(--accent-2));
+        display: grid; place-items: center;
+        font-weight: 800; font-size: .8rem; color: #06110a;
+      }
+      .nav .name { font-weight: 700; letter-spacing: -.01em; }
+      .nav .spacer { flex: 1; }
+      .nav a.btn {
+        font-size: .8rem; font-weight: 600; text-decoration: none;
+        padding: .45rem .9rem; border-radius: 8px;
+        border: 1px solid var(--border); color: var(--muted);
+        transition: .2s;
+      }
+      .nav a.btn:hover { color: var(--text); border-color: var(--muted); }
+
+      /* ---------- hero ---------- */
+      .hero { max-width: 1180px; margin: 0 auto; padding: 4.5rem 1.5rem 2.5rem; }
+      .eyebrow {
+        display: inline-flex; align-items: center; gap: .5rem;
+        font-size: .75rem; font-weight: 600; letter-spacing: .08em;
+        text-transform: uppercase; color: var(--accent);
+        border: 1px solid rgba(74, 222, 128, .3); border-radius: 999px;
+        padding: .35rem .85rem; margin-bottom: 1.4rem;
+      }
+      .eyebrow::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+      .hero h1 {
+        font-size: clamp(2.2rem, 5.5vw, 3.6rem); font-weight: 800;
+        letter-spacing: -.03em; line-height: 1.08; max-width: 16ch;
+      }
+      .hero h1 .grad {
+        background: linear-gradient(90deg, var(--accent), var(--accent-2));
+        -webkit-background-clip: text; background-clip: text; color: transparent;
+      }
+      .hero p { margin-top: 1.1rem; color: var(--muted); font-size: 1.02rem; max-width: 58ch; }
+      .stats { display: flex; gap: 2.2rem; margin-top: 2rem; flex-wrap: wrap; }
+      .stat b { display: block; font-size: 1.5rem; font-weight: 800; letter-spacing: -.02em; }
+      .stat span { font-size: .78rem; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; }
+
+      /* ---------- setup card ---------- */
+      .setup {
+        max-width: 1180px; margin: 0 auto 1rem; padding: 0 1.5rem;
+      }
+      .setup-inner {
+        background: linear-gradient(180deg, var(--surface), var(--surface-2));
+        border: 1px solid var(--border); border-radius: var(--radius);
+        padding: 1.4rem 1.5rem;
+      }
+      .setup h2 { font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); margin-bottom: .9rem; }
+      .urlrow { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; padding: .55rem 0; }
+      .urlrow .label { font-size: .8rem; color: var(--muted); width: 150px; }
+      .urlrow code {
+        flex: 1; min-width: 260px; font-size: .82rem;
+        background: #0b1118; border: 1px solid var(--border);
+        border-radius: 8px; padding: .5rem .8rem; color: #a8e6c5;
+        overflow-x: auto; white-space: nowrap;
+      }
+      .copy {
+        cursor: pointer; border: 1px solid var(--border); background: transparent;
+        color: var(--muted); font: 600 .75rem "Inter", sans-serif;
+        border-radius: 8px; padding: .45rem .8rem; transition: .2s;
+      }
+      .copy:hover { color: var(--text); border-color: var(--muted); }
+      .copy.done { color: var(--accent); border-color: var(--accent); }
+      .setup .hint { margin-top: .7rem; font-size: .8rem; color: var(--muted); }
+      .setup .hint b { color: var(--text); font-weight: 600; }
+
+      /* ---------- toolbar ---------- */
+      .toolbar {
+        max-width: 1180px; margin: 2.6rem auto 1.4rem; padding: 0 1.5rem;
+        display: flex; flex-wrap: wrap; gap: .7rem; align-items: center;
+      }
+      .search {
+        flex: 1; min-width: 220px; display: flex; align-items: center; gap: .55rem;
+        background: var(--surface); border: 1px solid var(--border);
+        border-radius: 10px; padding: .6rem .9rem;
+      }
+      .search svg { flex-shrink: 0; stroke: var(--muted); }
+      .search input {
+        flex: 1; background: none; border: 0; outline: 0;
+        color: var(--text); font: 400 .9rem "Inter", sans-serif;
+      }
+      .search input::placeholder { color: var(--muted); }
+      .chips { display: flex; gap: .45rem; flex-wrap: wrap; }
+      .chip {
+        cursor: pointer; border: 1px solid var(--border); border-radius: 999px;
+        background: var(--surface); color: var(--muted);
+        font: 600 .76rem "Inter", sans-serif; padding: .45rem .95rem;
+        transition: .18s;
+      }
+      .chip:hover { color: var(--text); border-color: var(--muted); }
+      .chip.on {
+        background: var(--accent); border-color: var(--accent);
+        color: #06110a;
+      }
+
+      /* ---------- grid ---------- */
+      .grid {
+        max-width: 1180px; margin: 0 auto; padding: 0 1.5rem 4.5rem;
+        display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 1.4rem;
+      }
+      .card {
+        background: var(--surface); border: 1px solid var(--border);
+        border-radius: var(--radius); overflow: hidden;
+        display: flex; flex-direction: column;
+        transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+      }
+      .card:hover {
+        transform: translateY(-4px); border-color: #3a4b60;
+        box-shadow: 0 18px 40px -18px rgba(0, 0, 0, .7);
+      }
+      .thumb { position: relative; aspect-ratio: 16/9; overflow: hidden; background: var(--surface-2); }
+      .thumb img {
+        width: 100%; height: 100%; object-fit: cover; object-position: top;
+        display: block; transition: transform .5s ease;
+      }
+      .card:hover .thumb img { transform: scale(1.04); }
+      .thumb .pages-badge {
+        position: absolute; right: .7rem; bottom: .7rem;
+        font-size: .68rem; font-weight: 700;
+        background: rgba(6, 12, 9, .75); color: var(--accent);
+        border: 1px solid rgba(74, 222, 128, .35);
+        backdrop-filter: blur(6px);
+        border-radius: 999px; padding: .25rem .65rem;
+      }
+      .body { padding: 1.05rem 1.15rem 1.15rem; display: flex; flex-direction: column; gap: .55rem; flex: 1; }
+      .body h2 { font-size: 1.05rem; font-weight: 700; letter-spacing: -.015em; }
+      .desc { font-size: .8rem; color: var(--muted); line-height: 1.5; flex: 1; }
       .cats { display: flex; gap: .35rem; flex-wrap: wrap; }
-      .cats span { font-size: .68rem; background: #eef1f3; color: #4b565f; border-radius: 999px; padding: .15em .6em; }
-      .pages { display: flex; gap: .4rem .8rem; flex-wrap: wrap; border-top: 1px solid #eef1f3; padding-top: .6rem; margin-top: .2rem; }
-      .pages a { font-size: .78rem; color: #2271b1; text-decoration: none; }
-      .pages a:hover { text-decoration: underline; }
-      main h3 { font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; color: #8a949c; margin: 0 0 .9rem; }
-      .err { padding: 2rem; color: #b32d2e; }
+      .cats span {
+        font-size: .66rem; font-weight: 600; letter-spacing: .02em;
+        background: rgba(56, 189, 248, .1); color: #7dd3fc;
+        border: 1px solid rgba(56, 189, 248, .25);
+        border-radius: 999px; padding: .2em .65em;
+      }
+      .pages {
+        display: flex; gap: .15rem .9rem; flex-wrap: wrap;
+        border-top: 1px solid var(--border); padding-top: .75rem; margin-top: .35rem;
+      }
+      .pages a {
+        font-size: .78rem; font-weight: 500; color: var(--muted);
+        text-decoration: none; transition: color .15s;
+      }
+      .pages a:hover { color: var(--accent); }
+      .pages a::after { content: " ↗"; font-size: .68em; opacity: 0; transition: opacity .15s; }
+      .pages a:hover::after { opacity: 1; }
+
+      .empty, .err { grid-column: 1 / -1; padding: 3rem 1rem; text-align: center; color: var(--muted); }
+      .err { color: #f87171; }
+
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 1.6rem 1.5rem; text-align: center;
+        font-size: .78rem; color: var(--muted);
+      }
+      footer code { color: #a8e6c5; }
     </style>
   </head>
   <body>
+    <div class="glow"></div>
+
     <header>
-      <div class="wrap">
-        <h1>tema</h1>
-        <p>Remote payload for the <strong>ARC Starter Templates</strong> WordPress plugin — demo manifest, template documents and images, downloaded on demand at import time.</p>
-      </div>
+      <nav class="nav">
+        <div class="logo">T</div>
+        <span class="name">tema</span>
+        <span class="spacer"></span>
+        <a class="btn" href="https://github.com/ops147/tema" target="_blank" rel="noopener">GitHub ↗</a>
+      </nav>
     </header>
-    <main>
-      <div class="setup">
-        <b>Point the plugin at this repo:</b> in wp-admin, <b>Starter Templates → Templates repository → Remote base URL</b>:
-        <br /><code id="raw-url">https://raw.githubusercontent.com/ops147/tema/main</code>
-        <br />This Pages mirror works too: <code id="pages-url"></code>
-        <br />Leave the field empty to use the templates bundled with the plugin.
+
+    <section class="hero">
+      <span class="eyebrow">ARC Starter Templates</span>
+      <h1>Remote template library, <span class="grad">served by GitHub Pages</span></h1>
+      <p>
+        Demo manifest, template documents and images pulled on demand by the
+        <strong>ARC Starter Templates</strong> WordPress plugin — so the plugin stays
+        lightweight and this repo stays the single source of truth.
+      </p>
+      <div class="stats" id="stats"></div>
+    </section>
+
+    <section class="setup">
+      <div class="setup-inner">
+        <h2>Point the plugin at this repo</h2>
+        <div class="urlrow">
+          <span class="label">Remote base URL</span>
+          <code id="raw-url">https://raw.githubusercontent.com/ops147/tema/main</code>
+          <button class="copy" data-copy="https://raw.githubusercontent.com/ops147/tema/main">Copy</button>
+        </div>
+        <div class="urlrow">
+          <span class="label">Pages mirror</span>
+          <code id="pages-url"></code>
+          <button class="copy" id="copy-pages">Copy</button>
+        </div>
+        <p class="hint">
+          wp-admin → <b>Starter Templates → Templates repository → Remote base URL</b>.
+          Repo is public — leave the access token empty.
+        </p>
       </div>
-      <h3>Demos — click any page to preview</h3>
-      <div class="grid" id="grid"><div class="err">Loading manifest…</div></div>
-    </main>
+    </section>
+
+    <div class="toolbar">
+      <div class="search">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="q" type="search" placeholder="Search demos…" />
+      </div>
+      <div class="chips" id="chips"></div>
+    </div>
+
+    <main class="grid" id="grid"><div class="empty">Loading manifest…</div></main>
+
+    <footer>
+      Powered by <code>templates/manifest.json</code> — previews apply the plugin's
+      <code>Img/ · Css/ · Js/</code> rewrites in-browser.
+    </footer>
+
     <script>
       const root = new URL(".", location.href).href.replace(/\/$/, "");
+      const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
       document.getElementById("pages-url").textContent = root;
-      const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+      document.getElementById("copy-pages").dataset.copy = root;
+
+      for (const btn of document.querySelectorAll(".copy")) {
+        btn.addEventListener("click", async () => {
+          try { await navigator.clipboard.writeText(btn.dataset.copy); } catch (e) {}
+          btn.textContent = "Copied ✓"; btn.classList.add("done");
+          setTimeout(() => { btn.textContent = "Copy"; btn.classList.remove("done"); }, 1600);
+        });
+      }
+
+      let DEMOS = [];
+      let activeCat = "All";
+      const grid = document.getElementById("grid");
+      const chipsEl = document.getElementById("chips");
+
+      function render() {
+        const q = document.getElementById("q").value.trim().toLowerCase();
+        const shown = DEMOS.filter(([, d]) => {
+          const catOk = activeCat === "All" || (d.categories || []).includes(activeCat);
+          const qOk = !q || (d.title + " " + (d.desc || "")).toLowerCase().includes(q);
+          return catOk && qOk;
+        });
+        grid.innerHTML = "";
+        if (!shown.length) { grid.innerHTML = '<div class="empty">No demos match.</div>'; return; }
+        for (const [id, d] of shown) grid.appendChild(card(id, d));
+      }
+
+      function card(id, d) {
+        const el = document.createElement("article");
+        el.className = "card";
+        const links = (d._pageLinks || []).join("");
+        el.innerHTML =
+          '<div class="thumb">' + (d.image ? '<img loading="lazy" src="' + esc(d.image) + '" alt="" />' : "") +
+          '<span class="pages-badge">' + (d.pages || []).length + " pages</span></div>" +
+          '<div class="body"><h2>' + esc(d.title || id) + "</h2>" +
+          '<p class="desc">' + esc(d.desc || "") + "</p>" +
+          '<div class="cats">' + (d.categories || []).map((c) => "<span>" + esc(c) + "</span>").join("") + "</div>" +
+          '<nav class="pages">' + links + "</nav></div>";
+        return el;
+      }
+
       fetch("templates/manifest.json")
         .then((r) => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
         .then((m) => {
-          const demos = m.demos || {}, tpl = m.templates || {};
-          const grid = document.getElementById("grid");
-          grid.innerHTML = "";
-          for (const [id, d] of Object.entries(demos)) {
-            const links = (d.pages || [])
+          const tpl = m.templates || {};
+          DEMOS = Object.entries(m.demos || {});
+          let pages = 0;
+          for (const [, d] of DEMOS) {
+            d._pageLinks = (d.pages || [])
               .filter((p) => tpl[p])
-              .map((p) => '<a href="preview.html?f=templates/' + encodeURIComponent(tpl[p].file) + '">' + esc(tpl[p].name || p) + "</a>")
-              .join("");
-            const card = document.createElement("article");
-            card.className = "card";
-            card.innerHTML =
-              (d.image ? '<img loading="lazy" src="' + esc(d.image) + '" alt="" />' : "") +
-              '<div class="body"><h2>' + esc(d.title || id) + "</h2>" +
-              '<p class="desc">' + esc(d.desc || "") + "</p>" +
-              '<div class="cats">' + (d.categories || []).map((c) => "<span>" + esc(c) + "</span>").join("") + "</div>" +
-              '<nav class="pages">' + links + "</nav></div>";
-            grid.appendChild(card);
+              .map((p) => '<a href="preview.html?f=templates/' + encodeURIComponent(tpl[p].file) + '">' + esc(tpl[p].name || p) + "</a>");
+            pages += (d.pages || []).length;
           }
-          if (!grid.children.length) grid.innerHTML = '<div class="err">No demos found in the manifest.</div>';
+          document.getElementById("stats").innerHTML =
+            '<div class="stat"><b>' + DEMOS.length + "</b><span>demos</span></div>" +
+            '<div class="stat"><b>' + pages + "</b><span>pages</span></div>" +
+            '<div class="stat"><b>' + Object.keys(tpl).length + "</b><span>templates</span></div>";
+
+          const cats = ["All", ...new Set(DEMOS.flatMap(([, d]) => d.categories || []))];
+          chipsEl.innerHTML = "";
+          for (const c of cats) {
+            const b = document.createElement("button");
+            b.className = "chip" + (c === "All" ? " on" : "");
+            b.textContent = c;
+            b.addEventListener("click", () => {
+              activeCat = c;
+              for (const x of chipsEl.children) x.classList.toggle("on", x === b);
+              render();
+            });
+            chipsEl.appendChild(b);
+          }
+          document.getElementById("q").addEventListener("input", render);
+          render();
         })
-        .catch((e) => { document.getElementById("grid").innerHTML = '<div class="err">Could not load templates/manifest.json — ' + esc(e.message) + "</div>"; });
+        .catch((e) => { grid.innerHTML = '<div class="err">Could not load templates/manifest.json — ' + esc(e.message) + "</div>"; });
     </script>
   </body>
 </html>
