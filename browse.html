@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browse templates — tema</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-navy: #000f44;
+        --color-ink: #555555;
+        --color-line: #dedede;
+        --color-blue: #1d70db;
+        --color-blue-d: #155cb8;
+        --color-soft: #f5f7fb;
+        --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+        --font-mono: "JetBrains Mono", ui-monospace, monospace;
+      }
+      body { @apply bg-white text-ink font-sans antialiased; }
+      code { @apply font-mono; }
+    </style>
+  </head>
+  <body>
+
+    <!-- ============ header ============ -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-line">
+      <nav class="max-w-6xl mx-auto px-6 py-3.5 flex items-center gap-3">
+        <a href="index.html" class="flex items-center gap-2.5 no-underline">
+          <span class="w-8 h-8 rounded-lg bg-blue grid place-items-center font-extrabold text-sm text-white">T</span>
+          <span class="font-bold tracking-tight text-navy">tema</span>
+        </a>
+        <span class="flex-1"></span>
+        <a href="index.html" class="hidden sm:block text-sm font-medium text-ink hover:text-blue no-underline transition">Home</a>
+        <a href="browse.html" class="hidden sm:block text-sm font-semibold text-blue no-underline transition ml-6">Browse Template</a>
+        <a href="index.html#setup" class="hidden sm:block text-sm font-medium text-ink hover:text-blue no-underline transition ml-6">Setup</a>
+        <a href="https://github.com/ops147/tema" target="_blank" rel="noopener"
+           class="ml-6 text-sm font-semibold bg-navy hover:bg-blue text-white rounded-lg px-4 py-2 no-underline transition">GitHub ↗</a>
+      </nav>
+    </header>
+
+    <!-- ============ page head ============ -->
+    <section class="bg-soft border-b border-line">
+      <div class="max-w-6xl mx-auto px-6 py-12 text-center">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-navy tracking-tight">Browse Starter Templates</h1>
+        <p class="mt-3 text-ink/90">Pick your layout — <span id="count-label">…</span> ready-to-import demos.</p>
+        <div class="mt-6 max-w-md mx-auto flex items-center gap-2.5 bg-white border border-line rounded-xl px-3.5 py-2.5 focus-within:border-blue transition">
+          <svg class="shrink-0 stroke-ink/50" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input id="q" type="search" placeholder="Search layouts…" class="flex-1 bg-transparent outline-none text-sm text-navy placeholder:text-ink/50" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ body: sidebar + grid ============ -->
+    <div class="max-w-6xl mx-auto px-6 py-10 flex gap-8 items-start">
+
+      <aside class="w-52 shrink-0 max-md:hidden">
+        <h3 class="text-xs font-bold uppercase tracking-widest text-ink/60 mb-4">Categories</h3>
+        <form id="cats" class="flex flex-col gap-2.5"></form>
+      </aside>
+
+      <main class="flex-1 min-w-0">
+        <div id="grid" class="grid sm:grid-cols-2 xl:grid-cols-3 gap-6">
+          <div class="col-span-full py-12 text-center text-ink/60">Loading manifest…</div>
+        </div>
+      </main>
+    </div>
+
+    <footer class="border-t border-line px-6 py-6 text-center text-xs text-ink/70">
+      tema — remote payload for ARC Starter Templates ·
+      <a class="text-blue hover:underline" href="index.html">Home</a> ·
+      <a class="text-blue hover:underline" href="https://github.com/ops147/tema" target="_blank" rel="noopener">GitHub</a> ·
+      <a class="text-blue hover:underline" href="templates/manifest.json">manifest.json</a>
+    </footer>
+
+    <!-- ============ demo viewer ============ -->
+    <div id="modal" class="fixed inset-0 z-50 hidden">
+      <div class="absolute inset-0 bg-navy/60 backdrop-blur-sm" data-close></div>
+      <div class="absolute inset-[2.5vh_2vw] max-md:inset-0 bg-white border border-line max-md:border-0 rounded-2xl max-md:rounded-none overflow-hidden flex shadow-2xl">
+        <aside class="w-60 shrink-0 max-md:hidden flex flex-col border-r border-line bg-soft">
+          <div class="px-4 pt-4 pb-3.5 border-b border-line bg-white">
+            <h2 id="m-title" class="text-base font-bold tracking-tight text-navy"></h2>
+            <div id="m-cats" class="flex flex-wrap gap-1.5 mt-2.5"></div>
+          </div>
+          <nav id="m-pages" class="overflow-y-auto p-2.5 flex flex-col gap-0.5"></nav>
+          <div class="mt-auto px-4 py-3.5 border-t border-line text-[11px] text-ink/70 leading-relaxed bg-white">
+            Import with the plugin: <b class="text-navy">ARC Templates → Library</b> in wp-admin, or browse every page here first.
+          </div>
+        </aside>
+        <div class="flex-1 flex flex-col min-w-0">
+          <div class="flex items-center gap-3 px-3.5 py-2 border-b border-line bg-white">
+            <span id="m-file" class="flex-1 min-w-0 truncate font-mono text-[11px] text-ink/60"></span>
+            <div class="flex gap-1 bg-soft border border-line rounded-lg p-1">
+              <button class="dev on text-[11px] font-semibold px-2.5 py-1 rounded-md transition cursor-pointer border-0 bg-transparent" data-dev="desktop">Desktop</button>
+              <button class="dev text-[11px] font-semibold px-2.5 py-1 rounded-md transition cursor-pointer border-0 bg-transparent" data-dev="tablet">Tablet</button>
+              <button class="dev text-[11px] font-semibold px-2.5 py-1 rounded-md transition cursor-pointer border-0 bg-transparent" data-dev="mobile">Mobile</button>
+            </div>
+            <a id="m-open" href="#" target="_blank" rel="noopener"
+               class="text-[11px] font-semibold px-3 py-1.5 rounded-lg border border-line text-ink hover:text-blue hover:border-blue transition no-underline">Open ↗</a>
+            <button data-close title="Close" class="cursor-pointer border-0 bg-transparent text-ink/60 hover:text-navy hover:bg-soft text-base px-2 py-1 rounded-md transition">✕</button>
+          </div>
+          <div class="flex-1 overflow-auto flex justify-center bg-soft p-4 max-md:p-0">
+            <div id="m-wrap" class="w-full h-full transition-[width] duration-300">
+              <iframe id="m-frame" title="Template preview" class="w-full h-full border border-line rounded-xl max-md:rounded-none max-md:border-0 bg-white shadow-lg"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+      let DEMOS = {}, TPL = {};
+      const activeCats = new Set();
+      const grid = document.getElementById("grid");
+      const catsEl = document.getElementById("cats");
+
+      /* ---------- demo viewer ---------- */
+      const modal = document.getElementById("modal");
+      const frame = document.getElementById("m-frame");
+      const wrap = document.getElementById("m-wrap");
+      const DEV_W = { desktop: "w-full", tablet: "w-[768px] max-w-full", mobile: "w-[390px] max-w-full" };
+
+      function openDemo(id, pageSlug) {
+        const d = DEMOS[id];
+        if (!d) return;
+        if (!pageSlug) pageSlug = d.home || (d.pages || [])[0];
+        document.getElementById("m-title").textContent = d.title || id;
+        document.getElementById("m-cats").innerHTML =
+          (d.categories || []).map((c) =>
+            '<span class="text-[10px] font-semibold bg-blue/10 text-blue border border-blue/25 rounded-full px-2.5 py-0.5">' + esc(c) + "</span>").join("");
+        const nav = document.getElementById("m-pages");
+        nav.innerHTML = "";
+        for (const p of d.pages || []) {
+          if (!TPL[p]) continue;
+          const b = document.createElement("button");
+          const on = p === pageSlug;
+          b.className = "text-left cursor-pointer border-0 rounded-lg px-2.5 py-2 text-[13px] font-medium transition flex items-center gap-2 " +
+            (on ? "bg-blue/10 text-blue" : "bg-transparent text-ink hover:bg-white hover:text-navy");
+          b.innerHTML = (on ? '<span class="w-1.5 h-1.5 rounded-full bg-blue shrink-0"></span>' : "") + esc(TPL[p].name || p);
+          b.addEventListener("click", () => openDemo(id, p));
+          nav.appendChild(b);
+        }
+        const file = TPL[pageSlug] ? TPL[pageSlug].file : "";
+        document.getElementById("m-file").textContent = "templates/" + file;
+        frame.src = "preview.html?f=templates/" + encodeURIComponent(file) + "&embed=1";
+        document.getElementById("m-open").href = "preview.html?f=templates/" + encodeURIComponent(file);
+        modal.classList.replace("hidden", "block");
+        document.body.classList.add("overflow-hidden");
+      }
+      function closeDemo() {
+        modal.classList.replace("block", "hidden");
+        document.body.classList.remove("overflow-hidden");
+        frame.src = "about:blank";
+      }
+      modal.addEventListener("click", (e) => { if (e.target.dataset.close !== undefined) closeDemo(); });
+      document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeDemo(); });
+      document.querySelectorAll(".dev").forEach((b) => b.addEventListener("click", () => {
+        document.querySelectorAll(".dev").forEach((x) => {
+          const on = x === b;
+          x.classList.toggle("bg-white", on);
+          x.classList.toggle("text-blue", on);
+          x.classList.toggle("shadow-sm", on);
+          x.classList.toggle("text-ink", !on);
+        });
+        wrap.className = "h-full transition-[width] duration-300 " + DEV_W[b.dataset.dev];
+      }));
+      document.querySelectorAll(".dev").forEach((x) => x.classList.add("text-ink"));
+      document.querySelector(".dev.on").classList.replace("text-ink", "text-blue");
+      document.querySelector(".dev.on").classList.add("bg-white", "shadow-sm");
+
+      /* ---------- library grid ---------- */
+      function render() {
+        const q = document.getElementById("q").value.trim().toLowerCase();
+        const shown = Object.entries(DEMOS).filter(([, d]) => {
+          const catOk = !activeCats.size || (d.categories || []).some((c) => activeCats.has(c));
+          const qOk = !q || (d.title + " " + (d.desc || "")).toLowerCase().includes(q);
+          return catOk && qOk;
+        });
+        grid.innerHTML = "";
+        document.getElementById("count-label").textContent = shown.length;
+        if (!shown.length) { grid.innerHTML = '<div class="col-span-full py-12 text-center text-ink/60">No demos match.</div>'; return; }
+        for (const [id, d] of shown) grid.appendChild(card(id, d));
+      }
+
+      function card(id, d) {
+        const el = document.createElement("article");
+        el.className = "group bg-white border border-line rounded-2xl overflow-hidden flex flex-col transition duration-300 hover:-translate-y-1 hover:border-blue hover:shadow-lg";
+        el.innerHTML =
+          '<div class="thumb relative aspect-[16/10] overflow-hidden bg-soft cursor-pointer">' +
+            (d.image ? '<img loading="lazy" src="' + esc(d.image) + '" alt="" class="w-full h-full object-cover object-top transition duration-500 group-hover:scale-105" />' : "") +
+            '<div class="absolute inset-0 grid place-items-center bg-navy/0 group-hover:bg-navy/40 transition">' +
+              '<span class="opacity-0 translate-y-1.5 group-hover:opacity-100 group-hover:translate-y-0 transition bg-white text-navy text-xs font-bold rounded-full px-5 py-2.5 shadow-xl">Preview site</span>' +
+            "</div>" +
+          "</div>" +
+          '<div class="flex flex-col gap-2 flex-1 px-5 pt-4 pb-5">' +
+            '<div class="flex items-center gap-2">' +
+              '<h2 class="text-base font-bold tracking-tight text-navy cursor-pointer hover:text-blue transition">' + esc(d.title || id) + "</h2>" +
+              '<span class="text-[10px] font-bold uppercase tracking-wide bg-blue/10 text-blue rounded-full px-2 py-0.5">Free</span>' +
+            "</div>" +
+            '<p class="text-xs leading-relaxed text-ink/80 line-clamp-3"><strong class="text-navy">Ideal for: </strong>' + esc(d.desc || "") + "</p>" +
+          "</div>";
+        el.querySelector(".thumb").addEventListener("click", () => openDemo(id));
+        el.querySelector("h2").addEventListener("click", () => openDemo(id));
+        return el;
+      }
+
+      fetch("templates/manifest.json")
+        .then((r) => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+        .then((m) => {
+          TPL = m.templates || {};
+          DEMOS = m.demos || {};
+
+          const cats = [...new Set(Object.values(DEMOS).flatMap((d) => d.categories || []))].sort();
+          catsEl.innerHTML = "";
+          for (const c of cats) {
+            const label = document.createElement("label");
+            label.className = "flex items-center gap-2.5 text-sm text-ink cursor-pointer select-none hover:text-navy";
+            label.innerHTML = '<input type="checkbox" class="w-4 h-4 rounded accent-[#1d70db]" value="' + esc(c) + '" />' + esc(c);
+            label.querySelector("input").addEventListener("change", (e) => {
+              e.target.checked ? activeCats.add(c) : activeCats.delete(c);
+              render();
+            });
+            catsEl.appendChild(label);
+          }
+          document.getElementById("q").addEventListener("input", render);
+          render();
+
+          // Deep link: browse.html?d=<demo>&p=<page-slug>
+          const d = new URLSearchParams(location.search).get("d");
+          const p = new URLSearchParams(location.search).get("p");
+          if (d && DEMOS[d]) openDemo(d, p || undefined);
+        })
+        .catch((e) => { grid.innerHTML = '<div class="col-span-full py-12 text-center text-red-500">Could not load templates/manifest.json — ' + esc(e.message) + "</div>"; });
+    </script>
+  </body>
+</html>
