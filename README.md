@@ -20,12 +20,25 @@ In WordPress: **Starter Templates → Templates repository → Remote base URL**
 the raw URL of this repo's branch, e.g.
 
 ```
-https://raw.githubusercontent.com/<org>/tema/main
+https://raw.githubusercontent.com/ops147/tema/main
 ```
 
 Leave it empty to use the templates bundled with the plugin (if any). On every
 import the plugin pulls the repo's current state; downloaded files are cached
 under `uploads/arc-st-remote/` between requests.
+
+## GitHub Pages mirror
+
+The repo is published through GitHub Pages at
+
+```
+https://ops147.github.io/tema
+```
+
+It serves the same layout, so it also works as a **Remote base URL**, and adds
+a browsable index (`index.html`) plus a previewer (`preview.html?f=templates/<demo>/<page>.html`)
+that applies the same `Img/`, `Css/`, `Js/` rewrites the plugin applies at
+preview time — every demo page is viewable in a browser without importing.
 
 ## Private repositories
 

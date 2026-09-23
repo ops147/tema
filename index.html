@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tema — ARC Starter Templates payload</title>
+    <style>
+      * { box-sizing: border-box; margin: 0; }
+      body { font-family: ui-sans-serif, system-ui, sans-serif; background: #f6f7f8; color: #1d2327; }
+      header { background: #142a1e; color: #fff; padding: 2rem 1.5rem; }
+      header .wrap, main { max-width: 1100px; margin: 0 auto; }
+      h1 { font-size: 1.4rem; font-weight: 700; }
+      header p { margin-top: .4rem; color: #b8c4bd; font-size: .9rem; max-width: 60ch; }
+      code { background: #e8eaec; border-radius: 4px; padding: .1em .4em; font-size: .85em; }
+      header code { background: #234437; color: #cdebd8; }
+      .setup { background: #fff; border: 1px solid #e2e5e8; border-radius: 8px; padding: 1rem 1.25rem; margin: 1.5rem 0; font-size: .9rem; line-height: 1.7; }
+      .setup b { font-weight: 600; }
+      .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.25rem; padding-bottom: 3rem; }
+      .card { background: #fff; border: 1px solid #e2e5e8; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; }
+      .card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; object-position: top; display: block; background: #e8eaec; }
+      .card .body { padding: .9rem 1rem 1rem; display: flex; flex-direction: column; gap: .5rem; flex: 1; }
+      .card h2 { font-size: 1rem; font-weight: 650; }
+      .card .desc { font-size: .8rem; color: #5c666e; line-height: 1.45; flex: 1; }
+      .cats { display: flex; gap: .35rem; flex-wrap: wrap; }
+      .cats span { font-size: .68rem; background: #eef1f3; color: #4b565f; border-radius: 999px; padding: .15em .6em; }
+      .pages { display: flex; gap: .4rem .8rem; flex-wrap: wrap; border-top: 1px solid #eef1f3; padding-top: .6rem; margin-top: .2rem; }
+      .pages a { font-size: .78rem; color: #2271b1; text-decoration: none; }
+      .pages a:hover { text-decoration: underline; }
+      main h3 { font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; color: #8a949c; margin: 0 0 .9rem; }
+      .err { padding: 2rem; color: #b32d2e; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <h1>tema</h1>
+        <p>Remote payload for the <strong>ARC Starter Templates</strong> WordPress plugin — demo manifest, template documents and images, downloaded on demand at import time.</p>
+      </div>
+    </header>
+    <main>
+      <div class="setup">
+        <b>Point the plugin at this repo:</b> in wp-admin, <b>Starter Templates → Templates repository → Remote base URL</b>:
+        <br /><code id="raw-url">https://raw.githubusercontent.com/ops147/tema/main</code>
+        <br />This Pages mirror works too: <code id="pages-url"></code>
+        <br />Leave the field empty to use the templates bundled with the plugin.
+      </div>
+      <h3>Demos — click any page to preview</h3>
+      <div class="grid" id="grid"><div class="err">Loading manifest…</div></div>
+    </main>
+    <script>
+      const root = new URL(".", location.href).href.replace(/\/$/, "");
+      document.getElementById("pages-url").textContent = root;
+      const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+      fetch("templates/manifest.json")
+        .then((r) => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+        .then((m) => {
+          const demos = m.demos || {}, tpl = m.templates || {};
+          const grid = document.getElementById("grid");
+          grid.innerHTML = "";
+          for (const [id, d] of Object.entries(demos)) {
+            const links = (d.pages || [])
+              .filter((p) => tpl[p])
+              .map((p) => '<a href="preview.html?f=templates/' + encodeURIComponent(tpl[p].file) + '">' + esc(tpl[p].name || p) + "</a>")
+              .join("");
+            const card = document.createElement("article");
+            card.className = "card";
+            card.innerHTML =
+              (d.image ? '<img loading="lazy" src="' + esc(d.image) + '" alt="" />' : "") +
+              '<div class="body"><h2>' + esc(d.title || id) + "</h2>" +
+              '<p class="desc">' + esc(d.desc || "") + "</p>" +
+              '<div class="cats">' + (d.categories || []).map((c) => "<span>" + esc(c) + "</span>").join("") + "</div>" +
+              '<nav class="pages">' + links + "</nav></div>";
+            grid.appendChild(card);
+          }
+          if (!grid.children.length) grid.innerHTML = '<div class="err">No demos found in the manifest.</div>';
+        })
+        .catch((e) => { document.getElementById("grid").innerHTML = '<div class="err">Could not load templates/manifest.json — ' + esc(e.message) + "</div>"; });
+    </script>
+  </body>
+</html>

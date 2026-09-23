@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template preview</title>
+    <style>
+      * { box-sizing: border-box; margin: 0; }
+      html, body { height: 100%; }
+      body { font-family: ui-sans-serif, system-ui, sans-serif; display: flex; flex-direction: column; background: #1d2327; }
+      #bar { display: flex; align-items: center; gap: 1rem; padding: .45rem .9rem; background: #1d2327; color: #d6dbe0; font-size: .8rem; }
+      #bar a { color: #9ec2e6; text-decoration: none; }
+      #bar a:hover { text-decoration: underline; }
+      #file { color: #8a949c; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; }
+      iframe { flex: 1; border: 0; width: 100%; background: #fff; }
+      #err { display: none; padding: 2rem; color: #f1b8b8; font-size: .9rem; }
+    </style>
+  </head>
+  <body>
+    <div id="bar">
+      <a href="index.html">&larr; demos</a>
+      <span id="file"></span>
+      <a id="raw" href="#" target="_blank" rel="noopener">open raw &nearr;</a>
+    </div>
+    <div id="err"></div>
+    <iframe id="frame" title="Template preview"></iframe>
+    <script>
+      const params = new URLSearchParams(location.search);
+      const f = params.get("f") || "";
+      const err = (msg) => { const e = document.getElementById("err"); e.style.display = "block"; e.textContent = msg; };
+      if (!/^templates\/[\w.\/-]+\.html$/.test(f) || f.includes("..")) {
+        err("Missing or invalid ?f= parameter (expected templates/<demo>/<page>.html).");
+      } else {
+        const dir = f.slice(0, f.lastIndexOf("/") + 1);
+        const root = new URL(".", location.href).href;
+        document.getElementById("file").textContent = f;
+        document.getElementById("raw").href = f;
+        fetch(f)
+          .then((r) => { if (!r.ok) throw new Error("HTTP " + r.status); return r.text(); })
+          .then((html) => {
+            // Same asset rewrites the plugin applies (assets_to_plugin_urls):
+            // bundled Img/, Css/, Js/ placeholders -> repo asset paths.
+            let out = html
+              .split('="Img/').join('="assets/img/')
+              .split('="Css/tailwind.css').join('="assets/css/tailwind.css')
+              .split('="Js/site.js').join('="assets/js/site.js');
+            out = out.replace(/<head(\s[^>]*)?>/i, (m) => m + '<base href="' + root + '">');
+            // Internal href="<slug>.html" links stay inside the previewer.
+            out = out.replace(/href="([\w-]+)\.html"/g, (m, slug) =>
+              'href="preview.html?f=' + encodeURIComponent(dir + slug + ".html") + '"');
+            document.getElementById("frame").srcdoc = out;
+          })
+          .catch((e) => err("Could not load " + f + " — " + e.message));
+      }
+    </script>
+  </body>
+</html>
