@@ -3,217 +3,180 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>tema — ARC Starter Templates</title>
-    <meta name="description" content="Remote template library for the ARC Starter Templates WordPress plugin — manifest, pages and images served by GitHub Pages." />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>tema — Starter Templates Library</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Work%20Sans:wght@300;400;500;600;700;800&family=Tinos:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
       @theme {
-        --color-brand: #5b67b5;
-        --color-brand-dark: #3a4380;
-        --color-accent: #8b96d9;
-        --color-navy: #191d33;
-        --color-mint: #eef0fa;
-        --color-cream: #f7f8fd;
-        --font-sans: "Work Sans", ui-sans-serif, system-ui, sans-serif;
-        --font-display: "Tinos", ui-sans-serif, system-ui, sans-serif;
+        --color-navy: #000f44;
+        --color-ink: #555555;
+        --color-line: #dedede;
+        --color-blue: #1d70db;
+        --color-blue-d: #155cb8;
+        --color-soft: #f5f7fb;
+        --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+        --font-mono: "JetBrains Mono", ui-monospace, monospace;
       }
-      body { @apply font-sans text-slate-600 antialiased; }
-      code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
-      @layer components {
-        .btn-primary { display:inline-flex; align-items:center; gap:.5rem; border-radius:9999px; background:var(--color-brand); padding:.8rem 1.75rem; font-size:.9rem; font-weight:600; color:#fff; transition:all .2s; }
-        .btn-primary:hover { background:var(--color-brand-dark); transform:translateY(-2px); box-shadow:0 10px 15px -3px rgb(20 42 30 / .25); }
-        .btn-outline { display:inline-flex; align-items:center; gap:.5rem; border-radius:9999px; border:1px solid #cbd5e1; padding:.8rem 1.75rem; font-size:.9rem; font-weight:600; color:var(--color-navy); transition:all .2s; }
-        .btn-outline:hover { border-color:var(--color-brand); color:var(--color-brand); transform:translateY(-2px); }
-        .btn-ghost-light { display:inline-flex; align-items:center; gap:.5rem; border-radius:9999px; border:1px solid rgba(255,255,255,.25); padding:.8rem 1.75rem; font-size:.9rem; font-weight:600; color:#fff; transition:all .2s; }
-        .btn-ghost-light:hover { border-color:#fff; transform:translateY(-2px); }
-        .eyebrow { font-size:.8rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--color-brand); }
-        .field { width:100%; border-radius:.6rem; border:1px solid #e2e8f0; background:#fff; padding:.8rem 1rem; font-size:.9rem; color:var(--color-navy); outline:none; transition:border-color .2s, box-shadow .2s; }
-        .field:focus { border-color:var(--color-brand); box-shadow:0 0 0 3px rgb(91 103 181 / .18); }
-        .card-lift { transition:transform .25s ease, box-shadow .25s ease; }
-        .card-lift:hover { transform:translateY(-4px); box-shadow:0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1); }
-        .chip { border-radius:9999px; border:1px solid #e2e8f0; background:#fff; color:#475569; padding:.45rem 1rem; font-size:.78rem; font-weight:600; transition:all .18s; cursor:pointer; }
-        .chip:hover { border-color:var(--color-brand); color:var(--color-brand); }
-        .chip.on { background:var(--color-brand); border-color:var(--color-brand); color:#fff; }
-      }
+      body { @apply bg-white text-ink font-sans antialiased; }
+      code { @apply font-mono; }
+      .btn-primary { @apply inline-flex items-center gap-2 bg-blue hover:bg-blue-d text-white text-sm font-semibold rounded-lg px-6 py-3 transition no-underline shadow-sm; }
+      .btn-ghost { @apply inline-flex items-center gap-2 border border-line hover:border-navy text-navy text-sm font-semibold rounded-lg px-6 py-3 transition no-underline; }
+      .marquee { animation: marquee 45s linear infinite; }
+      @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
     </style>
   </head>
   <body>
-    <!-- ===== Header ===== -->
-    <header class="sticky top-0 z-50 border-b border-slate-100 bg-white/95 backdrop-blur">
-      <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 py-4 lg:px-8">
-        <a href="index.html" class="flex min-w-0 shrink-0 items-center gap-2.5">
-          <span class="leading-none">
-            <span class="block text-lg font-extrabold tracking-tight text-navy font-display">tema</span>
-            <span class="block text-[10px] font-bold tracking-[0.3em] text-brand">TEMPLATES</span>
-          </span>
+
+    <!-- ============ header ============ -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-line">
+      <nav class="max-w-6xl mx-auto px-6 py-3.5 flex items-center gap-3">
+        <a href="#" class="flex items-center gap-2.5 no-underline">
+          <span class="w-8 h-8 rounded-lg bg-blue grid place-items-center font-extrabold text-sm text-white">T</span>
+          <span class="font-bold tracking-tight text-navy">tema</span>
         </a>
-        <nav class="hidden items-center gap-6 whitespace-nowrap text-[13px] font-medium text-slate-700 lg:flex">
-          <a href="#demos" class="transition hover:text-brand">Demos</a>
-          <a href="#setup" class="transition hover:text-brand">Setup</a>
-          <a href="#library" class="transition hover:text-brand">Library</a>
-          <a href="https://github.com/ops147/tema" target="_blank" rel="noopener" class="transition hover:text-brand">GitHub ↗</a>
-        </nav>
-        <button class="btn-primary copy hidden lg:inline-flex" data-copy="https://raw.githubusercontent.com/ops147/tema/main">Copy base URL</button>
-      </div>
+        <span class="flex-1"></span>
+        <a href="#demos" class="hidden sm:block text-sm font-medium text-ink hover:text-blue no-underline transition">Templates</a>
+        <a href="#setup" class="hidden sm:block text-sm font-medium text-ink hover:text-blue no-underline transition ml-6">Setup</a>
+        <a href="https://github.com/ops147/tema" target="_blank" rel="noopener"
+           class="ml-6 text-sm font-semibold bg-navy hover:bg-blue text-white rounded-lg px-4 py-2 no-underline transition">GitHub ↗</a>
+      </nav>
     </header>
 
-    <!-- ===== Hero ===== -->
-    <section class="bg-cream">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-28 text-center">
-        <p class="eyebrow">ARC Starter Templates</p>
-        <h1 class="mt-5 font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-navy leading-[1.08] mx-auto max-w-3xl">
-          A remote template library, <em class="italic text-brand">served</em> by GitHub Pages
+    <!-- ============ hero ============ -->
+    <section class="bg-soft border-b border-line">
+      <div class="max-w-6xl mx-auto px-6 pt-20 pb-14 text-center">
+        <h1 class="text-4xl sm:text-5xl lg:text-[3.4rem] font-extrabold text-navy tracking-tight leading-[1.08]">
+          Effortless Starter Templates<br class="hidden sm:block" /> for WordPress.
         </h1>
-        <p class="mx-auto mt-6 max-w-2xl text-base leading-relaxed">
-          Demo manifest, template documents and images pulled on demand by the
-          <strong class="font-semibold text-navy">ARC Starter Templates</strong> WordPress plugin —
-          so the plugin stays lightweight and this repo stays the single source of truth.
+        <p class="mt-5 text-base sm:text-lg text-ink/90 max-w-2xl mx-auto">
+          A remote payload for the <strong class="text-navy">ARC Starter Templates</strong> plugin —
+          demo manifest, template documents and images served on demand from GitHub Pages.
         </p>
-        <div class="mt-9 flex flex-wrap items-center justify-center gap-4">
-          <a href="#demos" class="btn-primary">Browse demos</a>
-          <button class="btn-outline copy" data-copy="https://raw.githubusercontent.com/ops147/tema/main">Copy base URL</button>
+        <div class="mt-8 flex flex-wrap justify-center gap-3">
+          <a href="#demos" class="btn-primary">Browse templates</a>
+          <a href="#setup" class="btn-ghost">Setup guide</a>
         </div>
+      </div>
+
+      <!-- marquee of demo names -->
+      <div class="border-t border-line bg-white overflow-hidden py-4">
+        <div id="marquee" class="marquee flex whitespace-nowrap gap-10 w-max text-sm font-semibold text-ink/60"></div>
       </div>
     </section>
 
-    <!-- ===== Stats ===== -->
-    <section class="border-y border-slate-100 bg-mint">
-      <div id="stats" class="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-4 py-12 text-center sm:grid-cols-3 sm:px-6 lg:px-8"></div>
+    <!-- ============ intro strip ============ -->
+    <section class="max-w-4xl mx-auto px-6 py-14 text-center">
+      <p class="text-base sm:text-lg text-ink/90 leading-relaxed">
+        One repository, <strong id="stat-demos" class="text-navy">…</strong> ready-to-import site demos and
+        <strong id="stat-pages" class="text-navy">…</strong> pages — modern, responsive designs for every
+        niche. Preview each one right here before importing it into WordPress.
+      </p>
     </section>
 
-    <!-- ===== Setup ===== -->
-    <section id="setup" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
-      <div class="grid items-start gap-10 lg:grid-cols-2">
-        <div>
-          <p class="eyebrow">Point the plugin at this repo</p>
-          <h2 class="mt-4 font-display text-3xl sm:text-4xl font-bold tracking-tight text-navy">
-            One URL and the <em class="italic text-brand">whole library</em> is importable
-          </h2>
-          <p class="mt-5 text-sm leading-relaxed">
-            In wp-admin open <strong class="font-semibold text-navy">Starter Templates → Templates repository</strong>
-            and paste either URL into <strong class="font-semibold text-navy">Remote base URL</strong>.
-            The repo is public — the access token can stay empty. Every import pulls the
-            repo's current state; downloads are cached under
-            <code class="text-brand">uploads/arc-st-remote/</code> between requests.
-          </p>
+    <!-- ============ templates grid ============ -->
+    <section id="demos" class="max-w-6xl mx-auto px-6 pb-8 scroll-mt-20">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-navy tracking-tight text-center">
+        <span id="stat-tpl">…</span> Templates for All Purposes.
+      </h2>
+      <p class="mt-4 text-ink/90 max-w-2xl mx-auto text-center">
+        Pick your layout — every demo is a complete site with inner pages, served straight
+        from this repo into your WordPress install.
+      </p>
+
+      <!-- filters -->
+      <div class="mt-8 flex flex-wrap items-center gap-3">
+        <div class="flex-1 min-w-56 flex items-center gap-2.5 bg-white border border-line rounded-xl px-3.5 py-2.5 focus-within:border-blue transition">
+          <svg class="shrink-0 stroke-ink/50" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input id="q" type="search" placeholder="Search layouts…" class="flex-1 bg-transparent outline-none text-sm text-navy placeholder:text-ink/50" />
         </div>
-        <div class="card-lift rounded-2xl border border-slate-100 bg-white p-6 shadow-sm">
-          <div class="space-y-4">
-            <div>
-              <label class="mb-1.5 block text-[11px] font-bold uppercase tracking-widest text-slate-400">Remote base URL</label>
-              <div class="flex gap-2">
-                <code class="field !bg-cream text-[12px] !text-navy">https://raw.githubusercontent.com/ops147/tema/main</code>
-                <button class="btn-primary copy shrink-0 !px-4 !py-0 text-xs" data-copy="https://raw.githubusercontent.com/ops147/tema/main">Copy</button>
-              </div>
-            </div>
-            <div>
-              <label class="mb-1.5 block text-[11px] font-bold uppercase tracking-widest text-slate-400">GitHub Pages mirror</label>
-              <div class="flex gap-2">
-                <code id="pages-url" class="field !bg-cream text-[12px] !text-navy"></code>
-                <button id="copy-pages" class="btn-primary copy shrink-0 !px-4 !py-0 text-xs">Copy</button>
-              </div>
-            </div>
-            <p class="text-xs leading-relaxed text-slate-500">
-              Both serve the same <code class="text-brand">templates/ + assets/</code> layout — raw is the
-              canonical source, Pages doubles as this browsable library.
-            </p>
+        <div id="chips" class="flex flex-wrap gap-2"></div>
+      </div>
+
+      <div id="grid" class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="col-span-full py-12 text-center text-ink/60">Loading manifest…</div>
+      </div>
+
+      <div class="mt-10 text-center">
+        <a href="https://github.com/ops147/tema" target="_blank" rel="noopener" class="btn-ghost">Browse on GitHub ↗</a>
+      </div>
+    </section>
+
+    <!-- ============ setup ============ -->
+    <section id="setup" class="bg-soft border-y border-line mt-16 scroll-mt-20">
+      <div class="max-w-6xl mx-auto px-6 py-16">
+        <h2 class="text-3xl font-extrabold text-navy tracking-tight text-center">Point the plugin at this repo.</h2>
+        <p class="mt-3 text-ink/90 text-center max-w-xl mx-auto">
+          wp-admin → <b class="text-navy">Starter Templates → Templates repository → Remote base URL</b>.
+          Public repo — no access token needed.
+        </p>
+        <div class="mt-8 max-w-3xl mx-auto bg-white border border-line rounded-2xl p-6 shadow-sm">
+          <div class="flex flex-wrap items-center gap-2.5 py-2">
+            <span class="text-xs font-semibold text-ink/70 w-36 uppercase tracking-wide">Remote base URL</span>
+            <code class="flex-1 min-w-64 text-[13px] bg-soft border border-line rounded-lg px-3 py-2 text-navy overflow-x-auto whitespace-nowrap">https://raw.githubusercontent.com/ops147/tema/main</code>
+            <button class="copy text-xs font-semibold px-3 py-2 rounded-lg border border-line text-ink hover:border-blue hover:text-blue transition cursor-pointer bg-white"
+                    data-copy="https://raw.githubusercontent.com/ops147/tema/main">Copy</button>
+          </div>
+          <div class="flex flex-wrap items-center gap-2.5 py-2">
+            <span class="text-xs font-semibold text-ink/70 w-36 uppercase tracking-wide">Pages mirror</span>
+            <code id="pages-url" class="flex-1 min-w-64 text-[13px] bg-soft border border-line rounded-lg px-3 py-2 text-navy overflow-x-auto whitespace-nowrap"></code>
+            <button id="copy-pages" class="copy text-xs font-semibold px-3 py-2 rounded-lg border border-line text-ink hover:border-blue hover:text-blue transition cursor-pointer bg-white">Copy</button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== Demos ===== -->
-    <section id="demos" class="bg-cream py-16 lg:py-20">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-2xl text-center">
-          <p class="eyebrow">Starter Templates</p>
-          <h2 class="mt-4 font-display text-3xl sm:text-4xl font-bold tracking-tight text-navy">
-            Explore the <em class="italic text-brand">demos</em> ready to import
-          </h2>
-          <p class="mt-5 text-sm leading-relaxed">
-            Every demo is a complete site — click any card to open the live viewer,
-            browse its pages and switch device widths before importing.
-          </p>
-        </div>
-
-        <div class="mt-10 flex flex-wrap items-center justify-center gap-3">
-          <div class="relative w-full max-w-xs">
-            <svg class="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 stroke-slate-400" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-            <input id="q" type="search" placeholder="Search demos…" class="field !pl-9" />
-          </div>
-          <div id="chips" class="flex flex-wrap justify-center gap-2"></div>
-        </div>
-
-        <div id="grid" class="mt-10 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
-          <div class="col-span-full py-14 text-center text-slate-400">Loading manifest…</div>
-        </div>
-      </div>
+    <!-- ============ features ============ -->
+    <section class="max-w-6xl mx-auto px-6 py-16">
+      <h2 class="text-3xl font-extrabold text-navy tracking-tight text-center">How it works.</h2>
+      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-5" id="features"></div>
     </section>
 
-    <!-- ===== CTA ===== -->
+    <!-- ============ cta ============ -->
     <section class="bg-navy">
-      <div class="mx-auto max-w-7xl px-4 py-16 text-center sm:px-6 lg:px-8 lg:py-20">
-        <h2 class="mx-auto max-w-2xl font-display text-3xl sm:text-4xl font-bold tracking-tight text-white">
-          Import any demo in <em class="italic text-accent">one click</em>
-        </h2>
-        <p class="mx-auto mt-4 max-w-xl text-sm text-slate-300">
-          Paste the base URL in wp-admin, open the library and hit Import — pages,
-          menus, images and kit settings land on your site.
-        </p>
-        <div class="mt-8 flex flex-wrap justify-center gap-4">
-          <button class="btn-primary copy" data-copy="https://raw.githubusercontent.com/ops147/tema/main">Copy base URL</button>
-          <a href="https://github.com/ops147/tema" target="_blank" rel="noopener" class="btn-ghost-light">View repository ↗</a>
-        </div>
+      <div class="max-w-6xl mx-auto px-6 py-14 text-center">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Start building with these templates.</h2>
+        <p class="mt-3 text-white/70 max-w-xl mx-auto">Install the ARC Starter Templates plugin, paste the remote URL and import any demo in one click.</p>
+        <a href="#setup" class="btn-primary mt-7 !bg-white !text-navy hover:!bg-soft">Get the remote URL</a>
       </div>
     </section>
 
-    <!-- ===== Footer ===== -->
-    <footer class="border-t border-slate-100 bg-white">
-      <div class="mx-auto flex max-w-7xl flex-col items-center gap-3 px-4 py-8 text-center sm:flex-row sm:justify-between sm:px-6 sm:text-left lg:px-8">
-        <span class="leading-none">
-          <span class="block text-base font-extrabold tracking-tight text-navy font-display">tema</span>
-          <span class="block text-[9px] font-bold tracking-[0.3em] text-brand">TEMPLATES</span>
-        </span>
-        <p class="text-xs text-slate-500">
-          Remote payload for <strong class="font-semibold text-navy">ARC Starter Templates</strong> —
-          previews apply the plugin's <code class="text-brand">Img/ · Css/ · Js/</code> rewrites in-browser.
-        </p>
-      </div>
+    <footer class="border-t border-line px-6 py-6 text-center text-xs text-ink/70">
+      tema — remote payload for ARC Starter Templates ·
+      <a class="text-blue hover:underline" href="https://github.com/ops147/tema" target="_blank" rel="noopener">GitHub</a> ·
+      <a class="text-blue hover:underline" href="templates/manifest.json">manifest.json</a>
     </footer>
 
-    <!-- ===== Demo viewer ===== -->
-    <div id="modal" class="fixed inset-0 z-[60] hidden">
+    <!-- ============ demo viewer ============ -->
+    <div id="modal" class="fixed inset-0 z-50 hidden">
       <div class="absolute inset-0 bg-navy/60 backdrop-blur-sm" data-close></div>
-      <div class="absolute inset-[2.5vh_2vw] max-md:inset-0 overflow-hidden rounded-2xl max-md:rounded-none bg-white shadow-2xl flex">
-        <!-- sidebar -->
-        <aside class="flex w-60 shrink-0 flex-col border-r border-slate-100 bg-cream max-md:hidden">
-          <div class="border-b border-slate-100 px-5 pb-4 pt-5">
-            <h2 id="m-title" class="font-display text-lg font-bold tracking-tight text-navy"></h2>
-            <div id="m-cats" class="mt-2.5 flex flex-wrap gap-1.5"></div>
+      <div class="absolute inset-[2.5vh_2vw] max-md:inset-0 bg-white border border-line max-md:border-0 rounded-2xl max-md:rounded-none overflow-hidden flex shadow-2xl">
+        <aside class="w-60 shrink-0 max-md:hidden flex flex-col border-r border-line bg-soft">
+          <div class="px-4 pt-4 pb-3.5 border-b border-line bg-white">
+            <h2 id="m-title" class="text-base font-bold tracking-tight text-navy"></h2>
+            <div id="m-cats" class="flex flex-wrap gap-1.5 mt-2.5"></div>
           </div>
-          <nav id="m-pages" class="flex flex-col gap-0.5 overflow-y-auto p-3"></nav>
-          <div class="mt-auto border-t border-slate-100 px-5 py-4 text-[11px] leading-relaxed text-slate-500">
+          <nav id="m-pages" class="overflow-y-auto p-2.5 flex flex-col gap-0.5"></nav>
+          <div class="mt-auto px-4 py-3.5 border-t border-line text-[11px] text-ink/70 leading-relaxed bg-white">
             Import with the plugin: <b class="text-navy">Starter Templates → Library</b> in wp-admin, or browse every page here first.
           </div>
         </aside>
-        <!-- preview -->
-        <div class="flex min-w-0 flex-1 flex-col">
-          <div class="flex items-center gap-3 border-b border-slate-100 bg-white px-4 py-2.5">
-            <span id="m-file" class="min-w-0 flex-1 truncate font-mono text-[11px] text-slate-400"></span>
-            <div class="flex gap-1 rounded-lg border border-slate-200 bg-cream p-1">
-              <button class="dev on rounded-md px-2.5 py-1 text-[11px] font-semibold transition" data-dev="desktop">Desktop</button>
-              <button class="dev rounded-md px-2.5 py-1 text-[11px] font-semibold transition" data-dev="tablet">Tablet</button>
-              <button class="dev rounded-md px-2.5 py-1 text-[11px] font-semibold transition" data-dev="mobile">Mobile</button>
+        <div class="flex-1 flex flex-col min-w-0">
+          <div class="flex items-center gap-3 px-3.5 py-2 border-b border-line bg-white">
+            <span id="m-file" class="flex-1 min-w-0 truncate font-mono text-[11px] text-ink/60"></span>
+            <div class="flex gap-1 bg-soft border border-line rounded-lg p-1">
+              <button class="dev on text-[11px] font-semibold px-2.5 py-1 rounded-md transition cursor-pointer border-0 bg-transparent" data-dev="desktop">Desktop</button>
+              <button class="dev text-[11px] font-semibold px-2.5 py-1 rounded-md transition cursor-pointer border-0 bg-transparent" data-dev="tablet">Tablet</button>
+              <button class="dev text-[11px] font-semibold px-2.5 py-1 rounded-md transition cursor-pointer border-0 bg-transparent" data-dev="mobile">Mobile</button>
             </div>
-            <a id="m-open" href="#" target="_blank" rel="noopener" class="rounded-lg border border-slate-200 px-3 py-1.5 text-[11px] font-semibold text-slate-500 no-underline transition hover:border-brand hover:text-brand">Open ↗</a>
-            <button data-close title="Close" class="rounded-md px-2 py-1 text-base text-slate-400 transition hover:bg-slate-100 hover:text-navy">✕</button>
+            <a id="m-open" href="#" target="_blank" rel="noopener"
+               class="text-[11px] font-semibold px-3 py-1.5 rounded-lg border border-line text-ink hover:text-blue hover:border-blue transition no-underline">Open ↗</a>
+            <button data-close title="Close" class="cursor-pointer border-0 bg-transparent text-ink/60 hover:text-navy hover:bg-soft text-base px-2 py-1 rounded-md transition">✕</button>
           </div>
-          <div class="flex flex-1 justify-center overflow-auto bg-mint/50 p-4 max-md:p-0">
-            <div id="m-wrap" class="h-full w-full transition-[width] duration-300">
-              <iframe id="m-frame" title="Template preview" class="h-full w-full rounded-xl border border-slate-200 bg-white shadow-lg max-md:rounded-none max-md:border-0"></iframe>
+          <div class="flex-1 overflow-auto flex justify-center bg-soft p-4 max-md:p-0">
+            <div id="m-wrap" class="w-full h-full transition-[width] duration-300">
+              <iframe id="m-frame" title="Template preview" class="w-full h-full border border-line rounded-xl max-md:rounded-none max-md:border-0 bg-white shadow-lg"></iframe>
             </div>
           </div>
         </div>
@@ -229,11 +192,23 @@
       for (const btn of document.querySelectorAll(".copy")) {
         btn.addEventListener("click", async () => {
           try { await navigator.clipboard.writeText(btn.dataset.copy); } catch (e) {}
-          const t = btn.textContent;
           btn.textContent = "Copied ✓";
-          setTimeout(() => { btn.textContent = t; }, 1600);
+          btn.classList.add("!text-blue", "!border-blue");
+          setTimeout(() => { btn.textContent = "Copy"; btn.classList.remove("!text-blue", "!border-blue"); }, 1600);
         });
       }
+
+      const FEATURES = [
+        ["M13 10V3L4 14h7v7l9-11h-7z", "Instant previews", "Every page is viewable in the browser — no WordPress install needed to evaluate a design."],
+        ["M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-2", "Import on demand", "The plugin pulls the manifest, documents and images only when you import a demo."],
+        ["M4 6h16M4 12h16M4 18h10", "Same repo layout", "templates/manifest.json, templates/<demo>/<page>.html and assets/img/* — mirrors the plugin bundle."],
+        ["M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 4v6l4 2", "Cached downloads", "The plugin caches pulled files under uploads/arc-st-remote/ for 6h between requests."],
+      ];
+      document.getElementById("features").innerHTML = FEATURES.map(([d, t, x]) =>
+        '<div class="bg-white border border-line rounded-2xl p-6 hover:border-blue hover:shadow-md transition">' +
+          '<svg class="w-7 h-7 stroke-blue" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="' + d + '"/></svg>' +
+          '<h3 class="mt-4 text-sm font-bold text-navy">' + t + '</h3>' +
+          '<p class="mt-2 text-xs leading-relaxed text-ink/80">' + x + "</p></div>").join("");
 
       let DEMOS = {}, TPL = {}, activeCat = "All";
       const grid = document.getElementById("grid");
@@ -244,7 +219,6 @@
       const frame = document.getElementById("m-frame");
       const wrap = document.getElementById("m-wrap");
       const DEV_W = { desktop: "w-full", tablet: "w-[768px] max-w-full", mobile: "w-[390px] max-w-full" };
-      const DEV_CLS = { on: "bg-white text-brand shadow-sm", off: "text-slate-500 hover:text-navy" };
 
       function openDemo(id, pageSlug) {
         const d = DEMOS[id];
@@ -252,23 +226,23 @@
         document.getElementById("m-title").textContent = d.title || id;
         document.getElementById("m-cats").innerHTML =
           (d.categories || []).map((c) =>
-            '<span class="rounded-full border border-accent/40 bg-mint px-2.5 py-0.5 text-[10px] font-semibold text-brand">' + esc(c) + "</span>").join("");
+            '<span class="text-[10px] font-semibold bg-blue/10 text-blue border border-blue/25 rounded-full px-2.5 py-0.5">' + esc(c) + "</span>").join("");
         const nav = document.getElementById("m-pages");
         nav.innerHTML = "";
         for (const p of d.pages || []) {
           if (!TPL[p]) continue;
           const b = document.createElement("button");
           const on = p === pageSlug;
-          b.className = "flex items-center gap-2 rounded-lg px-3 py-2 text-left text-[13px] font-medium transition " +
-            (on ? "bg-white text-brand shadow-sm" : "text-slate-500 hover:bg-white/70 hover:text-navy");
-          b.innerHTML = (on ? '<span class="h-1.5 w-1.5 shrink-0 rounded-full bg-brand"></span>' : "") + esc(TPL[p].name || p);
+          b.className = "text-left cursor-pointer border-0 rounded-lg px-2.5 py-2 text-[13px] font-medium transition flex items-center gap-2 " +
+            (on ? "bg-blue/10 text-blue" : "bg-transparent text-ink hover:bg-white hover:text-navy");
+          b.innerHTML = (on ? '<span class="w-1.5 h-1.5 rounded-full bg-blue shrink-0"></span>' : "") + esc(TPL[p].name || p);
           b.addEventListener("click", () => openDemo(id, p));
           nav.appendChild(b);
         }
         const file = TPL[pageSlug] ? TPL[pageSlug].file : "";
         document.getElementById("m-file").textContent = "templates/" + file;
         frame.src = "preview.html?f=templates/" + encodeURIComponent(file) + "&embed=1";
-        document.getElementById("m-open").href = "preview.html?f=" + encodeURIComponent("templates/" + file);
+        document.getElementById("m-open").href = "preview.html?f=templates/" + encodeURIComponent(file);
         modal.classList.replace("hidden", "block");
         document.body.classList.add("overflow-hidden");
       }
@@ -281,12 +255,23 @@
       document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeDemo(); });
       document.querySelectorAll(".dev").forEach((b) => b.addEventListener("click", () => {
         document.querySelectorAll(".dev").forEach((x) => {
-          x.className = "dev rounded-md px-2.5 py-1 text-[11px] font-semibold transition " + (x === b ? DEV_CLS.on : DEV_CLS.off);
+          const on = x === b;
+          x.classList.toggle("bg-white", on);
+          x.classList.toggle("text-blue", on);
+          x.classList.toggle("shadow-sm", on);
+          x.classList.toggle("text-ink", !on);
         });
         wrap.className = "h-full transition-[width] duration-300 " + DEV_W[b.dataset.dev];
       }));
+      document.querySelectorAll(".dev").forEach((x) => x.classList.add("text-ink"));
+      document.querySelector(".dev.on").classList.replace("text-ink", "text-blue");
+      document.querySelector(".dev.on").classList.add("bg-white", "shadow-sm");
 
       /* ---------- library grid ---------- */
+      const chipCls = "cursor-pointer border rounded-full text-xs font-semibold px-3.5 py-1.5 transition ";
+      const chipOn = "bg-blue border-blue text-white";
+      const chipOff = "bg-white border-line text-ink hover:border-navy hover:text-navy";
+
       function render() {
         const q = document.getElementById("q").value.trim().toLowerCase();
         const shown = Object.entries(DEMOS).filter(([, d]) => {
@@ -295,39 +280,30 @@
           return catOk && qOk;
         });
         grid.innerHTML = "";
-        if (!shown.length) { grid.innerHTML = '<div class="col-span-full py-14 text-center text-slate-400">No demos match.</div>'; return; }
+        if (!shown.length) { grid.innerHTML = '<div class="col-span-full py-12 text-center text-ink/60">No demos match.</div>'; return; }
         for (const [id, d] of shown) grid.appendChild(card(id, d));
       }
 
       function card(id, d) {
         const el = document.createElement("article");
-        el.className = "card-lift group flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white";
+        el.className = "group bg-white border border-line rounded-2xl overflow-hidden flex flex-col transition duration-300 hover:-translate-y-1 hover:border-blue hover:shadow-lg";
         const home = d.home || (d.pages || [])[0];
-        const links = (d.pages || [])
-          .filter((p) => TPL[p])
-          .map((p) => '<a href="#" data-demo="' + esc(id) + '" data-page="' + esc(p) + '" class="text-xs font-medium text-slate-500 no-underline transition hover:text-brand">' + esc(TPL[p].name || p) + "</a>")
-          .join("");
         el.innerHTML =
-          '<div class="thumb relative aspect-video cursor-pointer overflow-hidden bg-mint">' +
-            (d.image ? '<img loading="lazy" src="' + esc(d.image) + '" alt="" class="h-full w-full object-cover object-top transition duration-500 group-hover:scale-105" />' : "") +
-            '<div class="absolute inset-0 grid place-items-center bg-navy/0 transition group-hover:bg-navy/45">' +
-              '<span class="translate-y-1.5 rounded-full bg-white px-5 py-2.5 text-xs font-bold text-navy opacity-0 shadow-xl transition group-hover:translate-y-0 group-hover:opacity-100">Preview site</span>' +
+          '<div class="thumb relative aspect-[16/10] overflow-hidden bg-soft cursor-pointer">' +
+            (d.image ? '<img loading="lazy" src="' + esc(d.image) + '" alt="" class="w-full h-full object-cover object-top transition duration-500 group-hover:scale-105" />' : "") +
+            '<div class="absolute inset-0 grid place-items-center bg-navy/0 group-hover:bg-navy/40 transition">' +
+              '<span class="opacity-0 translate-y-1.5 group-hover:opacity-100 group-hover:translate-y-0 transition bg-white text-navy text-xs font-bold rounded-full px-5 py-2.5 shadow-xl">Preview site</span>' +
             "</div>" +
-            '<span class="absolute bottom-2.5 right-2.5 rounded-full bg-white/85 px-2.5 py-1 text-[10px] font-bold text-brand backdrop-blur">' + (d.pages || []).length + " pages</span>" +
           "</div>" +
-          '<div class="flex flex-1 flex-col gap-2.5 px-5 pb-5 pt-4">' +
-            '<h2 class="cursor-pointer font-display text-lg font-bold tracking-tight text-navy transition hover:text-brand">' + esc(d.title || id) + "</h2>" +
-            '<p class="line-clamp-3 flex-1 text-xs leading-relaxed text-slate-500">' + esc(d.desc || "") + "</p>" +
-            '<div class="flex flex-wrap gap-1.5">' + (d.categories || []).map((c) =>
-              '<span class="rounded-full border border-accent/40 bg-mint px-2.5 py-0.5 text-[10px] font-semibold text-brand">' + esc(c) + "</span>").join("") + "</div>" +
-            '<nav class="mt-1.5 flex flex-wrap gap-x-3.5 gap-y-1 border-t border-slate-100 pt-3">' + links + "</nav>" +
+          '<div class="flex flex-col gap-2 flex-1 px-5 pt-4 pb-5">' +
+            '<div class="flex items-center gap-2">' +
+              '<h2 class="text-base font-bold tracking-tight text-navy cursor-pointer hover:text-blue transition">' + esc(d.title || id) + "</h2>" +
+              '<span class="text-[10px] font-bold uppercase tracking-wide bg-blue/10 text-blue rounded-full px-2 py-0.5">Free</span>' +
+            "</div>" +
+            '<p class="text-xs leading-relaxed text-ink/80 line-clamp-3"><strong class="text-navy">Ideal for: </strong>' + esc(d.desc || "") + "</p>" +
           "</div>";
         el.querySelector(".thumb").addEventListener("click", () => openDemo(id, home));
         el.querySelector("h2").addEventListener("click", () => openDemo(id, home));
-        el.querySelectorAll("nav a").forEach((a) => a.addEventListener("click", (e) => {
-          e.preventDefault();
-          openDemo(a.dataset.demo, a.dataset.page);
-        }));
         return el;
       }
 
@@ -337,20 +313,23 @@
           TPL = m.templates || {};
           DEMOS = m.demos || {};
           const pages = Object.values(DEMOS).reduce((n, d) => n + (d.pages || []).length, 0);
-          const stat = (n, l) =>
-            '<div><b class="block font-display text-4xl font-bold tracking-tight text-navy">' + n + '</b><span class="mt-1 block text-[11px] font-bold uppercase tracking-widest text-brand">' + l + "</span></div>";
-          document.getElementById("stats").innerHTML =
-            stat(Object.keys(DEMOS).length, "demos") + stat(pages, "pages") + stat(Object.keys(TPL).length, "templates");
+          document.getElementById("stat-demos").textContent = Object.keys(DEMOS).length;
+          document.getElementById("stat-pages").textContent = pages;
+          document.getElementById("stat-tpl").textContent = Object.keys(DEMOS).length;
+
+          const names = Object.values(DEMOS).map((d) => d.title || "");
+          const strip = names.map((n) => '<span class="flex items-center gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-blue"></span>' + esc(n) + "</span>").join("");
+          document.getElementById("marquee").innerHTML = strip + strip;
 
           const cats = ["All", ...new Set(Object.values(DEMOS).flatMap((d) => d.categories || []))];
           chipsEl.innerHTML = "";
           for (const c of cats) {
             const b = document.createElement("button");
-            b.className = "chip" + (c === "All" ? " on" : "");
+            b.className = chipCls + (c === "All" ? chipOn : chipOff);
             b.textContent = c;
             b.addEventListener("click", () => {
               activeCat = c;
-              for (const x of chipsEl.children) x.classList.toggle("on", x === b);
+              for (const x of chipsEl.children) x.className = chipCls + (x === b ? chipOn : chipOff);
               render();
             });
             chipsEl.appendChild(b);
@@ -358,7 +337,7 @@
           document.getElementById("q").addEventListener("input", render);
           render();
         })
-        .catch((e) => { grid.innerHTML = '<div class="col-span-full py-14 text-center text-red-500">Could not load templates/manifest.json — ' + esc(e.message) + "</div>"; });
+        .catch((e) => { grid.innerHTML = '<div class="col-span-full py-12 text-center text-red-500">Could not load templates/manifest.json — ' + esc(e.message) + "</div>"; });
     </script>
   </body>
 </html>

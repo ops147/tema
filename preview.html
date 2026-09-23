@@ -7,65 +7,64 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
       @theme {
-        --color-brand: #5b67b5;
-        --color-navy: #191d33;
-        --color-cream: #f7f8fd;
-        --font-sans: "Work Sans", ui-sans-serif, system-ui, sans-serif;
+        --color-navy: #000f44;
+        --color-ink: #555555;
+        --color-line: #dedede;
+        --color-blue: #1d70db;
+        --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+        --font-mono: "JetBrains Mono", ui-monospace, monospace;
       }
       html, body { height: 100%; }
       body { @apply bg-white font-sans flex flex-col; }
     </style>
   </head>
   <body>
-    <div id="bar" class="flex items-center gap-4 border-b border-slate-100 bg-white px-4 py-2 text-xs text-slate-600">
-      <a href="index.html" class="font-semibold text-brand no-underline hover:text-navy">&larr; demos</a>
-      <span id="file" class="min-w-0 flex-1 truncate font-mono text-[11px] text-slate-400"></span>
-      <a id="raw" href="#" target="_blank" rel="noopener" class="font-semibold text-brand no-underline hover:text-navy">open raw &nearr;</a>
+    <div id="bar" class="flex items-center gap-4 px-4 py-2 bg-white border-b border-line text-xs text-ink">
+      <a href="index.html" class="text-blue hover:underline no-underline font-medium">&larr; demos</a>
+      <span id="file" class="flex-1 min-w-0 truncate font-mono text-[11px] text-ink/60"></span>
+      <a id="raw" href="#" target="_blank" rel="noopener" class="text-blue hover:underline no-underline font-medium">open raw &nearr;</a>
     </div>
-    <div id="err" class="hidden p-8 text-sm text-red-500"></div>
-    <iframe id="frame" title="Template preview" class="w-full flex-1 border-0 bg-white"></iframe>
+    <div id="err" class="hidden p-8 text-red-500 text-sm"></div>
+    <iframe id="frame" title="Template preview" class="flex-1 w-full border-0 bg-white"></iframe>
     <script>
       const params = new URLSearchParams(location.search);
       const embed = params.get("embed") === "1";
       if (embed) document.getElementById("bar").style.display = "none";
       const f = params.get("f") || "";
       const err = (msg) => { const e = document.getElementById("err"); e.classList.remove("hidden"); e.textContent = msg; };
-
       if (!/^templates\/[\w.\/-]+\.html$/.test(f) || f.includes("..")) {
         err("Missing or invalid ?f= parameter (expected templates/<demo>/<page>.html).");
       } else {
-        const dir = f.slice(0, f.lastIndexOf("/") + 1); // e.g. "templates/gymnista/"
+        const dir = f.slice(0, f.lastIndexOf("/") + 1);           // e.g. templates/gymnista/
+        const demoDir = dir.replace(/^templates\//, "");           // e.g. gymnista/
         const root = new URL(".", location.href).href;
         document.getElementById("file").textContent = f;
         document.getElementById("raw").href = f;
-        const suffix = embed ? "&embed=1" : "";
-
-        // The manifest maps link slugs -> real files. Templates use two link
-        // styles: filename ("services.html") and slug ("gymnista-faq.html");
-        // the plugin resolves both through the manifest — mirror that here.
         Promise.all([
           fetch(f).then((r) => { if (!r.ok) throw new Error("HTTP " + r.status); return r.text(); }),
-          fetch("templates/manifest.json").then((r) => (r.ok ? r.json() : {})).catch(() => ({})),
+          fetch("templates/manifest.json").then((r) => r.ok ? r.json() : {}),
         ])
           .then(([html, manifest]) => {
-            const tpl = manifest.templates || {};
-            const slugFile = {}, files = new Set();
-            for (const [slug, t] of Object.entries(tpl)) {
-              slugFile[slug] = "templates/" + t.file;
-              files.add("templates/" + t.file);
-            }
-            const resolve = (slug) => {
-              const sameDir = dir + slug + ".html";
-              return files.has(sameDir) ? sameDir : (slugFile[slug] || sameDir);
-            };
-
+            // Same asset rewrites the plugin applies (assets_to_plugin_urls):
+            // bundled Img/, Css/, Js/ placeholders -> repo asset paths.
             let out = html
               .split('="Img/').join('="assets/img/')
               .split('="Css/tailwind.css').join('="assets/css/tailwind.css')
               .split('="Js/site.js').join('="assets/js/site.js');
             out = out.replace(/<head(\s[^>]*)?>/i, (m) => m + '<base href="' + root + '">');
-            out = out.replace(/href="([\w-]+)\.html"/g, (m, slug) =>
-              'href="preview.html?f=' + encodeURIComponent(resolve(slug)) + suffix + '"');
+            // Internal href="<x>.html" links stay inside the previewer. Templates
+            // link either by manifest slug (gymnista-all-collections.html) or by
+            // same-dir filename (services.html) — resolve like the plugin does.
+            const tpl = manifest.templates || {};
+            const files = new Set(Object.values(tpl).map((t) => t.file));
+            const q = embed ? "&embed=1" : "";
+            out = out.replace(/href="([\w-]+)\.html"/g, (m, slug) => {
+              let target;
+              if (files.has(demoDir + slug + ".html")) target = dir + slug + ".html";
+              else if (tpl[slug]) target = "templates/" + tpl[slug].file;
+              else target = dir + slug + ".html";
+              return 'href="preview.html?f=' + encodeURIComponent(target) + q + '"';
+            });
             document.getElementById("frame").srcdoc = out;
           })
           .catch((e) => err("Could not load " + f + " — " + e.message));
