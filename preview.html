@@ -4,31 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Template preview</title>
-    <style>
-      * { box-sizing: border-box; margin: 0; }
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-bg: #0b0f14;
+        --color-edge: #243040;
+        --color-mut: #8b98a5;
+        --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+        --font-mono: "JetBrains Mono", ui-monospace, monospace;
+      }
       html, body { height: 100%; }
-      body { font-family: ui-sans-serif, system-ui, sans-serif; display: flex; flex-direction: column; background: #1d2327; }
-      #bar { display: flex; align-items: center; gap: 1rem; padding: .45rem .9rem; background: #1d2327; color: #d6dbe0; font-size: .8rem; }
-      #bar a { color: #9ec2e6; text-decoration: none; }
-      #bar a:hover { text-decoration: underline; }
-      #file { color: #8a949c; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; }
-      iframe { flex: 1; border: 0; width: 100%; background: #fff; }
-      #err { display: none; padding: 2rem; color: #f1b8b8; font-size: .9rem; }
+      body { @apply bg-bg font-sans flex flex-col; }
     </style>
   </head>
   <body>
-    <div id="bar">
-      <a href="index.html">&larr; demos</a>
-      <span id="file"></span>
-      <a id="raw" href="#" target="_blank" rel="noopener">open raw &nearr;</a>
+    <div id="bar" class="flex items-center gap-4 px-4 py-2 bg-bg border-b border-edge text-xs text-slate-300">
+      <a href="index.html" class="text-sky-300 hover:underline no-underline">&larr; demos</a>
+      <span id="file" class="flex-1 min-w-0 truncate font-mono text-[11px] text-mut"></span>
+      <a id="raw" href="#" target="_blank" rel="noopener" class="text-sky-300 hover:underline no-underline">open raw &nearr;</a>
     </div>
-    <div id="err"></div>
-    <iframe id="frame" title="Template preview"></iframe>
+    <div id="err" class="hidden p-8 text-red-300 text-sm"></div>
+    <iframe id="frame" title="Template preview" class="flex-1 w-full border-0 bg-white"></iframe>
     <script>
       const params = new URLSearchParams(location.search);
-      if (params.get("embed") === "1") document.getElementById("bar").style.display = "none";
+      const embed = params.get("embed") === "1";
+      if (embed) document.getElementById("bar").style.display = "none";
       const f = params.get("f") || "";
-      const err = (msg) => { const e = document.getElementById("err"); e.style.display = "block"; e.textContent = msg; };
+      const err = (msg) => { const e = document.getElementById("err"); e.classList.remove("hidden"); e.textContent = msg; };
       if (!/^templates\/[\w.\/-]+\.html$/.test(f) || f.includes("..")) {
         err("Missing or invalid ?f= parameter (expected templates/<demo>/<page>.html).");
       } else {
@@ -48,7 +50,7 @@
             out = out.replace(/<head(\s[^>]*)?>/i, (m) => m + '<base href="' + root + '">');
             // Internal href="<slug>.html" links stay inside the previewer.
             out = out.replace(/href="([\w-]+)\.html"/g, (m, slug) =>
-              'href="preview.html?f=' + encodeURIComponent(dir + slug + ".html") + '"');
+              'href="preview.html?f=' + encodeURIComponent(dir + slug + ".html") + (embed ? "&embed=1" : "") + '"');
             document.getElementById("frame").srcdoc = out;
           })
           .catch((e) => err("Could not load " + f + " — " + e.message));

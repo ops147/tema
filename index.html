@@ -7,372 +7,130 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-    <style>
-      :root {
-        --bg: #0b0f14;
-        --surface: #12181f;
-        --surface-2: #18212b;
-        --border: #243040;
-        --text: #e8edf2;
-        --muted: #8b98a5;
-        --accent: #4ade80;
-        --accent-2: #38bdf8;
-        --radius: 14px;
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-bg: #0b0f14;
+        --color-surface: #12181f;
+        --color-surface2: #18212b;
+        --color-edge: #243040;
+        --color-mut: #8b98a5;
+        --color-acc: #4ade80;
+        --color-acc2: #38bdf8;
+        --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+        --font-mono: "JetBrains Mono", ui-monospace, monospace;
       }
-      * { box-sizing: border-box; margin: 0; }
-      html { scroll-behavior: smooth; }
-      body {
-        font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
-        background: var(--bg);
-        color: var(--text);
-        line-height: 1.5;
-        -webkit-font-smoothing: antialiased;
-      }
-      body.locked { overflow: hidden; }
-      a { color: inherit; }
-      code { font-family: "JetBrains Mono", ui-monospace, monospace; }
-      button { font-family: inherit; }
-
-      /* ---------- ambient background ---------- */
-      .glow { position: fixed; inset: 0; z-index: -1; overflow: hidden; }
-      .glow::before, .glow::after {
-        content: ""; position: absolute; width: 55vw; height: 55vw;
-        border-radius: 50%; filter: blur(120px); opacity: .14;
-      }
-      .glow::before { background: #22c55e; top: -25vw; left: -15vw; }
-      .glow::after { background: #0ea5e9; top: -20vw; right: -20vw; }
-
-      /* ---------- header ---------- */
-      header {
-        position: sticky; top: 0; z-index: 10;
-        backdrop-filter: blur(12px);
-        background: rgba(11, 15, 20, .72);
-        border-bottom: 1px solid var(--border);
-      }
-      .nav {
-        max-width: 1180px; margin: 0 auto; padding: .8rem 1.5rem;
-        display: flex; align-items: center; gap: .75rem;
-      }
-      .logo {
-        width: 30px; height: 30px; border-radius: 8px;
-        background: linear-gradient(135deg, var(--accent), var(--accent-2));
-        display: grid; place-items: center;
-        font-weight: 800; font-size: .8rem; color: #06110a;
-      }
-      .nav .name { font-weight: 700; letter-spacing: -.01em; }
-      .nav .spacer { flex: 1; }
-      .nav a.btn {
-        font-size: .8rem; font-weight: 600; text-decoration: none;
-        padding: .45rem .9rem; border-radius: 8px;
-        border: 1px solid var(--border); color: var(--muted);
-        transition: .2s;
-      }
-      .nav a.btn:hover { color: var(--text); border-color: var(--muted); }
-
-      /* ---------- hero ---------- */
-      .hero { max-width: 1180px; margin: 0 auto; padding: 4.5rem 1.5rem 2.5rem; }
-      .eyebrow {
-        display: inline-flex; align-items: center; gap: .5rem;
-        font-size: .75rem; font-weight: 600; letter-spacing: .08em;
-        text-transform: uppercase; color: var(--accent);
-        border: 1px solid rgba(74, 222, 128, .3); border-radius: 999px;
-        padding: .35rem .85rem; margin-bottom: 1.4rem;
-      }
-      .eyebrow::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
-      .hero h1 {
-        font-size: clamp(2.2rem, 5.5vw, 3.6rem); font-weight: 800;
-        letter-spacing: -.03em; line-height: 1.08; max-width: 16ch;
-      }
-      .hero h1 .grad {
-        background: linear-gradient(90deg, var(--accent), var(--accent-2));
-        -webkit-background-clip: text; background-clip: text; color: transparent;
-      }
-      .hero p { margin-top: 1.1rem; color: var(--muted); font-size: 1.02rem; max-width: 58ch; }
-      .stats { display: flex; gap: 2.2rem; margin-top: 2rem; flex-wrap: wrap; }
-      .stat b { display: block; font-size: 1.5rem; font-weight: 800; letter-spacing: -.02em; }
-      .stat span { font-size: .78rem; color: var(--muted); text-transform: uppercase; letter-spacing: .07em; }
-
-      /* ---------- setup card ---------- */
-      .setup { max-width: 1180px; margin: 0 auto 1rem; padding: 0 1.5rem; }
-      .setup-inner {
-        background: linear-gradient(180deg, var(--surface), var(--surface-2));
-        border: 1px solid var(--border); border-radius: var(--radius);
-        padding: 1.4rem 1.5rem;
-      }
-      .setup h2 { font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); margin-bottom: .9rem; }
-      .urlrow { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; padding: .55rem 0; }
-      .urlrow .label { font-size: .8rem; color: var(--muted); width: 150px; }
-      .urlrow code {
-        flex: 1; min-width: 260px; font-size: .82rem;
-        background: #0b1118; border: 1px solid var(--border);
-        border-radius: 8px; padding: .5rem .8rem; color: #a8e6c5;
-        overflow-x: auto; white-space: nowrap;
-      }
-      .copy {
-        cursor: pointer; border: 1px solid var(--border); background: transparent;
-        color: var(--muted); font: 600 .75rem "Inter", sans-serif;
-        border-radius: 8px; padding: .45rem .8rem; transition: .2s;
-      }
-      .copy:hover { color: var(--text); border-color: var(--muted); }
-      .copy.done { color: var(--accent); border-color: var(--accent); }
-      .setup .hint { margin-top: .7rem; font-size: .8rem; color: var(--muted); }
-      .setup .hint b { color: var(--text); font-weight: 600; }
-
-      /* ---------- toolbar ---------- */
-      .toolbar {
-        max-width: 1180px; margin: 2.6rem auto 1.4rem; padding: 0 1.5rem;
-        display: flex; flex-wrap: wrap; gap: .7rem; align-items: center;
-      }
-      .search {
-        flex: 1; min-width: 220px; display: flex; align-items: center; gap: .55rem;
-        background: var(--surface); border: 1px solid var(--border);
-        border-radius: 10px; padding: .6rem .9rem;
-      }
-      .search svg { flex-shrink: 0; stroke: var(--muted); }
-      .search input {
-        flex: 1; background: none; border: 0; outline: 0;
-        color: var(--text); font: 400 .9rem "Inter", sans-serif;
-      }
-      .search input::placeholder { color: var(--muted); }
-      .chips { display: flex; gap: .45rem; flex-wrap: wrap; }
-      .chip {
-        cursor: pointer; border: 1px solid var(--border); border-radius: 999px;
-        background: var(--surface); color: var(--muted);
-        font: 600 .76rem "Inter", sans-serif; padding: .45rem .95rem;
-        transition: .18s;
-      }
-      .chip:hover { color: var(--text); border-color: var(--muted); }
-      .chip.on { background: var(--accent); border-color: var(--accent); color: #06110a; }
-
-      /* ---------- grid ---------- */
-      .grid {
-        max-width: 1180px; margin: 0 auto; padding: 0 1.5rem 4.5rem;
-        display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-        gap: 1.4rem;
-      }
-      .card {
-        background: var(--surface); border: 1px solid var(--border);
-        border-radius: var(--radius); overflow: hidden;
-        display: flex; flex-direction: column;
-        transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
-      }
-      .card:hover {
-        transform: translateY(-4px); border-color: #3a4b60;
-        box-shadow: 0 18px 40px -18px rgba(0, 0, 0, .7);
-      }
-      .thumb { position: relative; aspect-ratio: 16/9; overflow: hidden; background: var(--surface-2); cursor: pointer; }
-      .thumb img {
-        width: 100%; height: 100%; object-fit: cover; object-position: top;
-        display: block; transition: transform .5s ease;
-      }
-      .card:hover .thumb img { transform: scale(1.04); }
-      .thumb .pages-badge {
-        position: absolute; right: .7rem; bottom: .7rem;
-        font-size: .68rem; font-weight: 700;
-        background: rgba(6, 12, 9, .75); color: var(--accent);
-        border: 1px solid rgba(74, 222, 128, .35);
-        backdrop-filter: blur(6px);
-        border-radius: 999px; padding: .25rem .65rem;
-      }
-      .thumb .play {
-        position: absolute; inset: 0; display: grid; place-items: center;
-        background: rgba(6, 12, 9, 0); transition: background .25s;
-      }
-      .thumb .play span {
-        opacity: 0; transform: translateY(6px); transition: .25s;
-        background: var(--accent); color: #06110a;
-        font: 700 .8rem "Inter", sans-serif;
-        border-radius: 999px; padding: .55rem 1.2rem;
-        box-shadow: 0 8px 24px rgba(0,0,0,.5);
-      }
-      .card:hover .play { background: rgba(6, 12, 9, .45); }
-      .card:hover .play span { opacity: 1; transform: none; }
-      .body { padding: 1.05rem 1.15rem 1.15rem; display: flex; flex-direction: column; gap: .55rem; flex: 1; }
-      .body h2 { font-size: 1.05rem; font-weight: 700; letter-spacing: -.015em; cursor: pointer; }
-      .body h2:hover { color: var(--accent); }
-      .desc { font-size: .8rem; color: var(--muted); line-height: 1.5; flex: 1; }
-      .cats { display: flex; gap: .35rem; flex-wrap: wrap; }
-      .cats span {
-        font-size: .66rem; font-weight: 600; letter-spacing: .02em;
-        background: rgba(56, 189, 248, .1); color: #7dd3fc;
-        border: 1px solid rgba(56, 189, 248, .25);
-        border-radius: 999px; padding: .2em .65em;
-      }
-      .pages {
-        display: flex; gap: .15rem .9rem; flex-wrap: wrap;
-        border-top: 1px solid var(--border); padding-top: .75rem; margin-top: .35rem;
-      }
-      .pages a {
-        font-size: .78rem; font-weight: 500; color: var(--muted);
-        text-decoration: none; transition: color .15s;
-      }
-      .pages a:hover { color: var(--accent); }
-
-      .empty, .err { grid-column: 1 / -1; padding: 3rem 1rem; text-align: center; color: var(--muted); }
-      .err { color: #f87171; }
-
-      /* ---------- demo viewer modal ---------- */
-      .modal { position: fixed; inset: 0; z-index: 50; display: none; }
-      .modal.open { display: block; }
-      .modal-backdrop { position: absolute; inset: 0; background: rgba(4, 7, 10, .8); backdrop-filter: blur(4px); }
-      .modal-box {
-        position: absolute; inset: 2.5vh 2vw;
-        background: var(--bg); border: 1px solid var(--border);
-        border-radius: 16px; overflow: hidden;
-        display: flex; box-shadow: 0 30px 80px rgba(0,0,0,.6);
-      }
-      .m-side {
-        width: 250px; flex-shrink: 0; display: flex; flex-direction: column;
-        border-right: 1px solid var(--border); background: var(--surface);
-      }
-      .m-head { padding: 1.1rem 1.1rem .9rem; border-bottom: 1px solid var(--border); }
-      .m-head h2 { font-size: .98rem; font-weight: 700; letter-spacing: -.01em; }
-      .m-head .cats { margin-top: .5rem; }
-      .m-pages { overflow-y: auto; padding: .6rem; display: flex; flex-direction: column; gap: .15rem; }
-      .m-pages button {
-        text-align: left; cursor: pointer; border: 0; background: transparent;
-        color: var(--muted); font: 500 .82rem "Inter", sans-serif;
-        padding: .5rem .7rem; border-radius: 8px; transition: .15s;
-        display: flex; align-items: center; gap: .5rem;
-      }
-      .m-pages button:hover { background: var(--surface-2); color: var(--text); }
-      .m-pages button.on { background: rgba(74, 222, 128, .12); color: var(--accent); }
-      .m-pages button.on::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
-      .m-import {
-        margin-top: auto; padding: .9rem 1.1rem; border-top: 1px solid var(--border);
-        font-size: .72rem; color: var(--muted); line-height: 1.5;
-      }
-      .m-import b { color: var(--text); }
-
-      .m-main { flex: 1; display: flex; flex-direction: column; min-width: 0; }
-      .m-bar {
-        display: flex; align-items: center; gap: .8rem;
-        padding: .55rem .9rem; border-bottom: 1px solid var(--border);
-        background: var(--surface);
-      }
-      .m-file { font-size: .76rem; color: var(--muted); font-family: "JetBrains Mono", monospace; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; }
-      .devices { display: flex; gap: .3rem; background: #0b1118; border: 1px solid var(--border); border-radius: 8px; padding: .2rem; }
-      .dev {
-        cursor: pointer; border: 0; background: transparent; color: var(--muted);
-        font: 600 .72rem "Inter", sans-serif; padding: .35rem .7rem; border-radius: 6px; transition: .15s;
-      }
-      .dev:hover { color: var(--text); }
-      .dev.on { background: var(--surface-2); color: var(--accent); }
-      .m-open {
-        font-size: .76rem; font-weight: 600; color: var(--muted); text-decoration: none;
-        border: 1px solid var(--border); border-radius: 8px; padding: .4rem .75rem; transition: .15s;
-      }
-      .m-open:hover { color: var(--text); border-color: var(--muted); }
-      .m-close {
-        cursor: pointer; border: 0; background: transparent; color: var(--muted);
-        font-size: 1rem; padding: .3rem .55rem; border-radius: 6px; transition: .15s;
-      }
-      .m-close:hover { color: var(--text); background: var(--surface-2); }
-      .m-view { flex: 1; overflow: auto; display: flex; justify-content: center; background: #0a0e13; padding: 1rem; }
-      .m-frame-wrap { width: 100%; height: 100%; transition: width .3s ease; }
-      .m-frame-wrap.tablet { width: 768px; max-width: 100%; }
-      .m-frame-wrap.mobile { width: 390px; max-width: 100%; }
-      .m-frame-wrap iframe { width: 100%; height: 100%; border: 0; border-radius: 10px; background: #fff; box-shadow: 0 10px 40px rgba(0,0,0,.5); }
-
-      @media (max-width: 760px) {
-        .m-side { display: none; }
-        .modal-box { inset: 0; border-radius: 0; border: 0; }
-      }
-
-      footer {
-        border-top: 1px solid var(--border);
-        padding: 1.6rem 1.5rem; text-align: center;
-        font-size: .78rem; color: var(--muted);
-      }
-      footer code { color: #a8e6c5; }
+      body { @apply bg-bg text-slate-100 font-sans antialiased; }
+      code { @apply font-mono; }
     </style>
   </head>
   <body>
-    <div class="glow"></div>
+    <!-- ambient glow -->
+    <div class="fixed inset-0 -z-10 overflow-hidden" aria-hidden="true">
+      <div class="absolute -top-[25vw] -left-[15vw] w-[55vw] h-[55vw] rounded-full bg-green-500 opacity-15 blur-[120px]"></div>
+      <div class="absolute -top-[20vw] -right-[20vw] w-[55vw] h-[55vw] rounded-full bg-sky-500 opacity-15 blur-[120px]"></div>
+    </div>
 
-    <header>
-      <nav class="nav">
-        <div class="logo">T</div>
-        <span class="name">tema</span>
-        <span class="spacer"></span>
-        <a class="btn" href="https://github.com/ops147/tema" target="_blank" rel="noopener">GitHub ↗</a>
+    <!-- header -->
+    <header class="sticky top-0 z-10 backdrop-blur-xl bg-bg/70 border-b border-edge">
+      <nav class="max-w-6xl mx-auto px-6 py-3 flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-acc to-acc2 grid place-items-center font-extrabold text-sm text-[#06110a]">T</div>
+        <span class="font-bold tracking-tight">tema</span>
+        <span class="flex-1"></span>
+        <a href="https://github.com/ops147/tema" target="_blank" rel="noopener"
+           class="text-xs font-semibold px-3.5 py-1.5 rounded-lg border border-edge text-mut hover:text-slate-100 hover:border-mut transition">GitHub ↗</a>
       </nav>
     </header>
 
-    <section class="hero">
-      <span class="eyebrow">ARC Starter Templates</span>
-      <h1>Remote template library, <span class="grad">served by GitHub Pages</span></h1>
-      <p>
+    <!-- hero -->
+    <section class="max-w-6xl mx-auto px-6 pt-16 pb-8">
+      <span class="inline-flex items-center gap-2 text-[11px] font-semibold tracking-widest uppercase text-acc border border-acc/30 rounded-full px-3.5 py-1.5 mb-6">
+        <span class="w-1.5 h-1.5 rounded-full bg-acc"></span>ARC Starter Templates
+      </span>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.05] max-w-[16ch]">
+        Remote template library,
+        <span class="bg-gradient-to-r from-acc to-acc2 bg-clip-text text-transparent">served by GitHub Pages</span>
+      </h1>
+      <p class="mt-5 text-mut text-base max-w-[58ch]">
         Demo manifest, template documents and images pulled on demand by the
-        <strong>ARC Starter Templates</strong> WordPress plugin — so the plugin stays
-        lightweight and this repo stays the single source of truth.
+        <strong class="text-slate-100 font-semibold">ARC Starter Templates</strong> WordPress plugin —
+        so the plugin stays lightweight and this repo stays the single source of truth.
       </p>
-      <div class="stats" id="stats"></div>
+      <div id="stats" class="flex flex-wrap gap-9 mt-8"></div>
     </section>
 
-    <section class="setup">
-      <div class="setup-inner">
-        <h2>Point the plugin at this repo</h2>
-        <div class="urlrow">
-          <span class="label">Remote base URL</span>
-          <code>https://raw.githubusercontent.com/ops147/tema/main</code>
-          <button class="copy" data-copy="https://raw.githubusercontent.com/ops147/tema/main">Copy</button>
+    <!-- setup -->
+    <section class="max-w-6xl mx-auto px-6 mb-4">
+      <div class="bg-gradient-to-b from-surface to-surface2 border border-edge rounded-2xl p-6">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-mut mb-4">Point the plugin at this repo</h2>
+        <div class="flex flex-wrap items-center gap-2.5 py-2">
+          <span class="text-xs text-mut w-36">Remote base URL</span>
+          <code class="flex-1 min-w-64 text-[13px] bg-[#0b1118] border border-edge rounded-lg px-3 py-2 text-[#a8e6c5] overflow-x-auto whitespace-nowrap">https://raw.githubusercontent.com/ops147/tema/main</code>
+          <button class="copy text-xs font-semibold px-3 py-2 rounded-lg border border-edge text-mut hover:text-slate-100 hover:border-mut transition cursor-pointer bg-transparent"
+                  data-copy="https://raw.githubusercontent.com/ops147/tema/main">Copy</button>
         </div>
-        <div class="urlrow">
-          <span class="label">Pages mirror</span>
-          <code id="pages-url"></code>
-          <button class="copy" id="copy-pages">Copy</button>
+        <div class="flex flex-wrap items-center gap-2.5 py-2">
+          <span class="text-xs text-mut w-36">Pages mirror</span>
+          <code id="pages-url" class="flex-1 min-w-64 text-[13px] bg-[#0b1118] border border-edge rounded-lg px-3 py-2 text-[#a8e6c5] overflow-x-auto whitespace-nowrap"></code>
+          <button id="copy-pages" class="copy text-xs font-semibold px-3 py-2 rounded-lg border border-edge text-mut hover:text-slate-100 hover:border-mut transition cursor-pointer bg-transparent">Copy</button>
         </div>
-        <p class="hint">
-          wp-admin → <b>Starter Templates → Templates repository → Remote base URL</b>.
+        <p class="mt-3 text-xs text-mut">
+          wp-admin → <b class="text-slate-100 font-semibold">Starter Templates → Templates repository → Remote base URL</b>.
           Repo is public — leave the access token empty.
         </p>
       </div>
     </section>
 
-    <div class="toolbar">
-      <div class="search">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-        <input id="q" type="search" placeholder="Search demos…" />
+    <!-- toolbar -->
+    <div class="max-w-6xl mx-auto px-6 mt-10 mb-6 flex flex-wrap items-center gap-3">
+      <div class="flex-1 min-w-56 flex items-center gap-2.5 bg-surface border border-edge rounded-xl px-3.5 py-2.5">
+        <svg class="shrink-0 stroke-mut" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="q" type="search" placeholder="Search demos…" class="flex-1 bg-transparent outline-none text-sm text-slate-100 placeholder:text-mut" />
       </div>
-      <div class="chips" id="chips"></div>
+      <div id="chips" class="flex flex-wrap gap-2"></div>
     </div>
 
-    <main class="grid" id="grid"><div class="empty">Loading manifest…</div></main>
+    <!-- grid -->
+    <main id="grid" class="max-w-6xl mx-auto px-6 pb-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="col-span-full py-12 text-center text-mut">Loading manifest…</div>
+    </main>
 
-    <footer>
-      Powered by <code>templates/manifest.json</code> — previews apply the plugin's
-      <code>Img/ · Css/ · Js/</code> rewrites in-browser.
+    <footer class="border-t border-edge px-6 py-6 text-center text-xs text-mut">
+      Powered by <code class="text-[#a8e6c5]">templates/manifest.json</code> — previews apply the plugin's
+      <code class="text-[#a8e6c5]">Img/ · Css/ · Js/</code> rewrites in-browser.
     </footer>
 
-    <!-- Demo viewer -->
-    <div class="modal" id="modal">
-      <div class="modal-backdrop" data-close></div>
-      <div class="modal-box">
-        <aside class="m-side">
-          <div class="m-head">
-            <h2 id="m-title"></h2>
-            <div class="cats" id="m-cats"></div>
+    <!-- demo viewer -->
+    <div id="modal" class="fixed inset-0 z-50 hidden">
+      <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" data-close></div>
+      <div class="absolute inset-[2.5vh_2vw] max-md:inset-0 bg-bg border border-edge max-md:border-0 rounded-2xl max-md:rounded-none overflow-hidden flex shadow-2xl">
+        <!-- sidebar -->
+        <aside class="w-60 shrink-0 max-md:hidden flex flex-col border-r border-edge bg-surface">
+          <div class="px-4 pt-4 pb-3.5 border-b border-edge">
+            <h2 id="m-title" class="text-base font-bold tracking-tight"></h2>
+            <div id="m-cats" class="flex flex-wrap gap-1.5 mt-2.5"></div>
           </div>
-          <nav class="m-pages" id="m-pages"></nav>
-          <div class="m-import">
-            Import with the plugin: <b>Starter Templates → Library</b> in wp-admin, or browse every page here first.
+          <nav id="m-pages" class="overflow-y-auto p-2.5 flex flex-col gap-0.5"></nav>
+          <div class="mt-auto px-4 py-3.5 border-t border-edge text-[11px] text-mut leading-relaxed">
+            Import with the plugin: <b class="text-slate-100">Starter Templates → Library</b> in wp-admin, or browse every page here first.
           </div>
         </aside>
-        <div class="m-main">
-          <div class="m-bar">
-            <span class="m-file" id="m-file"></span>
-            <div class="devices">
-              <button class="dev on" data-dev="desktop">Desktop</button>
-              <button class="dev" data-dev="tablet">Tablet</button>
-              <button class="dev" data-dev="mobile">Mobile</button>
+        <!-- preview -->
+        <div class="flex-1 flex flex-col min-w-0">
+          <div class="flex items-center gap-3 px-3.5 py-2 border-b border-edge bg-surface">
+            <span id="m-file" class="flex-1 min-w-0 truncate font-mono text-[11px] text-mut"></span>
+            <div class="flex gap-1 bg-[#0b1118] border border-edge rounded-lg p-1">
+              <button class="dev on text-[11px] font-semibold px-2.5 py-1 rounded-md transition cursor-pointer border-0 bg-transparent text-mut" data-dev="desktop">Desktop</button>
+              <button class="dev text-[11px] font-semibold px-2.5 py-1 rounded-md transition cursor-pointer border-0 bg-transparent text-mut" data-dev="tablet">Tablet</button>
+              <button class="dev text-[11px] font-semibold px-2.5 py-1 rounded-md transition cursor-pointer border-0 bg-transparent text-mut" data-dev="mobile">Mobile</button>
             </div>
-            <a class="m-open" id="m-open" href="#" target="_blank" rel="noopener">Open ↗</a>
-            <button class="m-close" data-close title="Close">✕</button>
+            <a id="m-open" href="#" target="_blank" rel="noopener"
+               class="text-[11px] font-semibold px-3 py-1.5 rounded-lg border border-edge text-mut hover:text-slate-100 hover:border-mut transition no-underline">Open ↗</a>
+            <button data-close title="Close" class="cursor-pointer border-0 bg-transparent text-mut hover:text-slate-100 hover:bg-surface2 text-base px-2 py-1 rounded-md transition">✕</button>
           </div>
-          <div class="m-view">
-            <div class="m-frame-wrap" id="m-wrap">
-              <iframe id="m-frame" title="Template preview"></iframe>
+          <div class="flex-1 overflow-auto flex justify-center bg-[#0a0e13] p-4 max-md:p-0">
+            <div id="m-wrap" class="w-full h-full transition-[width] duration-300">
+              <iframe id="m-frame" title="Template preview" class="w-full h-full border-0 rounded-xl max-md:rounded-none bg-white shadow-2xl"></iframe>
             </div>
           </div>
         </div>
@@ -388,8 +146,9 @@
       for (const btn of document.querySelectorAll(".copy")) {
         btn.addEventListener("click", async () => {
           try { await navigator.clipboard.writeText(btn.dataset.copy); } catch (e) {}
-          btn.textContent = "Copied ✓"; btn.classList.add("done");
-          setTimeout(() => { btn.textContent = "Copy"; btn.classList.remove("done"); }, 1600);
+          btn.textContent = "Copied ✓";
+          btn.classList.add("text-acc", "border-acc");
+          setTimeout(() => { btn.textContent = "Copy"; btn.classList.remove("text-acc", "border-acc"); }, 1600);
         });
       }
 
@@ -401,22 +160,24 @@
       const modal = document.getElementById("modal");
       const frame = document.getElementById("m-frame");
       const wrap = document.getElementById("m-wrap");
-      let curDemo = null, curPage = null;
+      const DEV_W = { desktop: "w-full", tablet: "w-[768px] max-w-full", mobile: "w-[390px] max-w-full" };
 
       function openDemo(id, pageSlug) {
         const d = DEMOS[id];
         if (!d) return;
-        curDemo = id; curPage = pageSlug;
         document.getElementById("m-title").textContent = d.title || id;
         document.getElementById("m-cats").innerHTML =
-          (d.categories || []).map((c) => "<span>" + esc(c) + "</span>").join("");
+          (d.categories || []).map((c) =>
+            '<span class="text-[10px] font-semibold bg-acc2/10 text-sky-300 border border-acc2/25 rounded-full px-2.5 py-0.5">' + esc(c) + "</span>").join("");
         const nav = document.getElementById("m-pages");
         nav.innerHTML = "";
         for (const p of d.pages || []) {
           if (!TPL[p]) continue;
           const b = document.createElement("button");
-          b.textContent = TPL[p].name || p;
-          b.classList.toggle("on", p === pageSlug);
+          const on = p === pageSlug;
+          b.className = "text-left cursor-pointer border-0 rounded-lg px-2.5 py-2 text-[13px] font-medium transition flex items-center gap-2 " +
+            (on ? "bg-acc/10 text-acc" : "bg-transparent text-mut hover:bg-surface2 hover:text-slate-100");
+          b.innerHTML = (on ? '<span class="w-1.5 h-1.5 rounded-full bg-acc shrink-0"></span>' : "") + esc(TPL[p].name || p);
           b.addEventListener("click", () => openDemo(id, p));
           nav.appendChild(b);
         }
@@ -424,22 +185,28 @@
         document.getElementById("m-file").textContent = "templates/" + file;
         frame.src = "preview.html?f=templates/" + encodeURIComponent(file) + "&embed=1";
         document.getElementById("m-open").href = "preview.html?f=templates/" + encodeURIComponent(file);
-        modal.classList.add("open");
-        document.body.classList.add("locked");
+        modal.classList.replace("hidden", "block");
+        document.body.classList.add("overflow-hidden");
       }
       function closeDemo() {
-        modal.classList.remove("open");
-        document.body.classList.remove("locked");
+        modal.classList.replace("block", "hidden");
+        document.body.classList.remove("overflow-hidden");
         frame.src = "about:blank";
       }
       modal.addEventListener("click", (e) => { if (e.target.dataset.close !== undefined) closeDemo(); });
       document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeDemo(); });
       document.querySelectorAll(".dev").forEach((b) => b.addEventListener("click", () => {
-        document.querySelectorAll(".dev").forEach((x) => x.classList.toggle("on", x === b));
-        wrap.className = "m-frame-wrap" + (b.dataset.dev === "desktop" ? "" : " " + b.dataset.dev);
+        document.querySelectorAll(".dev").forEach((x) => {
+          const on = x === b;
+          x.classList.toggle("bg-surface2", on);
+          x.classList.toggle("text-acc", on);
+          x.classList.toggle("text-mut", !on);
+        });
+        wrap.className = "h-full transition-[width] duration-300 " + DEV_W[b.dataset.dev];
       }));
 
       /* ---------- library grid ---------- */
+      const chipCls = "cursor-pointer border rounded-full text-xs font-semibold px-3.5 py-1.5 transition ";
       function render() {
         const q = document.getElementById("q").value.trim().toLowerCase();
         const shown = Object.entries(DEMOS).filter(([, d]) => {
@@ -448,29 +215,36 @@
           return catOk && qOk;
         });
         grid.innerHTML = "";
-        if (!shown.length) { grid.innerHTML = '<div class="empty">No demos match.</div>'; return; }
+        if (!shown.length) { grid.innerHTML = '<div class="col-span-full py-12 text-center text-mut">No demos match.</div>'; return; }
         for (const [id, d] of shown) grid.appendChild(card(id, d));
       }
 
       function card(id, d) {
         const el = document.createElement("article");
-        el.className = "card";
+        el.className = "group bg-surface border border-edge rounded-2xl overflow-hidden flex flex-col transition duration-300 hover:-translate-y-1 hover:border-slate-600 hover:shadow-2xl";
         const home = d.home || (d.pages || [])[0];
         const links = (d.pages || [])
           .filter((p) => TPL[p])
-          .map((p) => '<a href="#" data-demo="' + esc(id) + '" data-page="' + esc(p) + '">' + esc(TPL[p].name || p) + "</a>")
+          .map((p) => '<a href="#" data-demo="' + esc(id) + '" data-page="' + esc(p) + '" class="text-xs font-medium text-mut hover:text-acc no-underline transition">' + esc(TPL[p].name || p) + "</a>")
           .join("");
         el.innerHTML =
-          '<div class="thumb">' + (d.image ? '<img loading="lazy" src="' + esc(d.image) + '" alt="" />' : "") +
-          '<div class="play"><span>Preview site</span></div>' +
-          '<span class="pages-badge">' + (d.pages || []).length + " pages</span></div>" +
-          '<div class="body"><h2>' + esc(d.title || id) + "</h2>" +
-          '<p class="desc">' + esc(d.desc || "") + "</p>" +
-          '<div class="cats">' + (d.categories || []).map((c) => "<span>" + esc(c) + "</span>").join("") + "</div>" +
-          '<nav class="pages">' + links + "</nav></div>";
+          '<div class="thumb relative aspect-video overflow-hidden bg-surface2 cursor-pointer">' +
+            (d.image ? '<img loading="lazy" src="' + esc(d.image) + '" alt="" class="w-full h-full object-cover object-top transition duration-500 group-hover:scale-105" />' : "") +
+            '<div class="absolute inset-0 grid place-items-center bg-black/0 group-hover:bg-black/45 transition">' +
+              '<span class="opacity-0 translate-y-1.5 group-hover:opacity-100 group-hover:translate-y-0 transition bg-acc text-[#06110a] text-xs font-bold rounded-full px-5 py-2.5 shadow-xl">Preview site</span>' +
+            "</div>" +
+            '<span class="absolute right-2.5 bottom-2.5 text-[10px] font-bold bg-black/75 text-acc border border-acc/35 backdrop-blur rounded-full px-2.5 py-1">' + (d.pages || []).length + " pages</span>" +
+          "</div>" +
+          '<div class="flex flex-col gap-2.5 flex-1 px-5 pt-4 pb-5">' +
+            '<h2 class="text-base font-bold tracking-tight cursor-pointer hover:text-acc transition">' + esc(d.title || id) + "</h2>" +
+            '<p class="text-xs text-mut leading-relaxed line-clamp-3 flex-1">' + esc(d.desc || "") + "</p>" +
+            '<div class="flex flex-wrap gap-1.5">' + (d.categories || []).map((c) =>
+              '<span class="text-[10px] font-semibold bg-acc2/10 text-sky-300 border border-acc2/25 rounded-full px-2.5 py-0.5">' + esc(c) + "</span>").join("") + "</div>" +
+            '<nav class="flex flex-wrap gap-x-3.5 gap-y-1 border-t border-edge pt-3 mt-1.5">' + links + "</nav>" +
+          "</div>";
         el.querySelector(".thumb").addEventListener("click", () => openDemo(id, home));
         el.querySelector("h2").addEventListener("click", () => openDemo(id, home));
-        el.querySelectorAll(".pages a").forEach((a) => a.addEventListener("click", (e) => {
+        el.querySelectorAll(".pages a, nav a").forEach((a) => a.addEventListener("click", (e) => {
           e.preventDefault();
           openDemo(a.dataset.demo, a.dataset.page);
         }));
@@ -483,20 +257,26 @@
           TPL = m.templates || {};
           DEMOS = m.demos || {};
           const pages = Object.values(DEMOS).reduce((n, d) => n + (d.pages || []).length, 0);
+          const stat = (n, l) => '<div><b class="block text-2xl font-extrabold tracking-tight">' + n + '</b><span class="text-[11px] text-mut uppercase tracking-widest">' + l + "</span></div>";
           document.getElementById("stats").innerHTML =
-            '<div class="stat"><b>' + Object.keys(DEMOS).length + "</b><span>demos</span></div>" +
-            '<div class="stat"><b>' + pages + "</b><span>pages</span></div>" +
-            '<div class="stat"><b>' + Object.keys(TPL).length + "</b><span>templates</span></div>";
+            stat(Object.keys(DEMOS).length, "demos") + stat(pages, "pages") + stat(Object.keys(TPL).length, "templates");
 
           const cats = ["All", ...new Set(Object.values(DEMOS).flatMap((d) => d.categories || []))];
           chipsEl.innerHTML = "";
           for (const c of cats) {
             const b = document.createElement("button");
-            b.className = "chip" + (c === "All" ? " on" : "");
+            b.className = chipCls + (c === "All"
+              ? "bg-acc border-acc text-[#06110a]"
+              : "bg-surface border-edge text-mut hover:text-slate-100 hover:border-mut");
             b.textContent = c;
             b.addEventListener("click", () => {
               activeCat = c;
-              for (const x of chipsEl.children) x.classList.toggle("on", x === b);
+              for (const x of chipsEl.children) {
+                const on = x === b;
+                x.className = chipCls + (on
+                  ? "bg-acc border-acc text-[#06110a]"
+                  : "bg-surface border-edge text-mut hover:text-slate-100 hover:border-mut");
+              }
               render();
             });
             chipsEl.appendChild(b);
@@ -504,7 +284,7 @@
           document.getElementById("q").addEventListener("input", render);
           render();
         })
-        .catch((e) => { grid.innerHTML = '<div class="err">Could not load templates/manifest.json — ' + esc(e.message) + "</div>"; });
+        .catch((e) => { grid.innerHTML = '<div class="col-span-full py-12 text-center text-red-400">Could not load templates/manifest.json — ' + esc(e.message) + "</div>"; });
     </script>
   </body>
 </html>
