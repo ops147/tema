@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tema</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-navy: #000f44;
+        --color-ink: #555555;
+        --color-line: #dedede;
+        --color-blue: #1d70db;
+        --color-blue-d: #155cb8;
+        --color-soft: #f5f7fb;
+        --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+        --font-mono: "JetBrains Mono", ui-monospace, monospace;
+      }
+      body { @apply bg-white text-ink font-sans antialiased; }
+      code { @apply font-mono; }
+      .btn-primary { @apply inline-flex items-center gap-2 bg-blue hover:bg-blue-d text-white text-sm font-semibold rounded-lg px-6 py-3 transition no-underline shadow-sm; }
+      .btn-ghost { @apply inline-flex items-center gap-2 border border-line hover:border-navy text-navy text-sm font-semibold rounded-lg px-6 py-3 transition no-underline; }
+    </style>
+  </head>
+  <body>
+
+    <!-- ============ header (rendered from site.json) ============ -->
+    <header id="site-header" class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-line"></header>
+
+    <!-- ============ hero + stats ============ -->
+    <section class="bg-soft border-b border-line">
+      <div class="max-w-6xl mx-auto px-6 pt-20 pb-12 text-center">
+        <span id="hero-badge" class="inline-block text-[11px] font-bold uppercase tracking-widest text-blue bg-blue/10 rounded-full px-3.5 py-1.5 mb-5"></span>
+        <h1 id="hero-title" class="text-4xl sm:text-5xl lg:text-[3.4rem] font-extrabold text-navy tracking-tight leading-[1.08]"></h1>
+        <p id="hero-lead" class="mt-5 text-base sm:text-lg text-ink/90 max-w-2xl mx-auto"></p>
+        <div id="hero-ctas" class="mt-8 flex flex-wrap justify-center gap-3"></div>
+      </div>
+      <div class="border-t border-line bg-white">
+        <div id="hero-stats" class="max-w-6xl mx-auto px-6 py-6 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center"></div>
+      </div>
+    </section>
+
+    <!-- ============ sections (rendered from site.json) ============ -->
+    <main id="sections"></main>
+
+    <!-- ============ cta ============ -->
+    <section class="bg-navy">
+      <div class="max-w-6xl mx-auto px-6 py-14 text-center">
+        <h2 id="cta-title" class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight"></h2>
+        <p id="cta-text" class="mt-3 text-white/70 max-w-xl mx-auto"></p>
+        <a id="cta-btn" href="#" class="btn-primary mt-7 !bg-white !text-navy hover:!bg-soft"></a>
+      </div>
+    </section>
+
+    <!-- ============ footer (rendered from site.json) ============ -->
+    <footer id="site-footer" class="border-t border-line px-6 py-6 text-center text-xs text-ink/70"></footer>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/product.js" data-page="plugin"></script>
+  </body>
+</html>

@@ -110,9 +110,8 @@
       el("eco-title").textContent = P.ecosystem.title;
       el("eco-lead").innerHTML = P.ecosystem.lead;
       el("ecosystem").innerHTML = P.ecosystem.items
-        .map(
-          (s) =>
-            '<div class="bg-white border border-line rounded-2xl p-6">' +
+        .map((s) => {
+          const inner =
             '<div class="flex items-center gap-2.5">' +
             '<span class="w-7 h-7 rounded-full bg-blue text-white text-xs font-bold grid place-items-center shrink-0">' +
             esc(s.n) +
@@ -125,8 +124,22 @@
             "</h3>" +
             '<p class="mt-1.5 text-xs leading-relaxed text-ink/80">' +
             esc(s.text) +
-            "</p></div>"
-        )
+            "</p>" +
+            (s.href && s.linkLabel
+              ? '<span class="mt-3 inline-block text-xs font-semibold text-blue">' +
+                esc(s.linkLabel) +
+                "</span>"
+              : "");
+          return s.href
+            ? '<a href="' +
+                esc(fill(s.href, v)) +
+                '"' +
+                (/^https?:/.test(fill(s.href, v)) ? ' target="_blank" rel="noopener"' : "") +
+                ' class="bg-white border border-line rounded-2xl p-6 block no-underline hover:border-blue hover:shadow-md transition">' +
+                inner +
+                "</a>"
+            : '<div class="bg-white border border-line rounded-2xl p-6">' + inner + "</div>";
+        })
         .join("");
       el("eco-note").innerHTML = P.ecosystem.note;
 
