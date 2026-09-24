@@ -61,6 +61,16 @@
           { "icon": "M8 9l-4 3 4 3m8-6 4 3-4 3M13 5l-2 14", "title": "WP-CLI ready", "text": "wp arc-st import, reset and status — provision headless sites from the command line." }
         ]
       },
+      "ecosystem": {
+        "title": "One system, three pieces.",
+        "lead": "The repo, the plugin and the theme work as one — each stays small on its own, together they build the whole site.",
+        "items": [
+          { "n": "1", "tag": "This repo", "title": "tema — the payload", "text": "Templates, images and the manifest live here. Imports always pull the latest state, so updating a template here ships it everywhere the plugin points." },
+          { "n": "2", "tag": "The plugin", "title": "ARC Starter Templates", "text": "Reads this repo remotely and turns each demo into real pages — Gutenberg blocks or Elementor layouts, Media Library images, menus, front page and a built-in chat bot." },
+          { "n": "3", "tag": "The theme", "title": "Lienzo Astra", "text": "Supplies the chrome around imported pages — header, menus, logo and fonts — plus Customizer controls: template color palettes and markdown copy overrides that re-skin any imported demo." }
+        ],
+        "note": "Change a template here → the plugin imports it → the theme frames and re-skins it. Everything stays connected."
+      },
       "setup": {
         "title": "Connect the plugin to this repo.",
         "lead": "wp-admin → <b class=\"text-navy\">ARC Templates → Templates repository → Remote base URL</b>. This repo is public — leave the access token empty and every import pulls the latest state.",

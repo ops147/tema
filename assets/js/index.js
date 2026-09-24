@@ -106,6 +106,30 @@
         )
         .join("");
 
+      /* ---------- ecosystem ---------- */
+      el("eco-title").textContent = P.ecosystem.title;
+      el("eco-lead").innerHTML = P.ecosystem.lead;
+      el("ecosystem").innerHTML = P.ecosystem.items
+        .map(
+          (s) =>
+            '<div class="bg-white border border-line rounded-2xl p-6">' +
+            '<div class="flex items-center gap-2.5">' +
+            '<span class="w-7 h-7 rounded-full bg-blue text-white text-xs font-bold grid place-items-center shrink-0">' +
+            esc(s.n) +
+            "</span>" +
+            '<span class="text-[10px] font-bold uppercase tracking-widest text-blue">' +
+            esc(s.tag) +
+            "</span></div>" +
+            '<h3 class="mt-3 text-sm font-bold text-navy">' +
+            esc(s.title) +
+            "</h3>" +
+            '<p class="mt-1.5 text-xs leading-relaxed text-ink/80">' +
+            esc(s.text) +
+            "</p></div>"
+        )
+        .join("");
+      el("eco-note").innerHTML = P.ecosystem.note;
+
       /* ---------- setup ---------- */
       el("setup-title").textContent = P.setup.title;
       el("setup-lead").innerHTML = P.setup.lead;
