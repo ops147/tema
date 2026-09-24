@@ -15,6 +15,8 @@ assets/js/site.js                  # shared runtime script (template pages)
 site.json                          # all site content/config for the Pages mirror
 assets/js/app.js                   # shared renderer (header, footer, data loading)
 assets/js/{index,browse,preview}.js # per-page controllers — all content is data-driven
+assets/js/product.js               # generic product-page renderer (plugin.html, theme.html)
+plugin.html / theme.html           # pages for the ARC Starter Templates plugin & Lienzo Astra theme
 ```
 
 ## Pointing the plugin at this repo
