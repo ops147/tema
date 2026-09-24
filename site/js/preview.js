@@ -1,12 +1,10 @@
-// preview.js — template previewer controller. Mounts the shell, fetches a
-// template document, applies the same Img/ Css/ Js/ rewrites the plugin
-// applies at preview time, and keeps internal page links inside the
-// previewer. UI strings come from site/pages/preview.json (with inline
-// fallbacks so the viewer never breaks).
+// preview.js — template previewer controller. Fetches a template document,
+// applies the same Img/ Css/ Js/ rewrites the plugin applies at preview time,
+// and keeps internal page links inside the previewer. UI strings come from
+// site.json (with inline fallbacks so the viewer never breaks).
 (function () {
   "use strict";
   const el = (id) => document.getElementById(id);
-  el("page").innerHTML = Tema.ui.previewShell();
   const params = new URLSearchParams(location.search);
   const embed = params.get("embed") === "1";
   const f = params.get("f") || "";
@@ -16,9 +14,10 @@
     e.textContent = msg;
   };
 
-  Tema.load("preview")
-    .catch(() => ({ site: {}, manifest: { templates: {} }, page: {} }))
-    .then(({ manifest, page: P }) => {
+  fetch("site/pages/preview.json")
+    .then((r) => (r.ok ? r.json() : {}))
+    .catch(() => ({}))
+    .then((P) => {
       document.title = P.title || "Template preview";
       el("back").textContent = P.back || "← templates";
       el("raw").textContent = P.raw || "open raw ⤥";
@@ -35,12 +34,14 @@
       el("file").textContent = f;
       el("raw").href = f;
 
-      fetch(f)
-        .then((r) => {
+      Promise.all([
+        fetch(f).then((r) => {
           if (!r.ok) throw new Error("HTTP " + r.status);
           return r.text();
-        })
-        .then((html) => {
+        }),
+        fetch("templates/manifest.json").then((r) => (r.ok ? r.json() : {})),
+      ])
+        .then(([html, manifest]) => {
           // Same asset rewrites the plugin applies (assets_to_plugin_urls):
           // bundled Img/, Css/, Js/ placeholders -> repo asset paths.
           let out = html

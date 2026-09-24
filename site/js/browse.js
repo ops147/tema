@@ -5,7 +5,6 @@
 (function () {
   "use strict";
   const el = (id) => document.getElementById(id);
-  el("page").innerHTML = Tema.ui.browseShell();
   const grid = el("grid");
   grid.innerHTML = '<div class="col-span-full py-12 text-center text-ink/60">…</div>';
 
@@ -151,14 +150,33 @@
         const el2 = document.createElement("article");
         el2.className =
           "group bg-white border border-line rounded-2xl overflow-hidden flex flex-col transition duration-300 hover:-translate-y-1 hover:border-blue hover:shadow-lg";
-        el2.innerHTML = Tema.ui.demoCard(id, d, {
-          badge: P.badge,
-          idealFor: P.idealFor,
-          previewCta: P.previewCta,
-          interactive: true,
-        });
+        el2.innerHTML =
+          '<div class="thumb relative aspect-[16/10] overflow-hidden bg-soft cursor-pointer">' +
+          (d.image
+            ? '<img loading="lazy" src="' +
+              esc(d.image) +
+              '" alt="" class="w-full h-full object-cover object-top transition duration-500 group-hover:scale-105" />'
+            : "") +
+          '<div class="absolute inset-0 grid place-items-center bg-navy/0 group-hover:bg-navy/40 transition">' +
+          '<span class="opacity-0 translate-y-1.5 group-hover:opacity-100 group-hover:translate-y-0 transition bg-white text-navy text-xs font-bold rounded-full px-5 py-2.5 shadow-xl">' +
+          esc(P.previewCta) +
+          "</span></div></div>" +
+          '<div class="flex flex-col gap-2 flex-1 px-5 pt-4 pb-5">' +
+          '<div class="flex items-center gap-2">' +
+          '<h2 class="text-base font-bold tracking-tight text-navy cursor-pointer hover:text-blue transition">' +
+          esc(d.title || id) +
+          "</h2>" +
+          '<span class="text-[10px] font-bold uppercase tracking-wide bg-blue/10 text-blue rounded-full px-2 py-0.5">' +
+          esc(P.badge) +
+          "</span>" +
+          "</div>" +
+          '<p class="text-xs leading-relaxed text-ink/80 line-clamp-3"><strong class="text-navy">' +
+          esc(P.idealFor) +
+          "</strong>" +
+          esc(d.desc || "") +
+          "</p></div>";
         el2.querySelector(".thumb").addEventListener("click", () => openDemo(id));
-        el2.querySelector("h3").addEventListener("click", () => openDemo(id));
+        el2.querySelector("h2").addEventListener("click", () => openDemo(id));
         return el2;
       }
 

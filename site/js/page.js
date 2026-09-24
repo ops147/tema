@@ -92,14 +92,35 @@
           const ids = Object.keys(DEMOS);
           const cards = ids
             .slice(0, s.featuredCount || 6)
-            .map(
-              (id) =>
+            .map((id) => {
+              const d = DEMOS[id];
+              return (
                 '<a href="browse.html?d=' +
                 encodeURIComponent(id) +
                 '" class="group bg-white border border-line rounded-2xl overflow-hidden flex flex-col transition duration-300 hover:-translate-y-1 hover:border-blue hover:shadow-lg no-underline">' +
-                ui.demoCard(id, DEMOS[id], { badge: s.badge, idealFor: s.idealFor }) +
-                "</a>"
-            )
+                '<div class="relative aspect-[16/10] overflow-hidden bg-soft">' +
+                (d.image
+                  ? '<img loading="lazy" src="' +
+                    esc(d.image) +
+                    '" alt="" class="w-full h-full object-cover object-top transition duration-500 group-hover:scale-105" />'
+                  : "") +
+                "</div>" +
+                '<div class="flex flex-col gap-2 flex-1 px-5 pt-4 pb-5">' +
+                '<div class="flex items-center gap-2">' +
+                '<h3 class="text-base font-bold tracking-tight text-navy group-hover:text-blue transition">' +
+                esc(d.title || id) +
+                "</h3>" +
+                '<span class="text-[10px] font-bold uppercase tracking-wide bg-blue/10 text-blue rounded-full px-2 py-0.5">' +
+                esc(s.badge) +
+                "</span>" +
+                "</div>" +
+                '<p class="text-xs leading-relaxed text-ink/80 line-clamp-3"><strong class="text-navy">' +
+                esc(s.idealFor) +
+                "</strong>" +
+                esc(d.desc || "") +
+                "</p></div></a>"
+              );
+            })
             .join("");
           return wrap(
             ui.sectionHead(fill(s.title, { count: ids.length }), s.lead) +

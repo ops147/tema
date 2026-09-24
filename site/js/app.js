@@ -110,25 +110,12 @@ window.Tema = (function () {
     return fill(site.footer.text, v) + " · " + links;
   }
 
-  // Inject header/footer — the mounts are auto-created around <main> when a
-  // page doesn't declare them; chromeless pages (preview) never call this.
+  // Inject header/footer into the page's mount points (if present).
   function mountChrome(site, active) {
-    let h = document.getElementById("site-header");
-    if (!h) {
-      h = document.createElement("header");
-      h.id = "site-header";
-      h.className = "sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-line";
-      document.body.prepend(h);
-    }
-    let f = document.getElementById("site-footer");
-    if (!f) {
-      f = document.createElement("footer");
-      f.id = "site-footer";
-      f.className = "border-t border-line px-6 py-6 text-center text-xs text-ink/70";
-      document.body.appendChild(f);
-    }
-    h.innerHTML = headerHTML(site, active);
-    f.innerHTML = footerHTML(site);
+    const h = document.getElementById("site-header");
+    if (h) h.innerHTML = headerHTML(site, active);
+    const f = document.getElementById("site-footer");
+    if (f) f.innerHTML = footerHTML(site);
   }
 
   // Clipboard copy buttons — elements carrying a data-copy attribute.
