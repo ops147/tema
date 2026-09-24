@@ -1,0 +1,161 @@
+{
+  "title": "ARC Starter Templates — the plugin",
+  "hero": {
+    "badge": "WordPress plugin · v1.6 · GPL-2.0",
+    "title": "The importer.<br class=\"hidden sm:block\" /> One click, a whole site.",
+    "lead": "<strong class=\"text-navy\">ARC Starter Templates</strong> turns any demo in this repository into real WordPress pages — Elementor containers or native Gutenberg blocks — with images in your Media Library, menus assigned and the front page set, all from a step-by-step wizard.",
+    "ctas": [
+      {
+        "label": "Browse templates",
+        "href": "browse.html",
+        "style": "primary"
+      },
+      {
+        "label": "Connect the repo",
+        "href": "index.html#setup",
+        "style": "ghost"
+      }
+    ]
+  },
+  "stats": [
+    {
+      "value": "16",
+      "label": "importable demos"
+    },
+    {
+      "value": "106",
+      "label": "ready-made pages"
+    },
+    {
+      "value": "< 1 min",
+      "label": "per import"
+    },
+    {
+      "value": "6.0+",
+      "label": "WordPress · PHP 7.4+"
+    }
+  ],
+  "marquee": "demos",
+  "intro": "Every demo in the marquee above is one import away — the plugin pulls this repo's manifest, downloads each page and its images on demand, and leaves behind a real WordPress site you own and can edit.",
+  "sections": [
+    {
+      "type": "features",
+      "soft": true,
+      "title": "Everything the importer does.",
+      "lead": "A solace-extra style library screen, a resilient wizard and a full site-setup pass — designed to never touch content it didn't create.",
+      "cols": 4,
+      "items": [
+        {
+          "icon": "M13 10V3L4 14h7v7l9-11h-7z",
+          "title": "Import wizard",
+          "text": "Media → Pages → Setup with a live progress log, per-page selection, dry-run mode and an optional reset of previously imported pages."
+        },
+        {
+          "icon": "M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5",
+          "title": "Elementor native",
+          "text": "Pages import as flexbox container/widget layouts (Elementor 3.16+); brand colors and Outfit land in the kit as globals and the CSS cache is rebuilt."
+        },
+        {
+          "icon": "M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z",
+          "title": "Gutenberg fallback",
+          "text": "Without Elementor the same pages become native blocks — groups, headings, images with Media Library ids — fully editable in the block editor."
+        },
+        {
+          "icon": "M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-2",
+          "title": "Remote payload",
+          "text": "Manifest, documents and images live in this repo and download on demand into uploads/arc-st-remote/. Set the base URL, a constant or a filter."
+        },
+        {
+          "icon": "M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6l7-3zM9 12l2 2 4-4",
+          "title": "Resilient runs",
+          "text": "Run lock, server-side progress with Resume/Retry, per-file media error reporting and environment checks — nothing fails silently."
+        },
+        {
+          "icon": "M3 11l9-8 9 8M5 10v10h5v-6h4v6h5V10",
+          "title": "Site setup",
+          "text": "Home becomes the front page, the demo's Main + Footer menus take the theme's locations, and the logo doubles as custom logo and site icon."
+        },
+        {
+          "icon": "M4 6h16v12H4zM4 7l8 6 8-6",
+          "title": "Contact + entries",
+          "text": "Working form with configurable recipient, honeypot and consent checkbox — every submission stored in the Form Entries panel."
+        },
+        {
+          "icon": "M8 9l-4 3 4 3m8-6 4 3-4 3M13 5l-2 14",
+          "title": "Patterns & WP-CLI",
+          "text": "Every page registers under the ARC Starter Templates pattern category; wp arc-st import/reset/status provisions headless sites."
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "title": "How an import runs.",
+      "lead": "Click a card in ARC Templates → Library and the wizard does the rest — resume-safe if anything interrupts it.",
+      "items": [
+        {
+          "n": "1",
+          "title": "Media",
+          "text": "Every image the demo references is downloaded into the Media Library and template URLs are rewritten to it."
+        },
+        {
+          "n": "2",
+          "title": "Pages",
+          "text": "Pages are created first, then filled — so cross-links and CTAs resolve to real permalinks instead of dead \"#\" hrefs."
+        },
+        {
+          "n": "3",
+          "title": "Setup",
+          "text": "Front page, menus, logo and site icon are wired. Re-importing updates the same pages — it never duplicates them."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "title": "Headless with WP-CLI.",
+      "lead": "Provision sites from the command line — same importer, no wp-admin required.",
+      "note": "Flags: --reset · --pages=a,b · --no-front · --dry-run",
+      "lines": [
+        "$ wp arc-st status",
+        "$ wp arc-st import --pages=home,about,contact",
+        "$ wp arc-st import --reset",
+        "$ wp arc-st reset"
+      ]
+    },
+    {
+      "type": "checks",
+      "soft": true,
+      "title": "Requirements & safety.",
+      "lead": "Built to coexist with real sites — the importer only touches what it creates.",
+      "items": [
+        {
+          "title": "WordPress 6.0+ · PHP 7.4+",
+          "text": "Tested up to WP 6.7; warns about missing extensions or a non-writable uploads directory."
+        },
+        {
+          "title": "Elementor optional",
+          "text": "3.16+ with flexbox containers enabled for Elementor layouts; native blocks otherwise."
+        },
+        {
+          "title": "Never edits your content",
+          "text": "The wizard only creates its own pages, menus and uploads — the reset removes only what it imported."
+        },
+        {
+          "title": "Theme overrides",
+          "text": "A template at arc-starter-templates/<demo>/<page>.html inside the theme wins over the bundled copy — edit in the theme, re-import."
+        }
+      ],
+      "link": {
+        "label": "See how Lienzo Astra frames it →",
+        "href": "theme.html"
+      }
+    }
+  ],
+  "cta": {
+    "title": "Point the plugin at this repo.",
+    "text": "Copy the remote base URL, paste it in wp-admin and import your first demo in under a minute.",
+    "button": {
+      "label": "Get the remote URL",
+      "href": "index.html#setup"
+    }
+  }
+}

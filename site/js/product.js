@@ -10,10 +10,8 @@
   const main = el("sections");
   main.innerHTML = '<div class="py-12 text-center text-ink/60">…</div>';
 
-  Tema.load()
-    .then(({ site, manifest }) => {
-      const P = site.pages[page];
-      if (!P) throw new Error("site.json → missing pages." + page);
+  Tema.load(page)
+    .then(({ site, manifest, page: P }) => {
       const esc = Tema.esc,
         fill = Tema.fill;
       const v = Tema.vars(site);

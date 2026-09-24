@@ -1,0 +1,170 @@
+{
+  "title": "Lienzo Astra — the theme",
+  "hero": {
+    "badge": "WordPress theme · v1.2 · GPL-3.0",
+    "title": "The chrome around<br class=\"hidden sm:block\" /> every imported site.",
+    "lead": "<strong class=\"text-navy\">Lienzo Astra</strong> is a lightweight, accessible base theme — a rebuilt, de-branded Hello Elementor derivative — with an Astra-inspired Design Options panel, full Elementor Theme Builder support and native integration with ARC Starter Templates.",
+    "ctas": [
+      {
+        "label": "Meet the plugin",
+        "href": "plugin.html",
+        "style": "primary"
+      },
+      {
+        "label": "Browse templates",
+        "href": "browse.html",
+        "style": "ghost"
+      }
+    ]
+  },
+  "stats": [
+    {
+      "value": "~150 KB",
+      "label": "uncompressed"
+    },
+    {
+      "value": "8",
+      "label": "block patterns"
+    },
+    {
+      "value": "3",
+      "label": "Elementor widgets"
+    },
+    {
+      "value": "6",
+      "label": "builder locations"
+    }
+  ],
+  "marquee": [
+    "Colors",
+    "Typography",
+    "Layout",
+    "Header & footer",
+    "Blog",
+    "WooCommerce",
+    "Dark mode",
+    "Breadcrumbs",
+    "SEO meta",
+    "JSON-LD",
+    "8 block patterns",
+    "RTL ready"
+  ],
+  "intro": "Activate it once and forget it — Lienzo Astra draws the header, menus and footer around whatever the plugin imports, and its Design Options panel re-skins the whole site without touching a single template file.",
+  "sections": [
+    {
+      "type": "features",
+      "soft": true,
+      "title": "Small theme, full stack.",
+      "lead": "Everything a base theme should ship — and a switch under Appearance → Lienzo to turn each piece off.",
+      "cols": 4,
+      "items": [
+        {
+          "icon": "M4 7h9m4 0h3M4 17h5m4 0h7M13 4v6M9 14v6",
+          "title": "Design Options",
+          "text": "Astra-style Customizer panel: colors, typography, layout widths, logo position, sticky header and footer colors — all with live preview."
+        },
+        {
+          "icon": "M4 5h16v14H4zM4 9h16M9 9v10",
+          "title": "Elementor Theme Builder",
+          "text": "Registers every location — header, footer, single, archive, search, 404 — plus Lienzo Header/Footer tabs inside Site Settings."
+        },
+        {
+          "icon": "M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM16.5 13v7M13 16.5h7",
+          "title": "Lienzo widgets",
+          "text": "Breadcrumbs, Dark Mode Switcher and Reading Time under their own widget category — drop them into any Theme Builder template."
+        },
+        {
+          "icon": "M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14zM20 20l-3.5-3.5",
+          "title": "SEO built in",
+          "text": "Canonicals, meta descriptions, Open Graph/Twitter cards and a JSON-LD graph — steps aside when Yoast, Rank Math, SEOPress, AIOSEO or TSF is active."
+        },
+        {
+          "icon": "M20 13A8 8 0 1 1 11 4a6.5 6.5 0 0 0 9 9z",
+          "title": "Dark mode & extras",
+          "text": "Site-wide dark mode that respects prefers-color-scheme and remembers the choice, plus a back-to-top button and reading progress bar."
+        },
+        {
+          "icon": "M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6l7-3zM9 12l2 2 4-4",
+          "title": "Fast & hardened",
+          "text": "Reversible tweaks: no emoji scripts, RSD/shortlink cleanup, dashicons off the front end, pingbacks disabled — each behind its own filter."
+        },
+        {
+          "icon": "M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 7.7l5.4-.8z",
+          "title": "Patterns & palettes",
+          "text": "8 core-block patterns under a Lienzo Astra category; preset palettes sync into theme.json so blocks follow the Customizer."
+        },
+        {
+          "icon": "M3 4h2l2.6 12.2a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.76L21 8H6M9.5 20h.01M17.5 20h.01",
+          "title": "WooCommerce ready",
+          "text": "Products per row and per page, a header cart icon with live count and a dedicated shop wrapper — plus editor styles and RTL sheets."
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "title": "Built for ARC Starter Templates.",
+      "lead": "The theme detects imported pages and gets out of the way — while keeping full control of the chrome around them.",
+      "items": [
+        {
+          "n": "1",
+          "title": "Full-width canvas",
+          "text": "On ARC pages the boxed container, page title, breadcrumbs, comments and floating buttons step aside; only the chrome stylesheet stays."
+        },
+        {
+          "n": "2",
+          "title": "Template overrides",
+          "text": "Drop arc-starter-templates/<demo>/<page>.html inside the theme and it wins over the plugin's copy — edit the HTML in the theme, re-import."
+        },
+        {
+          "n": "3",
+          "title": "Editor in sync",
+          "text": "The demo's palette and Outfit font merge into the theme.json layers, so imported designs appear as real presets in block controls."
+        }
+      ],
+      "link": {
+        "label": "See the importer →",
+        "href": "plugin.html"
+      }
+    },
+    {
+      "type": "checks",
+      "soft": true,
+      "title": "Design Options, panel by panel.",
+      "lead": "Appearance → Customize → Design Options — the quick-styling controls Astra users expect, reimplemented from scratch.",
+      "items": [
+        {
+          "title": "Colors",
+          "text": "Primary, link, text and background colors plus preset palettes synced to the block editor."
+        },
+        {
+          "title": "Typography",
+          "text": "Body & heading fonts with Google Fonts preconnect and a base font-size control."
+        },
+        {
+          "title": "Layout",
+          "text": "Container and content widths, with wide alignment support in the editor."
+        },
+        {
+          "title": "Header & footer",
+          "text": "Logo position and width, sticky header, footer colors and copyright text."
+        },
+        {
+          "title": "Blog",
+          "text": "Featured images on archives, post meta on single posts and excerpt length."
+        },
+        {
+          "title": "WooCommerce",
+          "text": "Products per row and per page, plus a header cart with a live count badge."
+        }
+      ]
+    }
+  ],
+  "cta": {
+    "title": "Theme frames it, plugin builds it.",
+    "text": "Activate Lienzo Astra, install ARC Starter Templates and import a demo — header, menus and palette included.",
+    "button": {
+      "label": "Meet the plugin",
+      "href": "plugin.html"
+    }
+  }
+}

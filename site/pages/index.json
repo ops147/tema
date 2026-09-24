@@ -1,0 +1,150 @@
+{
+  "title": "ARC Starter Templates — One-click site demos for WordPress",
+  "hero": {
+    "badge": "WordPress plugin · v1.6",
+    "title": "Effortless Website Creation<br class=\"hidden sm:block\" /> Starts Here.",
+    "lead": "<strong class=\"text-navy\">ARC Starter Templates</strong> imports complete Tailwind sites into WordPress in one click — Elementor-editable or Gutenberg blocks, images in your Media Library, menus and front page wired automatically.",
+    "ctas": [
+      {
+        "label": "Browse templates",
+        "href": "browse.html",
+        "style": "primary"
+      },
+      {
+        "label": "Setup guide",
+        "href": "#setup",
+        "style": "ghost"
+      }
+    ]
+  },
+  "intro": "Pick a demo, run the step-by-step wizard and get a full site — pages, images, menus and settings — in under a minute. The plugin stays lightweight: template documents and images live in this repository and download on demand at import time.",
+  "demos": {
+    "title": "{count} Free Templates for All Purposes.",
+    "lead": "Corporate, e-commerce, blog, nonprofit and more — each design is a complete multi-page site, tailored for one-click import.",
+    "featuredCount": 6,
+    "moreLabel": "Browse all templates",
+    "moreHref": "browse.html",
+    "badge": "Free",
+    "idealFor": "Ideal for: ",
+    "loading": "Loading manifest…",
+    "manifestError": "Could not load templates/manifest.json — {error}"
+  },
+  "features": {
+    "title": "Key Features.",
+    "lead": "Everything a starter-template plugin should do — and nothing it shouldn't.",
+    "items": [
+      {
+        "icon": "M13 10V3L4 14h7v7l9-11h-7z",
+        "title": "One-click import wizard",
+        "text": "Step-by-step Media → Pages → Setup flow with live progress, per-page selection, dry-run and optional reset."
+      },
+      {
+        "icon": "M4 5h16v14H4z M4 9h16 M9 9v10",
+        "title": "Elementor or Gutenberg",
+        "text": "With Elementor pages import as native container/widget layouts; without it they land as editable block pages."
+      },
+      {
+        "icon": "M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-2",
+        "title": "Remote payload",
+        "text": "Manifest, documents and images live in this repo — the plugin stays light and every import pulls the latest state."
+      },
+      {
+        "icon": "M4 16l4.6-6.2a1 1 0 0 1 1.6 0L16 17l2-2.5a1 1 0 0 1 1.6 0L22 18M4 5h16v14H4z",
+        "title": "Media Library images",
+        "text": "Every image downloads into your Media Library on import and template URLs are rewritten to it."
+      },
+      {
+        "icon": "M4 6h16M4 12h16M4 18h10",
+        "title": "Menus & front page",
+        "text": "Home is set as the front page and the demo's Main + Footer menus are assigned to the theme locations."
+      },
+      {
+        "icon": "M4 4h16v12H8l-4 4z",
+        "title": "Working contact form",
+        "text": "Configurable recipient, honeypot, consent checkbox and a Form Entries panel storing every submission."
+      },
+      {
+        "icon": "M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 7.7l5.4-.8z",
+        "title": "Block patterns",
+        "text": "Every imported page is also registered under the ARC Starter Templates pattern category."
+      },
+      {
+        "icon": "M8 9l-4 3 4 3m8-6 4 3-4 3M13 5l-2 14",
+        "title": "WP-CLI ready",
+        "text": "wp arc-st import, reset and status — provision headless sites from the command line."
+      }
+    ]
+  },
+  "ecosystem": {
+    "title": "One system, three pieces.",
+    "lead": "The repo, the plugin and the theme work as one — each stays small on its own, together they build the whole site.",
+    "items": [
+      {
+        "n": "1",
+        "tag": "This repo",
+        "title": "tema — the payload",
+        "text": "Templates, images and the manifest live here. Imports always pull the latest state, so updating a template here ships it everywhere the plugin points.",
+        "href": "{github}",
+        "linkLabel": "View on GitHub →"
+      },
+      {
+        "n": "2",
+        "tag": "The plugin",
+        "title": "ARC Starter Templates",
+        "text": "Reads this repo remotely and turns each demo into real pages — Gutenberg blocks or Elementor layouts, Media Library images, menus, front page and a built-in chat bot.",
+        "href": "plugin.html",
+        "linkLabel": "Meet the plugin →"
+      },
+      {
+        "n": "3",
+        "tag": "The theme",
+        "title": "Lienzo Astra",
+        "text": "Supplies the chrome around imported pages — header, menus, logo and fonts — plus Customizer controls: template color palettes and markdown copy overrides that re-skin any imported demo.",
+        "href": "theme.html",
+        "linkLabel": "Meet the theme →"
+      }
+    ],
+    "note": "Change a template here → the plugin imports it → the theme frames and re-skins it. Everything stays connected."
+  },
+  "setup": {
+    "title": "Connect the plugin to this repo.",
+    "lead": "wp-admin → <b class=\"text-navy\">ARC Templates → Templates repository → Remote base URL</b>. This repo is public — leave the access token empty and every import pulls the latest state.",
+    "urls": [
+      {
+        "label": "Remote base URL",
+        "value": "{raw}"
+      },
+      {
+        "label": "Pages mirror",
+        "value": "{root}"
+      }
+    ],
+    "copyLabel": "Copy",
+    "copiedLabel": "Copied ✓",
+    "steps": [
+      {
+        "n": "1",
+        "title": "Install & activate",
+        "text": "Copy the plugin to wp-content/plugins and activate ARC Starter Templates."
+      },
+      {
+        "n": "2",
+        "title": "Paste the remote URL",
+        "text": "ARC Templates → Templates repository → Remote base URL."
+      },
+      {
+        "n": "3",
+        "title": "Import a demo",
+        "text": "Open the library, click a card and run the wizard — done in under a minute."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Experience the power of one-click starter sites.",
+    "text": "Activate ARC Starter Templates, point it at this repository and import your first demo today.",
+    "button": {
+      "label": "Get the remote URL",
+      "href": "#setup"
+    }
+  }
+}

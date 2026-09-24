@@ -1,0 +1,7 @@
+{
+  "title": "Template preview",
+  "back": "← templates",
+  "raw": "open raw ⤥",
+  "invalidParam": "Missing or invalid ?f= parameter (expected templates/<demo>/<page>.html).",
+  "loadError": "Could not load {file} — {error}"
+}

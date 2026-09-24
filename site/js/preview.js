@@ -14,11 +14,10 @@
     e.textContent = msg;
   };
 
-  fetch("site.json")
+  fetch("site/pages/preview.json")
     .then((r) => (r.ok ? r.json() : {}))
     .catch(() => ({}))
-    .then((site) => {
-      const P = (site.pages && site.pages.preview) || {};
+    .then((P) => {
       document.title = P.title || "Template preview";
       el("back").textContent = P.back || "← templates";
       el("raw").textContent = P.raw || "open raw ⤥";

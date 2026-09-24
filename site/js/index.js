@@ -6,9 +6,8 @@
   const grid = el("grid");
   grid.innerHTML = '<div class="col-span-full py-12 text-center text-ink/60">…</div>';
 
-  Tema.load()
-    .then(({ site, manifest }) => {
-      const P = site.pages.index;
+  Tema.load("index")
+    .then(({ site, manifest, page: P }) => {
       const esc = Tema.esc,
         fill = Tema.fill;
       const v = Tema.vars(site);

@@ -1,0 +1,66 @@
+{
+  "brand": {
+    "letter": "T",
+    "name": "tema"
+  },
+  "repo": {
+    "github": "https://github.com/ops147/tema",
+    "raw": "https://raw.githubusercontent.com/ops147/tema/main",
+    "pluginName": "ARC Starter Templates",
+    "pluginSite": "https://ashrivercollective.com"
+  },
+  "githubButtonLabel": "GitHub ↗",
+  "nav": [
+    {
+      "label": "Home",
+      "href": "index.html",
+      "page": "index"
+    },
+    {
+      "label": "Plugin",
+      "href": "plugin.html",
+      "page": "plugin"
+    },
+    {
+      "label": "Theme",
+      "href": "theme.html",
+      "page": "theme"
+    },
+    {
+      "label": "Templates",
+      "href": "browse.html",
+      "page": "browse"
+    },
+    {
+      "label": "Setup",
+      "href": "index.html#setup",
+      "page": "setup"
+    }
+  ],
+  "footer": {
+    "text": "tema — remote payload for <a class=\"text-blue hover:underline\" href=\"{pluginSite}\" target=\"_blank\" rel=\"noopener\">{pluginName}</a>",
+    "links": [
+      {
+        "label": "Plugin",
+        "href": "plugin.html"
+      },
+      {
+        "label": "Theme",
+        "href": "theme.html"
+      },
+      {
+        "label": "Browse templates",
+        "href": "browse.html"
+      },
+      {
+        "label": "GitHub",
+        "href": "{github}",
+        "external": true
+      },
+      {
+        "label": "manifest.json",
+        "href": "templates/manifest.json"
+      }
+    ]
+  }
+}

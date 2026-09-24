@@ -6,18 +6,40 @@ itself stays lightweight.
 
 ## Layout
 
+The repo has three layers — the **remote payload** the plugin downloads, the
+**Pages mirror** (this browsable site), and vendored copies of the other two
+pieces of the system:
+
 ```
-templates/manifest.json            # demo + page registry
-templates/<demo>/<page>.html       # one HTML document per page
-assets/img/<file>                  # images referenced by the templates and manifest
-assets/css/tailwind.css            # shared runtime stylesheet
-assets/js/site.js                  # shared runtime script (template pages)
-site.json                          # all site content/config for the Pages mirror
-assets/js/app.js                   # shared renderer (header, footer, data loading)
-assets/js/{index,browse,preview}.js # per-page controllers — all content is data-driven
-assets/js/product.js               # generic product-page renderer (plugin.html, theme.html)
-plugin.html / theme.html           # pages for the ARC Starter Templates plugin & Lienzo Astra theme
+templates/manifest.json            # demo + page registry            ┐
+templates/<demo>/<page>.html       # one HTML document per page      │ remote
+assets/img/<file>                  # images referenced by templates   │ payload
+assets/css/tailwind.css            # shared runtime stylesheet        │ (contract:
+assets/js/site.js                  # shared runtime script            │ do not move)
+
+index.html · browse.html · preview.html · plugin.html · theme.html   ┐ Pages
+site/site.json                     # shared chrome: brand, nav, footer│ mirror
+site/pages/<page>.json             # per-page content module          │
+site/js/app.js                     # shared runtime (header, footer,  │
+                                   #   data loading: Tema.load())    │
+site/js/{index,browse,preview,product}.js  # page controllers        ┘
+
+wordpress/arc-starter-templates/   # the plugin (source copy)
+wordpress/lienzo-astra/            # the theme (source copy)
 ```
+
+**Contract with the plugin** — the remote base URL must keep serving
+`templates/manifest.json`, `templates/<demo>/<page>.html` and
+`assets/img/<file>`; the previewer additionally relies on
+`assets/css/tailwind.css` and `assets/js/site.js`. Those paths are frozen —
+everything under `site/` is internal to the mirror and can be reorganized
+freely.
+
+**Adding a Pages page** — drop an `<name>.html` shell at root, a matching
+`site/pages/<name>.json` content module and (if the generic product renderer
+doesn't fit) a `site/js/<name>.js` controller; then add a `nav` entry in
+`site/site.json`. `plugin.html`/`theme.html` show the minimal shell: chrome
+mounts + `site/js/product.js` with `data-page="<name>"`.
 
 ## Pointing the plugin at this repo
 

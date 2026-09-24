@@ -1,0 +1,30 @@
+{
+  "title": "Browse templates — tema",
+  "heading": "Browse Starter Templates",
+  "subtitle": "Pick your layout — {count} ready-to-import demos.",
+  "searchPlaceholder": "Search layouts…",
+  "categoriesTitle": "Categories",
+  "empty": "No demos match.",
+  "loading": "Loading manifest…",
+  "manifestError": "Could not load templates/manifest.json — {error}",
+  "previewCta": "Preview site",
+  "badge": "Free",
+  "idealFor": "Ideal for: ",
+  "devices": [
+    {
+      "id": "desktop",
+      "label": "Desktop"
+    },
+    {
+      "id": "tablet",
+      "label": "Tablet"
+    },
+    {
+      "id": "mobile",
+      "label": "Mobile"
+    }
+  ],
+  "openLabel": "Open ↗",
+  "closeTitle": "Close",
+  "modalNote": "Import with the plugin: <b class=\"text-navy\">ARC Templates → Library</b> in wp-admin, or browse every page here first."
+}
