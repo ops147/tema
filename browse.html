@@ -4,12 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>tema</title>
-    <script src="site/js/head.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-navy: #000f44;
+        --color-ink: #555555;
+        --color-line: #dedede;
+        --color-blue: #1d70db;
+        --color-blue-d: #155cb8;
+        --color-soft: #f5f7fb;
+        --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+        --font-mono: "JetBrains Mono", ui-monospace, monospace;
+      }
+      body { @apply bg-white text-ink font-sans antialiased; }
+      code { @apply font-mono; }
+    </style>
   </head>
   <body>
 
-    <!-- ============ header (rendered from site/site.json) ============ -->
+    <!-- ============ header (rendered from site.json) ============ -->
     <header id="site-header" class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-line"></header>
 
     <!-- ============ page head ============ -->
@@ -37,7 +53,7 @@
       </main>
     </div>
 
-    <!-- ============ footer (rendered from site/site.json) ============ -->
+    <!-- ============ footer (rendered from site.json) ============ -->
     <footer id="site-footer" class="border-t border-line px-6 py-6 text-center text-xs text-ink/70"></footer>
 
     <!-- ============ demo viewer ============ -->
