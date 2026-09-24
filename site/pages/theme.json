@@ -1,56 +1,60 @@
 {
   "title": "Lienzo Astra — the theme",
-  "hero": {
-    "badge": "WordPress theme · v1.2 · GPL-3.0",
-    "title": "The chrome around<br class=\"hidden sm:block\" /> every imported site.",
-    "lead": "<strong class=\"text-navy\">Lienzo Astra</strong> is a lightweight, accessible base theme — a rebuilt, de-branded Hello Elementor derivative — with an Astra-inspired Design Options panel, full Elementor Theme Builder support and native integration with ARC Starter Templates.",
-    "ctas": [
-      {
-        "label": "Meet the plugin",
-        "href": "plugin.html",
-        "style": "primary"
-      },
-      {
-        "label": "Browse templates",
-        "href": "browse.html",
-        "style": "ghost"
-      }
-    ]
-  },
-  "stats": [
+  "layout": [
     {
-      "value": "~150 KB",
-      "label": "uncompressed"
+      "type": "hero",
+      "stats": [
+        {
+          "value": "~150 KB",
+          "label": "uncompressed"
+        },
+        {
+          "value": "8",
+          "label": "block patterns"
+        },
+        {
+          "value": "3",
+          "label": "Elementor widgets"
+        },
+        {
+          "value": "6",
+          "label": "builder locations"
+        }
+      ],
+      "marquee": [
+        "Colors",
+        "Typography",
+        "Layout",
+        "Header & footer",
+        "Blog",
+        "WooCommerce",
+        "Dark mode",
+        "Breadcrumbs",
+        "SEO meta",
+        "JSON-LD",
+        "8 block patterns",
+        "RTL ready"
+      ],
+      "badge": "WordPress theme · v1.2 · GPL-3.0",
+      "title": "The chrome around<br class=\"hidden sm:block\" /> every imported site.",
+      "lead": "<strong class=\"text-navy\">Lienzo Astra</strong> is a lightweight, accessible base theme — a rebuilt, de-branded Hello Elementor derivative — with an Astra-inspired Design Options panel, full Elementor Theme Builder support and native integration with ARC Starter Templates.",
+      "ctas": [
+        {
+          "label": "Meet the plugin",
+          "href": "plugin.html",
+          "style": "primary"
+        },
+        {
+          "label": "Browse templates",
+          "href": "browse.html",
+          "style": "ghost"
+        }
+      ]
     },
     {
-      "value": "8",
-      "label": "block patterns"
+      "type": "intro",
+      "text": "Activate it once and forget it — Lienzo Astra draws the header, menus and footer around whatever the plugin imports, and its Design Options panel re-skins the whole site without touching a single template file."
     },
-    {
-      "value": "3",
-      "label": "Elementor widgets"
-    },
-    {
-      "value": "6",
-      "label": "builder locations"
-    }
-  ],
-  "marquee": [
-    "Colors",
-    "Typography",
-    "Layout",
-    "Header & footer",
-    "Blog",
-    "WooCommerce",
-    "Dark mode",
-    "Breadcrumbs",
-    "SEO meta",
-    "JSON-LD",
-    "8 block patterns",
-    "RTL ready"
-  ],
-  "intro": "Activate it once and forget it — Lienzo Astra draws the header, menus and footer around whatever the plugin imports, and its Design Options panel re-skins the whole site without touching a single template file.",
-  "sections": [
     {
       "type": "features",
       "soft": true,
@@ -157,14 +161,15 @@
           "text": "Products per row and per page, plus a header cart with a live count badge."
         }
       ]
+    },
+    {
+      "type": "cta",
+      "title": "Theme frames it, plugin builds it.",
+      "text": "Activate Lienzo Astra, install ARC Starter Templates and import a demo — header, menus and palette included.",
+      "button": {
+        "label": "Meet the plugin",
+        "href": "plugin.html"
+      }
     }
-  ],
-  "cta": {
-    "title": "Theme frames it, plugin builds it.",
-    "text": "Activate Lienzo Astra, install ARC Starter Templates and import a demo — header, menus and palette included.",
-    "button": {
-      "label": "Meet the plugin",
-      "href": "plugin.html"
-    }
-  }
+  ]
 }

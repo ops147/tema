@@ -1,43 +1,47 @@
 {
   "title": "ARC Starter Templates — the plugin",
-  "hero": {
-    "badge": "WordPress plugin · v1.6 · GPL-2.0",
-    "title": "The importer.<br class=\"hidden sm:block\" /> One click, a whole site.",
-    "lead": "<strong class=\"text-navy\">ARC Starter Templates</strong> turns any demo in this repository into real WordPress pages — Elementor containers or native Gutenberg blocks — with images in your Media Library, menus assigned and the front page set, all from a step-by-step wizard.",
-    "ctas": [
-      {
-        "label": "Browse templates",
-        "href": "browse.html",
-        "style": "primary"
-      },
-      {
-        "label": "Connect the repo",
-        "href": "index.html#setup",
-        "style": "ghost"
-      }
-    ]
-  },
-  "stats": [
+  "layout": [
     {
-      "value": "16",
-      "label": "importable demos"
+      "type": "hero",
+      "stats": [
+        {
+          "value": "16",
+          "label": "importable demos"
+        },
+        {
+          "value": "106",
+          "label": "ready-made pages"
+        },
+        {
+          "value": "< 1 min",
+          "label": "per import"
+        },
+        {
+          "value": "6.0+",
+          "label": "WordPress · PHP 7.4+"
+        }
+      ],
+      "marquee": "demos",
+      "badge": "WordPress plugin · v1.6 · GPL-2.0",
+      "title": "The importer.<br class=\"hidden sm:block\" /> One click, a whole site.",
+      "lead": "<strong class=\"text-navy\">ARC Starter Templates</strong> turns any demo in this repository into real WordPress pages — Elementor containers or native Gutenberg blocks — with images in your Media Library, menus assigned and the front page set, all from a step-by-step wizard.",
+      "ctas": [
+        {
+          "label": "Browse templates",
+          "href": "browse.html",
+          "style": "primary"
+        },
+        {
+          "label": "Connect the repo",
+          "href": "index.html#setup",
+          "style": "ghost"
+        }
+      ]
     },
     {
-      "value": "106",
-      "label": "ready-made pages"
+      "type": "intro",
+      "text": "Every demo in the marquee above is one import away — the plugin pulls this repo's manifest, downloads each page and its images on demand, and leaves behind a real WordPress site you own and can edit."
     },
-    {
-      "value": "< 1 min",
-      "label": "per import"
-    },
-    {
-      "value": "6.0+",
-      "label": "WordPress · PHP 7.4+"
-    }
-  ],
-  "marquee": "demos",
-  "intro": "Every demo in the marquee above is one import away — the plugin pulls this repo's manifest, downloads each page and its images on demand, and leaves behind a real WordPress site you own and can edit.",
-  "sections": [
     {
       "type": "features",
       "soft": true,
@@ -148,14 +152,15 @@
         "label": "See how Lienzo Astra frames it →",
         "href": "theme.html"
       }
+    },
+    {
+      "type": "cta",
+      "title": "Point the plugin at this repo.",
+      "text": "Copy the remote base URL, paste it in wp-admin and import your first demo in under a minute.",
+      "button": {
+        "label": "Get the remote URL",
+        "href": "index.html#setup"
+      }
     }
-  ],
-  "cta": {
-    "title": "Point the plugin at this repo.",
-    "text": "Copy the remote base URL, paste it in wp-admin and import your first demo in under a minute.",
-    "button": {
-      "label": "Get the remote URL",
-      "href": "index.html#setup"
-    }
-  }
+  ]
 }

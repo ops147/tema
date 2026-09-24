@@ -17,12 +17,17 @@ assets/img/<file>                  # images referenced by templates   │ payloa
 assets/css/tailwind.css            # shared runtime stylesheet        │ (contract:
 assets/js/site.js                  # shared runtime script            │ do not move)
 
-index.html · browse.html · preview.html · plugin.html · theme.html   ┐ Pages
-site/site.json                     # shared chrome: brand, nav, footer│ mirror
-site/pages/<page>.json             # per-page content module          │
-site/js/app.js                     # shared runtime (header, footer,  │
-                                   #   data loading: Tema.load())    │
-site/js/{index,browse,preview,product}.js  # page controllers        ┘
+*.html                             # 16-line shells: meta + scripts +  ┐
+                                   #   <main id="page"> — zero markup  │
+site/site.json                     # shared chrome: brand, nav, footer │ Pages
+site/pages/<page>.json             # content: "layout" = typed blocks  │ mirror
+                                   #   (or config for app pages)       │
+site/js/head.js                    # shared <head>: fonts + @theme     │
+site/js/app.js                     # runtime: Tema.load(), chrome,     │
+                                   #   esc/fill/vars, bindCopy         │
+site/js/ui.js                      # all markup: atoms + app shells    │
+site/js/page.js                    # layout engine (blocks → DOM)      │
+site/js/browse.js · preview.js     # app behavior (no markup inside)   ┘
 
 wordpress/arc-starter-templates/   # the plugin (source copy)
 wordpress/lienzo-astra/            # the theme (source copy)
@@ -35,11 +40,13 @@ wordpress/lienzo-astra/            # the theme (source copy)
 everything under `site/` is internal to the mirror and can be reorganized
 freely.
 
-**Adding a Pages page** — drop an `<name>.html` shell at root, a matching
-`site/pages/<name>.json` content module and (if the generic product renderer
-doesn't fit) a `site/js/<name>.js` controller; then add a `nav` entry in
-`site/site.json`. `plugin.html`/`theme.html` show the minimal shell: chrome
-mounts + `site/js/product.js` with `data-page="<name>"`.
+**Adding a Pages page** — copy `plugin.html` (16 lines, zero markup), point
+`data-page` at a new `site/pages/<name>.json` and add a `nav` entry in
+`site/site.json`. Content is a `layout` array of typed blocks —
+`hero`, `intro`, `demos`, `features`, `cards`, `steps`, `code`, `checks`,
+`setup`, `cta` — rendered by `site/js/page.js` from `site/js/ui.js` atoms.
+All markup lives in `ui.js` (including the browse/preview app shells), so
+controllers only carry behavior.
 
 ## Pointing the plugin at this repo
 
