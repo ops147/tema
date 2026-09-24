@@ -1,7 +1,6 @@
-// Shared runtime for the tema Pages site — every page renders its chrome from
-// site/site.json, its content from site/pages/<page>.json and the demo registry
-// from templates/manifest.json, so nothing is hardcoded. Exposes window.Tema;
-// page controllers live alongside this file (index/browse/preview/product.js).
+// Shared runtime for the tema Pages site — every page renders its chrome and
+// content from site.json + templates/manifest.json, so nothing is hardcoded.
+// Exposes window.Tema; page controllers live in index.js / browse.js / preview.js.
 window.Tema = (function () {
   "use strict";
 
@@ -12,27 +11,21 @@ window.Tema = (function () {
   // and as <base> when previewing template documents.
   const root = new URL(".", location.href).href.replace(/\/$/, "");
 
-  const j = (u) =>
-    fetch(u).then((r) => {
-      if (!r.ok) throw new Error(u + " → HTTP " + r.status);
-      return r.json();
-    });
-
-  // load() → { site, manifest }; load("index") → { site, manifest, page }
-  // where `page` is that page's content module (site/pages/<page>.json).
   let cache = null;
-  function load(page) {
+  function load() {
     if (!cache) {
-      cache = Promise.all([j("site/site.json"), j("templates/manifest.json")]).then(
-        ([site, manifest]) => ({ site, manifest })
-      );
+      cache = Promise.all([
+        fetch("site.json").then((r) => {
+          if (!r.ok) throw new Error("site.json → HTTP " + r.status);
+          return r.json();
+        }),
+        fetch("templates/manifest.json").then((r) => {
+          if (!r.ok) throw new Error("templates/manifest.json → HTTP " + r.status);
+          return r.json();
+        }),
+      ]).then(([site, manifest]) => ({ site, manifest }));
     }
-    if (!page) return cache;
-    return cache.then((base) =>
-      j("site/pages/" + encodeURIComponent(page) + ".json").then((p) =>
-        Object.assign({ page: p }, base)
-      )
-    );
+    return cache;
   }
 
   // "{placeholder}" interpolation against a vars map (unknown keys kept as-is).
