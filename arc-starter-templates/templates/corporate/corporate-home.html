@@ -1,0 +1,341 @@
+<!-- ARC Starter Templates: bundled template document. Edit this file directly, then re-import in wp-admin. -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ash River Collective — Home</title>
+    <meta name="description" content="Build the team your business needs without adding unnecessary overhead — trained accounting and admin professionals plus documented processes." />
+    <script src="Js/site.js" defer></script>
+    <link rel="stylesheet" href="Css/tailwind.css" onerror="this.onerror=null;var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4';document.head.appendChild(s);" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style type="text/tailwindcss">
+@import "tailwindcss";
+
+@theme {
+  /* ===== Design tokens — arc-careers base (slate + blue). ===== */
+  --color-brand: #2563eb;
+  --color-brand-dark: #1d4ed8;
+  --color-accent: #3b82f6;
+  --color-navy: #0f172a;
+  --color-mint: #f8fafc;
+  --color-cream: #e2e8f0;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* ===== Motion — ported from arc-careers (cubic-bezier + pop/slide/shimmer) =====
+     up | down | left | right | zoom | fade | blur | flip | bounce via data-reveal */
+  --animate-fade-in: arc-fade-in 0.3s ease both;
+  --animate-fade-in-up: arc-fade-in-up 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-fade-in-down: arc-fade-in-down 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-fade-in-left: arc-fade-in-left 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-fade-in-right: arc-slide-in-right 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-zoom-in: arc-pop-in 0.28s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  --animate-blur-in: blur-in 0.8s ease-out both;
+  --animate-flip-in: arc-pop-in 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  --animate-bounce-in: arc-pop-in 0.34s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+
+  /* ===== Ambient ===== */
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-slow: float 9s ease-in-out infinite;
+  --animate-pulse-slow: arc-pulse-glow 1.8s ease-in-out infinite;
+  --animate-spin-slow: spin-slow 14s linear infinite;
+  --animate-bounce-soft: bounce-soft 2.4s ease-in-out infinite;
+  --animate-marquee: marquee 32s linear infinite;
+
+  @keyframes arc-fade-in-up { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes arc-fade-in { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes arc-fade-in-down { from { opacity: 0; transform: translateY(-12px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes arc-fade-in-left { from { opacity: 0; transform: translateX(-24px); } to { opacity: 1; transform: translateX(0); } }
+  @keyframes arc-slide-in-right { from { opacity: 0; transform: translateX(24px); } to { opacity: 1; transform: translateX(0); } }
+  @keyframes arc-pop-in { 0% { opacity: 0; transform: scale(0.92); } 100% { opacity: 1; transform: scale(1); } }
+  @keyframes arc-shimmer { 0% { background-position: -400px 0; } 100% { background-position: 400px 0; } }
+  @keyframes arc-pulse-glow { 0%, 100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.35); } 50% { box-shadow: 0 0 0 8px rgba(37, 99, 235, 0); } }
+  @keyframes blur-in { from { opacity: 0; filter: blur(10px); } to { opacity: 1; filter: blur(0); } }
+  @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+  @keyframes spin-slow { to { transform: rotate(360deg); } }
+  @keyframes bounce-soft { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+  @keyframes marquee { to { transform: translateX(-50%); } }
+}
+
+/* Scroll reveal — same contract as every kit (site.js drives it). */
+@layer base {
+  html.js [data-reveal],
+  html.js [data-reveal-stagger] > * { opacity: 0; }
+  html.js .is-revealed { opacity: 1; }
+}
+
+/* Shared component layer — arc-careers feedback & card system. */
+@layer components {
+  .btn-primary { display:inline-flex; align-items:center; gap:.5rem; border-radius:.6rem; background:var(--color-brand); padding:.8rem 1.75rem; font-size:.9rem; font-weight:600; color:#fff; transition:transform .15s ease, box-shadow .15s ease, background-color .15s ease; }
+  .btn-primary:hover { background:var(--color-brand-dark); transform:translateY(-2px); box-shadow:0 10px 15px -3px rgb(37 99 235 / .3); }
+  .btn-primary:active { transform:scale(.97); }
+  .btn-outline { display:inline-flex; align-items:center; gap:.5rem; border-radius:.6rem; border:1px solid var(--color-brand-dark); padding:.8rem 1.75rem; font-size:.9rem; font-weight:600; color:var(--color-navy); transition:transform .15s ease, box-shadow .15s ease, background-color .15s ease; }
+  .btn-outline:hover { background:var(--color-brand-dark); border-color:var(--color-brand-dark); color:#fff; transform:translateY(-2px); }
+  .btn-outline:active { transform:scale(.97); }
+  .btn-ghost-light { display:inline-flex; align-items:center; gap:.5rem; border-radius:.6rem; border:1px solid rgba(255,255,255,.25); padding:.8rem 1.75rem; font-size:.9rem; font-weight:600; color:#fff; transition:all .15s ease; }
+  .btn-ghost-light:hover { border-color:#fff; transform:translateY(-2px); }
+  .btn-ghost-light:active { transform:scale(.97); }
+  .eyebrow { font-size:.75rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--color-brand); }
+  .field { width:100%; border-radius:.5rem; border:1px solid #e2e8f0; background:#fff; padding:.8rem 1rem; font-size:.9rem; color:var(--color-navy); outline:none; transition:border-color .2s, box-shadow .2s; }
+  .field:focus { border-color:var(--color-accent); box-shadow:0 0 0 3px rgba(59,130,246,.18); }
+  .card-lift { transition:transform .25s ease, box-shadow .25s ease; }
+  .card-lift:hover { transform:translateY(-4px); box-shadow:0 10px 30px -10px rgba(15,23,42,.25); }
+  /* arc-careers components */
+  .card-accent { border-left:4px solid var(--color-brand); }
+  .glass { background:rgba(255,255,255,.92); backdrop-filter:blur(10px); }
+  .notice { display:flex; gap:.7rem; align-items:flex-start; padding:.85rem 1rem; border-radius:.75rem; border:1px solid #e2e8f0; background:#f8fafc; color:#0f172a; font-size:.875rem; }
+  .notice .icon { flex:0 0 auto; width:22px; height:22px; display:inline-flex; align-items:center; justify-content:center; border-radius:999px; font-size:.75rem; font-weight:700; background:#e2e8f0; color:#334155; }
+  .notice.info { background:#eff6ff; border-color:#bfdbfe; }
+  .notice.info .icon { background:#dbeafe; color:#1d4ed8; }
+  .notice.success { background:#f0fdf4; border-color:#bbf7d0; }
+  .notice.success .icon { background:#dcfce7; color:#15803d; }
+  .skeleton { background:linear-gradient(90deg,#eef1f6 25%,#f7f9fc 37%,#eef1f6 63%); background-size:800px 100%; animation:arc-shimmer 1.4s linear infinite; border-radius:.5rem; }
+}
+
+    </style>
+  </head>
+  <body class="font-sans text-slate-600 antialiased">
+    <style>:root{--color-brand:#2563eb;--color-brand-dark:#1d4ed8;--color-accent:#3b82f6;--color-navy:#0f172a;--color-mint:#f8fafc;--color-cream:#e2e8f0;--font-sans:"Inter",ui-sans-serif,system-ui,sans-serif;--font-display:"Inter",ui-sans-serif,system-ui,sans-serif;}</style>
+    <!-- ===== Header ===== -->
+    <header class="sticky top-0 z-50 border-b border-slate-100 glass" data-reveal="down">
+      <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 py-3 lg:px-8">
+        <a href="corporate-home.html" class="flex min-w-0 shrink-0 items-center gap-2.5"><img src="Img/logo-green.png" alt="Ash River Collective" class="h-9 w-9 shrink-0 sm:h-10 sm:w-10" /><span class="leading-none">
+            <span class="block text-lg font-extrabold tracking-tight text-navy font-display">ASH RIVER</span>
+            <span class="block text-[10px] font-bold tracking-[0.3em] text-brand">COLLECTIVE</span>
+          </span></a>
+        <nav class="hidden items-center gap-3 whitespace-nowrap text-[12px] font-medium text-slate-700 lg:flex xl:gap-5 xl:text-[13px]">
+          <a href="corporate-home.html" class="font-semibold text-brand">Home</a>
+          <a href="corporate-about.html" class="transition hover:text-brand">About</a>
+          <a href="corporate-services.html" class="transition hover:text-brand">Services</a>
+          <a href="corporate-industries.html" class="transition hover:text-brand">Industries</a>
+          <a href="corporate-insights.html" class="transition hover:text-brand">Insights</a>
+          <a href="corporate-contact.html" class="transition hover:text-brand">Contact</a>
+        </nav>
+        <form role="search" method="get" action="" class="hidden xl:flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3.5 py-1.5 text-[12px] text-slate-500">
+          <svg class="h-3.5 w-3.5 shrink-0 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path stroke-linecap="round" d="m20 20-3.5-3.5"/></svg>
+          <input type="search" name="s" placeholder="Search site…" aria-label="Search site" class="w-24 bg-transparent outline-none placeholder:text-slate-400" />
+        </form>
+        <button type="button" class="hidden lg:inline-flex items-center justify-center rounded-full p-2 text-slate-500 transition hover:bg-slate-100 hover:text-navy" aria-label="Toggle dark mode" onclick="arcStToggleDark()">
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+        </button>
+        <a href="corporate-contact.html" class="btn-primary hidden lg:inline-flex">Build Your Team</a>
+        <button type="button" class="inline-flex rounded-lg p-2 text-slate-700 hover:bg-slate-100 lg:hidden" aria-label="Toggle menu" aria-expanded="false" onclick="toggleMobileNav(this)">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+      <div id="mnav" class="hidden border-t border-slate-100 bg-white lg:hidden">
+        <nav class="flex flex-col px-4 sm:px-6 py-3 text-[15px] font-medium text-slate-700">
+          <form role="search" method="get" action="" class="mb-2 flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-3.5 py-2.5 text-sm text-slate-500">
+            <svg class="h-4 w-4 shrink-0 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path stroke-linecap="round" d="m20 20-3.5-3.5"/></svg>
+            <input type="search" name="s" placeholder="Search site…" aria-label="Search site" class="w-full bg-transparent outline-none placeholder:text-slate-400" />
+          </form>
+          <a href="corporate-home.html" class="border-b border-slate-50 py-3 font-semibold text-brand">Home</a>
+          <a href="corporate-about.html" class="border-b border-slate-50 py-3">About</a>
+          <a href="corporate-services.html" class="border-b border-slate-50 py-3">Services</a>
+          <a href="corporate-industries.html" class="border-b border-slate-50 py-3">Industries</a>
+          <a href="corporate-insights.html" class="border-b border-slate-50 py-3">Insights</a>
+          <a href="corporate-contact.html" class="py-3">Contact</a>
+          <a href="corporate-contact.html" class="btn-primary mt-2 mb-3 justify-center">Build Your Team</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ===== Hero ===== -->
+    <section class="relative overflow-hidden bg-navy">
+      <div class="pointer-events-none absolute -top-40 -right-40 h-[480px] w-[480px] rounded-full bg-brand/25 blur-3xl motion-safe:animate-float-slow"></div>
+      <div class="pointer-events-none absolute -bottom-52 -left-32 h-[420px] w-[420px] rounded-full bg-accent/15 blur-3xl motion-safe:animate-pulse-slow"></div>
+      <div class="relative mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 py-20 lg:grid-cols-2 lg:px-8 lg:py-28">
+        <div>
+          <p class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-widest text-accent backdrop-blur" data-reveal>Talent + Process + Accountability</p>
+          <h1 class="mt-5 text-4xl leading-tight font-extrabold tracking-tight text-white font-display sm:text-5xl lg:text-6xl" data-reveal data-reveal-delay="80">Elite Talent. <span class="text-accent">Bulletproof Systems.</span></h1>
+          <p class="mt-6 max-w-xl text-lg leading-8 text-slate-300" data-reveal data-reveal-delay="160">Build the team your business needs without adding unnecessary overhead. Ash River Collective places trained accounting and administrative professionals inside your business — then documents the processes they run.</p>
+          <div class="mt-8 flex flex-wrap gap-4" data-reveal data-reveal-delay="240">
+            <a href="corporate-contact.html" class="btn-primary">Build Your Team <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+            <a href="corporate-services.html" class="btn-ghost-light">Explore Our Services</a>
+          </div>
+          <dl class="mt-10 grid grid-cols-3 gap-4 max-w-md" data-reveal-stagger="90">
+            <div class="rounded-xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur"><dt class="text-2xl font-extrabold text-white">240+</dt><dd class="mt-0.5 text-[11px] font-medium uppercase tracking-wide text-slate-400">Roles placed</dd></div>
+            <div class="rounded-xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur"><dt class="text-2xl font-extrabold text-white">96%</dt><dd class="mt-0.5 text-[11px] font-medium uppercase tracking-wide text-slate-400">Retention</dd></div>
+            <div class="rounded-xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur"><dt class="text-2xl font-extrabold text-white">10d</dt><dd class="mt-0.5 text-[11px] font-medium uppercase tracking-wide text-slate-400">Avg. onboarding</dd></div>
+          </dl>
+        </div>
+        <div class="relative" data-reveal="left" data-reveal-delay="200">
+          <img src="Img/business-businessman-senior-mature-office-meeting-2023-11-27-05-34-55-utc-1.jpg" alt="Ash River Collective" class="w-full rounded-2xl object-cover shadow-2xl ring-1 ring-white/10 lg:aspect-[4/3]" loading="eager" />
+          <div class="glass card-lift absolute -bottom-5 left-5 flex items-center gap-3 rounded-xl border border-slate-200 px-4 py-3 shadow-lg" data-reveal="zoom" data-reveal-delay="400">
+            <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-brand/10 text-brand"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.6-2.6A9 9 0 1112 3a9 9 0 018.6 11.4z"/></svg></span>
+            <span class="text-xs font-semibold text-navy">Vetted talent, documented process</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Services ===== -->
+    <section class="py-16 sm:py-20 lg:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center" data-reveal>
+          <p class="eyebrow">What we do</p>
+          <h2 class="mt-3 text-3xl font-extrabold tracking-tight font-display text-navy sm:text-4xl">The People You Need. The Systems Behind Them.</h2>
+          <p class="mt-4 text-slate-500">ARC combines trained talent, documented processes, and operational systems to help growing companies execute consistently.</p>
+        </div>
+        <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-reveal-stagger="90">
+                    <div class="card-lift rounded-xl border border-slate-200 bg-white p-7 shadow-sm">
+            <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-brand/10 text-brand"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></span>
+            <h3 class="mt-5 text-lg font-bold text-navy font-display">Finance &amp; Accounting Talent</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-500">Accountants, accounting managers, controllers, AR/AP specialists, and finance professionals who work your hours and integrate into your existing operation.</p>
+          </div>
+          <div class="card-lift rounded-xl border border-slate-200 bg-white p-7 shadow-sm">
+            <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-brand/10 text-brand"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.4 15a1.7 1.7 0 00.3 1.9l.1.1a2 2 0 11-2.9 2.9l-.1-.1a1.7 1.7 0 00-1.9-.3 1.7 1.7 0 00-1 1.5V21a2 2 0 11-4 0v-.2a1.7 1.7 0 00-1-1.5 1.7 1.7 0 00-1.9.3l-.1.1a2 2 0 11-2.9-2.9l.1-.1a1.7 1.7 0 00.3-1.9 1.7 1.7 0 00-1.5-1H3a2 2 0 110-4h.2a1.7 1.7 0 001.5-1 1.7 1.7 0 00-.3-1.9l-.1-.1a2 2 0 112.9-2.9l.1.1a1.7 1.7 0 001.9.3h0a1.7 1.7 0 001-1.5V3a2 2 0 114 0v.2a1.7 1.7 0 001 1.5h0a1.7 1.7 0 001.9-.3l.1-.1a2 2 0 112.9 2.9l-.1.1a1.7 1.7 0 00.3 1.9v0a1.7 1.7 0 001.5 1h.2a2 2 0 110 4h-.2a1.7 1.7 0 00-1.5 1z"/></svg></span>
+            <h3 class="mt-5 text-lg font-bold text-navy font-display">Virtual Assistants</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-500">Administrative professionals who take recurring execution off your plate — scheduling, reporting, follow-up, CRM management, documentation, and operational support.</p>
+          </div>
+          <div class="card-lift rounded-xl border border-slate-200 bg-white p-7 shadow-sm">
+            <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-brand/10 text-brand"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.6 13.4L11 3.8A2 2 0 009.6 3H4a1 1 0 00-1 1v5.6c0 .5.2 1 .6 1.4l9.6 9.6a2 2 0 002.8 0l4.6-4.6a2 2 0 000-2.8z M7.5 7.5h.01"/></svg></span>
+            <h3 class="mt-5 text-lg font-bold text-navy font-display">Systems &amp; Playbooks</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-500">We document the recurring processes behind the work so your business can operate consistently without depending on one person.</p>
+          </div>
+          <div class="card-lift rounded-xl border border-slate-200 bg-white p-7 shadow-sm">
+            <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-brand/10 text-brand"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 21v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2M23 21v-2a4 4 0 00-3-3.9M16 3.1a4 4 0 010 7.8 M9 7a4 4 0 100 8 4 4 0 000-8z"/></svg></span>
+            <h3 class="mt-5 text-lg font-bold text-navy font-display">General Accountants</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-500">Day-to-day accounting execution, reconciliations, transaction management, month-end support, and recurring accounting tasks.</p>
+          </div>
+          <div class="card-lift rounded-xl border border-slate-200 bg-white p-7 shadow-sm">
+            <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-brand/10 text-brand"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19l7-7a2.1 2.1 0 000-3l-2-2a2.1 2.1 0 00-3 0l-7 7v5h5z M18 13l-4-4"/></svg></span>
+            <h3 class="mt-5 text-lg font-bold text-navy font-display">AR/AP Specialists</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-500">Receivables, payables, invoice processing, collections follow-up, vendor coordination, and supporting documentation.</p>
+          </div>
+          <div class="card-lift rounded-xl border border-slate-200 bg-white p-7 shadow-sm">
+            <span class="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-brand/10 text-brand"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3l8 4v5c0 5-3.4 8.4-8 9-4.6-.6-8-4-8-9V7l8-4z"/></svg></span>
+            <h3 class="mt-5 text-lg font-bold text-navy font-display">Controllers</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-500">Financial controls, reporting, close management, team oversight, and higher-level accounting operations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== How it works ===== -->
+    <section class="bg-mint border-y border-slate-200 py-16 sm:py-20 lg:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center" data-reveal>
+          <p class="eyebrow">The process</p>
+          <h2 class="mt-3 text-3xl font-extrabold tracking-tight font-display text-navy sm:text-4xl">From Role Definition to Documented Execution.</h2>
+        </div>
+        <ol class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4" data-reveal-stagger="110">
+                    <li class="card-lift relative rounded-xl border border-slate-200 bg-white p-6 shadow-sm list-none">
+            <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-brand text-sm font-bold text-white">1</span>
+            <h3 class="mt-4 text-base font-bold text-navy">Define</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-500">We map the role, the workload and the outcomes it must own — not just a job description.</p>
+          </li>
+          <li class="card-lift relative rounded-xl border border-slate-200 bg-white p-6 shadow-sm list-none">
+            <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-brand text-sm font-bold text-white">2</span>
+            <h3 class="mt-4 text-base font-bold text-navy">Place</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-500">Pre-vetted professionals matched to your stack, your hours and your operating rhythm.</p>
+          </li>
+          <li class="card-lift relative rounded-xl border border-slate-200 bg-white p-6 shadow-sm list-none">
+            <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-brand text-sm font-bold text-white">3</span>
+            <h3 class="mt-4 text-base font-bold text-navy">Document</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-500">The recurring work gets turned into playbooks while the role is running, not after.</p>
+          </li>
+          <li class="card-lift relative rounded-xl border border-slate-200 bg-white p-6 shadow-sm list-none">
+            <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-brand text-sm font-bold text-white">4</span>
+            <h3 class="mt-4 text-base font-bold text-navy">Scale</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-500">Add capacity or codify more processes — the system grows without re-hiring from zero.</p>
+          </li>
+        </ol>
+        <div class="notice info mx-auto mt-10 max-w-3xl" data-reveal>
+          <span class="icon">i</span>
+          <span><strong class="block mb-0.5 text-[13px]">No long hiring cycles.</strong>Most roles are running inside your operation within ten business days — with documentation starting in week one.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Testimonials ===== -->
+    <section class="py-16 sm:py-20 lg:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center" data-reveal>
+          <p class="eyebrow">Results</p>
+          <h2 class="mt-3 text-3xl font-extrabold tracking-tight font-display text-navy sm:text-4xl">Teams That Run on Systems, Not Heroics.</h2>
+        </div>
+        <div class="mt-14 grid gap-6 lg:grid-cols-3" data-reveal-stagger="120">
+                    <figure class="card-lift card-accent flex flex-col rounded-xl border border-slate-200 bg-white p-7 shadow-sm">
+            <blockquote class="flex-1 text-[15px] leading-7 text-slate-600">“Our controller closed the books in five days instead of fifteen. The playbooks meant nothing lived only in her head.”</blockquote>
+            <figcaption class="mt-5 border-t border-slate-100 pt-4">
+              <p class="text-sm font-bold text-navy">Operations Director</p>
+              <p class="text-xs text-slate-400">Professional services firm</p>
+            </figcaption>
+          </figure>
+          <figure class="card-lift card-accent flex flex-col rounded-xl border border-slate-200 bg-white p-7 shadow-sm">
+            <blockquote class="flex-1 text-[15px] leading-7 text-slate-600">“Our VA owns the recurring admin work end to end. Follow-up, reporting, CRM — it just happens now.”</blockquote>
+            <figcaption class="mt-5 border-t border-slate-100 pt-4">
+              <p class="text-sm font-bold text-navy">Fractional CFO</p>
+              <p class="text-xs text-slate-400">Distribution company</p>
+            </figcaption>
+          </figure>
+          <figure class="card-lift card-accent flex flex-col rounded-xl border border-slate-200 bg-white p-7 shadow-sm">
+            <blockquote class="flex-1 text-[15px] leading-7 text-slate-600">“They didn't just fill a seat. They documented the role so the next person could run it without us.”</blockquote>
+            <figcaption class="mt-5 border-t border-slate-100 pt-4">
+              <p class="text-sm font-bold text-navy">Founder</p>
+              <p class="text-xs text-slate-400">Partner firm</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative overflow-hidden bg-navy py-16 sm:py-20">
+      <div class="pointer-events-none absolute -top-40 right-0 h-96 w-96 rounded-full bg-brand/25 blur-3xl motion-safe:animate-pulse-slow"></div>
+      <div class="relative mx-auto max-w-4xl px-4 text-center sm:px-6">
+        <h2 class="text-3xl font-bold text-white font-display sm:text-4xl tracking-tight" data-reveal>Stop Hiring Around Broken Processes.</h2>
+        <p class="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-300" data-reveal data-reveal-delay="100">ARC combines trained talent, documented processes, and operational systems to help growing companies execute consistently.</p>
+        <div class="mt-8 flex flex-wrap justify-center gap-4" data-reveal data-reveal-delay="200">
+          <a href="corporate-contact.html" class="btn-primary">Talk With ARC <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+          <a href="corporate-about.html" class="btn-ghost-light">Learn more</a>
+        </div>
+      </div>
+    </section>
+    <!-- ===== Footer ===== -->
+    <footer class="bg-navy text-slate-300">
+      <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 py-16 md:grid-cols-2 lg:grid-cols-4 lg:px-8" data-reveal-stagger="120">
+        <div>
+          <a href="corporate-home.html" class="flex items-center gap-2.5"><img src="Img/logo-green.png" alt="Ash River Collective" class="h-10 w-10 shrink-0" />
+            <span class="text-lg font-extrabold tracking-tight text-white font-display">ASH RIVER</span>
+          </a>
+          <p class="mt-5 text-sm leading-6 text-slate-400">Elite Talent. Bulletproof Systems. Accounting talent, virtual assistants, and documented operating systems built around the work your business needs to get done.</p>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-white">Company</h4>
+          <ul class="mt-5 space-y-3 text-sm">
+              <li><a href="corporate-home.html" class="transition hover:text-brand">Home</a></li>
+              <li><a href="corporate-about.html" class="transition hover:text-brand">About</a></li>
+              <li><a href="corporate-services.html" class="transition hover:text-brand">Services</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-white">Explore</h4>
+          <ul class="mt-5 space-y-3 text-sm">
+              <li><a href="corporate-industries.html" class="transition hover:text-brand">Industries</a></li>
+              <li><a href="corporate-insights.html" class="transition hover:text-brand">Insights</a></li>
+              <li><a href="corporate-contact.html" class="transition hover:text-brand">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-white">Contact</h4>
+          <ul class="mt-5 space-y-3 text-sm text-slate-400 [&_svg]:mt-0.5 [&_svg]:h-5 [&_svg]:w-5 [&_svg]:shrink-0 [&_svg]:text-brand">
+            <li class="flex gap-3"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1116 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Remote-first · U.S. time zones</span></li>
+            <li class="flex gap-3"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path stroke-linecap="round" stroke-linejoin="round" d="M3 7l9 6 9-6"/></svg><a href="mailto:hello@ashrivercollective.com" class="transition hover:text-brand">hello@ashrivercollective.com</a></li>
+            <li class="flex gap-3"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 2 .7 2.9a2 2 0 01-.5 2.1L8 10a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.5c.9.3 1.9.6 2.9.7a2 2 0 011.7 2z"/></svg><span>+1 (555) 013-4224</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/10">
+        <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 sm:px-6 py-6 text-xs text-slate-500 sm:flex-row lg:px-8">
+          <p>© 2026 Ash River Collective. All rights reserved.</p>
+          <p>Starter template · Built with ARC Starter Templates</p>
+        </div>
+      </div>
+    </footer>
+      <div id="arc-st-chat"></div>
+</body>
+</html>

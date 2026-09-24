@@ -11,7 +11,7 @@
   main.innerHTML = '<div class="py-12 text-center text-ink/60">…</div>';
 
   Tema.load()
-    .then(({ site }) => {
+    .then(({ site, manifest }) => {
       const P = site.pages[page];
       if (!P) throw new Error("site.json → missing pages." + page);
       const esc = Tema.esc,
@@ -51,6 +51,33 @@
             "</div></div>"
         )
         .join("");
+
+      /* ---------- marquee ("demos" → manifest titles, or a string array) ---------- */
+      const mq = el("marquee");
+      const items =
+        P.marquee === "demos"
+          ? Object.values(manifest.demos || {}).map((d) => d.title || "")
+          : Array.isArray(P.marquee)
+            ? P.marquee
+            : [];
+      if (items.length) {
+        const strip = items
+          .map(
+            (t) =>
+              '<span class="flex items-center gap-2.5"><span class="w-1.5 h-1.5 rounded-full bg-blue"></span>' +
+              esc(t) +
+              "</span>"
+          )
+          .join("");
+        mq.innerHTML = strip + strip;
+      } else {
+        mq.parentElement.classList.add("hidden");
+      }
+
+      /* ---------- intro ---------- */
+      const intro = el("intro");
+      if (P.intro) intro.innerHTML = P.intro;
+      else intro.parentElement.classList.add("hidden");
 
       /* ---------- section renderers ---------- */
       const head = (s) =>

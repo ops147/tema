@@ -1,0 +1,51 @@
+/**
+ * Lienzo Astra — WooCommerce.
+ *
+ * Header cart badge plus a few small alignment fixes so WooCommerce's own
+ * templates sit comfortably inside the theme's content column. Written
+ * with logical properties so no separate -rtl.css file is needed.
+ */
+
+.lienzoastra-cart-link {
+	align-items: center;
+	align-self: center;
+	display: inline-flex;
+	gap: 0.25rem;
+	line-height: 0;
+	position: relative;
+	text-decoration: none;
+}
+
+.lienzoastra-cart-count {
+	align-items: center;
+	background: var(--lienzoastra-color-primary, #2563eb);
+	border-radius: 999px;
+	color: #fff;
+	display: inline-flex;
+	font-size: 0.7rem;
+	font-weight: 600;
+	justify-content: center;
+	line-height: 1;
+	min-height: 1.15rem;
+	min-width: 1.15rem;
+	padding: 0.15rem 0.35rem;
+}
+
+.site-header .header-inner .lienzoastra-cart-link,
+.site-header:not(.dynamic-header) .lienzoastra-cart-link {
+	margin-inline-start: auto;
+}
+
+.site-header .header-inner .site-navigation + .lienzoastra-cart-link,
+.site-header:not(.dynamic-header) .site-navigation + .lienzoastra-cart-link {
+	margin-inline-start: 1rem;
+}
+
+/* Keep WooCommerce's own grid aligned with the theme content column. */
+.site-main .woocommerce {
+	max-width: 100%;
+}
+
+.site-main .woocommerce ul.products li.product .button {
+	margin-block-start: 0.5rem;
+}

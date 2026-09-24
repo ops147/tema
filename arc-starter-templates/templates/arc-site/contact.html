@@ -1,0 +1,302 @@
+<!-- ARC Starter Templates: bundled template document. Edit this file directly, then re-import in wp-admin. -->
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact – Ash River Collective</title>
+    <meta name="description" content="Whether you need one person, an accounting team, administrative support or a strategic staffing partner, start here." />
+    <link rel="icon" type="image/png" href="Img/logo-green.png" />
+    <script src="Js/site.js" defer></script>
+    <link rel="stylesheet" href="Css/tailwind.css" onerror="this.onerror=null;var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4';document.head.appendChild(s);" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style type="text/tailwindcss">
+@import "tailwindcss";
+
+@theme {
+  /* ===== Design tokens — global "site settings". Change here, applies everywhere. ===== */
+  --color-brand: #6FAF67;
+  --color-brand-dark: #438F69;
+  --color-leaf: #A8C85A;
+  --color-mint: #58B8A9;
+  --color-gold: #D7C94F;
+  --color-navy: #0F1C2E;
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+
+  /* ===== Entrance animations — picked per element via data-reveal="<name>" =====
+     up | down | left | right | zoom | fade | blur | flip | bounce (default: up) */
+  --animate-fade-in: fade-in 0.7s ease-out both;
+  --animate-fade-in-up: fade-in-up 0.7s ease-out both;
+  --animate-fade-in-down: fade-in-down 0.7s ease-out both;
+  --animate-fade-in-left: fade-in-left 0.7s ease-out both;
+  --animate-fade-in-right: fade-in-right 0.7s ease-out both;
+  --animate-zoom-in: zoom-in 0.6s ease-out both;
+  --animate-blur-in: blur-in 0.8s ease-out both;
+  --animate-flip-in: flip-in 0.8s ease-out both;
+  --animate-bounce-in: bounce-in 0.8s ease-out both;
+
+  /* ===== Ambient / looping — plain classes, e.g. motion-safe:animate-float ===== */
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-slow: float 9s ease-in-out infinite;
+  --animate-pulse-slow: pulse-slow 7s ease-in-out infinite;
+  --animate-spin-slow: spin-slow 14s linear infinite;
+  --animate-bounce-soft: bounce-soft 2.4s ease-in-out infinite;
+  --animate-marquee: marquee 32s linear infinite;
+
+  @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes fade-in-up { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fade-in-down { from { opacity: 0; transform: translateY(-24px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fade-in-left { from { opacity: 0; transform: translateX(-24px); } to { opacity: 1; transform: translateX(0); } }
+  @keyframes fade-in-right { from { opacity: 0; transform: translateX(24px); } to { opacity: 1; transform: translateX(0); } }
+  @keyframes zoom-in { from { opacity: 0; transform: scale(0.94); } to { opacity: 1; transform: scale(1); } }
+  @keyframes blur-in { from { opacity: 0; filter: blur(10px); } to { opacity: 1; filter: blur(0); } }
+  @keyframes flip-in { from { opacity: 0; transform: perspective(700px) rotateX(14deg) translateY(24px); } to { opacity: 1; transform: perspective(700px) rotateX(0) translateY(0); } }
+  @keyframes bounce-in { 0% { opacity: 0; transform: scale(0.4); } 55% { opacity: 1; transform: scale(1.06); } 75% { transform: scale(0.96); } 100% { opacity: 1; transform: scale(1); } }
+  @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+  @keyframes pulse-slow { 0%, 100% { opacity: 0.55; transform: scale(1); } 50% { opacity: 1; transform: scale(1.08); } }
+  @keyframes spin-slow { to { transform: rotate(360deg); } }
+  @keyframes bounce-soft { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+  @keyframes marquee { to { transform: translateX(-50%); } }
+}
+
+/* Scroll reveal: elements start hidden only when Js/site.js enables html.js.
+   Once the entrance finishes, site.js swaps the animation class for
+   .is-revealed so hover transforms (e.g. .card-lift) are free to run. */
+@layer base {
+  html.js [data-reveal],
+  html.js [data-reveal-stagger] > * { opacity: 0; }
+  html.js .is-revealed { opacity: 1; }
+}
+
+/* Shared component layer — single source for all pages. Do not redeclare in page <style> blocks. */
+@layer components {
+  .btn-primary { display:inline-flex; align-items:center; gap:.5rem; border-radius:9999px; background:#A8C85A; padding:.8rem 1.75rem; font-size:.9rem; font-weight:600; color:#0F1C2E; transition:all .2s; }
+  .btn-primary:hover { background:#0F1C2E; color:#fff; transform:translateY(-2px); box-shadow:0 10px 15px -3px rgb(20 42 30 / .25); }
+  .btn-outline { display:inline-flex; align-items:center; gap:.5rem; border-radius:9999px; border:1px solid #438F69; padding:.8rem 1.75rem; font-size:.9rem; font-weight:600; color:#0F1C2E; transition:all .2s; }
+  .btn-outline:hover { border-color:#438F69; background:#438F69; color:#fff; transform:translateY(-2px); }
+  .btn-ghost-light { display:inline-flex; align-items:center; gap:.5rem; border-radius:9999px; border:1px solid rgba(255,255,255,.25); padding:.8rem 1.75rem; font-size:.9rem; font-weight:600; color:#fff; transition:all .2s; }
+  .btn-ghost-light:hover { border-color:#fff; transform:translateY(-2px); }
+  .eyebrow { font-size:.8rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--color-brand); }
+  .field { width:100%; border-radius:.6rem; border:1px solid #e2e8f0; background:#fff; padding:.8rem 1rem; font-size:.9rem; color:var(--color-navy); outline:none; transition:border-color .2s, box-shadow .2s; }
+  .field:focus { border-color:var(--color-brand); box-shadow:0 0 0 3px rgb(111 175 103 / .22); }
+  /* Hover-lift card — shared replacement for "transition hover:-translate-y-1 hover:shadow-lg". */
+  .card-lift { transition:transform .25s ease, box-shadow .25s ease; }
+  .card-lift:hover { transform:translateY(-4px); box-shadow:0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1); }
+}
+    </style>
+
+  </head>
+  <body class="font-sans text-slate-600 antialiased">
+    <!-- ===== Header ===== -->
+    <header class="sticky top-0 z-50 border-b border-slate-100 bg-white/95 backdrop-blur" data-reveal="down">
+      <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 py-3 lg:px-8">
+        <a href="index.html" class="flex min-w-0 shrink-0 items-center gap-2.5">
+          <img src="Img/logo-green.png" alt="Ash River Collective" class="h-9 w-9 shrink-0 sm:h-10 sm:w-10" />
+          <span class="hidden min-[400px]:block leading-none">
+            <span class="block text-[15px] font-extrabold tracking-wide text-navy">ASH RIVER</span>
+            <span class="block text-[10px] font-bold tracking-[0.3em] text-brand">COLLECTIVE</span>
+          </span>
+        </a>
+        <nav class="hidden items-center gap-3 whitespace-nowrap text-[12px] font-medium text-slate-700 lg:flex xl:gap-5 xl:text-[13px]">
+          <a href="index.html" class="transition hover:text-brand">Home</a>
+          <a href="services.html" class="transition hover:text-brand">Services</a>
+          <a href="finance-accounting-talent.html" class="transition hover:text-brand">Finance Talent</a>
+          <a href="virtual-assistants.html" class="transition hover:text-brand">Virtual Assistants</a>
+          <a href="about.html" class="transition hover:text-brand">About</a>
+          <a href="partners.html" class="transition hover:text-brand">Partners</a>
+          <a href="ash-river-foundation.html" class="transition hover:text-brand">Foundation</a>
+          <a href="contact.html" class="font-semibold text-brand">Contact</a>
+        </nav>
+        <form role="search" method="get" action="" class="hidden xl:flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3.5 py-1.5 text-[12px] text-slate-500">
+          <svg class="h-3.5 w-3.5 shrink-0 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path stroke-linecap="round" d="m20 20-3.5-3.5"/></svg>
+          <input type="search" name="s" placeholder="Search site…" aria-label="Search site" class="w-24 bg-transparent outline-none placeholder:text-slate-400" />
+        </form>
+        <button type="button" class="hidden lg:inline-flex items-center justify-center rounded-full p-2 text-slate-500 transition hover:bg-slate-100 hover:text-navy" aria-label="Toggle dark mode" onclick="arcStToggleDark()">
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+        </button>
+        <a href="contact.html" class="btn-primary hidden lg:inline-flex">Build Your Team</a>
+        <button type="button" class="inline-flex rounded-lg p-2 text-slate-700 hover:bg-slate-100 lg:hidden" aria-label="Toggle menu" aria-expanded="false" onclick="toggleMobileNav(this)">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+      <div id="mnav" class="hidden border-t border-slate-100 bg-white lg:hidden">
+        <nav class="flex flex-col px-4 sm:px-6 py-3 text-[15px] font-medium text-slate-700">
+          <form role="search" method="get" action="" class="mb-2 flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-3.5 py-2.5 text-sm text-slate-500">
+            <svg class="h-4 w-4 shrink-0 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path stroke-linecap="round" d="m20 20-3.5-3.5"/></svg>
+            <input type="search" name="s" placeholder="Search site…" aria-label="Search site" class="w-full bg-transparent outline-none placeholder:text-slate-400" />
+          </form>
+          <a href="index.html" class="border-b border-slate-50 py-3">Home</a>
+          <a href="services.html" class="border-b border-slate-50 py-3">Services</a>
+          <a href="finance-accounting-talent.html" class="border-b border-slate-50 py-3">Finance &amp; Accounting Talent</a>
+          <a href="virtual-assistants.html" class="border-b border-slate-50 py-3">Virtual Assistants</a>
+          <a href="about.html" class="border-b border-slate-50 py-3">About</a>
+          <a href="partners.html" class="border-b border-slate-50 py-3">Partners</a>
+          <a href="ash-river-foundation.html" class="border-b border-slate-50 py-3">Ash River Foundation</a>
+          <a href="contact.html" class="py-3 font-semibold text-brand">Contact</a>
+          <a href="contact.html" class="btn-primary mt-2 mb-3 justify-center">Build Your Team</a>
+        </nav>
+      </div>
+    </header>
+
+<!-- ===== Page hero ===== -->
+    <section class="relative overflow-hidden bg-navy">
+      <div class="pointer-events-none absolute -top-40 -right-40 h-[420px] w-[420px] rounded-full bg-brand/25 blur-3xl motion-safe:animate-pulse-slow"></div>
+      <div class="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+        <h1 class="max-w-3xl text-3xl font-bold text-white sm:text-5xl" data-reveal>Tell Us What You Need.</h1>
+        <p class="mt-5 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg" data-reveal data-reveal-delay="120">Whether you need one person, an accounting team, administrative support, or a strategic staffing partner, start here.</p>
+        <a href="#contact-form" class="btn-primary mt-8" data-reveal data-reveal-delay="240">Start the Conversation</a>
+        <p class="mt-8 text-sm text-slate-400" data-reveal="fade" data-reveal-delay="360">
+          <a href="index.html" class="font-medium text-brand transition hover:text-white">Home</a>
+          <span class="mx-2 text-slate-500">/</span> Contact
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== Contact split ===== -->
+    <section class="bg-white">
+      <div class="mx-auto grid max-w-7xl gap-14 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-2 lg:px-8 lg:py-24">
+        <div data-reveal="left">
+          <p class="eyebrow">Get in touch</p>
+          <h2 class="mt-3 text-3xl font-bold text-navy sm:text-4xl">What Can We Help You Build?</h2>
+          <p class="mt-5 leading-7">Tell us where your business needs more capacity. We'll help determine the role, responsibilities, and next step.</p>
+          <div class="mt-10 space-y-6">
+            <div class="rounded-2xl border border-brand/20 bg-brand/5 p-6">
+              <div class="flex items-start gap-4">
+                <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand/10 text-brand">
+                  <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                </div>
+                <div>
+                  <h3 class="font-bold text-navy">Need Talent Quickly?</h3>
+                  <p class="mt-2 text-sm leading-6">Tell us the role, responsibilities, and timeline. Depending on the position and requirements, qualified candidates may be available within seven days.</p>
+                </div>
+              </div>
+            </div>
+            <div class="rounded-2xl bg-navy p-6 text-white">
+              <h3 class="font-bold">The Right People. Clear Ownership. Repeatable Execution.</h3>
+              <p class="mt-2 text-sm leading-6 text-slate-300">Ash River Collective puts the right people in the right seats — then builds the systems that make their work repeatable.</p>
+              <a href="#contact-form" class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-white transition hover:text-brand">
+                Contact ARC
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <form id="contact-form" class="h-fit rounded-2xl border border-slate-100 bg-slate-50 p-6 shadow-sm sm:p-8" onsubmit="event.preventDefault();handleContactSubmit(this)" data-reveal="right" data-reveal-delay="120">
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div>
+              <label for="first-name" class="mb-2 block text-sm font-semibold text-navy">First Name *</label>
+              <input id="first-name" type="text" class="field" required />
+            </div>
+            <div>
+              <label for="last-name" class="mb-2 block text-sm font-semibold text-navy">Last Name *</label>
+              <input id="last-name" type="text" class="field" required />
+            </div>
+            <div>
+              <label for="company" class="mb-2 block text-sm font-semibold text-navy">Company</label>
+              <input id="company" type="text" class="field" />
+            </div>
+            <div>
+              <label for="phone" class="mb-2 block text-sm font-semibold text-navy">Phone</label>
+              <input id="phone" type="tel" class="field" />
+            </div>
+            <div class="sm:col-span-2">
+              <label for="work-email" class="mb-2 block text-sm font-semibold text-navy">Work Email *</label>
+              <input id="work-email" type="email" class="field" required />
+            </div>
+            <div class="sm:col-span-2">
+              <label for="need" class="mb-2 block text-sm font-semibold text-navy">What do you need help with?</label>
+              <select id="need" class="field">
+                <option>Accounting Talent</option>
+                <option>Controller</option>
+                <option>AR/AP Support</option>
+                <option>Virtual Assistant</option>
+                <option>Build a Team</option>
+                <option>Partnership</option>
+                <option>Ash River Foundation</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label for="count" class="mb-2 block text-sm font-semibold text-navy">How many people do you need?</label>
+              <select id="count" class="field">
+                <option>1</option>
+                <option>2–3</option>
+                <option>4–5</option>
+                <option>6+</option>
+              </select>
+            </div>
+            <div>
+              <label for="when" class="mb-2 block text-sm font-semibold text-navy">When do you need support?</label>
+              <select id="when" class="field">
+                <option>Immediately</option>
+                <option>Within 30 days</option>
+                <option>Within 60–90 days</option>
+                <option>Exploring options</option>
+              </select>
+            </div>
+            <div class="sm:col-span-2">
+              <label for="details" class="mb-2 block text-sm font-semibold text-navy">Tell us what you need</label>
+              <textarea id="details" rows="5" class="field" placeholder="Role, responsibilities, systems, timeline..."></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn-primary mt-6 w-full justify-center">Start The Conversation</button>
+        </form>
+        <div id="form-success" class="hidden h-fit rounded-2xl border border-brand/20 bg-brand/5 p-8 text-center sm:p-10" data-reveal="zoom">
+          <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-brand/10 text-brand">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <h3 class="mt-5 text-xl font-bold text-navy">Message received.</h3>
+          <p class="mt-2 text-sm leading-6">Thanks for reaching out. We will review what you need and get back to you shortly.</p>
+        </div>
+      </div>
+    </section>
+    <!-- ===== Footer ===== -->
+    <footer class="bg-navy text-slate-300">
+      <div class="mx-auto grid max-w-7xl gap-10 border-t border-white/10 px-4 sm:px-6 py-16 md:grid-cols-2 lg:grid-cols-4 lg:px-8" data-reveal-stagger="120">
+        <div>
+          <a href="index.html" class="flex items-center gap-2.5">
+            <img src="Img/logo-green.png" alt="Ash River Collective" class="h-10 w-10" />
+            <span class="leading-none">
+              <span class="block text-[15px] font-extrabold tracking-wide text-white">ASH RIVER</span>
+              <span class="block text-[10px] font-bold tracking-[0.3em] text-brand">COLLECTIVE</span>
+            </span>
+          </a>
+          <p class="mt-5 text-sm leading-6 font-semibold text-white">Elite Talent. Bulletproof Systems.</p>
+          <p class="mt-3 text-sm leading-6 text-slate-400">Accounting talent, virtual assistants, and documented operating systems built around the work your business needs to get done.</p>
+          <div class="mt-6 flex gap-3">
+            <a href="#" aria-label="LinkedIn" class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 transition hover:bg-brand"><svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+            <a href="#" aria-label="X" class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 transition hover:bg-brand"><svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.21-6.82-5.97 6.82H1.67l7.73-8.84L1.25 2.25h6.83l4.71 6.23 5.45-6.23zm-1.16 17.52h1.83L7.08 4.13H5.12l11.96 15.64z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-base font-semibold text-white">Company</h3>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a href="about.html" class="transition hover:text-white">About</a></li>
+            <li><a href="partners.html" class="transition hover:text-white">Partners</a></li>
+            <li><a href="ash-river-foundation.html" class="transition hover:text-white">Ash River Foundation</a></li>
+            <li><a href="contact.html" class="transition hover:text-white">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-base font-semibold text-white">Services</h3>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a href="finance-accounting-talent.html" class="transition hover:text-white">Finance &amp; Accounting Talent</a></li>
+            <li><a href="virtual-assistants.html" class="transition hover:text-white">Virtual Assistants</a></li>
+            <li><a href="services.html" class="transition hover:text-white">Systems &amp; Playbooks</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-base font-semibold text-white">Need More Capacity?</h3>
+          <p class="mt-4 text-sm leading-6">Tell us what work needs to get done.</p>
+          <a href="contact.html" class="btn-primary mt-5">Build Your Team</a>
+        </div>
+      </div>
+      <div class="border-t border-white/10 py-6 text-center text-sm text-slate-400">Copyright © 2026 Ash River Collective. All rights reserved</div>
+    </footer>
+
+      <div id="arc-st-chat"></div>
+</body>
+</html>

@@ -1,0 +1,365 @@
+# Copyright (C) 2026 Lienzo
+# This file is distributed under the GPL v3 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Lienzo 1.0.0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: lienzo\n"
+
+#: comments.php:32
+msgctxt "comments title"
+msgid "One Response"
+msgstr ""
+
+#: comments.php:37
+msgctxt "comments title"
+msgid "%s Response"
+msgid_plural "%s Responses"
+msgstr[0] ""
+msgstr[1] ""
+
+#: header.php:30
+msgid "Skip to content"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:23
+msgid "Lienzo Footer"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:46 inc/setup.php:26
+msgid "Footer"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:54 inc/elementor/settings-footer.php:291 inc/elementor/settings-header.php:55
+msgid "Site Logo"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:56 inc/elementor/settings-footer.php:68 inc/elementor/settings-footer.php:80
+msgid "Show"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:57 inc/elementor/settings-footer.php:69 inc/elementor/settings-footer.php:81
+msgid "Hide"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:66 inc/elementor/settings-footer.php:495 inc/elementor/settings-header.php:66
+msgid "Tagline"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:78 inc/elementor/settings-footer.php:563 inc/elementor/settings-footer.php:610
+msgid "Menu"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:90 inc/elementor/settings-footer.php:653
+msgid "Copyright"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:105 inc/elementor/settings-header.php:91
+msgid "Note: Hiding all the elements, only hides them visually. To disable them completely go to <a href=\"%s\">Theme Settings</a> ."
+msgstr ""
+
+#: inc/elementor/settings-footer.php:122 inc/elementor/settings-header.php:107
+msgid "Layout"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:125 inc/elementor/settings-header.php:110
+msgid "Inverted"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:129 inc/elementor/settings-header.php:114
+msgid "Centered"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:133 inc/elementor/settings-header.php:118
+msgid "Default"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:148 inc/elementor/settings-header.php:133
+msgid "Tagline Position"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:151 inc/elementor/settings-header.php:136
+msgid "Before"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:155 inc/elementor/settings-header.php:140
+msgid "Below"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:159 inc/elementor/settings-header.php:144
+msgid "After"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:184 inc/elementor/settings-header.php:169
+msgid "Tagline Gap"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:211 inc/elementor/settings-header.php:196
+msgid "Width"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:213 inc/elementor/settings-header.php:198
+msgid "Boxed"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:214 inc/elementor/settings-header.php:199
+msgid "Full Width"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:226 inc/elementor/settings-header.php:211
+msgid "Content Width"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:252 inc/elementor/settings-header.php:237
+msgid "Side Margins"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:278 inc/elementor/settings-header.php:273
+msgid "Background"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:305 inc/elementor/settings-header.php:307
+msgid "Go to <a href=\"%s\">Site Identity</a> to manage your site's logo"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:323 inc/elementor/settings-header.php:325
+msgid "Go to <a href=\"%s\">Site Identity</a> to manage your site's title"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:337 inc/elementor/settings-header.php:339
+msgid "Type"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:341 inc/elementor/settings-header.php:343
+msgid "Logo"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:342 inc/elementor/settings-header.php:344
+msgid "Title"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:352 inc/elementor/settings-header.php:354
+msgid "Logo Width"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:379 inc/elementor/settings-footer.php:537 inc/elementor/settings-footer.php:632
+msgid "Typography"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:392 inc/elementor/settings-footer.php:549 inc/elementor/settings-footer.php:641
+msgid "Text Shadow"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:405 inc/elementor/settings-header.php:407
+msgid "Text Stroke"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:419 inc/elementor/settings-header.php:421
+msgid "Normal"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:430 inc/elementor/settings-footer.php:458 inc/elementor/settings-footer.php:522
+msgid "Text Color"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:447 inc/elementor/settings-header.php:449
+msgid "Hover"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:473 inc/elementor/settings-header.php:475
+msgid "Transition Duration"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:509 inc/elementor/settings-header.php:518
+msgid "Go to <a href=\"%s\">Site Identity</a> to manage your site's tagline"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:572 inc/elementor/settings-header.php:588
+msgid "— Select a Menu —"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:583 inc/elementor/settings-header.php:599
+msgid "There are no menus in your site."
+msgstr ""
+
+#: inc/elementor/settings-footer.php:586 inc/elementor/settings-header.php:602
+msgid "Go to <a href=\"%s\" target=\"_blank\">Menus screen</a> to create one."
+msgstr ""
+
+#: inc/elementor/settings-footer.php:600 inc/elementor/settings-header.php:616
+msgid "Go to the <a href=\"%s\" target=\"_blank\">Menus screen</a> to manage your menus. Changes will be reflected in the preview only after the page reloads."
+msgstr ""
+
+#: inc/elementor/settings-footer.php:620 inc/elementor/settings-header.php:683
+msgid "Color"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:671
+msgid "Text"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:672
+msgid "All rights reserved"
+msgstr ""
+
+#: inc/elementor/settings-footer.php:740
+msgid "Need a fully custom footer? Build one with the Theme Builder."
+msgstr ""
+
+#: inc/elementor/settings-footer.php:742
+msgid "Create Footer"
+msgstr ""
+
+#: inc/elementor/settings-header.php:24
+msgid "Lienzo Header"
+msgstr ""
+
+#: inc/elementor/settings-header.php:47 inc/setup.php:25
+msgid "Header"
+msgstr ""
+
+#: inc/elementor/settings-header.php:636
+msgid "Menu Layout"
+msgstr ""
+
+#: inc/elementor/settings-header.php:640
+msgid "Horizontal"
+msgstr ""
+
+#: inc/elementor/settings-header.php:641
+msgid "Dropdown"
+msgstr ""
+
+#: inc/elementor/settings-header.php:658
+msgid "%1$s (> %2$dpx)"
+msgstr ""
+
+#: inc/elementor/settings-header.php:664
+msgid "None"
+msgstr ""
+
+#: inc/elementor/settings-header.php:669
+msgid "Breakpoint"
+msgstr ""
+
+#: inc/elementor/settings-header.php:698
+msgid "Toggle Color"
+msgstr ""
+
+#: inc/elementor/settings-header.php:712
+msgid "Toggle Background Color"
+msgstr ""
+
+#: inc/elementor/settings-header.php:774
+msgid "Need a fully custom header? Build one with the Theme Builder."
+msgstr ""
+
+#: inc/elementor/settings-header.php:776
+msgid "Create Header"
+msgstr ""
+
+#: inc/settings-page.php:40
+msgid "Description meta tag"
+msgstr ""
+
+#: inc/settings-page.php:41
+msgid "Disable the meta description tag generated from the page excerpt."
+msgstr ""
+
+#: inc/settings-page.php:44
+msgid "Skip link"
+msgstr ""
+
+#: inc/settings-page.php:45
+msgid "Disable the \"Skip to content\" accessibility link."
+msgstr ""
+
+#: inc/settings-page.php:48
+msgid "Theme header & footer"
+msgstr ""
+
+#: inc/settings-page.php:49
+msgid "Disable the theme header and footer completely (use this when Elementor or a plugin provides them)."
+msgstr ""
+
+#: inc/settings-page.php:52
+msgid "Page title"
+msgstr ""
+
+#: inc/settings-page.php:53
+msgid "Disable the page title the theme prints above the content."
+msgstr ""
+
+#: inc/settings-page.php:56
+msgid "Reset stylesheet"
+msgstr ""
+
+#: inc/settings-page.php:57
+msgid "Do not load reset.css."
+msgstr ""
+
+#: inc/settings-page.php:60
+msgid "Theme stylesheet"
+msgstr ""
+
+#: inc/settings-page.php:61
+msgid "Do not load theme.css."
+msgstr ""
+
+#: inc/settings-page.php:129
+msgid "Lienzo settings"
+msgstr ""
+
+#: inc/settings-page.php:130
+msgid "Lienzo"
+msgstr ""
+
+#: inc/settings-page.php:153
+msgid "Turn off theme features you would rather build yourself with Elementor."
+msgstr ""
+
+#: template-parts/404.php:16
+msgid "The page can&rsquo;t be found."
+msgstr ""
+
+#: template-parts/404.php:21
+msgid "It looks like nothing was found at this location."
+msgstr ""
+
+#: template-parts/archive.php:50 template-parts/search.php:56
+msgid "%s Previous"
+msgstr ""
+
+#: template-parts/archive.php:54 template-parts/search.php:60
+msgid "Next %s"
+msgstr ""
+
+#: template-parts/dynamic-footer.php:33 template-parts/dynamic-header.php:39 template-parts/header.php:30
+msgid "Home"
+msgstr ""
+
+#: template-parts/dynamic-footer.php:47 template-parts/footer.php:20
+msgid "Footer menu"
+msgstr ""
+
+#: template-parts/dynamic-header.php:53 template-parts/header.php:43
+msgid "Main menu"
+msgstr ""
+
+#: template-parts/dynamic-header.php:66
+msgid "Mobile menu"
+msgstr ""
+
+#: template-parts/search.php:17
+msgid "Search results for: "
+msgstr ""
+
+#: template-parts/search.php:43
+msgid "It seems we can't find what you're looking for."
+msgstr ""
+
+#: template-parts/single.php:30
+msgid "Tagged "
+msgstr ""

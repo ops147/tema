@@ -113,9 +113,12 @@
         { "value": "< 1 min", "label": "per import" },
         { "value": "6.0+", "label": "WordPress · PHP 7.4+" }
       ],
+      "marquee": "demos",
+      "intro": "Every demo in the marquee above is one import away — the plugin pulls this repo's manifest, downloads each page and its images on demand, and leaves behind a real WordPress site you own and can edit.",
       "sections": [
         {
           "type": "features",
+          "soft": true,
           "title": "Everything the importer does.",
           "lead": "A solace-extra style library screen, a resilient wizard and a full site-setup pass — designed to never touch content it didn't create.",
           "cols": 4,
@@ -132,7 +135,6 @@
         },
         {
           "type": "steps",
-          "soft": true,
           "title": "How an import runs.",
           "lead": "Click a card in ARC Templates → Library and the wizard does the rest — resume-safe if anything interrupts it.",
           "items": [
@@ -190,9 +192,12 @@
         { "value": "3", "label": "Elementor widgets" },
         { "value": "6", "label": "builder locations" }
       ],
+      "marquee": ["Colors", "Typography", "Layout", "Header & footer", "Blog", "WooCommerce", "Dark mode", "Breadcrumbs", "SEO meta", "JSON-LD", "8 block patterns", "RTL ready"],
+      "intro": "Activate it once and forget it — Lienzo Astra draws the header, menus and footer around whatever the plugin imports, and its Design Options panel re-skins the whole site without touching a single template file.",
       "sections": [
         {
           "type": "features",
+          "soft": true,
           "title": "Small theme, full stack.",
           "lead": "Everything a base theme should ship — and a switch under Appearance → Lienzo to turn each piece off.",
           "cols": 4,
@@ -209,7 +214,6 @@
         },
         {
           "type": "steps",
-          "soft": true,
           "title": "Built for ARC Starter Templates.",
           "lead": "The theme detects imported pages and gets out of the way — while keeping full control of the chrome around them.",
           "items": [
@@ -221,6 +225,7 @@
         },
         {
           "type": "checks",
+          "soft": true,
           "title": "Design Options, panel by panel.",
           "lead": "Appearance → Customize → Design Options — the quick-styling controls Astra users expect, reimplemented from scratch.",
           "items": [

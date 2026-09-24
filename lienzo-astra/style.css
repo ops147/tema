@@ -1,0 +1,11 @@
+/*
+	Theme Name: Lienzo Astra
+	Description: Lightweight, minimalist base theme built to work with the Elementor site builder or the block editor, unified with an Astra-inspired Customizer panel (global color palettes, colors, typography, container width, header & footer layout, blog & WooCommerce options). Registers all Elementor Theme Builder locations, adds Header & Footer controls to Elementor's Site Settings, ships 3 custom Elementor widgets (breadcrumbs, dark mode switcher, reading time) and 8 starter block patterns, and adds SEO tags, performance/security hardening, dark mode and WooCommerce shop controls. Derived from Lienzo 1.1.0 (itself derived from Hello Elementor 3.5.1 by the Elementor Team, GPL-3.0-or-later), with a native design-options layer inspired by the Astra theme's Customizer UX (Brainstorm Force, GPL-2.0-or-later). No Astra code is included.
+	Version: 1.2.3
+	Requires at least: 6.0
+	Requires PHP: 7.4
+	License: GNU General Public License v3 or later.
+	License URI: https://www.gnu.org/licenses/gpl-3.0.html
+	Text Domain: lienzo-astra
+	Tags: accessibility-ready, flexible-header, custom-colors, custom-menu, custom-logo, featured-images, rtl-language-support, threaded-comments, translation-ready
+*/
