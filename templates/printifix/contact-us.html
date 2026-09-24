@@ -16,12 +16,12 @@
 
 @theme {
   /* ===== Design tokens — global "site settings". Change here, applies everywhere. ===== */
-  --color-brand: #377dff;
-  --color-brand-dark: #1b59f5;
-  --color-accent: #599fff;
-  --color-navy: #1f2937;
-  --color-mint: #eef5ff;
-  --color-cream: #f7faff;
+  --color-brand: #6FAF67;
+  --color-brand-dark: #438F69;
+  --color-accent: #58B8A9;
+  --color-navy: #0F1C2E;
+  --color-mint: #F5F8F4;
+  --color-cream: #EAF1E8;
   --font-sans: "Readex Pro", ui-sans-serif, system-ui, sans-serif;
   --font-display: "DM Sans", ui-sans-serif, system-ui, sans-serif;
 
@@ -72,15 +72,15 @@
 
 /* Shared component layer — single source for all pages. Do not redeclare in page <style> blocks. */
 @layer components {
-  .btn-primary { display:inline-flex; align-items:center; gap:.5rem; border-radius:9999px; background:var(--color-brand); padding:.8rem 1.75rem; font-size:.9rem; font-weight:600; color:#fff; transition:all .2s; }
-  .btn-primary:hover { background:var(--color-brand-dark); transform:translateY(-2px); box-shadow:0 10px 15px -3px rgb(20 42 30 / .25); }
-  .btn-outline { display:inline-flex; align-items:center; gap:.5rem; border-radius:9999px; border:1px solid #cbd5e1; padding:.8rem 1.75rem; font-size:.9rem; font-weight:600; color:var(--color-navy); transition:all .2s; }
-  .btn-outline:hover { border-color:var(--color-brand); color:var(--color-brand); transform:translateY(-2px); }
+  .btn-primary { display:inline-flex; align-items:center; gap:.5rem; border-radius:9999px; background:#A8C85A; padding:.8rem 1.75rem; font-size:.9rem; font-weight:600; color:#0F1C2E; transition:all .2s; }
+  .btn-primary:hover { background:#0F1C2E; color:#fff; transform:translateY(-2px); box-shadow:0 10px 15px -3px rgb(20 42 30 / .25); }
+  .btn-outline { display:inline-flex; align-items:center; gap:.5rem; border-radius:9999px; border:1px solid #438F69; padding:.8rem 1.75rem; font-size:.9rem; font-weight:600; color:#0F1C2E; transition:all .2s; }
+  .btn-outline:hover { border-color:#438F69; background:#438F69; color:#fff; transform:translateY(-2px); }
   .btn-ghost-light { display:inline-flex; align-items:center; gap:.5rem; border-radius:9999px; border:1px solid rgba(255,255,255,.25); padding:.8rem 1.75rem; font-size:.9rem; font-weight:600; color:#fff; transition:all .2s; }
   .btn-ghost-light:hover { border-color:#fff; transform:translateY(-2px); }
   .eyebrow { font-size:.8rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--color-brand); }
   .field { width:100%; border-radius:.6rem; border:1px solid #e2e8f0; background:#fff; padding:.8rem 1rem; font-size:.9rem; color:var(--color-navy); outline:none; transition:border-color .2s, box-shadow .2s; }
-  .field:focus { border-color:var(--color-brand); box-shadow:0 0 0 3px rgb(76 148 100 / .18); }
+  .field:focus { border-color:var(--color-brand); box-shadow:0 0 0 3px rgb(111 175 103 / .22); }
   /* Hover-lift card — shared replacement for "transition hover:-translate-y-1 hover:shadow-lg". */
   .card-lift { transition:transform .25s ease, box-shadow .25s ease; }
   .card-lift:hover { transform:translateY(-4px); box-shadow:0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1); }
@@ -89,11 +89,11 @@
     </style>
   </head>
   <body class="font-sans text-slate-600 antialiased">
-    <style>@import url('https://fonts.googleapis.com/css2?family=Readex%20Pro:wght@300;400;500;600;700;800&family=DM%20Sans:wght@300;400;500;600;700;800&display=swap');:root{--color-brand:#377dff;--color-brand-dark:#1b59f5;--color-accent:#599fff;--color-navy:#1f2937;--color-mint:#eef5ff;--color-cream:#f7faff;--font-sans:"Readex Pro",ui-sans-serif,system-ui,sans-serif;--font-display:"DM Sans",ui-sans-serif,system-ui,sans-serif;}</style>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Readex%20Pro:wght@300;400;500;600;700;800&family=DM%20Sans:wght@300;400;500;600;700;800&display=swap');:root{--color-brand:#6FAF67;--color-brand-dark:#438F69;--color-accent:#58B8A9;--color-navy:#0F1C2E;--color-mint:#F5F8F4;--color-cream:#EAF1E8;--font-sans:"Readex Pro",ui-sans-serif,system-ui,sans-serif;--font-display:"DM Sans",ui-sans-serif,system-ui,sans-serif;}</style>
     <!-- ===== Header ===== -->
     <header class="sticky top-0 z-50 border-b border-slate-100 bg-white/95 backdrop-blur" data-reveal="down">
       <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 py-4 lg:px-8">
-        <a href="printifix-home.html" class="flex min-w-0 shrink-0 items-center gap-2.5"><span class="leading-none">
+        <a href="printifix-home.html" class="flex min-w-0 shrink-0 items-center gap-2.5"><img src="Img/logo-green.png" alt="Ash River Collective" class="h-9 w-9 shrink-0 sm:h-10 sm:w-10" /><span class="leading-none">
             <span class="block text-lg font-extrabold tracking-tight text-navy font-display">ASH RIVER</span>
             <span class="block text-[10px] font-bold tracking-[0.3em] text-brand">COLLECTIVE</span>
           </span></a>
@@ -184,7 +184,7 @@
     <footer class="bg-navy text-slate-300">
       <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 py-16 md:grid-cols-2 lg:grid-cols-4 lg:px-8" data-reveal-stagger="120">
         <div>
-          <a href="printifix-home.html" class="flex items-center gap-2.5">
+          <a href="printifix-home.html" class="flex items-center gap-2.5"><img src="Img/logo-green.png" alt="Ash River Collective" class="h-10 w-10 shrink-0" />
             <span class="text-lg font-extrabold tracking-tight text-white font-display">ASH RIVER</span>
           </a>
           <p class="mt-5 text-sm leading-6 text-slate-400">Elite Talent. Bulletproof Systems. Accounting talent, virtual assistants, and documented operating systems built around the work your business needs to get done.</p>

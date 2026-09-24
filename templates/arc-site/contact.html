@@ -17,12 +17,12 @@
 
 @theme {
   /* ===== Design tokens — global "site settings". Change here, applies everywhere. ===== */
-  --color-brand: #4c9464;
-  --color-brand-dark: #3b7a51;
-  --color-leaf: #6ca444;
-  --color-mint: #8cccbc;
-  --color-gold: #ccc454;
-  --color-navy: #142a1e;
+  --color-brand: #6FAF67;
+  --color-brand-dark: #438F69;
+  --color-leaf: #A8C85A;
+  --color-mint: #58B8A9;
+  --color-gold: #D7C94F;
+  --color-navy: #0F1C2E;
   --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
 
   /* ===== Entrance animations — picked per element via data-reveal="<name>" =====
@@ -72,15 +72,15 @@
 
 /* Shared component layer — single source for all pages. Do not redeclare in page <style> blocks. */
 @layer components {
-  .btn-primary { display:inline-flex; align-items:center; gap:.5rem; border-radius:9999px; background:var(--color-brand); padding:.8rem 1.75rem; font-size:.9rem; font-weight:600; color:#fff; transition:all .2s; }
-  .btn-primary:hover { background:var(--color-brand-dark); transform:translateY(-2px); box-shadow:0 10px 15px -3px rgb(20 42 30 / .25); }
-  .btn-outline { display:inline-flex; align-items:center; gap:.5rem; border-radius:9999px; border:1px solid #cbd5e1; padding:.8rem 1.75rem; font-size:.9rem; font-weight:600; color:var(--color-navy); transition:all .2s; }
-  .btn-outline:hover { border-color:var(--color-brand); color:var(--color-brand); transform:translateY(-2px); }
+  .btn-primary { display:inline-flex; align-items:center; gap:.5rem; border-radius:9999px; background:#A8C85A; padding:.8rem 1.75rem; font-size:.9rem; font-weight:600; color:#0F1C2E; transition:all .2s; }
+  .btn-primary:hover { background:#0F1C2E; color:#fff; transform:translateY(-2px); box-shadow:0 10px 15px -3px rgb(20 42 30 / .25); }
+  .btn-outline { display:inline-flex; align-items:center; gap:.5rem; border-radius:9999px; border:1px solid #438F69; padding:.8rem 1.75rem; font-size:.9rem; font-weight:600; color:#0F1C2E; transition:all .2s; }
+  .btn-outline:hover { border-color:#438F69; background:#438F69; color:#fff; transform:translateY(-2px); }
   .btn-ghost-light { display:inline-flex; align-items:center; gap:.5rem; border-radius:9999px; border:1px solid rgba(255,255,255,.25); padding:.8rem 1.75rem; font-size:.9rem; font-weight:600; color:#fff; transition:all .2s; }
   .btn-ghost-light:hover { border-color:#fff; transform:translateY(-2px); }
   .eyebrow { font-size:.8rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--color-brand); }
   .field { width:100%; border-radius:.6rem; border:1px solid #e2e8f0; background:#fff; padding:.8rem 1rem; font-size:.9rem; color:var(--color-navy); outline:none; transition:border-color .2s, box-shadow .2s; }
-  .field:focus { border-color:var(--color-brand); box-shadow:0 0 0 3px rgb(76 148 100 / .18); }
+  .field:focus { border-color:var(--color-brand); box-shadow:0 0 0 3px rgb(111 175 103 / .22); }
   /* Hover-lift card — shared replacement for "transition hover:-translate-y-1 hover:shadow-lg". */
   .card-lift { transition:transform .25s ease, box-shadow .25s ease; }
   .card-lift:hover { transform:translateY(-4px); box-shadow:0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1); }
