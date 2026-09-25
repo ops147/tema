@@ -75,6 +75,9 @@
         const d = DEMOS[id];
         if (!d) return;
         if (!pageSlug) pageSlug = d.home || (d.pages || [])[0];
+        // If the slug isn't registered in the manifest, fall back to the
+        // first page that is — never hand preview.html an empty ?f=.
+        if (!TPL[pageSlug]) pageSlug = (d.pages || []).find((p) => TPL[p]);
         el("m-title").textContent = d.title || id;
         el("m-cats").innerHTML = (d.categories || [])
           .map(
@@ -115,10 +118,12 @@
             openDemo(cur, sel.value);
           });
         }
-        const file = TPL[pageSlug] ? TPL[pageSlug].file : "";
-        el("m-file").textContent = "templates/" + file;
-        frame.src = "preview.html?f=templates/" + encodeURIComponent(file) + "&embed=1";
-        el("m-open").href = "preview.html?f=templates/" + encodeURIComponent(file);
+        const file = pageSlug && TPL[pageSlug] ? TPL[pageSlug].file : "";
+        el("m-file").textContent = file ? "templates/" + file : "—";
+        frame.src = file
+          ? "preview.html?f=templates/" + encodeURIComponent(file) + "&embed=1"
+          : "about:blank";
+        el("m-open").href = file ? "preview.html?f=templates/" + encodeURIComponent(file) : "#";
         modal.classList.replace("hidden", "block");
         document.body.classList.add("overflow-hidden");
         const state = { d: id, p: pageSlug };

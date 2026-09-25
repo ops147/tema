@@ -6,18 +6,47 @@ itself stays lightweight.
 
 ## Layout
 
+The repo has three layers — the **remote payload** the plugin downloads, the
+**Pages mirror** (this browsable site), and vendored copies of the other two
+pieces of the system:
+
 ```
-templates/manifest.json            # demo + page registry
-templates/<demo>/<page>.html       # one HTML document per page
-assets/img/<file>                  # images referenced by the templates and manifest
-assets/css/tailwind.css            # shared runtime stylesheet
-assets/js/site.js                  # shared runtime script (template pages)
-site.json                          # all site content/config for the Pages mirror
-assets/js/app.js                   # shared renderer (header, footer, data loading)
-assets/js/{index,browse,preview}.js # per-page controllers — all content is data-driven
-assets/js/product.js               # generic product-page renderer (plugin.html, theme.html)
-plugin.html / theme.html           # pages for the ARC Starter Templates plugin & Lienzo Astra theme
+templates/manifest.json            # demo + page registry            ┐
+templates/<demo>/<page>.html       # one HTML document per page      │ remote
+assets/img/<file>                  # images referenced by templates   │ payload
+assets/css/tailwind.css            # shared runtime stylesheet        │ (contract:
+assets/js/site.js                  # shared runtime script            │ do not move)
+
+*.html                             # ~15-line shells: meta + scripts + ┐
+                                   #   <main id="page"> — zero markup  │
+site/site.json                     # shared chrome: brand, nav, footer │ Pages
+site/pages/<page>.json             # content: "layout" = typed blocks  │ mirror
+                                   #   (or config for app pages)       │
+site/js/head.js                    # shared <head>: fonts + @theme     │
+site/js/app.js                     # runtime: Tema.load(), chrome,     │
+                                   #   esc/fill/vars, bindCopy         │
+site/js/ui.js                      # all markup: atoms + app shells    │
+site/js/page.js                    # layout engine (blocks → DOM)      │
+site/js/browse.js · preview.js     # app behavior (no markup inside)   ┘
+
+wordpress/arc-starter-templates/   # the plugin (source copy)
+wordpress/lienzo-astra/            # the theme (source copy)
 ```
+
+**Contract with the plugin** — the remote base URL must keep serving
+`templates/manifest.json`, `templates/<demo>/<page>.html` and
+`assets/img/<file>`; the previewer additionally relies on
+`assets/css/tailwind.css` and `assets/js/site.js`. Those paths are frozen —
+everything under `site/` is internal to the mirror and can be reorganized
+freely.
+
+**Adding a Pages page** — copy `plugin.html` (~15 lines, zero markup), point
+`data-page` at a new `site/pages/<name>.json` and add a `nav` entry in
+`site/site.json`. Content is a `layout` array of typed blocks —
+`hero`, `intro`, `demos`, `features`, `cards`, `steps`, `code`, `checks`,
+`setup`, `cta` — rendered by `site/js/page.js` from `site/js/ui.js` atoms.
+All markup lives in `ui.js` (including the browse/preview app shells), so
+controllers only carry behavior.
 
 ## Pointing the plugin at this repo
 
