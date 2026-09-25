@@ -1,5 +1,5 @@
 {
-    "generated": "2026-09-23T14:05:31.718Z",
+    "generated": "2026-09-25T09:00:00.000Z",
     "templates": {
         "index": {
             "name": "Home",
@@ -742,6 +742,48 @@
             "description": "Home renovation contractor \u2014 Home, About, Services, Projects, Contact.",
             "file": "renovation/contact.html",
             "thumb": "assets/img/renovation-img-1.jpg"
+        },
+        "corporate-home": {
+            "name": "Home",
+            "title": "Ash River Collective \u2014 Home",
+            "description": "Build the team your business needs without adding unnecessary overhead \u2014 trained accounting and admin professionals plus documented processes.",
+            "file": "corporate/corporate-home.html",
+            "thumb": "assets/img/business-businessman-senior-mature-office-meeting-2023-11-27-05-34-55-utc-1.jpg"
+        },
+        "corporate-about": {
+            "name": "About",
+            "title": "Ash River Collective \u2014 About",
+            "description": "Talent is only half of the equation \u2014 ARC places professionals and documents the processes they run.",
+            "file": "corporate/corporate-about.html",
+            "thumb": "assets/img/group-of-diverse-business-people-successful-teamwo-2023-11-27-05-12-43-utc.jpg"
+        },
+        "corporate-services": {
+            "name": "Services",
+            "title": "Ash River Collective \u2014 Services",
+            "description": "Finance & accounting talent, virtual assistants, and systems & playbooks \u2014 one operating model.",
+            "file": "corporate/corporate-services.html",
+            "thumb": "assets/img/two-businessmen-working-together-in-office-2024-09-23-03-08-53-utc.jpg"
+        },
+        "corporate-industries": {
+            "name": "Industries",
+            "title": "Ash River Collective \u2014 Industries",
+            "description": "Built for operators who need consistency \u2014 professional services, e-commerce, healthcare, real estate, SaaS and nonprofits.",
+            "file": "corporate/corporate-industries.html",
+            "thumb": "assets/img/happy-business-people-handshake-and-interview-in-m-6FPDS75.jpg"
+        },
+        "corporate-insights": {
+            "name": "Insights",
+            "title": "Ash River Collective \u2014 Insights",
+            "description": "Notes on talent and process \u2014 what we learn placing finance and admin talent.",
+            "file": "corporate/corporate-insights.html",
+            "thumb": "assets/img/teamwork-with-business-people-analysis-cost-graph-3JFK4U7.jpg"
+        },
+        "corporate-contact": {
+            "name": "Contact",
+            "title": "Ash River Collective \u2014 Contact",
+            "description": "Tell us what needs to get done \u2014 scope the role or the process in one conversation.",
+            "file": "corporate/corporate-contact.html",
+            "thumb": "assets/img/business-people-sitting-together-on-couch-2023-11-27-04-52-21-utc.jpg"
         }
     },
     "demos": {

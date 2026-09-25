@@ -85,7 +85,9 @@
           )
           .join("");
         const nav = el("m-pages");
+        const sel = el("m-pages-mobile"); // page switcher shown on small screens
         nav.innerHTML = "";
+        if (sel) sel.innerHTML = "";
         for (const p of d.pages || []) {
           if (!TPL[p]) continue;
           const b = document.createElement("button");
@@ -98,6 +100,20 @@
             esc(TPL[p].name || p);
           b.addEventListener("click", () => openDemo(id, p));
           nav.appendChild(b);
+          if (sel) {
+            const opt = document.createElement("option");
+            opt.value = p;
+            opt.textContent = TPL[p].name || p;
+            opt.selected = on;
+            sel.appendChild(opt);
+          }
+        }
+        if (sel && !sel.dataset.bound) {
+          sel.dataset.bound = "1";
+          sel.addEventListener("change", () => {
+            const cur = new URLSearchParams(location.search).get("d") || id;
+            openDemo(cur, sel.value);
+          });
         }
         const file = TPL[pageSlug] ? TPL[pageSlug].file : "";
         el("m-file").textContent = "templates/" + file;

@@ -34,5 +34,9 @@
     ".btn-ghost { @apply inline-flex items-center gap-2 border border-line hover:border-navy text-navy text-sm font-semibold rounded-lg px-6 py-3 transition no-underline; }",
     ".marquee { animation: marquee 45s linear infinite; }",
     "@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }",
+    "@media (prefers-reduced-motion: reduce) { .marquee { animation: none; } html { scroll-behavior: auto; } }",
+    "@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }",
+    // Focus visibility for keyboard users (mouse keeps default outline:none).
+    "a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--color-blue); outline-offset: 2px; border-radius: 4px; }",
   ].join("\n");
 })();

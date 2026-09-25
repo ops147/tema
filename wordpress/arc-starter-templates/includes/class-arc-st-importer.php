@@ -292,14 +292,14 @@ final class Arc_ST_Importer {
 		$details['logo'] = self::assign_brand_identity( $demo );
 
 		// 4. Elementor: flexbox containers + kit globals + CSS cache rebuild.
-			if ( Arc_ST_Elementor::available() ) {
-				update_option( 'elementor_experiment-container', 'active' );
-				$details['elementor']        = true;
-				$details['elementor_colors'] = self::elementor_kit_globals( $demo );
-				$details['lienzo']           = self::uses_lienzo_chrome();
-				if ( $details['lienzo'] ) {
-					$details['lienzo_kit'] = self::configure_lienzo_kit();
-				}
+		if ( Arc_ST_Elementor::available() ) {
+			update_option( 'elementor_experiment-container', 'active' );
+			$details['elementor']        = true;
+			$details['elementor_colors'] = self::elementor_kit_globals( $demo );
+			$details['lienzo']           = self::uses_lienzo_chrome();
+			if ( $details['lienzo'] ) {
+				$details['lienzo_kit'] = self::configure_lienzo_kit();
+			}
 
 			// Verify the experiment actually engaged; if the experiments
 			// manager rejected it, imported pages would render boxed.
@@ -309,7 +309,7 @@ final class Arc_ST_Importer {
 			}
 
 			// Rebuild compiled CSS so the first render isn't unstyled.
-				if ( isset( \Elementor\Plugin::$instance->files_manager )
+			if ( isset( \Elementor\Plugin::$instance->files_manager )
 				&& method_exists( \Elementor\Plugin::$instance->files_manager, 'clear_cache' ) ) {
 				\Elementor\Plugin::$instance->files_manager->clear_cache();
 				$details['elementor_cache'] = true;
@@ -739,9 +739,9 @@ final class Arc_ST_Importer {
 				update_post_meta( $page_id, '_elementor_version', ELEMENTOR_VERSION );
 			}
 			delete_post_meta( $page_id, '_elementor_css' );
-				// Lienzo Astra supplies the site chrome. Canvas would remove its
-				// header/footer, so keep the theme's normal page template there.
-				update_post_meta( $page_id, '_wp_page_template', self::uses_lienzo_chrome() ? 'default' : 'elementor_canvas' );
+			// Lienzo Astra supplies the site chrome. Canvas would remove its
+			// header/footer, so keep the theme's normal page template there.
+			update_post_meta( $page_id, '_wp_page_template', self::uses_lienzo_chrome() ? 'default' : 'elementor_canvas' );
 		} else {
 			// Classic-mode import over a page that previously had Elementor
 			// data: clear it, or a reactivated Elementor would resurrect the
