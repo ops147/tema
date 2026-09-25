@@ -56,7 +56,7 @@
           const sec = document.createElement("section");
           sec.className = "bg-soft border-b border-line";
           sec.innerHTML =
-            '<div class="max-w-6xl mx-auto px-6 pt-20 pb-14 text-center">' +
+            '<div class="max-w-6xl mx-auto px-6 pt-14 pb-12 sm:pt-20 sm:pb-14 text-center">' +
             '<span class="inline-block text-[11px] font-bold uppercase tracking-widest text-blue bg-blue/10 rounded-full px-3.5 py-1.5 mb-5">' +
             esc(s.badge) +
             "</span>" +

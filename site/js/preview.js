@@ -46,7 +46,11 @@
           let out = html
             .split('="Img/').join('="assets/img/')
             .split('="Css/tailwind.css').join('="assets/css/tailwind.css')
-            .split('="Js/site.js').join('="assets/js/site.js');
+            .split('="Js/site.js').join('="assets/js/site.js')
+            // Same handler prefixes the plugin's runtime_fixes() applies —
+            // keeps legacy markup working if a template still uses them.
+            .split("toggleMobileNav(").join("arcStToggleMobileNav(")
+            .split("handleContactSubmit(").join("arcStHandleContactSubmit(");
           out = out.replace(/<head(\s[^>]*)?>/i, (m) => m + '<base href="' + root + '">');
           // Internal href="<x>.html" links stay inside the previewer. Templates
           // link either by manifest slug (gymnista-all-collections.html) or by
