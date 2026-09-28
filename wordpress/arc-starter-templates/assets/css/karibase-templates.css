@@ -110,6 +110,7 @@
   transform: translateY(-4px);
 }
 
+
 .arc-tpl header.sticky {
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);

@@ -1,54 +1,54 @@
 {
-    "generated": "2026-09-28T14:11:47.973Z",
+    "generated": "2026-09-28T15:43:44.856Z",
     "templates": {
         "arc-site-home": {
             "name": "Home — Elite Talent",
             "title": "Ash River Collective — Elite Talent. Bulletproof Systems.",
             "description": "Build the team your business needs without adding unnecessary overhead. Ash River Collective places trained accounting and administrative professionals inside your business — then helps document the processes they run so execution doesn't depend on one person.",
             "file": "arc-site/home.html",
-            "thumb": "assets/img/looking-good-and-feeling-confident-XJ79UJL.webp"
+            "thumb": "assets/img/group-of-diverse-business-people-successful-teamwo-2023-11-27-05-12-43-utc.webp"
         },
         "arc-site-about": {
             "name": "About — Built to Execute",
             "title": "About – Ash River Collective",
             "description": "Ash River Collective combines embedded talent, documented processes and practical automation — teams that can actually execute.",
             "file": "arc-site/about.html",
-            "thumb": "assets/img/handsome-european-males-are-discussing-something-i-FNFHBT4.webp"
+            "thumb": "assets/img/arc-stock-23.jpg"
         },
         "arc-site-services": {
             "name": "Services — Back Office Stack",
             "title": "Services – Ash River Collective",
             "description": "Finance & accounting talent, virtual assistants and documented playbooks — support built around the work, not a fixed package.",
             "file": "arc-site/services.html",
-            "thumb": "assets/img/business-people-sitting-together-on-couch-2023-11-27-04-52-21-utc.webp"
+            "thumb": "assets/img/arc-stock-44.jpg"
         },
         "arc-site-virtual-services": {
             "name": "Virtual Services — Off Your Plate",
             "title": "Virtual Services – Ash River Collective",
             "description": "Trained virtual professionals who own recurring admin and operations work — with a documented process behind every seat.",
             "file": "arc-site/virtual-services.html",
-            "thumb": "assets/img/teamwork-with-business-people-analysis-cost-graph-3JFK4U7.webp"
+            "thumb": "assets/img/arc-stock-46.jpg"
         },
         "arc-site-playbooks": {
             "name": "Playbooks — Living Intranet",
             "title": "Playbooks – Ash River Collective",
             "description": "Your documented processes live in a branded, per-company intranet — searchable, permissioned and always used.",
             "file": "arc-site/playbooks.html",
-            "thumb": "assets/img/file.webp"
+            "thumb": "assets/img/handsome-european-males-are-discussing-something-i-FNFHBT4.webp"
         },
         "arc-site-foundation": {
             "name": "Foundation — Opportunity Engine",
             "title": "Foundation – Ash River Collective",
             "description": "The Ash River Collective Foundation trains and prepares Latin American professionals for sustainable remote careers — train, prepare, connect, support.",
             "file": "arc-site/foundation.html",
-            "thumb": "assets/img/physicians-discussing-papers-with-man-at-desk-FEXH47D.webp"
+            "thumb": "assets/img/arc-stock-43.jpg"
         },
         "arc-site-partners": {
             "name": "Partners — Client Channel",
             "title": "Partners – Ash River Collective",
             "description": "You keep the relationship — we help build the team. For CFOs, firms, consultants and operating partners.",
             "file": "arc-site/partners.html",
-            "thumb": "assets/img/group-of-diverse-business-people-successful-teamwo-2023-11-27-05-12-43-utc.webp"
+            "thumb": "assets/img/business-people-sitting-together-on-couch-2023-11-27-04-52-21-utc.webp"
         },
         "blogify-home": {
             "name": "Home — Elite Talent",
@@ -1039,7 +1039,7 @@
                 "Business",
                 "Marketing"
             ],
-            "image": "assets/img/file.webp",
+            "image": "assets/img/group-of-diverse-business-people-successful-teamwo-2023-11-27-05-12-43-utc.webp",
             "home": "arc-site-home",
             "pages": [
                 "arc-site-home",

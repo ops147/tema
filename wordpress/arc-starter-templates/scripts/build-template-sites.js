@@ -88,7 +88,7 @@ const ARC_COMPONENTS = `@layer components {
 
 // Per-demo identity. h1 accepts inline HTML (brand span).
 const DEMOS = {
-    'arc-site': { name: 'Ash River Collective', l1: 'ASH RIVER', l2: 'COLLECTIVE', logo: 'logo-green.webp', h1: 'Elite Talent. <span class="text-brand">Bulletproof Systems.</span>' },
+    'arc-site': { name: 'Ash River Collective', l1: 'ASH RIVER', l2: 'COLLECTIVE', logo: 'logo-green.webp', h1: 'Elite Talent. <span class="text-brand">Bulletproof Systems.</span>', heroV: 2 },
     'avira': { name: 'Avira', h1: 'Balanced teams. <span class="text-brand">Bulletproof books.</span>' },
     'blogify': { name: 'Blogify', h1: 'Stories are told. <span class="text-brand">Systems are built.</span>' },
     'commercecraft': { name: 'CommerceCraft', h1: 'Crafted teams. <span class="text-brand">Crafted systems.</span>' },
@@ -121,6 +121,55 @@ const GENERIC_IMGS = [
     'two-businessmen-working-together-in-office-2024-09-23-03-08-53-utc.webp',
     'looking-good-and-feeling-confident-XJ79UJL.webp',
 ];
+
+/* Semantic image slots — named roles instead of magic pool indices.
+   Every img() call site references a slot; each demo resolves the slot to
+   one of its pool images. Slot order is chosen so that slots appearing on
+   the same page map to distinct positions in the 9-image stock pools. */
+const IMG_SLOTS = [
+    'hero',        // 0 — home hero
+    'finance',     // 1 — accounting/reporting
+    'assistant',   // 2 — virtual assistant at work
+    'playbook',    // 3 — documented processes
+    'team',        // 4 — collaborating team
+    'report',      // 5 — dashboard/workspace
+    'training',    // 6 — classroom/teaching
+    'process',     // 7 — sticky notes / process mapping
+    'meeting',     // 8 — people working together
+    'docs',        // 9 — writing/documentation (wraps to 0 for stock demos)
+    'partnership', // 10 — handshake (wraps to 1)
+    'portrait',    // 11 — single professional (wraps to 2)
+];
+
+/* arc-site flagship: fixed semantic map over its branded photography (plus a
+   few shared stock shots for themes the branded set doesn't cover). A fixed
+   map keeps generation deterministic — the old behavior scanned previously
+   generated HTML to rebuild the pool, so indices drifted on every run. */
+const ARC_IMGS = {
+    hero:        'group-of-diverse-business-people-successful-teamwo-2023-11-27-05-12-43-utc.webp',
+    finance:     'teamwork-with-business-people-analysis-cost-graph-3JFK4U7.webp',
+    assistant:   'arc-stock-46.jpg',
+    playbook:    'handsome-european-males-are-discussing-something-i-FNFHBT4.webp',
+    team:        'physicians-discussing-papers-with-man-at-desk-FEXH47D.webp',
+    report:      'arc-stock-44.jpg',
+    training:    'arc-stock-43.jpg',
+    process:     'arc-stock-28.jpg',
+    meeting:     'arc-stock-23.jpg',
+    docs:        'arc-stock-30.jpg',
+    partnership: 'business-people-sitting-together-on-couch-2023-11-27-04-52-21-utc.webp',
+    portrait:    'looking-good-and-feeling-confident-XJ79UJL.webp',
+};
+
+/* Slot used for each page's hero — also drives the library thumbnail. */
+const PAGE_HERO = {
+    home: 'hero',
+    about: 'meeting',
+    services: 'report',
+    'virtual-services': 'assistant',
+    playbooks: 'playbook',
+    foundation: 'training',
+    partners: 'partnership',
+};
 
 const SUB = (d) => `Build the team your business needs without adding unnecessary overhead. ${d.name} places trained accounting and administrative professionals inside your business — then helps document the processes they run so execution doesn't depend on one person.`;
 /* Same hero copy on every demo — only the structure changes. */
@@ -160,8 +209,6 @@ function skinOf(dir, homeFile) {
     return { style, fonts: [...new Set(fonts)], root };
 }
 
-const EXCLUDE_IMGS = (name) => name === 'logo-green.webp' || /^new-logocarousel/.test(name);
-
 // Free stock photos (Unsplash CDN) downloaded to assets/img/arc-stock-NN.jpg —
 // business/talent themed, shared across demos in rotated windows so each site
 // keeps a distinct look while staying on-message.
@@ -173,16 +220,10 @@ function stockPool() {
 
 function imagePool(dir, demoKey, logo, demoIdx, demoCount) {
     if ('arc-site' === demoKey) {
-        // The flagship keeps its own branded photography.
-        const pool = [];
-        for (const f of fs.readdirSync(dir).filter((f) => f.endsWith('.html')).sort()) {
-            const html = fs.readFileSync(path.join(dir, f), 'utf8');
-            for (const m of html.matchAll(/Img\/([^"'\s>]+)/g)) {
-                const name = decodeURIComponent(m[1]);
-                if (EXCLUDE_IMGS(name)) continue;
-                if (fs.existsSync(path.join(IMG_DIR, name)) && !pool.includes(name)) pool.push(name);
-            }
-        }
+        // The flagship uses the fixed semantic ARC_IMGS map — deterministic
+        // across runs, no dependence on previously generated markup.
+        const pool = [...new Set(Object.values(ARC_IMGS))]
+            .filter((f) => fs.existsSync(path.join(IMG_DIR, f)));
         return pool.length ? pool : GENERIC_IMGS.slice(0, 6);
     }
     const stock = stockPool();
@@ -272,7 +313,7 @@ function crumb(cfg, label) {
         </p>`;
 }
 
-function pageHero(cfg, label, h1, sub, btnText, btnHref) {
+function pageHero(cfg, label, h1, sub, btnText, btnHref, imgKey) {
     const btn = btnText ? `        <a href="${btnHref}" class="btn-primary mt-8${1 === cfg.heroV ? ' mx-auto' : ''}" data-reveal data-reveal-delay="240">${btnText}</a>\n` : '';
     const blobs = `      <div class="pointer-events-none absolute -top-40 -right-40 h-[420px] w-[420px] rounded-full bg-brand/25 blur-3xl motion-safe:animate-pulse-slow"></div>
       <div class="pointer-events-none absolute -bottom-44 -left-32 h-[380px] w-[380px] rounded-full bg-accent/15 blur-3xl motion-safe:animate-float-slow"></div>`;
@@ -301,7 +342,7 @@ ${blobs}
 ${btn}${crumb(cfg, label)}
         </div>
         <div class="relative" data-reveal="right" data-reveal-delay="200">
-          ${img(cfg, 2, label, 'mx-auto w-full max-w-md rounded-3xl object-cover shadow-xl')}
+          ${img(cfg, imgKey ?? 'hero', label, 'mx-auto w-full max-w-md rounded-3xl object-cover shadow-xl')}
         </div>
       </div>
     </section>
@@ -453,7 +494,19 @@ function statCard(v, l) {
           </div>`;
 }
 
-const img = (cfg, n, alt, cls) => `<img src="Img/${cfg.pool[n % cfg.pool.length]}" alt="${alt}" class="${cls}" loading="lazy" />`;
+/* ref may be a semantic IMG_SLOTS key (preferred), a literal filename, or a
+   legacy numeric pool index. Per-demo overrides come from cfg.imgs. */
+const resolveImg = (cfg, ref) => {
+    if ('string' === typeof ref) {
+        if (cfg.imgs && cfg.imgs[ref]) return cfg.imgs[ref];
+        if (ref.includes('.')) return ref;
+        const i = IMG_SLOTS.indexOf(ref);
+        if (i >= 0) return cfg.pool[i % cfg.pool.length];
+        return cfg.pool[0];
+    }
+    return cfg.pool[ref % cfg.pool.length];
+};
+const img = (cfg, ref, alt, cls) => `<img src="Img/${resolveImg(cfg, ref)}" alt="${alt}" class="${cls}" loading="lazy" />`;
 
 /* ------------------------------------------------ page bodies ------------ */
 
@@ -487,7 +540,7 @@ ${blobs}
         </div>
       </div>
       <div class="relative mx-auto max-w-5xl px-4 pb-20 sm:px-6 lg:px-8" data-reveal="up" data-reveal-delay="200">
-        ${img(cfg, 0, `${cfg.name} team`, 'w-full rounded-3xl object-cover shadow-2xl')}
+        ${img(cfg, 'hero', `${cfg.name} team`, 'w-full rounded-3xl object-cover shadow-2xl')}
         <div class="hidden sm:block">${badge.replace('absolute bottom-6 left-2', 'absolute -bottom-6 left-8')}</div>
       </div>
     </section>`;
@@ -512,7 +565,7 @@ ${blobs}
           </div>
         </div>
         <div class="relative ${ordB(cfg)}" data-reveal="${dirB(cfg)}" data-reveal-delay="200">
-          ${img(cfg, 0, `${cfg.name} team`, 'mx-auto w-full max-w-lg rounded-3xl object-cover')}
+          ${img(cfg, 'hero', `${cfg.name} team`, 'mx-auto w-full max-w-lg rounded-3xl object-cover')}
           ${badge}
         </div>
       </div>
@@ -540,10 +593,11 @@ function homeBody(cfg) {
           <p class="eyebrow">What we do</p>
           <h2 class="mt-3 text-3xl font-bold text-navy font-display sm:text-4xl">The People You Need. The Systems Behind Them.</h2>
         </div>
-        <div class="mt-14 grid gap-8 ${grid2(cfg)}" data-reveal-stagger="150">
+        <div class="mt-14 grid gap-8 md:grid-cols-2 ${grid3(cfg)}" data-reveal-stagger="150">
           ${[
-            ['Finance &amp; Accounting Talent', 'From transactional support through controller-level capacity — general accounting, AR/AP, reconciliations, month-end close and reporting.', 'Find Accounting Talent', `${cfg.key}-services.html`, 1],
-            ['Virtual Assistants', 'Executive support, operations, client coordination and back-office execution — recurring work owned end to end, with a playbook behind it.', 'Find Your VA', `${cfg.key}-virtual-services.html`, 2],
+            ['Finance &amp; Accounting Talent', 'Accountants, accounting managers, controllers, AR/AP specialists, and finance professionals who work your hours, speak fluent English, and integrate into your existing operation.', 'Explore Finance Talent', `${cfg.key}-services.html`, 'finance'],
+            ['Virtual Assistants', 'Administrative professionals who take recurring execution off your plate — scheduling, reporting, follow-up, CRM management, documentation, and operational support.', 'Explore Virtual Assistants', `${cfg.key}-virtual-services.html`, 'assistant'],
+            ['Systems &amp; Playbooks', 'We document the recurring processes behind the work so your business can operate consistently without depending on one person.', 'See How We Build Systems', `${cfg.key}-playbooks.html`, 'playbook'],
           ].map(([h, p, a, href, i]) => `          <div class="group flex flex-col overflow-hidden rounded-2xl bg-slate-50 shadow-sm ring-1 ring-slate-100 card-lift">
             ${img(cfg, i, h, 'h-56 w-full object-cover')}
             <div class="flex flex-1 flex-col p-8">
@@ -553,10 +607,6 @@ function homeBody(cfg) {
             </div>
           </div>`).join('\n')}
         </div>
-        <p class="mt-10 text-center text-sm font-medium text-slate-500" data-reveal>
-          Systems &amp; Playbooks —
-          <a href="${cfg.key}-playbooks.html" class="font-semibold text-brand transition hover:text-navy">the mechanism that makes both repeatable →</a>
-        </p>
       </div>
     </section>`,
         /* ===== Speed banner ===== */
@@ -574,7 +624,7 @@ function homeBody(cfg) {
       <div class="mx-auto max-w-7xl px-4 sm:px-6 py-20 lg:px-8 lg:py-28">
         <div class="grid items-center gap-12 ${splitCols(cfg)}">
           <div class="relative ${ordA(cfg)}" data-reveal="${dirA(cfg)}">
-            ${img(cfg, 4, 'Documented processes', 'w-full rounded-3xl object-cover')}
+            ${img(cfg, 'process', 'Documented processes', 'w-full rounded-3xl object-cover')}
             <div class="absolute -bottom-6 -right-4 hidden rounded-2xl bg-navy p-6 text-white shadow-xl sm:block motion-safe:animate-float">
               <p class="text-3xl font-bold font-display"><span class="text-accent" data-count="90">90</span> days</p>
               <p class="mt-1 text-sm">to a documented, repeatable role</p>
@@ -623,7 +673,7 @@ function homeBody(cfg) {
           </ul>
         </div>
         <div${clsB(cfg)} data-reveal="${dirB(cfg)}" data-reveal-delay="150">
-          ${img(cfg, 5, 'Latin American professionals collaborating', 'w-full rounded-3xl object-cover shadow-xl')}
+          ${img(cfg, 'team', 'Latin American professionals collaborating', 'w-full rounded-3xl object-cover shadow-xl')}
         </div>
       </div>
     </section>`,
@@ -674,12 +724,12 @@ function homeBody(cfg) {
 }
 
 function aboutBody(cfg) {
-    return `${pageHero(cfg, 'About', 'We Build Teams That Can <span class="text-brand">Actually Execute.</span>', `${cfg.name} helps companies run better by combining embedded talent, documented processes, and practical automation.`, 'See How We Work', `${cfg.key}-services.html`)}
+    return `${pageHero(cfg, 'About', 'We Build Teams That Can <span class="text-brand">Actually Execute.</span>', `${cfg.name} helps companies run better by combining embedded talent, documented processes, and practical automation.`, 'See How We Work', `${cfg.key}-services.html`, 'meeting')}
     <!-- ===== Story ===== -->
     <section class="bg-white">
       <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 py-20 ${splitCols(cfg)} lg:px-8 lg:py-24">
         <div${clsA(cfg)} data-reveal="${dirA(cfg)}">
-          ${img(cfg, 0, `${cfg.name} team at work`, 'w-full rounded-3xl object-cover shadow-xl')}
+          ${img(cfg, 'team', `${cfg.name} team at work`, 'w-full rounded-3xl object-cover shadow-xl')}
         </div>
         <div${clsB(cfg)} data-reveal="${dirB(cfg)}" data-reveal-delay="120">
           <p class="eyebrow">The belief</p>
@@ -735,15 +785,15 @@ function servicesBody(cfg) {
     const blocks = [
         ['Finance &amp; Accounting Talent', 'Put the right level of finance talent in the seat — scale the team based on the work instead of carrying unnecessary overhead.',
             'General Accountant · Senior Accountant · AR/AP Specialist · Accounting Manager · Controller · Fractional Controller',
-            ['From transactional support through controller-level capacity', 'Fluent English, U.S. working hours, inside your existing systems', 'Ready in as little as 7 days when the fit is clear'], 1],
+            ['From transactional support through controller-level capacity', 'Fluent English, U.S. working hours, inside your existing systems', 'Ready in as little as 7 days when the fit is clear'], 'finance'],
         ['Virtual Assistants', 'Recurring administrative and operational work owned end to end — with a documented process behind every seat.',
             'Executive Support · Sales Support · Operations Support · Client Support',
-            ['Recurring tasks become documented workflows', 'Manage, measure, transfer and scale the role', 'Ready to start in as little as 7 days'], 2],
+            ['Recurring tasks become documented workflows', 'Manage, measure, transfer and scale the role', 'Ready to start in as little as 7 days'], 'assistant'],
         ['Systems &amp; Playbooks', 'Make the process transferable. Recurring work converted into clear SOPs and playbooks — hosted in your own intranet.',
             'SOP development · finance playbooks · process mapping · automation identification',
-            ['First 90 days: document the workflows behind the role', 'The business keeps the operating knowledge — not trapped in one employee\'s head', 'Automations flagged where software beats manual work'], 3],
+            ['First 90 days: document the workflows behind the role', 'The business keeps the operating knowledge — not trapped in one employee\'s head', 'Automations flagged where software beats manual work'], 'playbook'],
     ];
-    return `${pageHero(cfg, 'Services', 'Install the Back Office <span class="text-brand">You Actually Need.</span>', `${cfg.name} builds support around the work — not around a fixed package. Add accounting capacity, administrative execution, documented processes, automation, or a combination.`, 'Build Your Support Plan', `${cfg.key}-partners.html`)}
+    return `${pageHero(cfg, 'Services', 'Install the Back Office <span class="text-brand">You Actually Need.</span>', `${cfg.name} builds support around the work — not around a fixed package. Add accounting capacity, administrative execution, documented processes, automation, or a combination.`, 'Build Your Support Plan', `${cfg.key}-partners.html`, 'report')}
     <div class="flex flex-col">
     <!-- ===== Service blocks ===== -->
     <section class="bg-white${cfg.swap ? ' order-2' : ''}">
@@ -791,7 +841,7 @@ ${cta(cfg, 'services')}`;
 }
 
 function virtualBody(cfg) {
-    return `${pageHero(cfg, 'Virtual Services', 'Get the Work <span class="text-brand">Off Your Plate.</span>', `${cfg.name} virtual professionals take administrative and operational work off leadership's plate — with documented workflows that make delegation easier to manage and easier to scale.`, 'Build a Virtual Support Role', `${cfg.key}-partners.html`)}
+    return `${pageHero(cfg, 'Virtual Services', 'Get the Work <span class="text-brand">Off Your Plate.</span>', `${cfg.name} virtual professionals take administrative and operational work off leadership's plate — with documented workflows that make delegation easier to manage and easier to scale.`, 'Build a Virtual Support Role', `${cfg.key}-partners.html`, 'assistant')}
     <!-- ===== Scope ===== -->
     <section class="bg-white">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 py-20 lg:px-8 lg:py-24">
@@ -830,7 +880,7 @@ function virtualBody(cfg) {
           </ul>
         </div>
         <div${clsB(cfg)} data-reveal="${dirB(cfg)}" data-reveal-delay="150">
-          ${img(cfg, 2, 'Virtual assistant documentation', 'w-full rounded-3xl object-cover shadow-xl')}
+          ${img(cfg, 'docs', 'Virtual assistant documentation', 'w-full rounded-3xl object-cover shadow-xl')}
         </div>
       </div>
     </section>
@@ -852,7 +902,7 @@ ${cta(cfg, 'virtual-services')}`;
 }
 
 function playbooksBody(cfg) {
-    return `${pageHero(cfg, 'Playbooks', 'Your Processes, <span class="text-brand">Documented — and Actually Used.</span>', 'Every playbook we write for you lives in your own secure intranet portal — searchable, organized by process, and scoped per company. Not a folder of forgotten docs.', 'See It In Person', `${cfg.key}-partners.html`)}
+    return `${pageHero(cfg, 'Playbooks', 'Your Processes, <span class="text-brand">Documented — and Actually Used.</span>', 'Every playbook we write for you lives in your own secure intranet portal — searchable, organized by process, and scoped per company. Not a folder of forgotten docs.', 'See It In Person', `${cfg.key}-partners.html`, 'playbook')}
     <!-- ===== Intranet overview ===== -->
     <section class="bg-white">
       <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 py-20 ${splitCols(cfg)} lg:px-8 lg:py-24">
@@ -867,7 +917,7 @@ function playbooksBody(cfg) {
           </ul>
         </div>
         <div${clsB(cfg)} data-reveal="${dirB(cfg)}" data-reveal-delay="150">
-          ${img(cfg, 3, 'Playbooks intranet workspace', 'w-full rounded-3xl object-cover shadow-xl')}
+          ${img(cfg, 'report', 'Playbooks intranet workspace', 'w-full rounded-3xl object-cover shadow-xl')}
         </div>
       </div>
     </section>
@@ -897,7 +947,7 @@ function playbooksBody(cfg) {
     <section class="bg-white">
       <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 py-20 ${splitCols(cfg)} lg:px-8 lg:py-24">
         <div${clsA(cfg)} data-reveal="${dirA(cfg)}">
-          ${img(cfg, 6, 'Playbook library organized by process', 'w-full rounded-3xl object-cover shadow-xl')}
+          ${img(cfg, 'process', 'Playbook library organized by process', 'w-full rounded-3xl object-cover shadow-xl')}
         </div>
         <div${clsB(cfg)} data-reveal="${dirB(cfg)}" data-reveal-delay="120">
           <p class="eyebrow">Find it in seconds</p>
@@ -934,12 +984,12 @@ ${cta(cfg, 'playbooks')}`;
 }
 
 function foundationBody(cfg) {
-    return `${pageHero(cfg, 'Foundation', 'Opportunity Shouldn\'t <span class="text-brand">Depend on Geography.</span>', `The ${cfg.name} Foundation trains and prepares Latin American professionals for sustainable remote careers — then connects the best graduates to real roles.`, 'Partner With the Foundation', `${cfg.key}-partners.html`)}
+    return `${pageHero(cfg, 'Foundation', 'Opportunity Shouldn\'t <span class="text-brand">Depend on Geography.</span>', `The ${cfg.name} Foundation trains and prepares Latin American professionals for sustainable remote careers — then connects the best graduates to real roles.`, 'Partner With the Foundation', `${cfg.key}-partners.html`, 'training')}
     <!-- ===== Mission ===== -->
     <section class="bg-white">
       <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 py-20 ${splitCols(cfg)} lg:px-8 lg:py-24">
         <div${clsA(cfg)} data-reveal="${dirA(cfg)}">
-          ${img(cfg, 5, 'Foundation students training', 'w-full rounded-3xl object-cover shadow-xl')}
+          ${img(cfg, 'team', 'Foundation students training', 'w-full rounded-3xl object-cover shadow-xl')}
         </div>
         <div${clsB(cfg)} data-reveal="${dirB(cfg)}" data-reveal-delay="120">
           <p class="eyebrow">The mission</p>
@@ -994,7 +1044,7 @@ ${cta(cfg, 'foundation')}`;
 }
 
 function partnersBody(cfg) {
-    return `${pageHero(cfg, 'Partners', 'You Keep the Relationship. <span class="text-brand">We Help Build the Team.</span>', `${cfg.name} partners with advisors and service providers who want a reliable place to send clients when finance, admin, process, or automation needs fall outside their core scope.`, 'Become an ARC Partner', '#contact-form')}
+    return `${pageHero(cfg, 'Partners', 'You Keep the Relationship. <span class="text-brand">We Help Build the Team.</span>', `${cfg.name} partners with advisors and service providers who want a reliable place to send clients when finance, admin, process, or automation needs fall outside their core scope.`, 'Become an ARC Partner', '#contact-form', 'partnership')}
     <!-- ===== Who partners ===== -->
     <section class="bg-white">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 py-20 lg:px-8 lg:py-24">
@@ -1032,7 +1082,7 @@ function partnersBody(cfg) {
           ${flowRow(['Make the introduction', 'ARC confirms fit', 'We scope &amp; deliver', 'You keep the client'], false, cfg)}
         </div>
         <div${clsB(cfg)} data-reveal="${dirB(cfg)}" data-reveal-delay="150">
-          ${img(cfg, 4, 'Partnership handshake', 'w-full rounded-3xl object-cover shadow-xl')}
+          ${img(cfg, 'meeting', 'Partnership handshake', 'w-full rounded-3xl object-cover shadow-xl')}
         </div>
       </div>
     </section>
@@ -1176,7 +1226,7 @@ for (const key of order) {
     const di = order.indexOf(key);
     // Independent 3-cycles → all 21 demos get a unique structural combo;
     // arc-site (di=0) keeps the canonical editorial layout.
-    cfg.heroV = di % VARIANTS;                    // hero shape
+    cfg.heroV = DEMOS[key].heroV ?? di % VARIANTS; // hero shape (per-demo override wins)
     cfg.gridV = Math.floor(di / 3) % VARIANTS;    // card-grid density
     cfg.ctaV  = Math.floor(di / 7) % VARIANTS;    // closing CTA shape
     cfg.flip  = 1 === Math.floor(di / 3) % 2;     // mirrored split sections
@@ -1184,6 +1234,7 @@ for (const key of order) {
     cfg.seq   = HOME_ORDERS[Math.floor(di / 3) % HOME_ORDERS.length]; // home section order
     cfg.h1 = ARC_H1;
     cfg.pool = imagePool(dir, key, cfg.logo, di, order.length);
+    if ('arc-site' === key) cfg.imgs = ARC_IMGS;
     if (!cfg.pool.length) cfg.pool = GENERIC_IMGS.slice(0, 4);
 
     // Emit canonical pages; drop anything else.
@@ -1197,12 +1248,15 @@ for (const key of order) {
         const html = head(cfg, page, title, desc) + header(cfg, page) + BODIES[page](cfg) + footer(cfg);
         fs.writeFileSync(path.join(dir, `${page}.html`), html, 'utf8');
         const slug = `${key}-${page}`;
+        const heroImg = cfg.imgs && cfg.imgs[PAGE_HERO[page]]
+            ? cfg.imgs[PAGE_HERO[page]]
+            : cfg.pool[PAGES.indexOf(page) % cfg.pool.length];
         newTemplates[slug] = {
             name: TPL_NAMES[page] || NAV.find(([s]) => s === page)[1],
             title,
             description: desc,
             file: `${key}/${page}.html`,
-            thumb: `assets/img/${cfg.pool[PAGES.indexOf(page) % cfg.pool.length]}`,
+            thumb: `assets/img/${heroImg}`,
         };
     }
 
