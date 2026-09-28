@@ -2,8 +2,8 @@
 /**
  * Plugin Name:       ARC Starter Templates
  * Plugin URI:        https://ashrivercollective.com
- * Description:       Starter-templates library (solace-extra style) with 16 importable Tailwind sites — one card per demo, step-by-step wizard (replaces the previously imported site automatically), Elementor-editable or Gutenberg block pages, Media Library images, nav menus, front page and a Form Entries panel storing every submission. Also registers every page as a block pattern.
- * Version:           1.6.3
+ * Description:       Starter-templates library with 21 Karibase-styled sites — one card per demo, step-by-step wizard, Elementor-editable or Gutenberg block pages, Media Library images, nav menus, front page and stored form entries. Also registers every page as a block pattern.
+ * Version:           1.7.0
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * Author:            Ash River Collective
@@ -16,7 +16,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'ARC_ST_VERSION', '1.6.3' );
+define( 'ARC_ST_VERSION', '1.7.0' );
 define( 'ARC_ST_FILE', __FILE__ );
 define( 'ARC_ST_PATH', plugin_dir_path( __FILE__ ) );
 define( 'ARC_ST_URL', plugin_dir_url( __FILE__ ) );

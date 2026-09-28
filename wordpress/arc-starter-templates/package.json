@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:css": "tailwindcss -i assets/css/tailwind.input.css -o assets/css/tailwind.css"
+    "build:css": "tailwindcss -i assets/css/tailwind.input.css -o assets/css/tailwind.css",
+    "build:templates": "node scripts/build-template-sites.js"
   },
   "keywords": [],
   "author": "",

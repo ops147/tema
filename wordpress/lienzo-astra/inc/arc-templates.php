@@ -188,7 +188,7 @@ if ( ! function_exists( 'lienzoastra_render_arc_starter_sites' ) ) {
 
 		<?php if ( lienzoastra_arc_st_active() ) : ?>
 			<p>
-				<?php esc_html_e( 'The ARC Starter Templates plugin imports complete Tailwind-designed pages as native Gutenberg blocks. Edit them in the block editor like any other page — the demo palette and Outfit font are synced into the block controls via theme.json, and the theme automatically steps aside on imported pages: full-width canvas, no page title, breadcrumbs, comments or floating buttons.', 'lienzo-astra' ); ?>
+				<?php esc_html_e( 'The ARC Starter Templates plugin imports complete Tailwind-designed pages as native Gutenberg blocks. Edit them in the block editor like any other page — the ARC palette and template fonts are synced into the block controls via theme.json, and the theme automatically steps aside on imported pages: full-width canvas, no page title, breadcrumbs, comments or floating buttons.', 'lienzo-astra' ); ?>
 			</p>
 			<p>
 				<?php
@@ -247,7 +247,7 @@ if ( ! function_exists( 'lienzoastra_render_arc_starter_sites' ) ) {
 			</p>
 		<?php else : ?>
 			<p>
-				<?php esc_html_e( 'The ARC Starter Templates plugin is not active. Activate it to import the eight-page Ash River Collective site into this theme.', 'lienzo-astra' ); ?>
+				<?php esc_html_e( 'The ARC Starter Templates plugin is not active. Activate it to import the seven-page Ash River Collective site into this theme.', 'lienzo-astra' ); ?>
 			</p>
 			<?php
 			$plugin_file = lienzoastra_arc_st_plugin_file();

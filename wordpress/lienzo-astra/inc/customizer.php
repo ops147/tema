@@ -54,6 +54,15 @@ function lienzoastra_color_palettes() {
 				'color_background' => '#ffffff',
 			],
 		],
+		'arc'     => [
+			'label'  => __( 'ARC River Systems', 'lienzo-astra' ),
+			'colors' => [
+				'color_primary'    => '#59B8A9',
+				'color_link'       => '#3E8E80',
+				'color_text'       => '#53616B',
+				'color_background' => '#F5F8F6',
+			],
+		],
 		'ocean'   => [
 			'label'  => __( 'Ocean', 'lienzo-astra' ),
 			'colors' => [
@@ -157,14 +166,20 @@ function lienzoastra_customizer_defaults() {
 		'shop_per_page'      => 12,
 		'header_cart'        => true,
 		'arc_tpl_palette'    => 'default',
-		'arc_tpl_color_brand' => '',
-		'arc_tpl_color_brand_dark' => '',
-		'arc_tpl_color_accent' => '',
-		'arc_tpl_color_navy' => '',
-		'arc_tpl_color_mint' => '',
-		'arc_tpl_color_cream' => '',
-		'arc_tpl_color_cta_bg' => '',
-		'arc_tpl_color_cta_text' => '',
+		'arc_tpl_color_brand' => '#59B8A9',
+		'arc_tpl_color_brand_dark' => '#3E8E80',
+		'arc_tpl_color_accent' => '#D6F73A',
+		'arc_tpl_color_navy' => '#0F1C2E',
+		'arc_tpl_color_mint' => '#F5F8F6',
+		'arc_tpl_color_cream' => '#EAF1E8',
+		'arc_tpl_color_cta_bg' => '#D6F73A',
+		'arc_tpl_color_cta_text' => '#0F1C2E',
+		'arc_tpl_link_primary' => 'default',
+		'arc_tpl_link_primary_url' => '',
+		'arc_tpl_link_partner' => 'default',
+		'arc_tpl_link_partner_url' => '',
+		'arc_tpl_link_secondary' => 'default',
+		'arc_tpl_link_secondary_url' => '',
 		'arc_tpl_copy_md'    => '',
 	];
 }
@@ -1043,7 +1058,7 @@ function lienzoastra_customize_register( $wp_customize ) {
 			'type'        => 'select',
 			'choices'     => [
 				'default'   => __( 'Template default (ARC)', 'lienzo-astra' ),
-				'arc'       => __( 'ARC Green', 'lienzo-astra' ),
+				'arc'       => __( 'ARC River Systems', 'lienzo-astra' ),
 				'corporate' => __( 'Corporate Blue', 'lienzo-astra' ),
 				'ocean'     => __( 'Ocean Teal', 'lienzo-astra' ),
 				'sunset'    => __( 'Sunset', 'lienzo-astra' ),
@@ -1103,6 +1118,50 @@ function lienzoastra_customize_register( $wp_customize ) {
 			'input_attrs' => [ 'rows' => 14 ],
 		]
 	);
+
+	/* ---------- Button / CTA destinations (ARC Careers portals or custom) ---------- */
+	$arc_cta_labels = [
+		'primary'   => __( 'Primary CTA buttons', 'lienzo-astra' ),
+		'partner'   => __( 'Partner / Foundation buttons', 'lienzo-astra' ),
+		'secondary' => __( 'Secondary buttons', 'lienzo-astra' ),
+	];
+	foreach ( $arc_cta_labels as $kind => $label ) {
+		$wp_customize->add_setting(
+			'lienzoastra_arc_tpl_link_' . $kind,
+			[
+				'default'           => $defaults[ 'arc_tpl_link_' . $kind ],
+				'sanitize_callback' => 'lienzoastra_sanitize_arc_link',
+			]
+		);
+		$wp_customize->add_control(
+			'lienzoastra_arc_tpl_link_' . $kind,
+			[
+				'label'       => $label,
+				'description' => 'primary' === $kind ? __( 'Where template buttons and CTAs link to. Portal pages come from the ARC Careers plugin.', 'lienzo-astra' ) : '',
+				'section'     => 'lienzoastra_arc_template',
+				'type'        => 'select',
+				'choices'     => lienzo_arc_cta_choices(),
+			]
+		);
+		$wp_customize->add_setting(
+			'lienzoastra_arc_tpl_link_' . $kind . '_url',
+			[
+				'default'           => $defaults[ 'arc_tpl_link_' . $kind . '_url' ],
+				'sanitize_callback' => 'esc_url_raw',
+			]
+		);
+		$wp_customize->add_control(
+			'lienzoastra_arc_tpl_link_' . $kind . '_url',
+			[
+				'label'           => __( 'Custom URL', 'lienzo-astra' ),
+				'section'         => 'lienzoastra_arc_template',
+				'type'            => 'url',
+				'active_callback' => function () use ( $kind ) {
+					return 'custom' === lienzoastra_get_option( 'arc_tpl_link_' . $kind );
+				},
+			]
+		);
+	}
 }
 add_action( 'customize_register', 'lienzoastra_customize_register' );
 

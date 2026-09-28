@@ -4,23 +4,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ash River Collective — About</title>
-    <meta name="description" content="Ash River Collective helps companies add trained financial and administrative talent without adding unnecessary overhead or operational complexity." />
+    <title>About – Printifix</title>
+    <meta name="description" content="Printifix combines embedded talent, documented processes and practical automation — teams that can actually execute." />
     <script src="Js/site.js" defer></script>
     <link rel="stylesheet" href="Css/tailwind.css" onerror="this.onerror=null;var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4';document.head.appendChild(s);" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Readex%20Pro:wght@300;400;500;600;700;800&family=DM%20Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-    <style type="text/tailwindcss">
+<style type="text/tailwindcss">
 @import "tailwindcss";
 
 @theme {
+  --color-slate-600: #53616B;
+  --color-gold: #E4CF43;
+  --color-leaf: #7FB34D;
   /* ===== Design tokens — global "site settings". Change here, applies everywhere. ===== */
-  --color-brand: #6FAF67;
-  --color-brand-dark: #438F69;
-  --color-accent: #58B8A9;
+  --color-brand: #59B8A9;
+  --color-brand-dark: #3E8E80;
+  --color-accent: #D6F73A;
   --color-navy: #0F1C2E;
-  --color-mint: #F5F8F4;
+  --color-mint: #F5F8F6;
   --color-cream: #EAF1E8;
   --font-sans: "Readex Pro", ui-sans-serif, system-ui, sans-serif;
   --font-display: "DM Sans", ui-sans-serif, system-ui, sans-serif;
@@ -72,15 +75,15 @@
 
 /* Shared component layer — single source for all pages. Do not redeclare in page <style> blocks. */
 @layer components {
-  .btn-primary { display:inline-flex; align-items:center; gap:.5rem; border-radius:9999px; background:#A8C85A; padding:.8rem 1.75rem; font-size:.9rem; font-weight:600; color:#0F1C2E; transition:all .2s; }
-  .btn-primary:hover { background:#0F1C2E; color:#fff; transform:translateY(-2px); box-shadow:0 10px 15px -3px rgb(20 42 30 / .25); }
-  .btn-outline { display:inline-flex; align-items:center; gap:.5rem; border-radius:9999px; border:1px solid #438F69; padding:.8rem 1.75rem; font-size:.9rem; font-weight:600; color:#0F1C2E; transition:all .2s; }
-  .btn-outline:hover { border-color:#438F69; background:#438F69; color:#fff; transform:translateY(-2px); }
+  .btn-primary { display:inline-flex; align-items:center; gap:.5rem; border-radius:9999px; background:var(--color-accent); padding:.8rem 1.75rem; font-size:.9rem; font-weight:700; letter-spacing:.02em; text-transform:uppercase; color:var(--color-navy); transition:all .2s; }
+  .btn-primary:hover { background:var(--color-navy); color:#fff; transform:translateY(-2px); box-shadow:0 10px 15px -3px rgb(15 28 46 / .25); }
+  .btn-outline { display:inline-flex; align-items:center; gap:.5rem; border-radius:9999px; border:1px solid var(--color-navy); padding:.8rem 1.75rem; font-size:.9rem; font-weight:600; color:var(--color-navy); transition:all .2s; }
+  .btn-outline:hover { background:var(--color-navy); color:#fff; transform:translateY(-2px); }
   .btn-ghost-light { display:inline-flex; align-items:center; gap:.5rem; border-radius:9999px; border:1px solid rgba(255,255,255,.25); padding:.8rem 1.75rem; font-size:.9rem; font-weight:600; color:#fff; transition:all .2s; }
   .btn-ghost-light:hover { border-color:#fff; transform:translateY(-2px); }
   .eyebrow { font-size:.8rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--color-brand); }
   .field { width:100%; border-radius:.6rem; border:1px solid #e2e8f0; background:#fff; padding:.8rem 1rem; font-size:.9rem; color:var(--color-navy); outline:none; transition:border-color .2s, box-shadow .2s; }
-  .field:focus { border-color:var(--color-brand); box-shadow:0 0 0 3px rgb(111 175 103 / .22); }
+  .field:focus { border-color:var(--color-brand); box-shadow:0 0 0 3px rgb(89 184 169 / .22); }
   /* Hover-lift card — shared replacement for "transition hover:-translate-y-1 hover:shadow-lg". */
   .card-lift { transition:transform .25s ease, box-shadow .25s ease; }
   .card-lift:hover { transform:translateY(-4px); box-shadow:0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1); }
@@ -89,233 +92,174 @@
     </style>
   </head>
   <body class="font-sans text-slate-600 antialiased">
-    <style>@import url('https://fonts.googleapis.com/css2?family=Readex%20Pro:wght@300;400;500;600;700;800&family=DM%20Sans:wght@300;400;500;600;700;800&display=swap');:root{--color-brand:#6FAF67;--color-brand-dark:#438F69;--color-accent:#58B8A9;--color-navy:#0F1C2E;--color-mint:#F5F8F4;--color-cream:#EAF1E8;--font-sans:"Readex Pro",ui-sans-serif,system-ui,sans-serif;--font-display:"DM Sans",ui-sans-serif,system-ui,sans-serif;}</style>
     <!-- ===== Header ===== -->
-    <header class="sticky top-0 z-50 border-b border-slate-100 bg-white/95 backdrop-blur" data-reveal="down">
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-navy/95 backdrop-blur" data-reveal="down">
       <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 py-3 lg:px-8">
-        <a href="printifix-home.html" class="flex min-w-0 shrink-0 items-center gap-2.5"><img src="Img/logo-green.png" alt="Ash River Collective" class="h-9 w-9 shrink-0 sm:h-10 sm:w-10" /><span class="leading-none">
-            <span class="block text-lg font-extrabold tracking-tight text-navy font-display">ASH RIVER</span>
-            <span class="block text-[10px] font-bold tracking-[0.3em] text-brand">COLLECTIVE</span>
-          </span></a>
-        <nav class="hidden items-center gap-3 whitespace-nowrap text-[12px] font-medium text-slate-700 lg:flex xl:gap-5 xl:text-[13px]">
-          <a href="printifix-home.html" class="transition hover:text-brand">Home</a>
-          <a href="printifix-about.html" class="font-semibold text-brand">About</a>
-          <a href="printifix-industries.html" class="transition hover:text-brand">Who We Serve</a>
-          <a href="printifix-testimonials.html" class="transition hover:text-brand">Results</a>
-          <a href="printifix-blog.html" class="transition hover:text-brand">Insights</a>
-          <a href="printifix-contact-us.html" class="transition hover:text-brand">Contact</a>
+        <a href="printifix-home.html" class="flex min-w-0 shrink-0 items-center gap-2.5">
+          <span class="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent font-display text-sm font-bold text-navy sm:h-10 sm:w-10">P</span>
+          <span class="hidden min-[400px]:block leading-none">
+            <span class="block text-[15px] font-extrabold tracking-wide text-white font-display">PRINTIFIX</span>
+            <span class="block text-[10px] font-bold tracking-[0.3em] text-brand">TALENT · SYSTEMS · PLAYBOOKS</span>
+          </span>
+        </a>
+        <nav class="hidden items-center gap-3 whitespace-nowrap text-[12px] font-medium text-slate-300 lg:flex xl:gap-5 xl:text-[13px]">
+          <a href="printifix-home.html" class="transition hover:text-white">Home</a>
+          <a href="printifix-services.html" class="transition hover:text-white">Services</a>
+          <a href="printifix-virtual-services.html" class="transition hover:text-white">Virtual Services</a>
+          <a href="printifix-playbooks.html" class="transition hover:text-white">Playbooks</a>
+          <a href="printifix-about.html" class="font-semibold text-white">About</a>
+          <a href="printifix-foundation.html" class="transition hover:text-white">Foundation</a>
+          <a href="printifix-partners.html" class="transition hover:text-white">Partners</a>
         </nav>
-        <form role="search" method="get" action="" class="hidden xl:flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3.5 py-1.5 text-[12px] text-slate-500">
-          <svg class="h-3.5 w-3.5 shrink-0 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path stroke-linecap="round" d="m20 20-3.5-3.5"/></svg>
-          <input type="search" name="s" placeholder="Search site…" aria-label="Search site" class="w-24 bg-transparent outline-none placeholder:text-slate-400" />
-        </form>
-        <button type="button" class="hidden lg:inline-flex items-center justify-center rounded-full p-2 text-slate-500 transition hover:bg-slate-100 hover:text-navy" aria-label="Toggle dark mode" onclick="arcStToggleDark()">
+        <button type="button" class="hidden lg:inline-flex items-center justify-center rounded-full p-2 text-slate-400 transition hover:bg-white/10 hover:text-white" aria-label="Toggle dark mode" data-arc-dark-toggle>
           <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
         </button>
-        <a href="printifix-contact-us.html" class="btn-primary hidden lg:inline-flex">Build Your Team</a>
-        <button type="button" class="inline-flex rounded-lg p-2 text-slate-700 hover:bg-slate-100 lg:hidden" aria-label="Toggle menu" aria-expanded="false" onclick="arcStToggleMobileNav(this)">
-          <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <a href="printifix-partners.html" class="btn-primary hidden lg:inline-flex">Build Your Team</a>
+        <button type="button" class="inline-flex items-center justify-center rounded-lg p-2 text-slate-300 transition hover:bg-white/10 hover:text-white lg:hidden" aria-label="Toggle menu" aria-expanded="false" aria-controls="mnav" data-arc-nav-toggle>
+          <svg data-arc-icon="open" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg data-arc-icon="close" class="hidden h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
         </button>
       </div>
-      <div id="mnav" class="hidden border-t border-slate-100 bg-white lg:hidden">
-        <nav class="flex flex-col px-4 sm:px-6 py-3 text-[15px] font-medium text-slate-700">
-          <form role="search" method="get" action="" class="mb-2 flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-3.5 py-2.5 text-sm text-slate-500">
-            <svg class="h-4 w-4 shrink-0 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path stroke-linecap="round" d="m20 20-3.5-3.5"/></svg>
-            <input type="search" name="s" placeholder="Search site…" aria-label="Search site" class="w-full bg-transparent outline-none placeholder:text-slate-400" />
-          </form>
-          <a href="printifix-home.html" class="border-b border-slate-50 py-3">Home</a>
-          <a href="printifix-about.html" class="border-b border-slate-50 py-3 font-semibold text-brand">About</a>
-          <a href="printifix-industries.html" class="border-b border-slate-50 py-3">Who We Serve</a>
-          <a href="printifix-testimonials.html" class="border-b border-slate-50 py-3">Results</a>
-          <a href="printifix-blog.html" class="border-b border-slate-50 py-3">Insights</a>
-          <a href="printifix-contact-us.html" class="py-3">Contact</a>
-          <a href="printifix-contact-us.html" class="btn-primary mt-2 mb-3 justify-center">Build Your Team</a>
+      <div id="mnav" class="hidden border-t border-white/10 bg-navy lg:hidden">
+        <nav class="flex flex-col px-4 sm:px-6 py-3 text-[15px] font-medium text-slate-200">
+          <a href="printifix-home.html" class="rounded-lg px-3 py-2.5 transition hover:bg-white/5 hover:text-white border-b border-white/10">Home</a>
+          <a href="printifix-services.html" class="rounded-lg px-3 py-2.5 transition hover:bg-white/5 hover:text-white border-b border-white/10">Services</a>
+          <a href="printifix-virtual-services.html" class="rounded-lg px-3 py-2.5 transition hover:bg-white/5 hover:text-white border-b border-white/10">Virtual Services</a>
+          <a href="printifix-playbooks.html" class="rounded-lg px-3 py-2.5 transition hover:bg-white/5 hover:text-white border-b border-white/10">Playbooks</a>
+          <a href="printifix-about.html" class="rounded-lg px-3 py-2.5 transition hover:bg-white/5 hover:text-white font-semibold text-white border-b border-white/10">About</a>
+          <a href="printifix-foundation.html" class="rounded-lg px-3 py-2.5 transition hover:bg-white/5 hover:text-white border-b border-white/10">Foundation</a>
+          <a href="printifix-partners.html" class="rounded-lg px-3 py-2.5 transition hover:bg-white/5 hover:text-white">Partners</a>
+          <a href="printifix-partners.html" class="btn-primary mt-2 mb-3 justify-center">Build Your Team</a>
         </nav>
       </div>
     </header>
-
-    <!-- ===== Page header ===== -->
+    <!-- ===== Page hero ===== -->
     <section class="relative overflow-hidden bg-navy">
-      <div class="pointer-events-none absolute -top-32 -right-24 h-80 w-80 rounded-full bg-brand/20 blur-3xl"></div>
-      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 py-16 lg:px-8 lg:py-20">
-        <p class="eyebrow" data-reveal>Talent + Process + Accountability</p>
-        <h1 class="mt-3 max-w-3xl text-4xl font-bold text-white font-display sm:text-5xl" data-reveal data-reveal-delay="80">We Build Teams That Can Actually Execute.</h1>
-        <p class="mt-5 max-w-2xl text-lg leading-8 text-slate-300" data-reveal data-reveal-delay="160">Ash River Collective helps companies add trained financial and administrative talent without adding unnecessary overhead or operational complexity.</p>
+      <div class="pointer-events-none absolute -top-40 -right-40 h-[420px] w-[420px] rounded-full bg-brand/25 blur-3xl motion-safe:animate-pulse-slow"></div>
+      <div class="pointer-events-none absolute -bottom-44 -left-32 h-[380px] w-[380px] rounded-full bg-accent/15 blur-3xl motion-safe:animate-float-slow"></div>
+      <div class="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+        <h1 class="max-w-3xl text-3xl font-bold text-white font-display sm:text-5xl" data-reveal>We Build Teams That Can <span class="text-brand">Actually Execute.</span></h1>
+        <p class="mt-5 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg" data-reveal data-reveal-delay="120">Printifix helps companies run better by combining embedded talent, documented processes, and practical automation.</p>
+        <a href="printifix-services.html" class="btn-primary mt-8" data-reveal data-reveal-delay="240">See How We Work</a>
+        <p class="mt-8 text-sm text-slate-400" data-reveal="fade" data-reveal-delay="360">
+          <a href="printifix-home.html" class="font-medium text-brand transition hover:text-white">Home</a>
+          <span class="mx-2 text-slate-500">/</span> About
+        </p>
       </div>
     </section>
 
-<section class="bg-mint py-16 sm:py-20 lg:py-24">
-      <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
-<div class="relative" data-reveal="left">
-            <img src="Img/printifix-img-1.png" alt="Ash River Collective" class="w-full rounded-3xl object-cover shadow-xl lg:aspect-[4/3]" loading="lazy" />
-          </div>
-          <div data-reveal="right">
-            <p class="eyebrow">Who We Are</p>
-            <h2 class="mt-3 text-3xl font-bold font-display text-navy sm:text-4xl">The People You Need. The Systems Behind Them.</h2>
-            <p class="mt-5 leading-8 text-slate-500">ARC combines trained talent, documented processes, and operational systems to help growing companies execute consistently.</p>
-            <ul class="mt-6 space-y-3 text-[15px] text-slate-600">
-              <li class="flex gap-3"><span class="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand/10 text-brand"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span>Reconciliations and close processes</span></li>
-              <li class="flex gap-3"><span class="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand/10 text-brand"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span>AR / AP workflows and follow-up</span></li>
-              <li class="flex gap-3"><span class="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand/10 text-brand"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span>Reporting and recurring deliverables</span></li>
-              <li class="flex gap-3"><span class="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand/10 text-brand"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span>Administrative processes and coordination</span></li>
-            </ul>
-            
-          </div>
-      </div>
-    </section>
-
-    <section class="bg-navy py-14 sm:py-16">
-      <div class="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-4 sm:px-6 lg:grid-cols-4 lg:px-8" data-reveal-stagger="120">
-        <div class="text-center">
-          <p class="text-4xl font-extrabold text-brand font-display sm:text-5xl">7 days</p>
-          <p class="mt-2 text-sm font-medium uppercase tracking-wide text-slate-400">Qualified talent available</p>
+    <!-- ===== Story ===== -->
+    <section class="bg-white">
+      <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 py-20 lg:grid-cols-2 lg:px-8 lg:py-24">
+        <div data-reveal="left">
+          <img src="Img/arc-stock-19.jpg" alt="Printifix team at work" class="w-full rounded-3xl object-cover shadow-xl" loading="lazy" />
         </div>
-        <div class="text-center">
-          <p class="text-4xl font-extrabold text-brand font-display sm:text-5xl">90 days</p>
-          <p class="mt-2 text-sm font-medium uppercase tracking-wide text-slate-400">To documented workflows</p>
-        </div>
-        <div class="text-center">
-          <p class="text-4xl font-extrabold text-brand font-display sm:text-5xl">6 role types</p>
-          <p class="mt-2 text-sm font-medium uppercase tracking-wide text-slate-400">From AR/AP to Controller</p>
-        </div>
-        <div class="text-center">
-          <p class="text-4xl font-extrabold text-brand font-display sm:text-5xl">U.S. hours</p>
-          <p class="mt-2 text-sm font-medium uppercase tracking-wide text-slate-400">Time-zone aligned</p>
+        <div data-reveal="right" data-reveal-delay="120">
+          <p class="eyebrow">The belief</p>
+          <h2 class="mt-3 text-3xl font-bold text-navy font-display sm:text-4xl">The Problem Is Usually Bigger Than the Hire.</h2>
+          <p class="mt-5 leading-7">A company can hire a strong accountant and still have a slow close. It can hire an assistant and still bury work in Slack. It can buy software and still run on spreadsheets. The missing layer is the operating system around the people.</p>
+          <p class="mt-4 leading-7">Printifix brings those pieces together — people, process, and practical automation — so the business runs on documentation and ownership, not memory.</p>
         </div>
       </div>
     </section>
 
-<section class="py-16 sm:py-20 lg:py-24">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <!-- ===== Operating spine ===== -->
+    <section class="bg-cream">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 py-20 lg:px-8 lg:py-24">
         <div class="mx-auto max-w-2xl text-center" data-reveal>
-          <p class="eyebrow">Values</p>
-          <h2 class="mt-3 text-3xl font-bold font-display text-navy sm:text-4xl">What We Stand For</h2>
-          
+          <p class="eyebrow">What we optimize for</p>
+          <h2 class="mt-3 text-3xl font-bold text-navy font-display sm:text-4xl">Less Founder Dependency. More Operating Leverage.</h2>
         </div>
-        <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-reveal-stagger="120">
-          <div class="card-lift rounded-2xl border border-slate-100 bg-white p-7 shadow-sm">
-            <span class="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand/10 text-brand"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8l-9-5-9 5v8l9 5 9-5V8z"/><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 5 9-5M12 13v8"/></svg></span>
-            <h3 class="mt-5 text-lg font-bold text-navy font-display">Finance &amp; Accounting Talent</h3>
-            <p class="mt-2 text-sm leading-6 text-slate-500">Accountants, accounting managers, controllers, AR/AP specialists, and finance professionals who work your hours, speak fluent English, and integrate into your existing operation.</p>
+        <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-1" data-reveal-stagger="100">
+                    <div class="rounded-2xl bg-white p-7 shadow-sm ring-1 ring-slate-100 card-lift">
+            <h3 class="text-lg font-bold text-navy font-display">People</h3>
+            <p class="mt-2 text-sm leading-6">Fluent-English accounting and administrative professionals aligned with your working hours — embedded, not offshore.</p>
           </div>
-          <div class="card-lift rounded-2xl border border-slate-100 bg-white p-7 shadow-sm">
-            <span class="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand/10 text-brand"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></span>
-            <h3 class="mt-5 text-lg font-bold text-navy font-display">Virtual Assistants</h3>
-            <p class="mt-2 text-sm leading-6 text-slate-500">Administrative professionals who take recurring execution off your plate — scheduling, reporting, follow-up, CRM management, documentation, and operational support.</p>
+          <div class="rounded-2xl bg-white p-7 shadow-sm ring-1 ring-slate-100 card-lift">
+            <h3 class="text-lg font-bold text-navy font-display">Playbooks</h3>
+            <p class="mt-2 text-sm leading-6">Recurring work documented into SOPs and playbooks the business owns — trained, reviewed, improved.</p>
           </div>
-          <div class="card-lift rounded-2xl border border-slate-100 bg-white p-7 shadow-sm">
-            <span class="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand/10 text-brand"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.4 15a1.7 1.7 0 00.3 1.9l.1.1a2 2 0 11-2.9 2.9l-.1-.1a1.7 1.7 0 00-1.9-.3 1.7 1.7 0 00-1 1.5V21a2 2 0 11-4 0v-.2a1.7 1.7 0 00-1-1.5 1.7 1.7 0 00-1.9.3l-.1.1a2 2 0 11-2.9-2.9l.1-.1a1.7 1.7 0 00.3-1.9 1.7 1.7 0 00-1.5-1H3a2 2 0 110-4h.2a1.7 1.7 0 001.5-1 1.7 1.7 0 00-.3-1.9l-.1-.1a2 2 0 112.9-2.9l.1.1a1.7 1.7 0 001.9.3h0a1.7 1.7 0 001-1.5V3a2 2 0 114 0v.2a1.7 1.7 0 001 1.5h0a1.7 1.7 0 001.9-.3l.1-.1a2 2 0 112.9 2.9l-.1.1a1.7 1.7 0 00-.3 1.9v0a1.7 1.7 0 001.5 1h.2a2 2 0 110 4h-.2a1.7 1.7 0 00-1.5 1z"/></svg></span>
-            <h3 class="mt-5 text-lg font-bold text-navy font-display">Systems &amp; Playbooks</h3>
-            <p class="mt-2 text-sm leading-6 text-slate-500">We document the recurring processes behind the work so your business can operate consistently without depending on one person.</p>
+          <div class="rounded-2xl bg-white p-7 shadow-sm ring-1 ring-slate-100 card-lift">
+            <h3 class="text-lg font-bold text-navy font-display">Automation</h3>
+            <p class="mt-2 text-sm leading-6">Automate after you understand the work — remove the steps nobody should be repeating.</p>
           </div>
-          <div class="card-lift rounded-2xl border border-slate-100 bg-white p-7 shadow-sm">
-            <span class="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand/10 text-brand"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19l7-7a2.1 2.1 0 000-3l-2-2a2.1 2.1 0 00-3 0l-7 7v5h5z"/><path stroke-linecap="round" d="M18 13l-4-4"/></svg></span>
-            <h3 class="mt-5 text-lg font-bold text-navy font-display">General Accountants</h3>
-            <p class="mt-2 text-sm leading-6 text-slate-500">Day-to-day accounting execution, reconciliations, transaction management, month-end support, and recurring accounting tasks.</p>
-          </div>
-          <div class="card-lift rounded-2xl border border-slate-100 bg-white p-7 shadow-sm">
-            <span class="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand/10 text-brand"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3l8 4v5c0 5-3.4 8.4-8 9-4.6-.6-8-4-8-9V7l8-4z"/></svg></span>
-            <h3 class="mt-5 text-lg font-bold text-navy font-display">AR/AP Specialists</h3>
-            <p class="mt-2 text-sm leading-6 text-slate-500">Receivables, payables, invoice processing, collections follow-up, vendor coordination, and supporting documentation.</p>
-          </div>
-          <div class="card-lift rounded-2xl border border-slate-100 bg-white p-7 shadow-sm">
-            <span class="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand/10 text-brand"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 7v5l3 3"/></svg></span>
-            <h3 class="mt-5 text-lg font-bold text-navy font-display">Controllers</h3>
-            <p class="mt-2 text-sm leading-6 text-slate-500">Financial controls, reporting, close management, team oversight, and higher-level accounting operations.</p>
+          <div class="rounded-2xl bg-white p-7 shadow-sm ring-1 ring-slate-100 card-lift">
+            <h3 class="text-lg font-bold text-navy font-display">Leverage</h3>
+            <p class="mt-2 text-sm leading-6">Less founder follow-up, less manual repetition, faster onboarding, clearer ownership.</p>
           </div>
         </div>
       </div>
     </section>
 
-<section class="py-16 sm:py-20 lg:py-24">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-2xl text-center" data-reveal>
-          <p class="eyebrow">Client outcomes</p>
-          <h2 class="mt-3 text-3xl font-bold font-display text-navy sm:text-4xl">What Clients Say</h2>
-          
+    <!-- ===== Foundation / Partners teasers ===== -->
+    <section class="bg-white">
+      <div class="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 py-20 lg:grid-cols-2 lg:px-8 lg:py-24" data-reveal-stagger="150">
+        <div class="flex flex-col overflow-hidden rounded-2xl bg-navy p-10 card-lift">
+          <p class="eyebrow">Foundation</p>
+          <h3 class="mt-3 text-2xl font-bold text-white font-display">Opportunity shouldn't depend on geography.</h3>
+          <p class="mt-4 flex-1 leading-7 text-slate-300">The Printifix Foundation trains Latin American professionals for sustainable remote careers — business English, modern tools and playbook discipline — then connects the best graduates to real roles.</p>
+          <a href="printifix-foundation.html" class="btn-primary mt-8 w-fit">See the Foundation</a>
         </div>
-        <div class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3" data-reveal-stagger="120">
-          <figure class="card-lift flex flex-col rounded-2xl border border-slate-100 bg-white p-7 shadow-sm">
-            <div class="flex gap-0.5 text-brand"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg></div>
-            <blockquote class="mt-4 flex-1 text-[15px] leading-7 text-slate-600">“ARC placed an accounting manager inside our operation in days, not months. The documented close process alone was worth it.”</blockquote>
-            <figcaption class="mt-5 border-t border-slate-100 pt-4">
-              <p class="text-sm font-bold text-navy">Operations Lead</p>
-              <p class="text-xs text-slate-400">Professional services firm</p>
-            </figcaption>
-          </figure>
-          <figure class="card-lift flex flex-col rounded-2xl border border-slate-100 bg-white p-7 shadow-sm">
-            <div class="flex gap-0.5 text-brand"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg></div>
-            <blockquote class="mt-4 flex-1 text-[15px] leading-7 text-slate-600">“Our VA owns the recurring admin work end to end. Follow-up, reporting, CRM — it just happens now.”</blockquote>
-            <figcaption class="mt-5 border-t border-slate-100 pt-4">
-              <p class="text-sm font-bold text-navy">Fractional CFO</p>
-              <p class="text-xs text-slate-400">Distribution company</p>
-            </figcaption>
-          </figure>
-          <figure class="card-lift flex flex-col rounded-2xl border border-slate-100 bg-white p-7 shadow-sm">
-            <div class="flex gap-0.5 text-brand"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg></div>
-            <blockquote class="mt-4 flex-1 text-[15px] leading-7 text-slate-600">“They didn't just fill a seat. They documented the role so the next person could run it without us.”</blockquote>
-            <figcaption class="mt-5 border-t border-slate-100 pt-4">
-              <p class="text-sm font-bold text-navy">Founder</p>
-              <p class="text-xs text-slate-400">Partner firm</p>
-            </figcaption>
-          </figure>
+        <div class="flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-slate-50 p-10 card-lift">
+          <p class="eyebrow">Partners</p>
+          <h3 class="mt-3 text-2xl font-bold text-navy font-display">You keep the relationship. We help build the team.</h3>
+          <p class="mt-4 flex-1 leading-7">Firms, agencies and platforms partner with Printifix to give their clients trained people plus documented systems — under their own brand, powered by ours.</p>
+          <a href="printifix-partners.html" class="btn-primary mt-8 w-fit">Become a Partner</a>
         </div>
       </div>
     </section>
-
-    <section class="relative overflow-hidden bg-navy py-16 sm:py-20">
-      <div class="pointer-events-none absolute -top-40 right-0 h-96 w-96 rounded-full bg-brand/25 blur-3xl motion-safe:animate-pulse-slow"></div>
-      <div class="relative mx-auto max-w-4xl px-4 text-center sm:px-6">
-        <h2 class="text-3xl font-bold text-white font-display sm:text-4xl" data-reveal>The People You Need. The Systems Behind Them.</h2>
-        <p class="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-300" data-reveal data-reveal-delay="100">Tell us the role, responsibilities, and timeline — we'll take it from there.</p>
-        <div class="mt-8 flex flex-wrap justify-center gap-4" data-reveal data-reveal-delay="200">
-          <a href="printifix-contact-us.html" class="btn-primary">Talk With ARC <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
-          
+    <!-- ===== CTA ===== -->
+    <section class="bg-navy">
+      <div class="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-4 sm:px-6 py-14 md:flex-row md:items-center lg:px-8">
+        <div data-reveal="left">
+          <h2 class="text-3xl font-bold text-white font-display sm:text-4xl">Show Us the Work That Should Run Better.</h2>
+          <p class="mt-3 max-w-xl leading-7 text-slate-300">We will help determine whether the answer is talent, process, automation, or a combination.</p>
         </div>
+        <a href="printifix-partners.html" class="btn-primary shrink-0" data-reveal="right" data-reveal-delay="150">Talk to ARC</a>
       </div>
     </section>
-
     <!-- ===== Footer ===== -->
     <footer class="bg-navy text-slate-300">
-      <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 py-16 md:grid-cols-2 lg:grid-cols-4 lg:px-8" data-reveal-stagger="120">
+      <div class="mx-auto grid max-w-7xl gap-10 border-t border-white/10 px-4 sm:px-6 py-16 md:grid-cols-2 lg:grid-cols-4 lg:px-8" data-reveal-stagger="120">
         <div>
-          <a href="printifix-home.html" class="flex items-center gap-2.5"><img src="Img/logo-green.png" alt="Ash River Collective" class="h-10 w-10 shrink-0" />
-            <span class="text-lg font-extrabold tracking-tight text-white font-display">ASH RIVER</span>
+          <a href="printifix-home.html" class="flex items-center gap-2.5">
+            <span class="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent font-display text-sm font-bold text-navy sm:h-10 sm:w-10">P</span>
+            <span class="leading-none">
+              <span class="block text-[15px] font-extrabold tracking-wide text-white font-display">PRINTIFIX</span>
+              <span class="block text-[10px] font-bold tracking-[0.3em] text-brand">TALENT · SYSTEMS · PLAYBOOKS</span>
+            </span>
           </a>
-          <p class="mt-5 text-sm leading-6 text-slate-400">Elite Talent. Bulletproof Systems. Accounting talent, virtual assistants, and documented operating systems built around the work your business needs to get done.</p>
+          <p class="mt-5 text-sm leading-6 text-slate-400">Trained Latin American professionals — fluent English, your time zone — plus the documented systems that make their work repeatable.</p>
         </div>
         <div>
-          <h4 class="text-sm font-bold uppercase tracking-wider text-white">Company</h4>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-white">Site</h3>
           <ul class="mt-5 space-y-3 text-sm">
-              <li><a href="printifix-home.html" class="transition hover:text-brand">Home</a></li>
-              <li><a href="printifix-about.html" class="transition hover:text-brand">About</a></li>
-              <li><a href="printifix-industries.html" class="transition hover:text-brand">Who We Serve</a></li>
+            <li><a href="printifix-home.html" class="transition hover:text-white">Home</a></li>
+            <li><a href="printifix-about.html" class="transition hover:text-white">About</a></li>
+            <li><a href="printifix-foundation.html" class="transition hover:text-white">Foundation</a></li>
+            <li><a href="printifix-partners.html" class="transition hover:text-white">Partners</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="text-sm font-bold uppercase tracking-wider text-white">Services</h4>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-white">What we do</h3>
           <ul class="mt-5 space-y-3 text-sm">
-              <li><a href="printifix-testimonials.html" class="transition hover:text-brand">Results</a></li>
-              <li><a href="printifix-blog.html" class="transition hover:text-brand">Insights</a></li>
-              <li><a href="printifix-contact-us.html" class="transition hover:text-brand">Contact</a></li>
+            <li><a href="printifix-services.html" class="transition hover:text-white">Services</a></li>
+            <li><a href="printifix-virtual-services.html" class="transition hover:text-white">Virtual Services</a></li>
+            <li><a href="printifix-playbooks.html" class="transition hover:text-white">Playbooks</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="text-sm font-bold uppercase tracking-wider text-white">Contact</h4>
-          <ul class="mt-5 space-y-3 text-sm text-slate-400 [&_svg]:mt-0.5 [&_svg]:h-5 [&_svg]:w-5 [&_svg]:shrink-0 [&_svg]:text-brand">
-            <li class="flex gap-3"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1116 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Remote-first · U.S. time zones</span></li>
-            <li class="flex gap-3"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path stroke-linecap="round" stroke-linejoin="round" d="M3 7l9 6 9-6"/></svg><a href="mailto:hello@ashrivercollective.com" class="transition hover:text-brand">hello@ashrivercollective.com</a></li>
-            <li class="flex gap-3"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 2 .7 2.9a2 2 0 01-.5 2.1L8 10a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.5c.9.3 1.9.6 2.9.7a2 2 0 011.7 2z"/></svg><span>+1 (555) 013-4224</span></li>
-          </ul>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-white">Get started</h3>
+          <p class="mt-5 text-sm leading-6 text-slate-400">Qualified professionals in as little as 7 days. Documented playbooks within 90.</p>
+          <a href="printifix-partners.html" class="btn-primary mt-5">Start a Conversation</a>
         </div>
       </div>
       <div class="border-t border-white/10">
-        <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 sm:px-6 py-6 text-xs text-slate-500 sm:flex-row lg:px-8">
-          <p>© 2026 Ash River Collective. All rights reserved.</p>
-          <p>Starter template · Built with ARC Starter Templates</p>
+        <div class="mx-auto flex max-w-7xl flex-col gap-2 px-4 sm:px-6 py-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+          <p>© 2026 Printifix. All rights reserved.</p>
+          <p>People. Process. Playbooks.</p>
         </div>
       </div>
     </footer>
-      <div id="arc-st-chat"></div>
-</body>
+  </body>
 </html>

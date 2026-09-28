@@ -1,15 +1,12 @@
-# Ash River Collective --- Website Copy
+# Ash River Collective — Website Copy
 
 ## Site Architecture
 
-**Navigation:** Home \| Services \| About \| Partners \| Foundation \|
-Contact
+**Navigation:** Home \| Services \| Virtual Services \| Playbooks \|
+About \| Foundation \| Partners
 
-**Services Dropdown:** Finance & Accounting Talent \| Virtual Assistants
-\| Systems & Playbooks
-
-**Core Positioning:** Ash River Collective puts the right people in the
-right seats --- then builds the systems that make their work repeatable.
+**Core Positioning:** Elite Talent. Bulletproof Systems. The right
+people. Clear ownership. Repeatable execution.
 
 ------------------------------------------------------------------------
 
@@ -20,68 +17,153 @@ right seats --- then builds the systems that make their work repeatable.
 ### Elite Talent. Bulletproof Systems.
 
 Build the team your business needs without adding unnecessary overhead.
-
 Ash River Collective places trained accounting and administrative
-professionals inside your business --- then helps document the processes
-they run so execution doesn't depend on one person.
+professionals inside your business — then helps document the
+processes they run so execution doesn't depend on one person.
 
 **Primary CTA:** Build Your Team\
 **Secondary CTA:** Explore Our Services
 
-## The People You Need. The Systems Behind Them.
+-   Fluent English
+-   Your time zone
+-   Ready in 7 days
+
+## Two Primary Solutions
+
+### What we do
+
+### The People You Need. The Systems Behind Them.
 
 ### Finance & Accounting Talent
 
-Accountants, accounting managers, controllers, AR/AP specialists, and
-finance professionals who work your hours, speak fluent English, and
-integrate into your existing operation.
+From transactional support through controller-level capacity — general
+accounting, AR/AP, reconciliations, month-end close and reporting.
 
-**CTA:** Explore Finance Talent
+**CTA:** Find Accounting Talent
 
 ### Virtual Assistants
 
-Administrative professionals who take recurring execution off your plate
---- scheduling, reporting, follow-up, CRM management, documentation, and
-operational support.
+Executive support, operations, client coordination and back-office
+execution — recurring work owned end to end, with a playbook behind
+it.
 
-**CTA:** Explore Virtual Assistants
+**CTA:** Find Your VA
 
-### Systems & Playbooks
+Systems & Playbooks — the mechanism that makes both repeatable →
 
-We document the recurring processes behind the work so your business can
-operate consistently without depending on one person.
+## Speed Banner
 
-**CTA:** See How We Build Systems
+### Ready in Days. Not Months.
 
-## Ready in Days. Not Months.
+As little as 7 days to staff a clear role. Ash River Collective
+maintains a bench of trained professionals so adding capacity never
+takes a full recruiting cycle.
 
-You shouldn't have to spend months recruiting just to add capacity.
+**CTA:** Build Your Team
 
-ARC maintains a pipeline of trained professionals so businesses can move
-faster when they need accounting or administrative support.
+## System Differentiator
 
-Qualified professionals may be available within seven days, depending on
-the role and requirements.
+### The difference
 
-**CTA:** Find Your Next Hire
+### People Are Only Half the Solution.
 
-## People Are Only Half the Solution.
+A person can absorb work. A documented system keeps that work from
+becoming a new dependency. Within the first 90 days, we document the
+recurring workflows behind the role — reconciliations, AR, AP,
+reporting, approvals and other critical operations.
 
-Hiring another person doesn't fix an undocumented operation.
+You get a person who can execute and a process your company can repeat
+— hosted in your own playbooks intranet.
 
-Within the first 90 days, we help document the recurring workflows
-behind the role --- reconciliations, AR, AP, reporting, administrative
-processes, approvals, and other critical operations.
+-   Person
+-   Responsibilities
+-   Workflow
+-   Playbook
+-   Repeatable Execution
 
-The result is more than additional capacity. You get a person who can
-execute and a process your company can repeat.
+## Operating Model
 
-## Talent + Process + Accountability
+### The ARC operating model
 
-**Talent:** The right professional in the right seat.\
-**Process:** Critical workflows documented and repeatable.\
-**Accountability:** Clear responsibilities, deliverables, and operating
-expectations.
+### Talent + Process + Accountability.
+
+### Talent
+
+The right person in the seat — fluent English, your working hours,
+inside your existing team.
+
+### Process
+
+Every recurring task documented into a clear, repeatable playbook.
+
+### Accountability
+
+Clear ownership. The work is managed, measured and improved — not just
+done.
+
+## Latin American Talent
+
+### Latin American talent
+
+### Your Time Zone. Fluent English. No Compromise.
+
+Our LATAM professionals are selected for fluent English, compatible U.S.
+working hours, and the ability to operate inside your existing team.
+Real collaboration — not task dumping across time zones.
+
+-   Same-day overlap — full U.S. time-zone coverage, not overnight
+    handoffs
+-   Fluent English — written and spoken, client-facing ready
+-   Trained before day one — the Foundation prepares talent on tools,
+    English and playbook discipline
+
+## Automation
+
+### Automation
+
+### Automation That Protects Time and Margin.
+
+Once the process is clear, we identify the manual steps that software
+should be doing instead of people. Less repetition, fewer errors, more
+output from the same capacity.
+
+### Identify
+
+Every playbook review surfaces tasks that repeat on a schedule — the
+best candidates for automation.
+
+### Implement
+
+We connect the tools you already run — forms, spreadsheets, CRM,
+email — so data moves without retyping.
+
+### Improve
+
+Documented processes are measurable processes. We refine the workflow,
+then the automation, every quarter.
+
+## Proof
+
+-   7 days
+-   To staff a clear role
+-   90 days
+-   Playbook & SOP window
+-   LATAM
+-   U.S. time-zone aligned
+-   Fluent
+-   English — direct collaboration
+
+## Partners Strip
+
+### Partners
+
+### Built to Support Your Advisors Too.
+
+Fractional CFOs, accounting firms, consultants and operating partners
+use Ash River Collective to give clients execution capacity — you keep
+the relationship, we help build the team.
+
+**CTA:** Become an ARC Partner
 
 ## Final CTA
 
@@ -89,506 +171,543 @@ expectations.
 
 Get the people and operating structure your business needs to execute.
 
-**CTA:** Talk With ARC
-
-------------------------------------------------------------------------
-
-# 2. SERVICES
-
-## Hero
-
-### Build Capacity Without Building More Chaos.
-
-ARC combines trained talent, documented processes, and operational
-systems to help growing companies execute consistently.
-
-**CTA:** Tell Us What You Need
-
-## Finance & Accounting Talent
-
-Add accounting professionals who work inside your existing systems and
-become part of your day-to-day operation.
-
-Roles can include General Accountants, Senior Accountants, AR/AP
-Specialists, Accounting Managers, Controllers, and Fractional
-Controllers.
-
-**CTA:** Explore Finance Talent
-
-## Virtual Assistants
-
-Delegate recurring administrative work to trained remote professionals
-who can operate inside your tools, processes, and schedule.
-
-Support can include calendar management, inbox management, CRM
-administration, reporting, client follow-up, research, documentation,
-and operations support.
-
-**CTA:** Explore Virtual Assistants
-
-## Systems & Playbooks
-
-People execute better when the process is clear.
-
-ARC helps document the workflows behind critical roles so knowledge
-doesn't live inside one person's head.
-
-Support can include SOP development, finance playbooks, workflow
-documentation, role documentation, process improvement, automation
-identification, and recurring task documentation.
-
-## How ARC Works
-
-### Diagnose
-
-We identify the work, bottlenecks, responsibilities, and capacity gaps
-affecting execution.
-
-### Install
-
-We place the right talent and establish the processes required for the
-role to operate effectively.
-
-### Execute
-
-Your team runs the work while processes, responsibilities, and recurring
-workflows become increasingly documented and repeatable.
-
-## Final CTA
-
-### You Don't Need More Complexity. You Need Capacity.
-
-Tell us what work needs to get done.
-
 **CTA:** Build Your Team
 
 ------------------------------------------------------------------------
 
-# 3. FINANCE & ACCOUNTING TALENT
-
-## Hero
-
-### Accounting Talent That Works Like Part of Your Team.
-
-Add trained accounting professionals who work your hours, speak fluent
-English, and operate inside your existing systems.
-
-**CTA:** Find Accounting Talent
-
-## Stop Building Your Finance Team One Expensive Hire at a Time.
-
-Not every finance problem requires another high-cost domestic hire.
-Sometimes the real problem is capacity.
-
-ARC helps companies add accounting professionals at the level they
-actually need --- from transaction execution to accounting management
-and controller oversight.
-
-## Roles We Can Help Fill
-
-### General Accountant
-
-Day-to-day accounting execution, reconciliations, transaction
-management, month-end support, and recurring accounting tasks.
-
-### AR/AP Specialist
-
-Receivables, payables, invoice processing, collections follow-up, vendor
-coordination, and supporting documentation.
-
-### Senior Accountant
-
-Complex accounting work, reconciliations, close support, reporting
-preparation, and accounting process execution.
-
-### Accounting Manager
-
-Close management, reporting oversight, workflow coordination, review,
-and management of recurring accounting responsibilities.
-
-### Controller
-
-Financial controls, reporting, close management, team oversight, and
-higher-level accounting operations.
-
-### Fractional Controller
-
-Controller-level oversight for companies that need stronger financial
-management without immediately adding a full-time domestic controller.
-
-## More Than a Resume.
-
-We don't start with a list of candidates. We start with the work.
-
-What needs to happen every day? What needs to happen every week? What
-needs to happen every month? Where is the current team overloaded?
-
-Then we identify the role and level of talent required.
-
-## Not Just Staffing.
-
-Putting someone in the seat is only the beginning.
-
-During the first 90 days, recurring accounting workflows can be
-documented into playbooks and SOPs --- including reconciliations, AR,
-AP, reporting, close procedures, and other critical processes.
-
-That reduces dependency on individual employees and makes the finance
-operation easier to manage.
-
-## Need More Capacity?
-
-Depending on the role and requirements, qualified talent may be
-available within seven days.
-
-## Final CTA
-
-### Tell Us the Role. We'll Build the Capacity.
-
-**CTA:** Find Your Next Finance Hire
-
-------------------------------------------------------------------------
-
-# 4. VIRTUAL ASSISTANTS
-
-## Hero
-
-### Get the Work Off Your Plate.
-
-Trained virtual assistants who handle the recurring administrative work
-consuming your team's time.
-
-**CTA:** Find Your VA
-
-## Your Time Shouldn't Be Spent Managing Tasks Someone Else Can Own.
-
-Inbox management. Scheduling. CRM updates. Client follow-up. Reporting.
-Research. Documentation. Coordination.
-
-These tasks still matter. They just shouldn't require the founder or
-highest-paid person on the team to complete them.
-
-## Delegate Execution. Keep Control.
-
-ARC matches businesses with remote professionals who can operate inside
-existing tools and workflows.
-
-The objective isn't simply to outsource tasks. It's to establish clear
-ownership for recurring work.
-
-## Executive Support
-
-Calendar management, inbox organization, meeting coordination,
-follow-up, research, document preparation, and administrative support.
-
-## Sales Support
-
-CRM updates, lead administration, pipeline reporting, follow-up
-coordination, meeting scheduling, data entry, and sales documentation.
-
-## Operations Support
-
-Process documentation, internal coordination, reporting, research,
-project administration, data management, and recurring task execution.
-
-## Client Support
-
-Client communication, scheduling, follow-up, documentation, status
-updates, and administrative coordination.
-
-## Then We Document the Role.
-
-As recurring responsibilities become clear, ARC can help convert them
-into documented workflows and playbooks.
-
-That makes the position easier to manage, measure, transfer, and scale.
-
-## Final CTA
-
-### Buy Back Your Time.
-
-Put recurring execution in the hands of someone who can own it.
-
-**CTA:** Find Your Virtual Assistant
-
-------------------------------------------------------------------------
-
-# 5. ABOUT
+# 2. ABOUT
 
 ## Hero
 
 ### We Build Teams That Can Actually Execute.
 
-Ash River Collective helps companies add trained financial and
-administrative talent without adding unnecessary overhead or operational
-complexity.
+Ash River Collective helps companies run better by combining embedded
+talent, documented processes, and practical automation.
 
-**CTA:** Talk With ARC
+**CTA:** See How We Work
 
-## Hiring Someone Doesn't Fix a Broken System.
+## Story
 
-Businesses usually don't struggle because nobody is working.
+### The belief
 
-They struggle because responsibilities are unclear, recurring processes
-live inside people's heads, and founders or senior employees become the
-final checkpoint for everything.
+### The Problem Is Usually Bigger Than the Hire.
 
-ARC approaches staffing differently.
+A company can hire a strong accountant and still have a slow close. It
+can hire an assistant and still bury work in Slack. It can buy software
+and still run on spreadsheets. The missing layer is the operating system
+around the people.
 
-We help put the right person in the seat --- and build the operating
-structure around them.
+Ash River Collective brings those pieces together — people, process,
+and practical automation — so the business runs on documentation and
+ownership, not memory.
 
-## Talent + Process + Accountability
+## Spine
 
-### Talent
+### What we optimize for
 
-Put capable professionals into roles where the business needs additional
-execution capacity.
+### Less Founder Dependency. More Operating Leverage.
 
-### Process
+### People
 
-Document recurring workflows so the business isn't dependent on tribal
-knowledge.
+Fluent-English accounting and administrative professionals aligned with
+your working hours — embedded, not offshore.
 
-### Accountability
+### Playbooks
 
-Create clearer ownership around who does what, when it happens, and what
-completion looks like.
+Recurring work documented into SOPs and playbooks the business owns —
+trained, reviewed, improved.
 
-## Built Around the Work
+### Automation
 
-We don't believe every business needs the same team.
+Automate after you understand the work — remove the steps nobody
+should be repeating.
 
-Some need an accountant. Some need AR/AP support. Some need a
-controller. Some need an executive assistant. Others need several people
-working together.
+### Leverage
 
-The structure should follow the work --- not a predefined staffing
-package.
+Less founder follow-up, less manual repetition, faster onboarding,
+clearer ownership.
 
-## The ARC Standard
+## Foundation Teaser
 
-We prioritize strong English communication, ability to work within U.S.
-time zones, professional reliability, role-specific capability, comfort
-with remote tools and systems, and ability to follow and improve
-documented processes.
+### Foundation
 
-## Leadership
+### Opportunity shouldn't depend on geography.
 
-### Matt Appel --- Founder
+The Ash River Collective Foundation trains Latin American professionals
+for sustainable remote careers — business English, modern tools and
+playbook discipline — then connects the best graduates to real roles.
 
-Ash River Collective was built around a straightforward operating
-principle: companies perform better when the right people have clear
-ownership of well-documented processes.
+**CTA:** See the Foundation
 
-ARC combines talent placement with operational discipline to help
-companies add capacity without adding unnecessary complexity.
+## Partners Teaser
+
+### Partners
+
+### You keep the relationship. We help build the team.
+
+Firms, agencies and platforms partner with Ash River Collective to give
+their clients trained people plus documented systems — under their own
+brand, powered by ours.
+
+**CTA:** Become a Partner
 
 ## Final CTA
 
-### Build a Team That Doesn't Depend on You.
+### Show Us the Work That Should Run Better.
 
-**CTA:** Start the Conversation
+We will help determine whether the answer is talent, process,
+automation, or a combination.
+
+**CTA:** Talk to ARC
 
 ------------------------------------------------------------------------
 
-# 6. PARTNERS
+# 3. SERVICES
 
 ## Hero
 
-### Give Your Clients More Execution Capacity.
+### Install the Back Office You Actually Need.
 
-Partner with Ash River Collective to provide trained accounting and
-administrative talent without building your own recruiting
-infrastructure.
+Ash River Collective builds support around the work — not around a
+fixed package. Add accounting capacity, administrative execution,
+documented processes, automation, or a combination.
 
-**CTA:** Become an ARC Partner
+**CTA:** Build Your Support Plan
 
-## You Keep the Relationship. We Help Build the Team.
+## Service 01
 
-Your clients already trust you.
+### Service 01
 
-When they need accounting capacity, administrative support, or
-operational execution, ARC can provide the people and systems behind it.
+### Finance & Accounting Talent
 
-## Who We Partner With
+Put the right level of finance talent in the seat — scale the team
+based on the work instead of carrying unnecessary overhead.
 
-### Fractional CFOs
+General Accountant · Senior Accountant · AR/AP Specialist · Accounting
+Manager · Controller · Fractional Controller
 
-Expand the execution layer beneath your advisory work with accountants,
-accounting managers, AR/AP support, and controller-level talent.
+-   From transactional support through controller-level capacity
+-   Fluent English, U.S. working hours, inside your existing systems
+-   Ready in as little as 7 days when the fit is clear
 
-### Accounting Firms
+## Service 02
 
-Add delivery capacity without immediately expanding domestic payroll or
-building another recruiting function.
+### Service 02
 
-### Consultants & Advisors
+### Virtual Assistants
 
-Give clients a practical path from recommendation to execution.
+Recurring administrative and operational work owned end to end — with
+a documented process behind every seat.
 
-### Agencies & Service Firms
+Executive Support · Sales Support · Operations Support · Client Support
 
-Add administrative and back-office support to increase internal
-capacity.
+-   Recurring tasks become documented workflows
+-   Manage, measure, transfer and scale the role
+-   Ready to start in as little as 7 days
 
-### Portfolio & Operating Partners
+## Service 03
 
-Create access to finance and administrative talent across multiple
-businesses or portfolio companies.
+### Service 03
 
-## Referral Partners
+### Systems & Playbooks
 
-Know a business that needs accounting or administrative capacity?
+Make the process transferable. Recurring work converted into clear SOPs
+and playbooks — hosted in your own intranet.
 
-Introduce them to ARC. We handle the staffing conversation, role
-definition, and placement process.
+SOP development · finance playbooks · process mapping · automation
+identification
 
-## Strategic Staffing Partners
+-   First 90 days: document the workflows behind the role
+-   The business keeps the operating knowledge — not trapped in one
+    employee's head
+-   Automations flagged where software beats manual work
 
-For firms with recurring client demand, ARC can become an extension of
-your delivery model.
+## Method
 
-Instead of rebuilding recruiting capacity every time a client needs
-help, create a repeatable talent channel.
+### How we work
+
+### Diagnose. Install. Document. Improve.
+
+The same model every time: map the work, install the capacity, document
+the process, then keep improving the system around it.
+
+### 01 · Diagnose
+
+Diagnose the constraint — map the role, the recurring tasks and the
+systems involved.
+
+### 02 · Install
+
+Install the right capacity — the trained professional who runs the
+work inside your team.
+
+### 03 · Document
+
+Document the recurring process into playbooks inside your own intranet.
+
+### 04 · Improve
+
+Improve the system around the work — review, refine and automate
+quarter after quarter.
 
 ## Final CTA
 
-### Let's Build Together.
+### What Is the Most Expensive Work Still Being Done Manually?
 
-Give your clients access to the execution capacity they need.
+Bring us the role, backlog, or broken workflow. We will help define the
+right operating response.
 
-**CTA:** Become an ARC Partner
+**CTA:** Talk to ARC
 
 ------------------------------------------------------------------------
 
-# 7. ASH RIVER FOUNDATION
+# 4. VIRTUAL SERVICES
+
+## Hero
+
+### Get the Work Off Your Plate.
+
+Ash River Collective virtual professionals take administrative and
+operational work off leadership's plate — with documented workflows
+that make delegation easier to manage and easier to scale.
+
+**CTA:** Build a Virtual Support Role
+
+## Scope
+
+### What they take off your plate
+
+### If It Repeats Every Week, It Should Not Live With the Founder.
+
+### Executive Support
+
+Calendar, inbox, meetings and follow-up — run in your hours, not
+overnight.
+
+### Sales Support
+
+CRM upkeep, pipeline follow-up and outreach coordination — nothing
+falls through.
+
+### Operations Support
+
+Recurring reports, task tracking, data management and process
+documentation.
+
+### Client Support
+
+Scheduling, status updates and routine client communication, handled.
+
+### Reporting & Follow-up
+
+Recurring reports built, checked and delivered on schedule, every time.
+
+### Documentation
+
+Every recurring responsibility converted into a playbook as it settles.
+
+## Why It Scales
+
+### Why it scales
+
+### Every Repeating Task Should Become Easier to Hand Off.
+
+An undocumented assistant is a single point of failure. During the first
+90 days, recurring responsibilities are documented into practical SOPs
+and playbooks hosted in your own playbooks intranet — clearer
+training, better continuity, less dependence on verbal instructions.
+
+-   Tasks
+-   Role
+-   Documented Process
+-   Accountability
+-   Coverage when someone is out — the process survives the person
+-   Onboard the next hire in days, not months
+-   Quality stays consistent as you add seats
+
+## Strip
+
+### Fluent English
+
+Written and spoken — built for direct collaboration with U.S. teams.
+
+### Your time zone
+
+Compatible U.S. working hours — no overnight handoffs.
+
+### 7 days
+
+Qualified professionals, ready to start.
+
+## Final CTA
+
+### What Keeps Showing Up on Your To-Do List?
+
+If it is recurring, necessary, and pulling you away from higher-value
+work, it may be ready to delegate.
+
+**CTA:** Find My Virtual Professional
+
+------------------------------------------------------------------------
+
+# 5. PLAYBOOKS
+
+## Hero
+
+### Your Processes, Documented — and Actually Used.
+
+Every playbook we write for you lives in your own secure intranet portal
+— searchable, organized by process, and scoped per company. Not a
+folder of forgotten docs.
+
+**CTA:** See It In Person
+
+## Intranet
+
+### The intranet
+
+### One portal for your whole operation.
+
+Your intranet is a branded, per-company workspace where your documented
+processes live next to the tools that run them. Each company, department
+or client gets its own space with its own permissions — employees see
+exactly what they need, nothing they shouldn't.
+
+-   Playbooks / SOP library — every documented process, one place
+-   Per-company permissions — scoped access for staff, clients and
+    partners
+-   Your branding — your logo, your colors, even your domain
+
+## Modules
+
+### Inside the portal
+
+### More than documents — the workspace around them.
+
+### 📚 Playbooks / SOP
+
+Step-by-step processes with a flat library view and a "processes" view
+that groups every playbook in execution order.
+
+### 📁 Projects & Files
+
+Work organized per company with the files attached to the process that
+uses them.
+
+### 🕐 Time Clock & Reports
+
+Hours, sprints and activity reporting tied to the people running your
+playbooks.
+
+### 📨 Requests & Tickets
+
+Access requests, troubleshooting tickets and internal communications —
+routed, logged, answered.
+
+## Organized
+
+### Find it in seconds
+
+### Organized the way your team works.
+
+-   Filter by tag — area, sub-area, role or category
+-   Processes view — see every playbook of a workflow in order, e.g.
+    "Recruiting" = 6 steps end to end
+-   Roles & permissions — the right playbook in front of the right
+    seat
+
+## The 90-Day Build
+
+### The 90-day build
+
+### From tribal knowledge to living playbooks.
+
+### 01 · Capture
+
+We sit with the people doing the work and map every recurring workflow
+— reconciliations, AR, AP, reporting, approvals.
+
+### 02 · Document
+
+Each process becomes a playbook: steps, screenshots, owners and the
+tools involved — written in plain English.
+
+### 03 · Run & improve
+
+Playbooks go live in your intranet. They get used, measured and refined
+— and flagged for automation where software wins.
+
+## Final CTA
+
+### Ready in Days. Not Months.
+
+Tell us the role, the responsibilities and the timeline. Qualified Latin
+American professionals — fluent English, your time zone — may be
+available within seven days.
+
+**CTA:** Build Your Team
+
+------------------------------------------------------------------------
+
+# 6. FOUNDATION
 
 ## Hero
 
 ### Opportunity Shouldn't Depend on Geography.
 
-Ash River Foundation trains, prepares, and connects Venezuelan
-professionals with sustainable remote career opportunities.
+The Ash River Collective Foundation trains and prepares Latin American
+professionals for sustainable remote careers — then connects the best
+graduates to real roles.
 
-**Primary CTA:** Support the Mission\
-**Secondary CTA:** Become an Employer Partner
+**CTA:** Partner With the Foundation
 
-## Talent Exists. Opportunity Doesn't Always Follow.
+## Mission
 
-Venezuela is home to educated accounting, finance, business, and
+### The mission
+
+### Talent is everywhere. Training isn't.
+
+Latin America is home to educated accounting, finance, business and
 administrative professionals with the ability to succeed in remote
-careers.
+careers. What they often lack is the bridge: business English, modern
+tools and the discipline of documented work.
 
-Economic instability and limited local employment opportunities can
-leave skilled professionals underemployed despite their education and
-experience.
+The Foundation builds that bridge — and feeds the same talent bench
+our clients hire from.
 
-Ash River Foundation exists to help close that gap.
+## Model
 
-## Turn Talent Into Economic Opportunity.
+### The model
+
+### Train. Prepare. Connect. Support.
 
 ### Train
 
-Build technical, professional, and remote-work capabilities.
+Business English, modern tools and the discipline of documented work —
+accounting and finance fundamentals included.
 
 ### Prepare
 
-Develop workplace readiness, communication, and professional
-expectations.
+Portfolio-ready skills, remote professionalism and playbook discipline
+for real client work.
 
 ### Connect
 
-Create pathways to employers and remote career opportunities.
+Introductions to real roles — the same talent bench our clients hire
+from.
 
 ### Support
 
-Provide continued professional development and retention support.
+Ongoing mentorship and community as graduates grow into sustainable
+remote careers.
 
-## Who We Serve
+## Pipeline
 
-Programs focus on Venezuelan professionals seeking access to sustainable
-remote careers, with particular emphasis on accounting and finance
-professionals, women professionals, and young professionals.
+### The pipeline
 
-## Skills That Lead to Work.
+### From classroom to client team.
 
-Training can focus on practical capabilities employers need, including
-U.S. accounting practices, QuickBooks, Excel, remote work systems,
-professional English communication, workplace expectations,
-administrative systems, and career readiness.
+Top graduates join the Ash River Collective talent bench — the same
+pool our clients hire from. When you work with us, you're working with
+people the Foundation trained, measured and vouched for.
 
-## From Training to Employment.
+**CTA:** See Our Services
 
-Training alone isn't the outcome.
+## Stay in the Loop
 
-Employment is.
+### Stay in the loop.
 
-The Foundation's model is designed to connect professional development
-with real workforce opportunities and support participants as they
-transition into remote careers.
+Follow the Foundation's progress — new cohorts, graduate stories and
+partnership opportunities.
 
-## For Employers
-
-### Access Talent. Create Opportunity.
-
-Companies can participate by providing career opportunities to qualified
-professionals who have completed Foundation training and workforce
-preparation.
-
-**CTA:** Become an Employer Partner
-
-## For Donors & Funding Partners
-
-### Invest in Economic Independence.
-
-Support helps fund workforce training, professional development,
-technology access, career preparation, placement support, and
-participant retention.
-
-The objective is sustainable earning capacity --- not temporary
-assistance.
-
-**CTA:** Support the Foundation
+**CTA:** Subscribe
 
 ## Final CTA
 
-### Help Build Careers That Strengthen Communities.
+### Want to Participate in the Work?
 
-When skilled professionals gain access to sustainable work, the impact
-extends beyond one employee.
+Connect with the Foundation to learn about approved initiatives,
+partnerships, and ways to contribute.
 
-It strengthens families, creates economic stability, and expands
-opportunity without requiring people to leave their communities.
-
-**CTA:** Support Ash River Foundation
+**CTA:** Connect With the Foundation
 
 ------------------------------------------------------------------------
 
-# 8. CONTACT
+# 7. PARTNERS
 
 ## Hero
 
-### Tell Us What You Need.
+### You Keep the Relationship. We Help Build the Team.
 
-Whether you need one person, an accounting team, administrative support,
-or a strategic staffing partner, start here.
+Ash River Collective partners with advisors and service providers who
+want a reliable place to send clients when finance, admin, process, or
+automation needs fall outside their core scope.
 
-**CTA:** Start the Conversation
+**CTA:** Become an ARC Partner
 
-## What Can We Help You Build?
+## Who We Partner With
 
-Tell us where your business needs more capacity.
+### Who we partner with
 
-We'll help determine the role, responsibilities, and next step.
+### Different Expertise. Same Standard for the Client.
 
-## Recommended Form
+### Fractional CFOs
 
-**First Name**\
-**Last Name**\
-**Company**\
-**Work Email**\
-**Phone Number**
+Give clients the accounting capacity behind your recommendations —
+without hiring yourself.
+
+### Accounting firms
+
+Staff client seats with fluent-English professionals working U.S. hours.
+
+### Consultants & agencies
+
+Add execution capacity behind your strategy: admins, VAs and documented
+processes.
+
+### Operating partners
+
+A reliable place to send portfolio companies that need finance, admin or
+process support.
+
+## What Partners Get
+
+### What partners get
+
+### A Better Answer Than "We Don't Do That."
+
+When a client needs accounting capacity, virtual support, process
+documentation, or automation, introduce Ash River Collective instead of
+leaving the need unresolved.
+
+-   A dedicated bench — trained professionals ready in as little as 7
+    days
+-   Documented playbooks — every engagement documented inside a shared
+    intranet
+-   Automation roadmap — recurring work flagged for automation, saving
+    your clients time and money
+-   Trust first — clear scope and direct communication that protect
+    the relationship you built
+
+## Contact Form
+
+### Get in touch
+
+### What Can We Help You Build?
+
+Tell us where your business needs more capacity — a role to staff, a
+process to document, a partnership to explore. We'll help determine the
+next step.
+
+### Need Talent Quickly?
+
+Tell us the role, responsibilities and timeline. Depending on the
+position, qualified candidates may be available within seven days.
+
+### The Right People. Clear Ownership. Repeatable Execution.
+
+Ash River Collective puts the right people in the right seats — then
+builds the systems that make their work repeatable.
 
 ### What do you need help with?
 
@@ -596,35 +715,40 @@ We'll help determine the role, responsibilities, and next step.
 -   Controller
 -   AR/AP Support
 -   Virtual Assistant
+-   Playbooks / SOP Documentation
 -   Build a Team
 -   Partnership
--   Ash River Foundation
+-   Foundation
 -   Other
 
 ### How many people do you need?
 
--   1
--   2--3
--   4--5
+-   2–3
+-   4–5
 -   6+
 
 ### When do you need support?
 
 -   Immediately
 -   Within 30 days
--   Within 60--90 days
+-   Within 60–90 days
 -   Exploring options
 
-**Tell us what you need:** Open text field.
+**Form CTA:** Start The Conversation
 
-**Form CTA:** Start the Conversation
+### Message received.
 
-## Need Talent Quickly?
+Thanks for reaching out. We will review what you need and get back to
+you shortly.
 
-Tell us the role, responsibilities, and timeline.
+## Final CTA
 
-Depending on the position and requirements, qualified candidates may be
-available within seven days.
+### Have a Client With an Operating Gap?
+
+Send the introduction. We will quickly determine whether ARC is the
+right fit.
+
+**CTA:** Become an ARC Partner
 
 ------------------------------------------------------------------------
 
@@ -632,10 +756,8 @@ available within seven days.
 
 ## Header
 
-Home \| Services \| About \| Partners \| Foundation \| Contact
-
-**Services:** Finance & Accounting Talent \| Virtual Assistants \|
-Systems & Playbooks
+Home \| Services \| Virtual Services \| Playbooks \| About \| Foundation
+\| Partners
 
 **Header CTA:** Build Your Team
 
@@ -643,21 +765,32 @@ Systems & Playbooks
 
 ### Ash River Collective
 
-**Elite Talent. Bulletproof Systems.**
+Trained Latin American professionals — fluent English, your time zone
+— plus the documented systems that make their work repeatable.
 
-Accounting talent, virtual assistants, and documented operating systems
-built around the work your business needs to get done.
+### Site
 
-**Services:** Finance & Accounting Talent \| Virtual Assistants \|
-Systems & Playbooks
+-   Home
+-   About
+-   Foundation
+-   Partners
 
-**Company:** About \| Partners \| Foundation \| Contact
+### What we do
 
-### Need More Capacity?
+-   Services
+-   Virtual Services
+-   Playbooks
 
-Tell us what work needs to get done.
+### Get started
 
-**CTA:** Build Your Team
+Qualified professionals in as little as 7 days. Documented playbooks
+within 90.
+
+**CTA:** Start a Conversation
+
+© 2026 Ash River Collective. All rights reserved.
+
+People. Process. Playbooks.
 
 ------------------------------------------------------------------------
 
@@ -665,14 +798,16 @@ Tell us what work needs to get done.
 
 ## Primary Positioning
 
-**Ash River Collective puts the right people in the right seats --- then
-builds the systems that make their work repeatable.**
+**Elite Talent. Bulletproof Systems.**
+
+Ash River Collective puts the right people in the right seats — then
+builds the systems that make their work repeatable.
 
 ## Supporting Positioning
 
-ARC combines trained remote talent with documented processes to help
-companies increase execution capacity without adding unnecessary
-overhead or operational complexity.
+ARC combines trained remote talent with documented processes and
+practical automation to help companies increase execution capacity
+without adding unnecessary overhead or operational complexity.
 
 ## Messaging Priorities
 
@@ -690,7 +825,7 @@ overhead or operational complexity.
     clearly separating its workforce-development purpose from ARC's
     commercial services.
 7.  Keep CTAs simple: Build Your Team, Find Talent, Talk With ARC,
-    Become a Partner, or Support the Foundation.
+    Become a Partner, or Partner With the Foundation.
 
 ## Matt-Style Copy Rules
 
@@ -704,15 +839,3 @@ overhead or operational complexity.
 -   Explain the mechanism.
 -   Focus on execution, ownership, capacity, and measurable business
     outcomes.
-
-------------------------------------------------------------------------
-
-# FINAL POSITIONING
-
-## Elite Talent. Bulletproof Systems.
-
-Ash River Collective helps companies build execution capacity by placing
-trained accounting and administrative professionals into the business
-and documenting the processes behind their work.
-
-**The right people. Clear ownership. Repeatable execution.**

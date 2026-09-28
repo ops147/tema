@@ -137,6 +137,96 @@ final class Arc_ST_Templates {
 	}
 
 	/**
+	 * Karibase design tokens for a template's demo.
+	 *
+	 * The demo kit is the source of truth for site branding. Older demos without
+	 * kit metadata fall back to the CSS variables in their home template, then
+	 * to Karibase's UCLA blue/gold defaults.
+	 *
+	 * @param string $slug Template slug.
+	 * @return array{tokens:string,fonts:array}
+	 */
+	public static function design_system( $slug ) {
+		$demo_id = self::demo_of( $slug );
+		$demo    = $demo_id ? self::demo( $demo_id ) : null;
+		$kit     = $demo && isset( $demo['kit'] ) && is_array( $demo['kit'] ) ? $demo['kit'] : array();
+		$home    = $demo && ! empty( $demo['home'] ) ? (string) $demo['home'] : $slug;
+		$path    = self::file( $home );
+		$html    = is_readable( $path ) ? (string) file_get_contents( $path ) : '';
+
+		$kit_colors = array();
+		foreach ( isset( $kit['colors'] ) ? (array) $kit['colors'] : array() as $item ) {
+			$id_parts = isset( $item['_id'] ) ? explode( '_', (string) $item['_id'] ) : array();
+			$key      = count( $id_parts ) > 1 ? (string) end( $id_parts ) : '';
+			if ( '' !== $key && isset( $item['color'] ) ) {
+				$kit_colors[ $key ] = (string) $item['color'];
+			}
+		}
+
+		$theme_value = static function ( $name ) use ( $html ) {
+			if ( preg_match( '/--' . preg_quote( $name, '/' ) . '\\s*:\\s*(#[0-9a-fA-F]{3,8})\\s*;/', $html, $match ) ) {
+				return $match[1];
+			}
+			return '';
+		};
+		$color = static function ( $value, $fallback ) {
+			return preg_match( '/^#[0-9a-fA-F]{3,8}$/', (string) $value ) ? (string) $value : $fallback;
+			};
+			$font = static function ( $value, $fallback ) {
+				$value = trim( (string) $value );
+				$value = trim( $value, chr( 34 ) . chr( 39 ) );
+				$value = preg_replace( '/[^A-Za-z0-9 -]/', '', $value );
+			return '' !== $value ? $value : $fallback;
+		};
+
+		$colors = array(
+			'brand'      => $color( isset( $kit_colors['brand'] ) ? $kit_colors['brand'] : $theme_value( 'color-brand' ), '#2774AE' ),
+			'dark'       => $color( isset( $kit_colors['dark'] ) ? $kit_colors['dark'] : $theme_value( 'color-brand-dark' ), '#1E5A8A' ),
+			'navy'       => $color( isset( $kit_colors['navy'] ) ? $kit_colors['navy'] : $theme_value( 'color-navy' ), '#101828' ),
+			'accent'     => $color( isset( $kit_colors['accent'] ) ? $kit_colors['accent'] : ( isset( $kit_colors['gold'] ) ? $kit_colors['gold'] : $theme_value( 'color-gold' ) ), '#FFD100' ),
+			'surface'    => $color( isset( $kit_colors['mint'] ) ? $kit_colors['mint'] : $theme_value( 'color-cream' ), '#F8FAFC' ),
+		);
+
+		$fonts = array( 'Inter', 'Inter' );
+		$kit_fonts = isset( $kit['fonts'] ) ? (array) $kit['fonts'] : array();
+		foreach ( $kit_fonts as $item ) {
+			$id = isset( $item['_id'] ) ? (string) $item['_id'] : '';
+			if ( isset( $item['typography_font_family'] ) && preg_match( '/(?:^|_)(body|heading)$/', $id, $match ) ) {
+				$index = 'body' === $match[1] ? 0 : 1;
+				$fonts[ $index ] = $font( $item['typography_font_family'], 'Inter' );
+			}
+		}
+		if ( ! $kit_fonts ) {
+			if ( preg_match( '/--font-sans\s*:\s*([^,;]+)/', $html, $match ) ) {
+				$fonts[0] = $font( $match[1], 'Inter' );
+			}
+			if ( preg_match( '/--font-display\s*:\s*([^,;]+)/', $html, $match ) ) {
+				$fonts[1] = $font( $match[1], $fonts[0] );
+			} else {
+				$fonts[1] = $fonts[0];
+			}
+		}
+
+		$tokens = '--color-brand: ' . $colors['brand'] . ';'
+			. ' --color-brand-dark: ' . $colors['dark'] . ';'
+			. ' --color-navy: ' . $colors['navy'] . ';'
+			. ' --color-accent: ' . $colors['accent'] . ';'
+			. ' --color-cream: ' . $colors['surface'] . ';'
+			. ' --font-sans: "' . $fonts[0] . '", ui-sans-serif, system-ui, sans-serif;'
+			. ' --font-display: "' . $fonts[1] . '", ui-sans-serif, system-ui, sans-serif;'
+			. ' --kb-primary-color: ' . $colors['brand'] . ';'
+			. ' --kb-primary-dark: ' . $colors['dark'] . ';'
+			. ' --kb-secondary-color: ' . $colors['accent'] . ';'
+			. ' --kb-text-primary: ' . $colors['navy'] . ';'
+			. ' --kb-surface: #ffffff;'
+			. ' --kb-border-color: #e4e7ec;'
+			. ' --kb-radius: 14px;'
+			. ' --kb-shadow: 0 10px 30px rgba(16, 24, 40, .10);';
+
+		return array( 'tokens' => $tokens, 'fonts' => array_values( array_unique( $fonts ) ) );
+	}
+
+	/**
 	 * All templates: slug => meta.
 	 *
 	 * @return array
@@ -343,10 +433,17 @@ final class Arc_ST_Templates {
 			return $html;
 		}
 
-		// method/action + drop the JS-only onsubmit.
+		// Drop the demo-only onsubmit if present (its preventDefault would
+		// block the real submission), then wire method/action.
 		$html = preg_replace(
-			'/<form\b([^>]*?)id="contact-form"([^>]*?)onsubmit="[^"]*"/',
-			'<form$1id="contact-form" method="post" action="' . esc_url( admin_url( 'admin-post.php' ) ) . '"$2',
+			'/(<form\b[^>]*id="contact-form"[^>]*?)\s+onsubmit="[^"]*"/',
+			'$1',
+			$html,
+			1
+		);
+		$html = preg_replace(
+			'/<form\b([^>]*?id="contact-form")/',
+			'<form$1 method="post" action="' . esc_url( admin_url( 'admin-post.php' ) ) . '"',
 			$html,
 			1
 		);
@@ -403,9 +500,15 @@ final class Arc_ST_Templates {
 			return $html;
 		}
 
-		// method/action + drop the JS-only onsubmit (on EVERY subscribe form).
+		// Drop the demo-only onsubmit if present (on EVERY subscribe form),
+		// then wire method/action.
 		$html = preg_replace(
-			'/<form\b([^>]*?\barc-st-subscribe\b[^>]*?)\s*onsubmit="[^"]*"/',
+			'/(<form\b[^>]*\barc-st-subscribe\b[^>]*?)\s+onsubmit="[^"]*"/',
+			'$1',
+			$html
+		);
+		$html = preg_replace(
+			'/<form\b([^>]*?\barc-st-subscribe\b[^>]*)/',
 			'<form$1 method="post" action="' . esc_url( admin_url( 'admin-post.php' ) ) . '"',
 			$html
 		);
@@ -453,6 +556,7 @@ final class Arc_ST_Templates {
 			array(
 				'="Img/'            => '="' . $img,
 				'="Css/tailwind.css' => '="' . ARC_ST_URL . 'assets/css/tailwind.css',
+				'="Css/karibase/'   => '="' . ARC_ST_URL . 'admin/css/karibase/',
 				'="Js/site.js'      => '="' . ARC_ST_URL . 'assets/js/site.js',
 			)
 		);

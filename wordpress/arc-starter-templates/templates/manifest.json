@@ -1,796 +1,1085 @@
 {
-    "generated": "2026-09-23T14:05:31.718Z",
+    "generated": "2026-09-28T14:11:47.973Z",
     "templates": {
-        "index": {
-            "name": "Home",
-            "title": "Ash River Collective \u2014 Elite Talent. Bulletproof Systems.",
-            "description": "Ash River Collective places trained accounting and administrative professionals inside growing businesses, then helps document the processes they run so execution becomes repeatable.",
-            "file": "arc-site/index.html",
-            "thumb": "assets/img/file.png"
+        "arc-site-home": {
+            "name": "Home — Elite Talent",
+            "title": "Ash River Collective — Elite Talent. Bulletproof Systems.",
+            "description": "Build the team your business needs without adding unnecessary overhead. Ash River Collective places trained accounting and administrative professionals inside your business — then helps document the processes they run so execution doesn't depend on one person.",
+            "file": "arc-site/home.html",
+            "thumb": "assets/img/looking-good-and-feeling-confident-XJ79UJL.webp"
         },
-        "services": {
-            "name": "Services",
-            "title": "Services \u2013 Ash River Collective",
-            "description": "ARC combines trained talent, documented processes and operational systems to help growing companies execute consistently.",
-            "file": "arc-site/services.html",
-            "thumb": "assets/img/business-people-sitting-together-on-couch-2023-11-27-04-52-21-utc.jpg"
-        },
-        "finance-accounting-talent": {
-            "name": "Finance & Accounting Talent",
-            "title": "Finance &amp; Accounting Talent \u2013 Ash River Collective",
-            "description": "Add trained accounting professionals who work your hours, speak fluent English and operate inside your existing systems.",
-            "file": "arc-site/finance-accounting-talent.html",
-            "thumb": "assets/img/handsome-european-males-are-discussing-something-i-FNFHBT4.jpg"
-        },
-        "virtual-assistants": {
-            "name": "Virtual Assistants",
-            "title": "Virtual Assistants \u2013 Ash River Collective",
-            "description": "Trained virtual assistants who handle the recurring administrative work consuming your team\u2019s time.",
-            "file": "arc-site/virtual-assistants.html",
-            "thumb": "assets/img/two-businessmen-working-together-in-office-2024-09-23-03-08-53-utc.jpg"
-        },
-        "about": {
-            "name": "About",
-            "title": "About \u2013 Ash River Collective",
-            "description": "Ash River Collective helps companies add trained financial and administrative talent without adding unnecessary overhead or operational complexity.",
+        "arc-site-about": {
+            "name": "About — Built to Execute",
+            "title": "About – Ash River Collective",
+            "description": "Ash River Collective combines embedded talent, documented processes and practical automation — teams that can actually execute.",
             "file": "arc-site/about.html",
-            "thumb": "assets/img/looking-good-and-feeling-confident-XJ79UJL.png"
+            "thumb": "assets/img/handsome-european-males-are-discussing-something-i-FNFHBT4.webp"
         },
-        "partners": {
-            "name": "Partners",
-            "title": "Partners \u2013 Ash River Collective",
-            "description": "Partner with Ash River Collective to provide trained accounting and administrative talent without building your own recruiting infrastructure.",
+        "arc-site-services": {
+            "name": "Services — Back Office Stack",
+            "title": "Services – Ash River Collective",
+            "description": "Finance & accounting talent, virtual assistants and documented playbooks — support built around the work, not a fixed package.",
+            "file": "arc-site/services.html",
+            "thumb": "assets/img/business-people-sitting-together-on-couch-2023-11-27-04-52-21-utc.webp"
+        },
+        "arc-site-virtual-services": {
+            "name": "Virtual Services — Off Your Plate",
+            "title": "Virtual Services – Ash River Collective",
+            "description": "Trained virtual professionals who own recurring admin and operations work — with a documented process behind every seat.",
+            "file": "arc-site/virtual-services.html",
+            "thumb": "assets/img/teamwork-with-business-people-analysis-cost-graph-3JFK4U7.webp"
+        },
+        "arc-site-playbooks": {
+            "name": "Playbooks — Living Intranet",
+            "title": "Playbooks – Ash River Collective",
+            "description": "Your documented processes live in a branded, per-company intranet — searchable, permissioned and always used.",
+            "file": "arc-site/playbooks.html",
+            "thumb": "assets/img/file.webp"
+        },
+        "arc-site-foundation": {
+            "name": "Foundation — Opportunity Engine",
+            "title": "Foundation – Ash River Collective",
+            "description": "The Ash River Collective Foundation trains and prepares Latin American professionals for sustainable remote careers — train, prepare, connect, support.",
+            "file": "arc-site/foundation.html",
+            "thumb": "assets/img/physicians-discussing-papers-with-man-at-desk-FEXH47D.webp"
+        },
+        "arc-site-partners": {
+            "name": "Partners — Client Channel",
+            "title": "Partners – Ash River Collective",
+            "description": "You keep the relationship — we help build the team. For CFOs, firms, consultants and operating partners.",
             "file": "arc-site/partners.html",
-            "thumb": "assets/img/happy-business-people-handshake-and-interview-in-m-6FPDS75.jpg"
-        },
-        "ash-river-foundation": {
-            "name": "Ash River Foundation",
-            "title": "Ash River Foundation \u2013 Ash River Collective",
-            "description": "Ash River Foundation trains and prepares Venezuelan professionals for sustainable remote careers.",
-            "file": "arc-site/ash-river-foundation.html",
-            "thumb": "assets/img/teamwork-with-business-people-analysis-cost-graph-3JFK4U7.jpg"
-        },
-        "contact": {
-            "name": "Contact",
-            "title": "Contact \u2013 Ash River Collective",
-            "description": "Whether you need one person, an accounting team, administrative support or a strategic staffing partner, start here.",
-            "file": "arc-site/contact.html",
-            "thumb": "assets/img/logo-green.png"
+            "thumb": "assets/img/group-of-diverse-business-people-successful-teamwo-2023-11-27-05-12-43-utc.webp"
         },
         "blogify-home": {
-            "name": "Home",
-            "title": "Blogify \u2014 Stories from the road",
-            "description": "Travel & lifestyle blog \u2014 Home, About, Gallery, Subscribe, Inspiration, Contact.",
+            "name": "Home — Elite Talent",
+            "title": "Blogify — Elite Talent. Bulletproof Systems.",
+            "description": "Build the team your business needs without adding unnecessary overhead. Blogify places trained accounting and administrative professionals inside your business — then helps document the processes they run so execution doesn't depend on one person.",
             "file": "blogify/home.html",
-            "thumb": "assets/img/blogify-img-1.png"
+            "thumb": "assets/img/arc-stock-04.jpg"
         },
         "blogify-about": {
-            "name": "About",
-            "title": "About \u2013 Blogify",
-            "description": "Travel & lifestyle blog \u2014 Home, About, Gallery, Subscribe, Inspiration, Contact.",
+            "name": "About — Built to Execute",
+            "title": "About – Blogify",
+            "description": "Blogify combines embedded talent, documented processes and practical automation — teams that can actually execute.",
             "file": "blogify/about.html",
-            "thumb": "assets/img/blogify-img-1.png"
+            "thumb": "assets/img/arc-stock-09.jpg"
         },
-        "blogify-gallery": {
-            "name": "Gallery",
-            "title": "Gallery \u2013 Blogify",
-            "description": "Travel & lifestyle blog \u2014 Home, About, Gallery, Subscribe, Inspiration, Contact.",
-            "file": "blogify/gallery.html",
-            "thumb": "assets/img/blogify-img-1.png"
+        "blogify-services": {
+            "name": "Services — Back Office Stack",
+            "title": "Services – Blogify",
+            "description": "Finance & accounting talent, virtual assistants and documented playbooks — support built around the work, not a fixed package.",
+            "file": "blogify/services.html",
+            "thumb": "assets/img/arc-stock-14.jpg"
         },
-        "blogify-subscribe": {
-            "name": "Subscribe",
-            "title": "Subscribe \u2013 Blogify",
-            "description": "Travel & lifestyle blog \u2014 Home, About, Gallery, Subscribe, Inspiration, Contact.",
-            "file": "blogify/subscribe.html",
-            "thumb": "assets/img/blogify-img-1.png"
+        "blogify-virtual-services": {
+            "name": "Virtual Services — Off Your Plate",
+            "title": "Virtual Services – Blogify",
+            "description": "Trained virtual professionals who own recurring admin and operations work — with a documented process behind every seat.",
+            "file": "blogify/virtual-services.html",
+            "thumb": "assets/img/arc-stock-19.jpg"
         },
-        "blogify-inspiration": {
-            "name": "Inspiration",
-            "title": "Inspiration \u2013 Blogify",
-            "description": "Travel & lifestyle blog \u2014 Home, About, Gallery, Subscribe, Inspiration, Contact.",
-            "file": "blogify/inspiration.html",
-            "thumb": "assets/img/blogify-img-1.png"
+        "blogify-playbooks": {
+            "name": "Playbooks — Living Intranet",
+            "title": "Playbooks – Blogify",
+            "description": "Your documented processes live in a branded, per-company intranet — searchable, permissioned and always used.",
+            "file": "blogify/playbooks.html",
+            "thumb": "assets/img/arc-stock-24.jpg"
         },
-        "blogify-contact": {
-            "name": "Contact",
-            "title": "Contact \u2013 Blogify",
-            "description": "Travel & lifestyle blog \u2014 Home, About, Gallery, Subscribe, Inspiration, Contact.",
-            "file": "blogify/contact.html",
-            "thumb": "assets/img/blogify-img-1.png"
+        "blogify-foundation": {
+            "name": "Foundation — Opportunity Engine",
+            "title": "Foundation – Blogify",
+            "description": "The Blogify Foundation trains and prepares Latin American professionals for sustainable remote careers — train, prepare, connect, support.",
+            "file": "blogify/foundation.html",
+            "thumb": "assets/img/arc-stock-29.jpg"
+        },
+        "blogify-partners": {
+            "name": "Partners — Client Channel",
+            "title": "Partners – Blogify",
+            "description": "You keep the relationship — we help build the team. For CFOs, firms, consultants and operating partners.",
+            "file": "blogify/partners.html",
+            "thumb": "assets/img/arc-stock-34.jpg"
         },
         "commercecraft-home": {
-            "name": "Home",
-            "title": "CommerceCraft \u2014 Crafted for living",
-            "description": "Furniture & home-decor store \u2014 Home, Shop, Accessories, Gift, Designers, Sale, Contact.",
+            "name": "Home — Elite Talent",
+            "title": "CommerceCraft — Elite Talent. Bulletproof Systems.",
+            "description": "Build the team your business needs without adding unnecessary overhead. CommerceCraft places trained accounting and administrative professionals inside your business — then helps document the processes they run so execution doesn't depend on one person.",
             "file": "commercecraft/home.html",
-            "thumb": "assets/img/commercecraft-img-1.png"
+            "thumb": "assets/img/arc-stock-07.jpg"
         },
-        "commercecraft-shop-2": {
-            "name": "Shop",
-            "title": "Shop \u2013 CommerceCraft",
-            "description": "Furniture & home-decor store \u2014 Home, Shop, Accessories, Gift, Designers, Sale, Contact.",
-            "file": "commercecraft/shop-2.html",
-            "thumb": "assets/img/commercecraft-img-1.png"
+        "commercecraft-about": {
+            "name": "About — Built to Execute",
+            "title": "About – CommerceCraft",
+            "description": "CommerceCraft combines embedded talent, documented processes and practical automation — teams that can actually execute.",
+            "file": "commercecraft/about.html",
+            "thumb": "assets/img/arc-stock-12.jpg"
         },
-        "commercecraft-accessories": {
-            "name": "Accessories",
-            "title": "Accessories \u2013 CommerceCraft",
-            "description": "Furniture & home-decor store \u2014 Home, Shop, Accessories, Gift, Designers, Sale, Contact.",
-            "file": "commercecraft/accessories.html",
-            "thumb": "assets/img/commercecraft-img-1.png"
+        "commercecraft-services": {
+            "name": "Services — Back Office Stack",
+            "title": "Services – CommerceCraft",
+            "description": "Finance & accounting talent, virtual assistants and documented playbooks — support built around the work, not a fixed package.",
+            "file": "commercecraft/services.html",
+            "thumb": "assets/img/arc-stock-17.jpg"
         },
-        "commercecraft-gift": {
-            "name": "Gift",
-            "title": "Gift \u2013 CommerceCraft",
-            "description": "Furniture & home-decor store \u2014 Home, Shop, Accessories, Gift, Designers, Sale, Contact.",
-            "file": "commercecraft/gift.html",
-            "thumb": "assets/img/commercecraft-img-1.png"
+        "commercecraft-virtual-services": {
+            "name": "Virtual Services — Off Your Plate",
+            "title": "Virtual Services – CommerceCraft",
+            "description": "Trained virtual professionals who own recurring admin and operations work — with a documented process behind every seat.",
+            "file": "commercecraft/virtual-services.html",
+            "thumb": "assets/img/arc-stock-22.jpg"
         },
-        "commercecraft-designers": {
-            "name": "Designers",
-            "title": "Designers \u2013 CommerceCraft",
-            "description": "Furniture & home-decor store \u2014 Home, Shop, Accessories, Gift, Designers, Sale, Contact.",
-            "file": "commercecraft/designers.html",
-            "thumb": "assets/img/commercecraft-img-1.png"
+        "commercecraft-playbooks": {
+            "name": "Playbooks — Living Intranet",
+            "title": "Playbooks – CommerceCraft",
+            "description": "Your documented processes live in a branded, per-company intranet — searchable, permissioned and always used.",
+            "file": "commercecraft/playbooks.html",
+            "thumb": "assets/img/arc-stock-27.jpg"
         },
-        "commercecraft-sale": {
-            "name": "Sale",
-            "title": "Sale \u2013 CommerceCraft",
-            "description": "Furniture & home-decor store \u2014 Home, Shop, Accessories, Gift, Designers, Sale, Contact.",
-            "file": "commercecraft/sale.html",
-            "thumb": "assets/img/commercecraft-img-1.png"
+        "commercecraft-foundation": {
+            "name": "Foundation — Opportunity Engine",
+            "title": "Foundation – CommerceCraft",
+            "description": "The CommerceCraft Foundation trains and prepares Latin American professionals for sustainable remote careers — train, prepare, connect, support.",
+            "file": "commercecraft/foundation.html",
+            "thumb": "assets/img/arc-stock-32.jpg"
         },
-        "commercecraft-contact": {
-            "name": "Contact",
-            "title": "Contact \u2013 CommerceCraft",
-            "description": "Furniture & home-decor store \u2014 Home, Shop, Accessories, Gift, Designers, Sale, Contact.",
-            "file": "commercecraft/contact.html",
-            "thumb": "assets/img/commercecraft-img-1.png"
+        "commercecraft-partners": {
+            "name": "Partners — Client Channel",
+            "title": "Partners – CommerceCraft",
+            "description": "You keep the relationship — we help build the team. For CFOs, firms, consultants and operating partners.",
+            "file": "commercecraft/partners.html",
+            "thumb": "assets/img/arc-stock-37.jpg"
         },
         "retailridge-home": {
-            "name": "Home",
-            "title": "RetailRidge \u2014 Wear the season",
-            "description": "Fashion retail store \u2014 Home, About, Our Brand, New Arrivals, Flash Sale, Blog, Contact.",
+            "name": "Home — Elite Talent",
+            "title": "RetailRidge — Elite Talent. Bulletproof Systems.",
+            "description": "Build the team your business needs without adding unnecessary overhead. RetailRidge places trained accounting and administrative professionals inside your business — then helps document the processes they run so execution doesn't depend on one person.",
             "file": "retailridge/home.html",
-            "thumb": "assets/img/retailridge-img-1.png"
+            "thumb": "assets/img/arc-stock-10.jpg"
         },
         "retailridge-about": {
-            "name": "About",
-            "title": "About \u2013 RetailRidge",
-            "description": "Fashion retail store \u2014 Home, About, Our Brand, New Arrivals, Flash Sale, Blog, Contact.",
+            "name": "About — Built to Execute",
+            "title": "About – RetailRidge",
+            "description": "RetailRidge combines embedded talent, documented processes and practical automation — teams that can actually execute.",
             "file": "retailridge/about.html",
-            "thumb": "assets/img/retailridge-img-1.png"
+            "thumb": "assets/img/arc-stock-15.jpg"
         },
-        "retailridge-our-brand": {
-            "name": "Our Brand",
-            "title": "Our Brand \u2013 RetailRidge",
-            "description": "Fashion retail store \u2014 Home, About, Our Brand, New Arrivals, Flash Sale, Blog, Contact.",
-            "file": "retailridge/our-brand.html",
-            "thumb": "assets/img/retailridge-img-1.png"
+        "retailridge-services": {
+            "name": "Services — Back Office Stack",
+            "title": "Services – RetailRidge",
+            "description": "Finance & accounting talent, virtual assistants and documented playbooks — support built around the work, not a fixed package.",
+            "file": "retailridge/services.html",
+            "thumb": "assets/img/arc-stock-20.jpg"
         },
-        "retailridge-new-arrivals": {
-            "name": "New Arrivals",
-            "title": "New Arrivals \u2013 RetailRidge",
-            "description": "Fashion retail store \u2014 Home, About, Our Brand, New Arrivals, Flash Sale, Blog, Contact.",
-            "file": "retailridge/new-arrivals.html",
-            "thumb": "assets/img/retailridge-img-1.png"
+        "retailridge-virtual-services": {
+            "name": "Virtual Services — Off Your Plate",
+            "title": "Virtual Services – RetailRidge",
+            "description": "Trained virtual professionals who own recurring admin and operations work — with a documented process behind every seat.",
+            "file": "retailridge/virtual-services.html",
+            "thumb": "assets/img/arc-stock-25.jpg"
         },
-        "retailridge-flash-sale": {
-            "name": "Flash Sale",
-            "title": "Flash Sale \u2013 RetailRidge",
-            "description": "Fashion retail store \u2014 Home, About, Our Brand, New Arrivals, Flash Sale, Blog, Contact.",
-            "file": "retailridge/flash-sale.html",
-            "thumb": "assets/img/retailridge-img-1.png"
+        "retailridge-playbooks": {
+            "name": "Playbooks — Living Intranet",
+            "title": "Playbooks – RetailRidge",
+            "description": "Your documented processes live in a branded, per-company intranet — searchable, permissioned and always used.",
+            "file": "retailridge/playbooks.html",
+            "thumb": "assets/img/arc-stock-30.jpg"
         },
-        "retailridge-blog": {
-            "name": "Blog",
-            "title": "Blog \u2013 RetailRidge",
-            "description": "Fashion retail store \u2014 Home, About, Our Brand, New Arrivals, Flash Sale, Blog, Contact.",
-            "file": "retailridge/blog.html",
-            "thumb": "assets/img/retailridge-img-1.png"
+        "retailridge-foundation": {
+            "name": "Foundation — Opportunity Engine",
+            "title": "Foundation – RetailRidge",
+            "description": "The RetailRidge Foundation trains and prepares Latin American professionals for sustainable remote careers — train, prepare, connect, support.",
+            "file": "retailridge/foundation.html",
+            "thumb": "assets/img/arc-stock-35.jpg"
         },
-        "retailridge-contact": {
-            "name": "Contact",
-            "title": "Contact \u2013 RetailRidge",
-            "description": "Fashion retail store \u2014 Home, About, Our Brand, New Arrivals, Flash Sale, Blog, Contact.",
-            "file": "retailridge/contact.html",
-            "thumb": "assets/img/retailridge-img-1.png"
+        "retailridge-partners": {
+            "name": "Partners — Client Channel",
+            "title": "Partners – RetailRidge",
+            "description": "You keep the relationship — we help build the team. For CFOs, firms, consultants and operating partners.",
+            "file": "retailridge/partners.html",
+            "thumb": "assets/img/arc-stock-40.jpg"
         },
         "flexiweb-home": {
-            "name": "Home",
-            "title": "Flexiweb \u2014 Digital agency",
-            "description": "Web design agency \u2014 Home, About, Career, Testimonials, Contact Us, Blog.",
+            "name": "Home — Elite Talent",
+            "title": "Flexiweb — Elite Talent. Bulletproof Systems.",
+            "description": "Build the team your business needs without adding unnecessary overhead. Flexiweb places trained accounting and administrative professionals inside your business — then helps document the processes they run so execution doesn't depend on one person.",
             "file": "flexiweb/home.html",
-            "thumb": "assets/img/flexiweb-img-1.jpg"
+            "thumb": "assets/img/arc-stock-13.jpg"
         },
         "flexiweb-about": {
-            "name": "About",
-            "title": "About \u2013 Flexiweb",
-            "description": "Web design agency \u2014 Home, About, Career, Testimonials, Contact Us, Blog.",
+            "name": "About — Built to Execute",
+            "title": "About – Flexiweb",
+            "description": "Flexiweb combines embedded talent, documented processes and practical automation — teams that can actually execute.",
             "file": "flexiweb/about.html",
-            "thumb": "assets/img/flexiweb-img-1.jpg"
+            "thumb": "assets/img/arc-stock-18.jpg"
         },
-        "flexiweb-career": {
-            "name": "Career",
-            "title": "Career \u2013 Flexiweb",
-            "description": "Web design agency \u2014 Home, About, Career, Testimonials, Contact Us, Blog.",
-            "file": "flexiweb/career.html",
-            "thumb": "assets/img/flexiweb-img-1.jpg"
+        "flexiweb-services": {
+            "name": "Services — Back Office Stack",
+            "title": "Services – Flexiweb",
+            "description": "Finance & accounting talent, virtual assistants and documented playbooks — support built around the work, not a fixed package.",
+            "file": "flexiweb/services.html",
+            "thumb": "assets/img/arc-stock-23.jpg"
         },
-        "flexiweb-testimonials": {
-            "name": "Testimonials",
-            "title": "Testimonials \u2013 Flexiweb",
-            "description": "Web design agency \u2014 Home, About, Career, Testimonials, Contact Us, Blog.",
-            "file": "flexiweb/testimonials.html",
-            "thumb": "assets/img/flexiweb-img-1.jpg"
+        "flexiweb-virtual-services": {
+            "name": "Virtual Services — Off Your Plate",
+            "title": "Virtual Services – Flexiweb",
+            "description": "Trained virtual professionals who own recurring admin and operations work — with a documented process behind every seat.",
+            "file": "flexiweb/virtual-services.html",
+            "thumb": "assets/img/arc-stock-28.jpg"
         },
-        "flexiweb-blog": {
-            "name": "Blog",
-            "title": "Blog \u2013 Flexiweb",
-            "description": "Web design agency \u2014 Home, About, Career, Testimonials, Contact Us, Blog.",
-            "file": "flexiweb/blog.html",
-            "thumb": "assets/img/flexiweb-img-6.jpg"
+        "flexiweb-playbooks": {
+            "name": "Playbooks — Living Intranet",
+            "title": "Playbooks – Flexiweb",
+            "description": "Your documented processes live in a branded, per-company intranet — searchable, permissioned and always used.",
+            "file": "flexiweb/playbooks.html",
+            "thumb": "assets/img/arc-stock-33.jpg"
         },
-        "flexiweb-contact-us": {
-            "name": "Contact Us",
-            "title": "Contact Us \u2013 Flexiweb",
-            "description": "Web design agency \u2014 Home, About, Career, Testimonials, Contact Us, Blog.",
-            "file": "flexiweb/contact-us.html",
-            "thumb": "assets/img/flexiweb-img-1.jpg"
+        "flexiweb-foundation": {
+            "name": "Foundation — Opportunity Engine",
+            "title": "Foundation – Flexiweb",
+            "description": "The Flexiweb Foundation trains and prepares Latin American professionals for sustainable remote careers — train, prepare, connect, support.",
+            "file": "flexiweb/foundation.html",
+            "thumb": "assets/img/arc-stock-38.jpg"
+        },
+        "flexiweb-partners": {
+            "name": "Partners — Client Channel",
+            "title": "Partners – Flexiweb",
+            "description": "You keep the relationship — we help build the team. For CFOs, firms, consultants and operating partners.",
+            "file": "flexiweb/partners.html",
+            "thumb": "assets/img/arc-stock-43.jpg"
         },
         "edinburgh-home": {
-            "name": "Home",
-            "title": "Edinburgh \u2014 Creative studio",
-            "description": "Creative agency \u2014 Home, About, Pricing, Career, Contact, Blog.",
+            "name": "Home — Elite Talent",
+            "title": "Edinburgh — Elite Talent. Bulletproof Systems.",
+            "description": "Build the team your business needs without adding unnecessary overhead. Edinburgh places trained accounting and administrative professionals inside your business — then helps document the processes they run so execution doesn't depend on one person.",
             "file": "edinburgh/home.html",
-            "thumb": "assets/img/edinburgh-img-1.png"
+            "thumb": "assets/img/arc-stock-16.jpg"
         },
         "edinburgh-about": {
-            "name": "About",
-            "title": "About \u2013 Edinburgh",
-            "description": "Creative agency \u2014 Home, About, Pricing, Career, Contact, Blog.",
+            "name": "About — Built to Execute",
+            "title": "About – Edinburgh",
+            "description": "Edinburgh combines embedded talent, documented processes and practical automation — teams that can actually execute.",
             "file": "edinburgh/about.html",
-            "thumb": "assets/img/edinburgh-img-1.png"
+            "thumb": "assets/img/arc-stock-21.jpg"
         },
-        "edinburgh-pricing": {
-            "name": "Pricing",
-            "title": "Pricing \u2013 Edinburgh",
-            "description": "Creative agency \u2014 Home, About, Pricing, Career, Contact, Blog.",
-            "file": "edinburgh/pricing.html",
-            "thumb": "assets/img/edinburgh-img-1.png"
+        "edinburgh-services": {
+            "name": "Services — Back Office Stack",
+            "title": "Services – Edinburgh",
+            "description": "Finance & accounting talent, virtual assistants and documented playbooks — support built around the work, not a fixed package.",
+            "file": "edinburgh/services.html",
+            "thumb": "assets/img/arc-stock-26.jpg"
         },
-        "edinburgh-career": {
-            "name": "Career",
-            "title": "Career \u2013 Edinburgh",
-            "description": "Creative agency \u2014 Home, About, Pricing, Career, Contact, Blog.",
-            "file": "edinburgh/career.html",
-            "thumb": "assets/img/edinburgh-img-12.jpg"
+        "edinburgh-virtual-services": {
+            "name": "Virtual Services — Off Your Plate",
+            "title": "Virtual Services – Edinburgh",
+            "description": "Trained virtual professionals who own recurring admin and operations work — with a documented process behind every seat.",
+            "file": "edinburgh/virtual-services.html",
+            "thumb": "assets/img/arc-stock-31.jpg"
         },
-        "edinburgh-blog": {
-            "name": "Blog",
-            "title": "Blog \u2013 Edinburgh",
-            "description": "Creative agency \u2014 Home, About, Pricing, Career, Contact, Blog.",
-            "file": "edinburgh/blog.html",
-            "thumb": "assets/img/edinburgh-img-6.jpg"
+        "edinburgh-playbooks": {
+            "name": "Playbooks — Living Intranet",
+            "title": "Playbooks – Edinburgh",
+            "description": "Your documented processes live in a branded, per-company intranet — searchable, permissioned and always used.",
+            "file": "edinburgh/playbooks.html",
+            "thumb": "assets/img/arc-stock-36.jpg"
         },
-        "edinburgh-contact": {
-            "name": "Contact",
-            "title": "Contact \u2013 Edinburgh",
-            "description": "Creative agency \u2014 Home, About, Pricing, Career, Contact, Blog.",
-            "file": "edinburgh/contact.html",
-            "thumb": "assets/img/edinburgh-img-1.png"
+        "edinburgh-foundation": {
+            "name": "Foundation — Opportunity Engine",
+            "title": "Foundation – Edinburgh",
+            "description": "The Edinburgh Foundation trains and prepares Latin American professionals for sustainable remote careers — train, prepare, connect, support.",
+            "file": "edinburgh/foundation.html",
+            "thumb": "assets/img/arc-stock-41.jpg"
+        },
+        "edinburgh-partners": {
+            "name": "Partners — Client Channel",
+            "title": "Partners – Edinburgh",
+            "description": "You keep the relationship — we help build the team. For CFOs, firms, consultants and operating partners.",
+            "file": "edinburgh/partners.html",
+            "thumb": "assets/img/arc-stock-46.jpg"
         },
         "printifix-home": {
-            "name": "Home",
-            "title": "Printifix \u2014 3D printing services",
-            "description": "3D printing services \u2014 Home, About, Industries, Testimonials, Contact Us, Blog.",
+            "name": "Home — Elite Talent",
+            "title": "Printifix — Elite Talent. Bulletproof Systems.",
+            "description": "Build the team your business needs without adding unnecessary overhead. Printifix places trained accounting and administrative professionals inside your business — then helps document the processes they run so execution doesn't depend on one person.",
             "file": "printifix/home.html",
-            "thumb": "assets/img/printifix-img-1.png"
+            "thumb": "assets/img/arc-stock-19.jpg"
         },
         "printifix-about": {
-            "name": "About",
-            "title": "About \u2013 Printifix",
-            "description": "3D printing services \u2014 Home, About, Industries, Testimonials, Contact Us, Blog.",
+            "name": "About — Built to Execute",
+            "title": "About – Printifix",
+            "description": "Printifix combines embedded talent, documented processes and practical automation — teams that can actually execute.",
             "file": "printifix/about.html",
-            "thumb": "assets/img/printifix-img-1.png"
+            "thumb": "assets/img/arc-stock-24.jpg"
         },
-        "printifix-industries": {
-            "name": "Industries",
-            "title": "Industries \u2013 Printifix",
-            "description": "3D printing services \u2014 Home, About, Industries, Testimonials, Contact Us, Blog.",
-            "file": "printifix/industries.html",
-            "thumb": "assets/img/printifix-img-1.png"
+        "printifix-services": {
+            "name": "Services — Back Office Stack",
+            "title": "Services – Printifix",
+            "description": "Finance & accounting talent, virtual assistants and documented playbooks — support built around the work, not a fixed package.",
+            "file": "printifix/services.html",
+            "thumb": "assets/img/arc-stock-29.jpg"
         },
-        "printifix-testimonials": {
-            "name": "Testimonials",
-            "title": "Testimonials \u2013 Printifix",
-            "description": "3D printing services \u2014 Home, About, Industries, Testimonials, Contact Us, Blog.",
-            "file": "printifix/testimonials.html",
-            "thumb": "assets/img/printifix-img-1.png"
+        "printifix-virtual-services": {
+            "name": "Virtual Services — Off Your Plate",
+            "title": "Virtual Services – Printifix",
+            "description": "Trained virtual professionals who own recurring admin and operations work — with a documented process behind every seat.",
+            "file": "printifix/virtual-services.html",
+            "thumb": "assets/img/arc-stock-34.jpg"
         },
-        "printifix-blog": {
-            "name": "Blog",
-            "title": "Blog \u2013 Printifix",
-            "description": "3D printing services \u2014 Home, About, Industries, Testimonials, Contact Us, Blog.",
-            "file": "printifix/blog.html",
-            "thumb": "assets/img/printifix-img-1.png"
+        "printifix-playbooks": {
+            "name": "Playbooks — Living Intranet",
+            "title": "Playbooks – Printifix",
+            "description": "Your documented processes live in a branded, per-company intranet — searchable, permissioned and always used.",
+            "file": "printifix/playbooks.html",
+            "thumb": "assets/img/arc-stock-39.jpg"
         },
-        "printifix-contact-us": {
-            "name": "Contact Us",
-            "title": "Contact Us \u2013 Printifix",
-            "description": "3D printing services \u2014 Home, About, Industries, Testimonials, Contact Us, Blog.",
-            "file": "printifix/contact-us.html",
-            "thumb": "assets/img/printifix-img-1.png"
+        "printifix-foundation": {
+            "name": "Foundation — Opportunity Engine",
+            "title": "Foundation – Printifix",
+            "description": "The Printifix Foundation trains and prepares Latin American professionals for sustainable remote careers — train, prepare, connect, support.",
+            "file": "printifix/foundation.html",
+            "thumb": "assets/img/arc-stock-44.jpg"
+        },
+        "printifix-partners": {
+            "name": "Partners — Client Channel",
+            "title": "Partners – Printifix",
+            "description": "You keep the relationship — we help build the team. For CFOs, firms, consultants and operating partners.",
+            "file": "printifix/partners.html",
+            "thumb": "assets/img/arc-stock-03.jpg"
         },
         "kelion-home": {
-            "name": "Home",
-            "title": "Kelion \u2014 Content creator",
-            "description": "Influencer & creator portfolio \u2014 Home, About, Services, Portfolios, Events, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+            "name": "Home — Elite Talent",
+            "title": "Kelion — Elite Talent. Bulletproof Systems.",
+            "description": "Build the team your business needs without adding unnecessary overhead. Kelion places trained accounting and administrative professionals inside your business — then helps document the processes they run so execution doesn't depend on one person.",
             "file": "kelion/home.html",
-            "thumb": "assets/img/kelion-img-1.png"
+            "thumb": "assets/img/arc-stock-22.jpg"
         },
         "kelion-about": {
-            "name": "About",
-            "title": "About \u2013 Kelion",
-            "description": "Influencer & creator portfolio \u2014 Home, About, Services, Portfolios, Events, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+            "name": "About — Built to Execute",
+            "title": "About – Kelion",
+            "description": "Kelion combines embedded talent, documented processes and practical automation — teams that can actually execute.",
             "file": "kelion/about.html",
-            "thumb": "assets/img/kelion-img-1.png"
+            "thumb": "assets/img/arc-stock-27.jpg"
         },
-        "kelion-our-services": {
-            "name": "Our Services",
-            "title": "Our Services \u2013 Kelion",
-            "description": "Influencer & creator portfolio \u2014 Home, About, Services, Portfolios, Events, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
-            "file": "kelion/our-services.html",
-            "thumb": "assets/img/kelion-img-1.png"
+        "kelion-services": {
+            "name": "Services — Back Office Stack",
+            "title": "Services – Kelion",
+            "description": "Finance & accounting talent, virtual assistants and documented playbooks — support built around the work, not a fixed package.",
+            "file": "kelion/services.html",
+            "thumb": "assets/img/arc-stock-32.jpg"
         },
-        "kelion-portfolios": {
-            "name": "Portfolios",
-            "title": "Portfolios \u2013 Kelion",
-            "description": "Influencer & creator portfolio \u2014 Home, About, Services, Portfolios, Events, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
-            "file": "kelion/portfolios.html",
-            "thumb": "assets/img/kelion-img-1.png"
+        "kelion-virtual-services": {
+            "name": "Virtual Services — Off Your Plate",
+            "title": "Virtual Services – Kelion",
+            "description": "Trained virtual professionals who own recurring admin and operations work — with a documented process behind every seat.",
+            "file": "kelion/virtual-services.html",
+            "thumb": "assets/img/arc-stock-37.jpg"
         },
-        "kelion-events": {
-            "name": "Events",
-            "title": "Events \u2013 Kelion",
-            "description": "Influencer & creator portfolio \u2014 Home, About, Services, Portfolios, Events, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
-            "file": "kelion/events.html",
-            "thumb": "assets/img/kelion-img-1.png"
+        "kelion-playbooks": {
+            "name": "Playbooks — Living Intranet",
+            "title": "Playbooks – Kelion",
+            "description": "Your documented processes live in a branded, per-company intranet — searchable, permissioned and always used.",
+            "file": "kelion/playbooks.html",
+            "thumb": "assets/img/arc-stock-42.jpg"
         },
-        "kelion-testimonials": {
-            "name": "Testimonials",
-            "title": "Testimonials \u2013 Kelion",
-            "description": "Influencer & creator portfolio \u2014 Home, About, Services, Portfolios, Events, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
-            "file": "kelion/testimonials.html",
-            "thumb": "assets/img/kelion-img-1.png"
+        "kelion-foundation": {
+            "name": "Foundation — Opportunity Engine",
+            "title": "Foundation – Kelion",
+            "description": "The Kelion Foundation trains and prepares Latin American professionals for sustainable remote careers — train, prepare, connect, support.",
+            "file": "kelion/foundation.html",
+            "thumb": "assets/img/arc-stock-01.jpg"
         },
-        "kelion-blog": {
-            "name": "Blog",
-            "title": "Blog \u2013 Kelion",
-            "description": "Influencer & creator portfolio \u2014 Home, About, Services, Portfolios, Events, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
-            "file": "kelion/blog.html",
-            "thumb": "assets/img/kelion-img-1.png"
-        },
-        "kelion-contact-us": {
-            "name": "Contact Us",
-            "title": "Contact Us \u2013 Kelion",
-            "description": "Influencer & creator portfolio \u2014 Home, About, Services, Portfolios, Events, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
-            "file": "kelion/contact-us.html",
-            "thumb": "assets/img/kelion-img-1.png"
+        "kelion-partners": {
+            "name": "Partners — Client Channel",
+            "title": "Partners – Kelion",
+            "description": "You keep the relationship — we help build the team. For CFOs, firms, consultants and operating partners.",
+            "file": "kelion/partners.html",
+            "thumb": "assets/img/arc-stock-06.jpg"
         },
         "kindora-home": {
-            "name": "Home",
-            "title": "Kindora \u2014 Nonprofit organization",
-            "description": "Nonprofit & charity \u2014 Home, About, What We Do, Disasters, Careers, Style Guide, Coming Soon, Blog, Contact Us.",
+            "name": "Home — Elite Talent",
+            "title": "Kindora — Elite Talent. Bulletproof Systems.",
+            "description": "Build the team your business needs without adding unnecessary overhead. Kindora places trained accounting and administrative professionals inside your business — then helps document the processes they run so execution doesn't depend on one person.",
             "file": "kindora/home.html",
-            "thumb": "assets/img/kindora-img-1.png"
+            "thumb": "assets/img/arc-stock-25.jpg"
         },
         "kindora-about": {
-            "name": "About",
-            "title": "About \u2013 Kindora",
-            "description": "Nonprofit & charity \u2014 Home, About, What We Do, Disasters, Careers, Style Guide, Coming Soon, Blog, Contact Us.",
+            "name": "About — Built to Execute",
+            "title": "About – Kindora",
+            "description": "Kindora combines embedded talent, documented processes and practical automation — teams that can actually execute.",
             "file": "kindora/about.html",
-            "thumb": "assets/img/kindora-img-1.png"
+            "thumb": "assets/img/arc-stock-30.jpg"
         },
-        "kindora-what-we-do": {
-            "name": "What We Do",
-            "title": "What We Do \u2013 Kindora",
-            "description": "Nonprofit & charity \u2014 Home, About, What We Do, Disasters, Careers, Style Guide, Coming Soon, Blog, Contact Us.",
-            "file": "kindora/what-we-do.html",
-            "thumb": "assets/img/kindora-img-1.png"
+        "kindora-services": {
+            "name": "Services — Back Office Stack",
+            "title": "Services – Kindora",
+            "description": "Finance & accounting talent, virtual assistants and documented playbooks — support built around the work, not a fixed package.",
+            "file": "kindora/services.html",
+            "thumb": "assets/img/arc-stock-35.jpg"
         },
-        "kindora-disasters": {
-            "name": "Disasters",
-            "title": "Disasters \u2013 Kindora",
-            "description": "Nonprofit & charity \u2014 Home, About, What We Do, Disasters, Careers, Style Guide, Coming Soon, Blog, Contact Us.",
-            "file": "kindora/disasters.html",
-            "thumb": "assets/img/kindora-img-1.png"
+        "kindora-virtual-services": {
+            "name": "Virtual Services — Off Your Plate",
+            "title": "Virtual Services – Kindora",
+            "description": "Trained virtual professionals who own recurring admin and operations work — with a documented process behind every seat.",
+            "file": "kindora/virtual-services.html",
+            "thumb": "assets/img/arc-stock-40.jpg"
         },
-        "kindora-careers": {
-            "name": "Careers",
-            "title": "Careers \u2013 Kindora",
-            "description": "Nonprofit & charity \u2014 Home, About, What We Do, Disasters, Careers, Style Guide, Coming Soon, Blog, Contact Us.",
-            "file": "kindora/careers.html",
-            "thumb": "assets/img/kindora-img-1.png"
+        "kindora-playbooks": {
+            "name": "Playbooks — Living Intranet",
+            "title": "Playbooks – Kindora",
+            "description": "Your documented processes live in a branded, per-company intranet — searchable, permissioned and always used.",
+            "file": "kindora/playbooks.html",
+            "thumb": "assets/img/arc-stock-45.jpg"
         },
-        "kindora-blog": {
-            "name": "Blog",
-            "title": "Blog \u2013 Kindora",
-            "description": "Nonprofit & charity \u2014 Home, About, What We Do, Disasters, Careers, Style Guide, Coming Soon, Blog, Contact Us.",
-            "file": "kindora/blog.html",
-            "thumb": "assets/img/kindora-img-1.png"
+        "kindora-foundation": {
+            "name": "Foundation — Opportunity Engine",
+            "title": "Foundation – Kindora",
+            "description": "The Kindora Foundation trains and prepares Latin American professionals for sustainable remote careers — train, prepare, connect, support.",
+            "file": "kindora/foundation.html",
+            "thumb": "assets/img/arc-stock-04.jpg"
         },
-        "kindora-contact-us": {
-            "name": "Contact Us",
-            "title": "Contact Us \u2013 Kindora",
-            "description": "Nonprofit & charity \u2014 Home, About, What We Do, Disasters, Careers, Style Guide, Coming Soon, Blog, Contact Us.",
-            "file": "kindora/contact-us.html",
-            "thumb": "assets/img/kindora-img-1.png"
+        "kindora-partners": {
+            "name": "Partners — Client Channel",
+            "title": "Partners – Kindora",
+            "description": "You keep the relationship — we help build the team. For CFOs, firms, consultants and operating partners.",
+            "file": "kindora/partners.html",
+            "thumb": "assets/img/arc-stock-09.jpg"
         },
         "gymnista-home": {
-            "name": "Home",
-            "title": "Gymnista \u2014 Train for life",
-            "description": "Gym & fitness brand \u2014 Home, About Us, Collections, Shop, Membership, FAQ, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+            "name": "Home — Elite Talent",
+            "title": "Gymnista — Elite Talent. Bulletproof Systems.",
+            "description": "Build the team your business needs without adding unnecessary overhead. Gymnista places trained accounting and administrative professionals inside your business — then helps document the processes they run so execution doesn't depend on one person.",
             "file": "gymnista/home.html",
-            "thumb": "assets/img/gymnista-img-1.jpg"
+            "thumb": "assets/img/arc-stock-28.jpg"
         },
-        "gymnista-about-us": {
-            "name": "About Us",
-            "title": "About Us \u2013 Gymnista",
-            "description": "Gym & fitness brand \u2014 Home, About Us, Collections, Shop, Membership, FAQ, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
-            "file": "gymnista/about-us.html",
-            "thumb": "assets/img/gymnista-img-1.jpg"
+        "gymnista-about": {
+            "name": "About — Built to Execute",
+            "title": "About – Gymnista",
+            "description": "Gymnista combines embedded talent, documented processes and practical automation — teams that can actually execute.",
+            "file": "gymnista/about.html",
+            "thumb": "assets/img/arc-stock-33.jpg"
         },
-        "gymnista-all-collections": {
-            "name": "All Collections",
-            "title": "All Collections \u2013 Gymnista",
-            "description": "Gym & fitness brand \u2014 Home, About Us, Collections, Shop, Membership, FAQ, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
-            "file": "gymnista/all-collections.html",
-            "thumb": "assets/img/gymnista-img-10.jpg"
+        "gymnista-services": {
+            "name": "Services — Back Office Stack",
+            "title": "Services – Gymnista",
+            "description": "Finance & accounting talent, virtual assistants and documented playbooks — support built around the work, not a fixed package.",
+            "file": "gymnista/services.html",
+            "thumb": "assets/img/arc-stock-38.jpg"
         },
-        "gymnista-shop-page": {
-            "name": "Shop",
-            "title": "Shop \u2013 Gymnista",
-            "description": "Gym & fitness brand \u2014 Home, About Us, Collections, Shop, Membership, FAQ, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
-            "file": "gymnista/shop-page.html",
-            "thumb": "assets/img/gymnista-img-1.jpg"
+        "gymnista-virtual-services": {
+            "name": "Virtual Services — Off Your Plate",
+            "title": "Virtual Services – Gymnista",
+            "description": "Trained virtual professionals who own recurring admin and operations work — with a documented process behind every seat.",
+            "file": "gymnista/virtual-services.html",
+            "thumb": "assets/img/arc-stock-43.jpg"
         },
-        "gymnista-membership": {
-            "name": "Membership",
-            "title": "Membership \u2013 Gymnista",
-            "description": "Gym & fitness brand \u2014 Home, About Us, Collections, Shop, Membership, FAQ, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
-            "file": "gymnista/membership.html",
-            "thumb": "assets/img/gymnista-img-1.jpg"
+        "gymnista-playbooks": {
+            "name": "Playbooks — Living Intranet",
+            "title": "Playbooks – Gymnista",
+            "description": "Your documented processes live in a branded, per-company intranet — searchable, permissioned and always used.",
+            "file": "gymnista/playbooks.html",
+            "thumb": "assets/img/arc-stock-02.jpg"
         },
-        "gymnista-faq": {
-            "name": "FAQ",
-            "title": "FAQ \u2013 Gymnista",
-            "description": "Gym & fitness brand \u2014 Home, About Us, Collections, Shop, Membership, FAQ, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
-            "file": "gymnista/faq.html",
-            "thumb": "assets/img/gymnista-img-1.jpg"
+        "gymnista-foundation": {
+            "name": "Foundation — Opportunity Engine",
+            "title": "Foundation – Gymnista",
+            "description": "The Gymnista Foundation trains and prepares Latin American professionals for sustainable remote careers — train, prepare, connect, support.",
+            "file": "gymnista/foundation.html",
+            "thumb": "assets/img/arc-stock-07.jpg"
         },
-        "gymnista-blog": {
-            "name": "Blog",
-            "title": "Blog \u2013 Gymnista",
-            "description": "Gym & fitness brand \u2014 Home, About Us, Collections, Shop, Membership, FAQ, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
-            "file": "gymnista/blog.html",
-            "thumb": "assets/img/gymnista-img-1.jpg"
-        },
-        "gymnista-contact-us": {
-            "name": "Contact Us",
-            "title": "Contact Us \u2013 Gymnista",
-            "description": "Gym & fitness brand \u2014 Home, About Us, Collections, Shop, Membership, FAQ, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
-            "file": "gymnista/contact-us.html",
-            "thumb": "assets/img/gymnista-img-12.jpg"
+        "gymnista-partners": {
+            "name": "Partners — Client Channel",
+            "title": "Partners – Gymnista",
+            "description": "You keep the relationship — we help build the team. For CFOs, firms, consultants and operating partners.",
+            "file": "gymnista/partners.html",
+            "thumb": "assets/img/arc-stock-12.jpg"
         },
         "nerra-home": {
-            "name": "Home",
-            "title": "Nerra \u2014 Clean energy, made simple",
-            "description": "Solar energy company \u2014 Home, About Us, Services, Products, Projects, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+            "name": "Home — Elite Talent",
+            "title": "Nerra — Elite Talent. Bulletproof Systems.",
+            "description": "Build the team your business needs without adding unnecessary overhead. Nerra places trained accounting and administrative professionals inside your business — then helps document the processes they run so execution doesn't depend on one person.",
             "file": "nerra/home.html",
-            "thumb": "assets/img/nerra-img-1.png"
+            "thumb": "assets/img/arc-stock-31.jpg"
         },
-        "nerra-about-us": {
-            "name": "About Us",
-            "title": "About Us \u2013 Nerra",
-            "description": "Solar energy company \u2014 Home, About Us, Services, Products, Projects, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
-            "file": "nerra/about-us.html",
-            "thumb": "assets/img/nerra-img-1.png"
+        "nerra-about": {
+            "name": "About — Built to Execute",
+            "title": "About – Nerra",
+            "description": "Nerra combines embedded talent, documented processes and practical automation — teams that can actually execute.",
+            "file": "nerra/about.html",
+            "thumb": "assets/img/arc-stock-36.jpg"
         },
         "nerra-services": {
-            "name": "Services",
-            "title": "Services \u2013 Nerra",
-            "description": "Solar energy company \u2014 Home, About Us, Services, Products, Projects, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+            "name": "Services — Back Office Stack",
+            "title": "Services – Nerra",
+            "description": "Finance & accounting talent, virtual assistants and documented playbooks — support built around the work, not a fixed package.",
             "file": "nerra/services.html",
-            "thumb": "assets/img/nerra-img-1.png"
+            "thumb": "assets/img/arc-stock-41.jpg"
         },
-        "nerra-products": {
-            "name": "Products",
-            "title": "Products \u2013 Nerra",
-            "description": "Solar energy company \u2014 Home, About Us, Services, Products, Projects, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
-            "file": "nerra/products.html",
-            "thumb": "assets/img/nerra-img-1.png"
+        "nerra-virtual-services": {
+            "name": "Virtual Services — Off Your Plate",
+            "title": "Virtual Services – Nerra",
+            "description": "Trained virtual professionals who own recurring admin and operations work — with a documented process behind every seat.",
+            "file": "nerra/virtual-services.html",
+            "thumb": "assets/img/arc-stock-46.jpg"
         },
-        "nerra-projects": {
-            "name": "Projects",
-            "title": "Projects \u2013 Nerra",
-            "description": "Solar energy company \u2014 Home, About Us, Services, Products, Projects, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
-            "file": "nerra/projects.html",
-            "thumb": "assets/img/nerra-img-1.png"
+        "nerra-playbooks": {
+            "name": "Playbooks — Living Intranet",
+            "title": "Playbooks – Nerra",
+            "description": "Your documented processes live in a branded, per-company intranet — searchable, permissioned and always used.",
+            "file": "nerra/playbooks.html",
+            "thumb": "assets/img/arc-stock-05.jpg"
         },
-        "nerra-careers": {
-            "name": "Careers",
-            "title": "Careers \u2013 Nerra",
-            "description": "Solar energy company \u2014 Home, About Us, Services, Products, Projects, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
-            "file": "nerra/careers.html",
-            "thumb": "assets/img/nerra-img-1.png"
+        "nerra-foundation": {
+            "name": "Foundation — Opportunity Engine",
+            "title": "Foundation – Nerra",
+            "description": "The Nerra Foundation trains and prepares Latin American professionals for sustainable remote careers — train, prepare, connect, support.",
+            "file": "nerra/foundation.html",
+            "thumb": "assets/img/arc-stock-10.jpg"
         },
-        "nerra-blog": {
-            "name": "Blog",
-            "title": "Blog \u2013 Nerra",
-            "description": "Solar energy company \u2014 Home, About Us, Services, Products, Projects, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
-            "file": "nerra/blog.html",
-            "thumb": "assets/img/nerra-img-1.png"
-        },
-        "nerra-contact-us": {
-            "name": "Contact Us",
-            "title": "Contact Us \u2013 Nerra",
-            "description": "Solar energy company \u2014 Home, About Us, Services, Products, Projects, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
-            "file": "nerra/contact-us.html",
-            "thumb": "assets/img/nerra-img-1.png"
+        "nerra-partners": {
+            "name": "Partners — Client Channel",
+            "title": "Partners – Nerra",
+            "description": "You keep the relationship — we help build the team. For CFOs, firms, consultants and operating partners.",
+            "file": "nerra/partners.html",
+            "thumb": "assets/img/arc-stock-15.jpg"
         },
         "ossian-home": {
-            "name": "Home",
-            "title": "Ossian \u2014 Naturally better",
-            "description": "Organic goods shop \u2014 Home, About Us, Shop, Testimonials, Contact Us.",
+            "name": "Home — Elite Talent",
+            "title": "Ossian — Elite Talent. Bulletproof Systems.",
+            "description": "Build the team your business needs without adding unnecessary overhead. Ossian places trained accounting and administrative professionals inside your business — then helps document the processes they run so execution doesn't depend on one person.",
             "file": "ossian/home.html",
-            "thumb": "assets/img/ossian-img-1.jpg"
+            "thumb": "assets/img/arc-stock-34.jpg"
         },
-        "ossian-about-us": {
-            "name": "About Us",
-            "title": "About Us \u2013 Ossian",
-            "description": "Organic goods shop \u2014 Home, About Us, Shop, Testimonials, Contact Us.",
-            "file": "ossian/about-us.html",
-            "thumb": "assets/img/ossian-img-1.jpg"
+        "ossian-about": {
+            "name": "About — Built to Execute",
+            "title": "About – Ossian",
+            "description": "Ossian combines embedded talent, documented processes and practical automation — teams that can actually execute.",
+            "file": "ossian/about.html",
+            "thumb": "assets/img/arc-stock-39.jpg"
         },
-        "ossian-shop": {
-            "name": "Shop",
-            "title": "Shop \u2013 Ossian",
-            "description": "Organic goods shop \u2014 Home, About Us, Shop, Testimonials, Contact Us.",
-            "file": "ossian/shop.html",
-            "thumb": "assets/img/ossian-img-11.webp"
+        "ossian-services": {
+            "name": "Services — Back Office Stack",
+            "title": "Services – Ossian",
+            "description": "Finance & accounting talent, virtual assistants and documented playbooks — support built around the work, not a fixed package.",
+            "file": "ossian/services.html",
+            "thumb": "assets/img/arc-stock-44.jpg"
         },
-        "ossian-testimonials": {
-            "name": "Testimonials",
-            "title": "Testimonials \u2013 Ossian",
-            "description": "Organic goods shop \u2014 Home, About Us, Shop, Testimonials, Contact Us.",
-            "file": "ossian/testimonials.html",
-            "thumb": "assets/img/ossian-img-12.png"
+        "ossian-virtual-services": {
+            "name": "Virtual Services — Off Your Plate",
+            "title": "Virtual Services – Ossian",
+            "description": "Trained virtual professionals who own recurring admin and operations work — with a documented process behind every seat.",
+            "file": "ossian/virtual-services.html",
+            "thumb": "assets/img/arc-stock-03.jpg"
         },
-        "ossian-contact-us": {
-            "name": "Contact Us",
-            "title": "Contact Us \u2013 Ossian",
-            "description": "Organic goods shop \u2014 Home, About Us, Shop, Testimonials, Contact Us.",
-            "file": "ossian/contact-us.html",
-            "thumb": "assets/img/ossian-img-1.jpg"
+        "ossian-playbooks": {
+            "name": "Playbooks — Living Intranet",
+            "title": "Playbooks – Ossian",
+            "description": "Your documented processes live in a branded, per-company intranet — searchable, permissioned and always used.",
+            "file": "ossian/playbooks.html",
+            "thumb": "assets/img/arc-stock-08.jpg"
+        },
+        "ossian-foundation": {
+            "name": "Foundation — Opportunity Engine",
+            "title": "Foundation – Ossian",
+            "description": "The Ossian Foundation trains and prepares Latin American professionals for sustainable remote careers — train, prepare, connect, support.",
+            "file": "ossian/foundation.html",
+            "thumb": "assets/img/arc-stock-13.jpg"
+        },
+        "ossian-partners": {
+            "name": "Partners — Client Channel",
+            "title": "Partners – Ossian",
+            "description": "You keep the relationship — we help build the team. For CFOs, firms, consultants and operating partners.",
+            "file": "ossian/partners.html",
+            "thumb": "assets/img/arc-stock-18.jpg"
         },
         "avira-home": {
-            "name": "Home",
-            "title": "Avira \u2014 Work-life balance coaching",
-            "description": "Work-life balance coaching \u2014 Home, About, Solutions, Case Studies, Find Your Coach, Pricing, FAQ, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+            "name": "Home — Elite Talent",
+            "title": "Avira — Elite Talent. Bulletproof Systems.",
+            "description": "Build the team your business needs without adding unnecessary overhead. Avira places trained accounting and administrative professionals inside your business — then helps document the processes they run so execution doesn't depend on one person.",
             "file": "avira/home.html",
-            "thumb": "assets/img/avira-img-1.png"
+            "thumb": "assets/img/arc-stock-37.jpg"
         },
         "avira-about": {
-            "name": "About",
-            "title": "About \u2013 Avira",
-            "description": "Work-life balance coaching \u2014 Home, About, Solutions, Case Studies, Find Your Coach, Pricing, FAQ, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+            "name": "About — Built to Execute",
+            "title": "About – Avira",
+            "description": "Avira combines embedded talent, documented processes and practical automation — teams that can actually execute.",
             "file": "avira/about.html",
-            "thumb": "assets/img/avira-img-1.png"
+            "thumb": "assets/img/arc-stock-42.jpg"
         },
-        "avira-solutions": {
-            "name": "Solutions",
-            "title": "Solutions \u2013 Avira",
-            "description": "Work-life balance coaching \u2014 Home, About, Solutions, Case Studies, Find Your Coach, Pricing, FAQ, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
-            "file": "avira/solutions.html",
-            "thumb": "assets/img/avira-img-1.png"
+        "avira-services": {
+            "name": "Services — Back Office Stack",
+            "title": "Services – Avira",
+            "description": "Finance & accounting talent, virtual assistants and documented playbooks — support built around the work, not a fixed package.",
+            "file": "avira/services.html",
+            "thumb": "assets/img/arc-stock-01.jpg"
         },
-        "avira-case-studies": {
-            "name": "Case Studies",
-            "title": "Case Studies \u2013 Avira",
-            "description": "Work-life balance coaching \u2014 Home, About, Solutions, Case Studies, Find Your Coach, Pricing, FAQ, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
-            "file": "avira/case-studies.html",
-            "thumb": "assets/img/avira-img-1.png"
+        "avira-virtual-services": {
+            "name": "Virtual Services — Off Your Plate",
+            "title": "Virtual Services – Avira",
+            "description": "Trained virtual professionals who own recurring admin and operations work — with a documented process behind every seat.",
+            "file": "avira/virtual-services.html",
+            "thumb": "assets/img/arc-stock-06.jpg"
         },
-        "avira-find-your-coach": {
-            "name": "Find Your Coach",
-            "title": "Find Your Coach \u2013 Avira",
-            "description": "Work-life balance coaching \u2014 Home, About, Solutions, Case Studies, Find Your Coach, Pricing, FAQ, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
-            "file": "avira/find-your-coach.html",
-            "thumb": "assets/img/avira-img-1.png"
+        "avira-playbooks": {
+            "name": "Playbooks — Living Intranet",
+            "title": "Playbooks – Avira",
+            "description": "Your documented processes live in a branded, per-company intranet — searchable, permissioned and always used.",
+            "file": "avira/playbooks.html",
+            "thumb": "assets/img/arc-stock-11.jpg"
         },
-        "avira-pricing": {
-            "name": "Pricing",
-            "title": "Pricing \u2013 Avira",
-            "description": "Work-life balance coaching \u2014 Home, About, Solutions, Case Studies, Find Your Coach, Pricing, FAQ, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
-            "file": "avira/pricing.html",
-            "thumb": "assets/img/avira-img-1.png"
+        "avira-foundation": {
+            "name": "Foundation — Opportunity Engine",
+            "title": "Foundation – Avira",
+            "description": "The Avira Foundation trains and prepares Latin American professionals for sustainable remote careers — train, prepare, connect, support.",
+            "file": "avira/foundation.html",
+            "thumb": "assets/img/arc-stock-16.jpg"
         },
-        "avira-faq": {
-            "name": "FAQs",
-            "title": "FAQs \u2013 Avira",
-            "description": "Work-life balance coaching \u2014 Home, About, Solutions, Case Studies, Find Your Coach, Pricing, FAQ, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
-            "file": "avira/faq.html",
-            "thumb": "assets/img/avira-img-1.png"
-        },
-        "avira-blog": {
-            "name": "Blog",
-            "title": "Blog \u2013 Avira",
-            "description": "Work-life balance coaching \u2014 Home, About, Solutions, Case Studies, Find Your Coach, Pricing, FAQ, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
-            "file": "avira/blog.html",
-            "thumb": "assets/img/avira-img-1.png"
-        },
-        "avira-contact-us": {
-            "name": "Contact Us",
-            "title": "Contact Us \u2013 Avira",
-            "description": "Work-life balance coaching \u2014 Home, About, Solutions, Case Studies, Find Your Coach, Pricing, FAQ, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
-            "file": "avira/contact-us.html",
-            "thumb": "assets/img/avira-img-1.png"
+        "avira-partners": {
+            "name": "Partners — Client Channel",
+            "title": "Partners – Avira",
+            "description": "You keep the relationship — we help build the team. For CFOs, firms, consultants and operating partners.",
+            "file": "avira/partners.html",
+            "thumb": "assets/img/arc-stock-21.jpg"
         },
         "consultant-home": {
-            "name": "Home",
-            "title": "Consultant \u2014 Business consulting",
-            "description": "Business consulting \u2014 Home, About, Services, Blog, Contact.",
+            "name": "Home — Elite Talent",
+            "title": "Consultant — Elite Talent. Bulletproof Systems.",
+            "description": "Build the team your business needs without adding unnecessary overhead. Consultant places trained accounting and administrative professionals inside your business — then helps document the processes they run so execution doesn't depend on one person.",
             "file": "consultant/home.html",
-            "thumb": "assets/img/consultant-img-1.jpg"
+            "thumb": "assets/img/arc-stock-40.jpg"
         },
         "consultant-about": {
-            "name": "About",
-            "title": "About \u2013 Consultant",
-            "description": "Business consulting \u2014 Home, About, Services, Blog, Contact.",
+            "name": "About — Built to Execute",
+            "title": "About – Consultant",
+            "description": "Consultant combines embedded talent, documented processes and practical automation — teams that can actually execute.",
             "file": "consultant/about.html",
-            "thumb": "assets/img/consultant-img-1.jpg"
+            "thumb": "assets/img/arc-stock-45.jpg"
         },
         "consultant-services": {
-            "name": "Services",
-            "title": "Services \u2013 Consultant",
-            "description": "Business consulting \u2014 Home, About, Services, Blog, Contact.",
+            "name": "Services — Back Office Stack",
+            "title": "Services – Consultant",
+            "description": "Finance & accounting talent, virtual assistants and documented playbooks — support built around the work, not a fixed package.",
             "file": "consultant/services.html",
-            "thumb": "assets/img/consultant-img-1.jpg"
+            "thumb": "assets/img/arc-stock-04.jpg"
         },
-        "consultant-blog": {
-            "name": "Blog",
-            "title": "Blog \u2013 Consultant",
-            "description": "Business consulting \u2014 Home, About, Services, Blog, Contact.",
-            "file": "consultant/blog.html",
-            "thumb": "assets/img/consultant-img-1.jpg"
+        "consultant-virtual-services": {
+            "name": "Virtual Services — Off Your Plate",
+            "title": "Virtual Services – Consultant",
+            "description": "Trained virtual professionals who own recurring admin and operations work — with a documented process behind every seat.",
+            "file": "consultant/virtual-services.html",
+            "thumb": "assets/img/arc-stock-09.jpg"
         },
-        "consultant-contact": {
-            "name": "Contact",
-            "title": "Contact \u2013 Consultant",
-            "description": "Business consulting \u2014 Home, About, Services, Blog, Contact.",
-            "file": "consultant/contact.html",
-            "thumb": "assets/img/consultant-img-1.jpg"
+        "consultant-playbooks": {
+            "name": "Playbooks — Living Intranet",
+            "title": "Playbooks – Consultant",
+            "description": "Your documented processes live in a branded, per-company intranet — searchable, permissioned and always used.",
+            "file": "consultant/playbooks.html",
+            "thumb": "assets/img/arc-stock-14.jpg"
+        },
+        "consultant-foundation": {
+            "name": "Foundation — Opportunity Engine",
+            "title": "Foundation – Consultant",
+            "description": "The Consultant Foundation trains and prepares Latin American professionals for sustainable remote careers — train, prepare, connect, support.",
+            "file": "consultant/foundation.html",
+            "thumb": "assets/img/arc-stock-19.jpg"
+        },
+        "consultant-partners": {
+            "name": "Partners — Client Channel",
+            "title": "Partners – Consultant",
+            "description": "You keep the relationship — we help build the team. For CFOs, firms, consultants and operating partners.",
+            "file": "consultant/partners.html",
+            "thumb": "assets/img/arc-stock-24.jpg"
         },
         "smile-dent-home": {
-            "name": "Home",
-            "title": "Smile Dent \u2014 Family dental clinic",
-            "description": "Dental clinic \u2014 Home, About, Services, Blog, Contact.",
+            "name": "Home — Elite Talent",
+            "title": "Smile Dent — Elite Talent. Bulletproof Systems.",
+            "description": "Build the team your business needs without adding unnecessary overhead. Smile Dent places trained accounting and administrative professionals inside your business — then helps document the processes they run so execution doesn't depend on one person.",
             "file": "smile-dent/home.html",
-            "thumb": "assets/img/smile-dent-img-1.jpg"
+            "thumb": "assets/img/arc-stock-43.jpg"
         },
         "smile-dent-about": {
-            "name": "About",
-            "title": "About \u2013 Smile Dent",
-            "description": "Dental clinic \u2014 Home, About, Services, Blog, Contact.",
+            "name": "About — Built to Execute",
+            "title": "About – Smile Dent",
+            "description": "Smile Dent combines embedded talent, documented processes and practical automation — teams that can actually execute.",
             "file": "smile-dent/about.html",
-            "thumb": "assets/img/smile-dent-img-1.jpg"
+            "thumb": "assets/img/arc-stock-02.jpg"
         },
         "smile-dent-services": {
-            "name": "Services",
-            "title": "Services \u2013 Smile Dent",
-            "description": "Dental clinic \u2014 Home, About, Services, Blog, Contact.",
+            "name": "Services — Back Office Stack",
+            "title": "Services – Smile Dent",
+            "description": "Finance & accounting talent, virtual assistants and documented playbooks — support built around the work, not a fixed package.",
             "file": "smile-dent/services.html",
-            "thumb": "assets/img/smile-dent-img-1.jpg"
+            "thumb": "assets/img/arc-stock-07.jpg"
         },
-        "smile-dent-blog": {
-            "name": "Blog",
-            "title": "Blog \u2013 Smile Dent",
-            "description": "Dental clinic \u2014 Home, About, Services, Blog, Contact.",
-            "file": "smile-dent/blog.html",
-            "thumb": "assets/img/smile-dent-img-1.jpg"
+        "smile-dent-virtual-services": {
+            "name": "Virtual Services — Off Your Plate",
+            "title": "Virtual Services – Smile Dent",
+            "description": "Trained virtual professionals who own recurring admin and operations work — with a documented process behind every seat.",
+            "file": "smile-dent/virtual-services.html",
+            "thumb": "assets/img/arc-stock-12.jpg"
         },
-        "smile-dent-contact": {
-            "name": "Contact",
-            "title": "Contact \u2013 Smile Dent",
-            "description": "Dental clinic \u2014 Home, About, Services, Blog, Contact.",
-            "file": "smile-dent/contact.html",
-            "thumb": "assets/img/smile-dent-img-1.jpg"
+        "smile-dent-playbooks": {
+            "name": "Playbooks — Living Intranet",
+            "title": "Playbooks – Smile Dent",
+            "description": "Your documented processes live in a branded, per-company intranet — searchable, permissioned and always used.",
+            "file": "smile-dent/playbooks.html",
+            "thumb": "assets/img/arc-stock-17.jpg"
+        },
+        "smile-dent-foundation": {
+            "name": "Foundation — Opportunity Engine",
+            "title": "Foundation – Smile Dent",
+            "description": "The Smile Dent Foundation trains and prepares Latin American professionals for sustainable remote careers — train, prepare, connect, support.",
+            "file": "smile-dent/foundation.html",
+            "thumb": "assets/img/arc-stock-22.jpg"
+        },
+        "smile-dent-partners": {
+            "name": "Partners — Client Channel",
+            "title": "Partners – Smile Dent",
+            "description": "You keep the relationship — we help build the team. For CFOs, firms, consultants and operating partners.",
+            "file": "smile-dent/partners.html",
+            "thumb": "assets/img/arc-stock-27.jpg"
         },
         "renovation-home": {
-            "name": "Home",
-            "title": "Renovation \u2014 Home remodeling",
-            "description": "Home renovation contractor \u2014 Home, About, Services, Projects, Contact.",
+            "name": "Home — Elite Talent",
+            "title": "Renovation — Elite Talent. Bulletproof Systems.",
+            "description": "Build the team your business needs without adding unnecessary overhead. Renovation places trained accounting and administrative professionals inside your business — then helps document the processes they run so execution doesn't depend on one person.",
             "file": "renovation/home.html",
-            "thumb": "assets/img/renovation-img-1.jpg"
+            "thumb": "assets/img/arc-stock-46.jpg"
         },
         "renovation-about": {
-            "name": "About",
-            "title": "About \u2013 Renovation",
-            "description": "Home renovation contractor \u2014 Home, About, Services, Projects, Contact.",
+            "name": "About — Built to Execute",
+            "title": "About – Renovation",
+            "description": "Renovation combines embedded talent, documented processes and practical automation — teams that can actually execute.",
             "file": "renovation/about.html",
-            "thumb": "assets/img/renovation-img-1.jpg"
+            "thumb": "assets/img/arc-stock-05.jpg"
         },
         "renovation-services": {
-            "name": "Services",
-            "title": "Services \u2013 Renovation",
-            "description": "Home renovation contractor \u2014 Home, About, Services, Projects, Contact.",
+            "name": "Services — Back Office Stack",
+            "title": "Services – Renovation",
+            "description": "Finance & accounting talent, virtual assistants and documented playbooks — support built around the work, not a fixed package.",
             "file": "renovation/services.html",
-            "thumb": "assets/img/renovation-img-1.jpg"
+            "thumb": "assets/img/arc-stock-10.jpg"
         },
-        "renovation-projects": {
-            "name": "Projects",
-            "title": "Projects \u2013 Renovation",
-            "description": "Home renovation contractor \u2014 Home, About, Services, Projects, Contact.",
-            "file": "renovation/projects.html",
-            "thumb": "assets/img/renovation-img-1.jpg"
+        "renovation-virtual-services": {
+            "name": "Virtual Services — Off Your Plate",
+            "title": "Virtual Services – Renovation",
+            "description": "Trained virtual professionals who own recurring admin and operations work — with a documented process behind every seat.",
+            "file": "renovation/virtual-services.html",
+            "thumb": "assets/img/arc-stock-15.jpg"
         },
-        "renovation-contact": {
-            "name": "Contact",
-            "title": "Contact \u2013 Renovation",
-            "description": "Home renovation contractor \u2014 Home, About, Services, Projects, Contact.",
-            "file": "renovation/contact.html",
-            "thumb": "assets/img/renovation-img-1.jpg"
+        "renovation-playbooks": {
+            "name": "Playbooks — Living Intranet",
+            "title": "Playbooks – Renovation",
+            "description": "Your documented processes live in a branded, per-company intranet — searchable, permissioned and always used.",
+            "file": "renovation/playbooks.html",
+            "thumb": "assets/img/arc-stock-20.jpg"
+        },
+        "renovation-foundation": {
+            "name": "Foundation — Opportunity Engine",
+            "title": "Foundation – Renovation",
+            "description": "The Renovation Foundation trains and prepares Latin American professionals for sustainable remote careers — train, prepare, connect, support.",
+            "file": "renovation/foundation.html",
+            "thumb": "assets/img/arc-stock-25.jpg"
+        },
+        "renovation-partners": {
+            "name": "Partners — Client Channel",
+            "title": "Partners – Renovation",
+            "description": "You keep the relationship — we help build the team. For CFOs, firms, consultants and operating partners.",
+            "file": "renovation/partners.html",
+            "thumb": "assets/img/arc-stock-30.jpg"
+        },
+        "corporate-home": {
+            "name": "Home — Elite Talent",
+            "title": "Corporate — Elite Talent. Bulletproof Systems.",
+            "description": "Build the team your business needs without adding unnecessary overhead. Corporate places trained accounting and administrative professionals inside your business — then helps document the processes they run so execution doesn't depend on one person.",
+            "file": "corporate/home.html",
+            "thumb": "assets/img/arc-stock-03.jpg"
+        },
+        "corporate-about": {
+            "name": "About — Built to Execute",
+            "title": "About – Corporate",
+            "description": "Corporate combines embedded talent, documented processes and practical automation — teams that can actually execute.",
+            "file": "corporate/about.html",
+            "thumb": "assets/img/arc-stock-08.jpg"
+        },
+        "corporate-services": {
+            "name": "Services — Back Office Stack",
+            "title": "Services – Corporate",
+            "description": "Finance & accounting talent, virtual assistants and documented playbooks — support built around the work, not a fixed package.",
+            "file": "corporate/services.html",
+            "thumb": "assets/img/arc-stock-13.jpg"
+        },
+        "corporate-virtual-services": {
+            "name": "Virtual Services — Off Your Plate",
+            "title": "Virtual Services – Corporate",
+            "description": "Trained virtual professionals who own recurring admin and operations work — with a documented process behind every seat.",
+            "file": "corporate/virtual-services.html",
+            "thumb": "assets/img/arc-stock-18.jpg"
+        },
+        "corporate-playbooks": {
+            "name": "Playbooks — Living Intranet",
+            "title": "Playbooks – Corporate",
+            "description": "Your documented processes live in a branded, per-company intranet — searchable, permissioned and always used.",
+            "file": "corporate/playbooks.html",
+            "thumb": "assets/img/arc-stock-23.jpg"
+        },
+        "corporate-foundation": {
+            "name": "Foundation — Opportunity Engine",
+            "title": "Foundation – Corporate",
+            "description": "The Corporate Foundation trains and prepares Latin American professionals for sustainable remote careers — train, prepare, connect, support.",
+            "file": "corporate/foundation.html",
+            "thumb": "assets/img/arc-stock-28.jpg"
+        },
+        "corporate-partners": {
+            "name": "Partners — Client Channel",
+            "title": "Partners – Corporate",
+            "description": "You keep the relationship — we help build the team. For CFOs, firms, consultants and operating partners.",
+            "file": "corporate/partners.html",
+            "thumb": "assets/img/arc-stock-33.jpg"
+        },
+        "orbita-home": {
+            "name": "Home — Elite Talent",
+            "title": "Orbita — Elite Talent. Bulletproof Systems.",
+            "description": "Build the team your business needs without adding unnecessary overhead. Orbita places trained accounting and administrative professionals inside your business — then helps document the processes they run so execution doesn't depend on one person.",
+            "file": "orbita/home.html",
+            "thumb": "assets/img/arc-stock-06.jpg"
+        },
+        "orbita-about": {
+            "name": "About — Built to Execute",
+            "title": "About – Orbita",
+            "description": "Orbita combines embedded talent, documented processes and practical automation — teams that can actually execute.",
+            "file": "orbita/about.html",
+            "thumb": "assets/img/arc-stock-11.jpg"
+        },
+        "orbita-services": {
+            "name": "Services — Back Office Stack",
+            "title": "Services – Orbita",
+            "description": "Finance & accounting talent, virtual assistants and documented playbooks — support built around the work, not a fixed package.",
+            "file": "orbita/services.html",
+            "thumb": "assets/img/arc-stock-16.jpg"
+        },
+        "orbita-virtual-services": {
+            "name": "Virtual Services — Off Your Plate",
+            "title": "Virtual Services – Orbita",
+            "description": "Trained virtual professionals who own recurring admin and operations work — with a documented process behind every seat.",
+            "file": "orbita/virtual-services.html",
+            "thumb": "assets/img/arc-stock-21.jpg"
+        },
+        "orbita-playbooks": {
+            "name": "Playbooks — Living Intranet",
+            "title": "Playbooks – Orbita",
+            "description": "Your documented processes live in a branded, per-company intranet — searchable, permissioned and always used.",
+            "file": "orbita/playbooks.html",
+            "thumb": "assets/img/arc-stock-26.jpg"
+        },
+        "orbita-foundation": {
+            "name": "Foundation — Opportunity Engine",
+            "title": "Foundation – Orbita",
+            "description": "The Orbita Foundation trains and prepares Latin American professionals for sustainable remote careers — train, prepare, connect, support.",
+            "file": "orbita/foundation.html",
+            "thumb": "assets/img/arc-stock-31.jpg"
+        },
+        "orbita-partners": {
+            "name": "Partners — Client Channel",
+            "title": "Partners – Orbita",
+            "description": "You keep the relationship — we help build the team. For CFOs, firms, consultants and operating partners.",
+            "file": "orbita/partners.html",
+            "thumb": "assets/img/arc-stock-36.jpg"
+        },
+        "nomad-home": {
+            "name": "Home — Elite Talent",
+            "title": "Nomad — Elite Talent. Bulletproof Systems.",
+            "description": "Build the team your business needs without adding unnecessary overhead. Nomad places trained accounting and administrative professionals inside your business — then helps document the processes they run so execution doesn't depend on one person.",
+            "file": "nomad/home.html",
+            "thumb": "assets/img/arc-stock-09.jpg"
+        },
+        "nomad-about": {
+            "name": "About — Built to Execute",
+            "title": "About – Nomad",
+            "description": "Nomad combines embedded talent, documented processes and practical automation — teams that can actually execute.",
+            "file": "nomad/about.html",
+            "thumb": "assets/img/arc-stock-14.jpg"
+        },
+        "nomad-services": {
+            "name": "Services — Back Office Stack",
+            "title": "Services – Nomad",
+            "description": "Finance & accounting talent, virtual assistants and documented playbooks — support built around the work, not a fixed package.",
+            "file": "nomad/services.html",
+            "thumb": "assets/img/arc-stock-19.jpg"
+        },
+        "nomad-virtual-services": {
+            "name": "Virtual Services — Off Your Plate",
+            "title": "Virtual Services – Nomad",
+            "description": "Trained virtual professionals who own recurring admin and operations work — with a documented process behind every seat.",
+            "file": "nomad/virtual-services.html",
+            "thumb": "assets/img/arc-stock-24.jpg"
+        },
+        "nomad-playbooks": {
+            "name": "Playbooks — Living Intranet",
+            "title": "Playbooks – Nomad",
+            "description": "Your documented processes live in a branded, per-company intranet — searchable, permissioned and always used.",
+            "file": "nomad/playbooks.html",
+            "thumb": "assets/img/arc-stock-29.jpg"
+        },
+        "nomad-foundation": {
+            "name": "Foundation — Opportunity Engine",
+            "title": "Foundation – Nomad",
+            "description": "The Nomad Foundation trains and prepares Latin American professionals for sustainable remote careers — train, prepare, connect, support.",
+            "file": "nomad/foundation.html",
+            "thumb": "assets/img/arc-stock-34.jpg"
+        },
+        "nomad-partners": {
+            "name": "Partners — Client Channel",
+            "title": "Partners – Nomad",
+            "description": "You keep the relationship — we help build the team. For CFOs, firms, consultants and operating partners.",
+            "file": "nomad/partners.html",
+            "thumb": "assets/img/arc-stock-39.jpg"
+        },
+        "vitalia-home": {
+            "name": "Home — Elite Talent",
+            "title": "Vitalia — Elite Talent. Bulletproof Systems.",
+            "description": "Build the team your business needs without adding unnecessary overhead. Vitalia places trained accounting and administrative professionals inside your business — then helps document the processes they run so execution doesn't depend on one person.",
+            "file": "vitalia/home.html",
+            "thumb": "assets/img/arc-stock-12.jpg"
+        },
+        "vitalia-about": {
+            "name": "About — Built to Execute",
+            "title": "About – Vitalia",
+            "description": "Vitalia combines embedded talent, documented processes and practical automation — teams that can actually execute.",
+            "file": "vitalia/about.html",
+            "thumb": "assets/img/arc-stock-17.jpg"
+        },
+        "vitalia-services": {
+            "name": "Services — Back Office Stack",
+            "title": "Services – Vitalia",
+            "description": "Finance & accounting talent, virtual assistants and documented playbooks — support built around the work, not a fixed package.",
+            "file": "vitalia/services.html",
+            "thumb": "assets/img/arc-stock-22.jpg"
+        },
+        "vitalia-virtual-services": {
+            "name": "Virtual Services — Off Your Plate",
+            "title": "Virtual Services – Vitalia",
+            "description": "Trained virtual professionals who own recurring admin and operations work — with a documented process behind every seat.",
+            "file": "vitalia/virtual-services.html",
+            "thumb": "assets/img/arc-stock-27.jpg"
+        },
+        "vitalia-playbooks": {
+            "name": "Playbooks — Living Intranet",
+            "title": "Playbooks – Vitalia",
+            "description": "Your documented processes live in a branded, per-company intranet — searchable, permissioned and always used.",
+            "file": "vitalia/playbooks.html",
+            "thumb": "assets/img/arc-stock-32.jpg"
+        },
+        "vitalia-foundation": {
+            "name": "Foundation — Opportunity Engine",
+            "title": "Foundation – Vitalia",
+            "description": "The Vitalia Foundation trains and prepares Latin American professionals for sustainable remote careers — train, prepare, connect, support.",
+            "file": "vitalia/foundation.html",
+            "thumb": "assets/img/arc-stock-37.jpg"
+        },
+        "vitalia-partners": {
+            "name": "Partners — Client Channel",
+            "title": "Partners – Vitalia",
+            "description": "You keep the relationship — we help build the team. For CFOs, firms, consultants and operating partners.",
+            "file": "vitalia/partners.html",
+            "thumb": "assets/img/arc-stock-42.jpg"
+        },
+        "hirewell-home": {
+            "name": "Home — Elite Talent",
+            "title": "Hirewell — Elite Talent. Bulletproof Systems.",
+            "description": "Build the team your business needs without adding unnecessary overhead. Hirewell places trained accounting and administrative professionals inside your business — then helps document the processes they run so execution doesn't depend on one person.",
+            "file": "hirewell/home.html",
+            "thumb": "assets/img/arc-stock-15.jpg"
+        },
+        "hirewell-about": {
+            "name": "About — Built to Execute",
+            "title": "About – Hirewell",
+            "description": "Hirewell combines embedded talent, documented processes and practical automation — teams that can actually execute.",
+            "file": "hirewell/about.html",
+            "thumb": "assets/img/arc-stock-20.jpg"
+        },
+        "hirewell-services": {
+            "name": "Services — Back Office Stack",
+            "title": "Services – Hirewell",
+            "description": "Finance & accounting talent, virtual assistants and documented playbooks — support built around the work, not a fixed package.",
+            "file": "hirewell/services.html",
+            "thumb": "assets/img/arc-stock-25.jpg"
+        },
+        "hirewell-virtual-services": {
+            "name": "Virtual Services — Off Your Plate",
+            "title": "Virtual Services – Hirewell",
+            "description": "Trained virtual professionals who own recurring admin and operations work — with a documented process behind every seat.",
+            "file": "hirewell/virtual-services.html",
+            "thumb": "assets/img/arc-stock-30.jpg"
+        },
+        "hirewell-playbooks": {
+            "name": "Playbooks — Living Intranet",
+            "title": "Playbooks – Hirewell",
+            "description": "Your documented processes live in a branded, per-company intranet — searchable, permissioned and always used.",
+            "file": "hirewell/playbooks.html",
+            "thumb": "assets/img/arc-stock-35.jpg"
+        },
+        "hirewell-foundation": {
+            "name": "Foundation — Opportunity Engine",
+            "title": "Foundation – Hirewell",
+            "description": "The Hirewell Foundation trains and prepares Latin American professionals for sustainable remote careers — train, prepare, connect, support.",
+            "file": "hirewell/foundation.html",
+            "thumb": "assets/img/arc-stock-40.jpg"
+        },
+        "hirewell-partners": {
+            "name": "Partners — Client Channel",
+            "title": "Partners – Hirewell",
+            "description": "You keep the relationship — we help build the team. For CFOs, firms, consultants and operating partners.",
+            "file": "hirewell/partners.html",
+            "thumb": "assets/img/arc-stock-45.jpg"
         }
     },
     "demos": {
         "arc-site": {
             "title": "Ash River Collective",
-            "desc": "Complete marketing site \u2014 8 pages (Home, Services, Finance & Accounting Talent, Virtual Assistants, About, Partners, Foundation, Contact).",
+            "desc": "Talent & systems site — Home, About, Services, Virtual Services, Playbooks, Foundation, Partners.",
             "categories": [
                 "Business",
                 "Marketing"
             ],
-            "image": "assets/img/file.png",
-            "home": "index",
+            "image": "assets/img/file.webp",
+            "home": "arc-site-home",
             "pages": [
-                "index",
-                "services",
-                "finance-accounting-talent",
-                "virtual-assistants",
-                "about",
-                "partners",
-                "ash-river-foundation",
-                "contact"
+                "arc-site-home",
+                "arc-site-about",
+                "arc-site-services",
+                "arc-site-virtual-services",
+                "arc-site-playbooks",
+                "arc-site-foundation",
+                "arc-site-partners"
             ],
             "footer": [
-                "about",
-                "partners",
-                "ash-river-foundation",
-                "contact"
+                "arc-site-about",
+                "arc-site-services",
+                "arc-site-playbooks",
+                "arc-site-partners"
             ],
-            "logo": "logo-green.png"
+            "logo": "logo-green.webp"
         },
         "blogify": {
             "title": "Blogify",
-            "desc": "Travel & lifestyle blog \u2014 Home, About, Gallery, Subscribe, Inspiration, Contact.",
+            "desc": "Talent & systems site — Home, About, Services, Virtual Services, Playbooks, Foundation, Partners.",
             "categories": [
                 "Blog"
             ],
-            "image": "assets/img/blogify-img-1.png",
+            "image": "assets/img/arc-stock-04.jpg",
             "home": "blogify-home",
             "pages": [
                 "blogify-home",
                 "blogify-about",
-                "blogify-gallery",
-                "blogify-subscribe",
-                "blogify-inspiration",
-                "blogify-contact"
+                "blogify-services",
+                "blogify-virtual-services",
+                "blogify-playbooks",
+                "blogify-foundation",
+                "blogify-partners"
             ],
             "footer": [
                 "blogify-about",
-                "blogify-contact"
+                "blogify-services",
+                "blogify-playbooks",
+                "blogify-partners"
             ],
             "source": "https://solacewp.com/blogify/",
             "kit": {
@@ -836,23 +1125,26 @@
         },
         "commercecraft": {
             "title": "CommerceCraft",
-            "desc": "Furniture & home-decor store \u2014 Home, Shop, Accessories, Gift, Designers, Sale, Contact.",
+            "desc": "Talent & systems site — Home, About, Services, Virtual Services, Playbooks, Foundation, Partners.",
             "categories": [
                 "Ecommerce"
             ],
-            "image": "assets/img/commercecraft-img-1.png",
+            "image": "assets/img/arc-stock-07.jpg",
             "home": "commercecraft-home",
             "pages": [
                 "commercecraft-home",
-                "commercecraft-shop-2",
-                "commercecraft-accessories",
-                "commercecraft-gift",
-                "commercecraft-designers",
-                "commercecraft-sale",
-                "commercecraft-contact"
+                "commercecraft-about",
+                "commercecraft-services",
+                "commercecraft-virtual-services",
+                "commercecraft-playbooks",
+                "commercecraft-foundation",
+                "commercecraft-partners"
             ],
             "footer": [
-                "commercecraft-contact"
+                "commercecraft-about",
+                "commercecraft-services",
+                "commercecraft-playbooks",
+                "commercecraft-partners"
             ],
             "source": "https://solacewp.com/commercecraft/",
             "kit": {
@@ -898,25 +1190,27 @@
         },
         "retailridge": {
             "title": "RetailRidge",
-            "desc": "Fashion retail store \u2014 Home, About, Our Brand, New Arrivals, Flash Sale, Blog, Contact.",
+            "desc": "Talent & systems site — Home, About, Services, Virtual Services, Playbooks, Foundation, Partners.",
             "categories": [
                 "Ecommerce",
                 "Fashion"
             ],
-            "image": "assets/img/retailridge-img-1.png",
+            "image": "assets/img/arc-stock-10.jpg",
             "home": "retailridge-home",
             "pages": [
                 "retailridge-home",
                 "retailridge-about",
-                "retailridge-our-brand",
-                "retailridge-new-arrivals",
-                "retailridge-flash-sale",
-                "retailridge-blog",
-                "retailridge-contact"
+                "retailridge-services",
+                "retailridge-virtual-services",
+                "retailridge-playbooks",
+                "retailridge-foundation",
+                "retailridge-partners"
             ],
             "footer": [
                 "retailridge-about",
-                "retailridge-contact"
+                "retailridge-services",
+                "retailridge-playbooks",
+                "retailridge-partners"
             ],
             "source": "https://solacewp.com/retailridge/",
             "kit": {
@@ -962,24 +1256,27 @@
         },
         "flexiweb": {
             "title": "Flexiweb",
-            "desc": "Web design agency \u2014 Home, About, Career, Testimonials, Contact Us, Blog.",
+            "desc": "Talent & systems site — Home, About, Services, Virtual Services, Playbooks, Foundation, Partners.",
             "categories": [
                 "Business",
                 "Agency"
             ],
-            "image": "assets/img/flexiweb-img-1.jpg",
+            "image": "assets/img/arc-stock-13.jpg",
             "home": "flexiweb-home",
             "pages": [
                 "flexiweb-home",
                 "flexiweb-about",
-                "flexiweb-career",
-                "flexiweb-testimonials",
-                "flexiweb-blog",
-                "flexiweb-contact-us"
+                "flexiweb-services",
+                "flexiweb-virtual-services",
+                "flexiweb-playbooks",
+                "flexiweb-foundation",
+                "flexiweb-partners"
             ],
             "footer": [
                 "flexiweb-about",
-                "flexiweb-contact-us"
+                "flexiweb-services",
+                "flexiweb-playbooks",
+                "flexiweb-partners"
             ],
             "source": "https://solacewp.com/flexiweb/",
             "kit": {
@@ -1025,25 +1322,27 @@
         },
         "edinburgh": {
             "title": "Edinburgh",
-            "desc": "Creative agency \u2014 Home, About, Pricing, Career, Contact, Blog.",
+            "desc": "Talent & systems site — Home, About, Services, Virtual Services, Playbooks, Foundation, Partners.",
             "categories": [
                 "Business",
                 "Agency"
             ],
-            "image": "assets/img/edinburgh-img-1.png",
+            "image": "assets/img/arc-stock-16.jpg",
             "home": "edinburgh-home",
             "pages": [
                 "edinburgh-home",
                 "edinburgh-about",
-                "edinburgh-pricing",
-                "edinburgh-career",
-                "edinburgh-blog",
-                "edinburgh-contact"
+                "edinburgh-services",
+                "edinburgh-virtual-services",
+                "edinburgh-playbooks",
+                "edinburgh-foundation",
+                "edinburgh-partners"
             ],
             "footer": [
                 "edinburgh-about",
-                "edinburgh-pricing",
-                "edinburgh-contact"
+                "edinburgh-services",
+                "edinburgh-playbooks",
+                "edinburgh-partners"
             ],
             "source": "https://solacewp.com/edinburgh/",
             "kit": {
@@ -1089,24 +1388,27 @@
         },
         "printifix": {
             "title": "Printifix",
-            "desc": "3D printing services \u2014 Home, About, Industries, Testimonials, Contact Us, Blog.",
+            "desc": "Talent & systems site — Home, About, Services, Virtual Services, Playbooks, Foundation, Partners.",
             "categories": [
                 "Business",
                 "Technology"
             ],
-            "image": "assets/img/printifix-img-1.png",
+            "image": "assets/img/arc-stock-19.jpg",
             "home": "printifix-home",
             "pages": [
                 "printifix-home",
                 "printifix-about",
-                "printifix-industries",
-                "printifix-testimonials",
-                "printifix-blog",
-                "printifix-contact-us"
+                "printifix-services",
+                "printifix-virtual-services",
+                "printifix-playbooks",
+                "printifix-foundation",
+                "printifix-partners"
             ],
             "footer": [
                 "printifix-about",
-                "printifix-contact-us"
+                "printifix-services",
+                "printifix-playbooks",
+                "printifix-partners"
             ],
             "source": "https://solacewp.com/printifix/",
             "kit": {
@@ -1152,27 +1454,27 @@
         },
         "kelion": {
             "title": "Kelion",
-            "desc": "Influencer & creator portfolio \u2014 Home, About, Services, Portfolios, Events, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+            "desc": "Talent & systems site — Home, About, Services, Virtual Services, Playbooks, Foundation, Partners.",
             "categories": [
                 "Portfolio",
                 "Marketing"
             ],
-            "image": "assets/img/kelion-img-1.png",
+            "image": "assets/img/arc-stock-22.jpg",
             "home": "kelion-home",
             "pages": [
                 "kelion-home",
                 "kelion-about",
-                "kelion-our-services",
-                "kelion-portfolios",
-                "kelion-events",
-                "kelion-testimonials",
-                "kelion-blog",
-                "kelion-contact-us"
+                "kelion-services",
+                "kelion-virtual-services",
+                "kelion-playbooks",
+                "kelion-foundation",
+                "kelion-partners"
             ],
             "footer": [
                 "kelion-about",
-                "kelion-our-services",
-                "kelion-contact-us"
+                "kelion-services",
+                "kelion-playbooks",
+                "kelion-partners"
             ],
             "source": "https://solacewp.com/kelion/",
             "kit": {
@@ -1218,25 +1520,26 @@
         },
         "kindora": {
             "title": "Kindora",
-            "desc": "Nonprofit & charity \u2014 Home, About, What We Do, Disasters, Careers, Style Guide, Coming Soon, Blog, Contact Us.",
+            "desc": "Talent & systems site — Home, About, Services, Virtual Services, Playbooks, Foundation, Partners.",
             "categories": [
                 "Nonprofit"
             ],
-            "image": "assets/img/kindora-img-1.png",
+            "image": "assets/img/arc-stock-25.jpg",
             "home": "kindora-home",
             "pages": [
                 "kindora-home",
                 "kindora-about",
-                "kindora-what-we-do",
-                "kindora-disasters",
-                "kindora-careers",
-                "kindora-blog",
-                "kindora-contact-us"
+                "kindora-services",
+                "kindora-virtual-services",
+                "kindora-playbooks",
+                "kindora-foundation",
+                "kindora-partners"
             ],
             "footer": [
                 "kindora-about",
-                "kindora-what-we-do",
-                "kindora-contact-us"
+                "kindora-services",
+                "kindora-playbooks",
+                "kindora-partners"
             ],
             "source": "https://solacewp.com/kindora/",
             "kit": {
@@ -1282,27 +1585,27 @@
         },
         "gymnista": {
             "title": "Gymnista",
-            "desc": "Gym & fitness brand \u2014 Home, About Us, Collections, Shop, Membership, FAQ, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+            "desc": "Talent & systems site — Home, About, Services, Virtual Services, Playbooks, Foundation, Partners.",
             "categories": [
                 "Ecommerce",
                 "Sports"
             ],
-            "image": "assets/img/gymnista-img-1.jpg",
+            "image": "assets/img/arc-stock-28.jpg",
             "home": "gymnista-home",
             "pages": [
                 "gymnista-home",
-                "gymnista-about-us",
-                "gymnista-all-collections",
-                "gymnista-shop-page",
-                "gymnista-membership",
-                "gymnista-faq",
-                "gymnista-blog",
-                "gymnista-contact-us"
+                "gymnista-about",
+                "gymnista-services",
+                "gymnista-virtual-services",
+                "gymnista-playbooks",
+                "gymnista-foundation",
+                "gymnista-partners"
             ],
             "footer": [
-                "gymnista-about-us",
-                "gymnista-faq",
-                "gymnista-contact-us"
+                "gymnista-about",
+                "gymnista-services",
+                "gymnista-playbooks",
+                "gymnista-partners"
             ],
             "source": "https://solacewp.com/gymnista/",
             "kit": {
@@ -1348,27 +1651,27 @@
         },
         "nerra": {
             "title": "Nerra",
-            "desc": "Solar energy company \u2014 Home, About Us, Services, Products, Projects, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+            "desc": "Talent & systems site — Home, About, Services, Virtual Services, Playbooks, Foundation, Partners.",
             "categories": [
                 "Business",
                 "Technology"
             ],
-            "image": "assets/img/nerra-img-1.png",
+            "image": "assets/img/arc-stock-31.jpg",
             "home": "nerra-home",
             "pages": [
                 "nerra-home",
-                "nerra-about-us",
+                "nerra-about",
                 "nerra-services",
-                "nerra-products",
-                "nerra-projects",
-                "nerra-careers",
-                "nerra-blog",
-                "nerra-contact-us"
+                "nerra-virtual-services",
+                "nerra-playbooks",
+                "nerra-foundation",
+                "nerra-partners"
             ],
             "footer": [
-                "nerra-about-us",
+                "nerra-about",
                 "nerra-services",
-                "nerra-contact-us"
+                "nerra-playbooks",
+                "nerra-partners"
             ],
             "source": "https://solacewp.com/nerra/",
             "kit": {
@@ -1414,22 +1717,26 @@
         },
         "ossian": {
             "title": "Ossian",
-            "desc": "Organic goods shop \u2014 Home, About Us, Shop, Testimonials, Contact Us.",
+            "desc": "Talent & systems site — Home, About, Services, Virtual Services, Playbooks, Foundation, Partners.",
             "categories": [
                 "Ecommerce"
             ],
-            "image": "assets/img/ossian-img-1.jpg",
+            "image": "assets/img/arc-stock-34.jpg",
             "home": "ossian-home",
             "pages": [
                 "ossian-home",
-                "ossian-about-us",
-                "ossian-shop",
-                "ossian-testimonials",
-                "ossian-contact-us"
+                "ossian-about",
+                "ossian-services",
+                "ossian-virtual-services",
+                "ossian-playbooks",
+                "ossian-foundation",
+                "ossian-partners"
             ],
             "footer": [
-                "ossian-about-us",
-                "ossian-contact-us"
+                "ossian-about",
+                "ossian-services",
+                "ossian-playbooks",
+                "ossian-partners"
             ],
             "source": "https://solacewp.com/ossian/",
             "kit": {
@@ -1475,29 +1782,27 @@
         },
         "avira": {
             "title": "Avira",
-            "desc": "Work-life balance coaching \u2014 Home, About, Solutions, Case Studies, Find Your Coach, Pricing, FAQ, Careers, Testimonials, Style Guide, Coming Soon, Blog, Contact Us.",
+            "desc": "Talent & systems site — Home, About, Services, Virtual Services, Playbooks, Foundation, Partners.",
             "categories": [
                 "Business",
                 "Coaching"
             ],
-            "image": "assets/img/avira-img-1.png",
+            "image": "assets/img/arc-stock-37.jpg",
             "home": "avira-home",
             "pages": [
                 "avira-home",
                 "avira-about",
-                "avira-solutions",
-                "avira-case-studies",
-                "avira-find-your-coach",
-                "avira-pricing",
-                "avira-faq",
-                "avira-blog",
-                "avira-contact-us"
+                "avira-services",
+                "avira-virtual-services",
+                "avira-playbooks",
+                "avira-foundation",
+                "avira-partners"
             ],
             "footer": [
                 "avira-about",
-                "avira-pricing",
-                "avira-faq",
-                "avira-contact-us"
+                "avira-services",
+                "avira-playbooks",
+                "avira-partners"
             ],
             "source": "https://solacewp.com/avira/",
             "kit": {
@@ -1543,23 +1848,26 @@
         },
         "consultant": {
             "title": "Consultant",
-            "desc": "Business consulting \u2014 Home, About, Services, Blog, Contact.",
+            "desc": "Talent & systems site — Home, About, Services, Virtual Services, Playbooks, Foundation, Partners.",
             "categories": [
                 "Business"
             ],
-            "image": "assets/img/consultant-img-1.jpg",
+            "image": "assets/img/arc-stock-40.jpg",
             "home": "consultant-home",
             "pages": [
                 "consultant-home",
                 "consultant-about",
                 "consultant-services",
-                "consultant-blog",
-                "consultant-contact"
+                "consultant-virtual-services",
+                "consultant-playbooks",
+                "consultant-foundation",
+                "consultant-partners"
             ],
             "footer": [
                 "consultant-about",
                 "consultant-services",
-                "consultant-contact"
+                "consultant-playbooks",
+                "consultant-partners"
             ],
             "source": "https://startersites.io/blocksy/consultant/",
             "kit": {
@@ -1605,23 +1913,26 @@
         },
         "smile-dent": {
             "title": "Smile Dent",
-            "desc": "Dental clinic \u2014 Home, About, Services, Blog, Contact.",
+            "desc": "Talent & systems site — Home, About, Services, Virtual Services, Playbooks, Foundation, Partners.",
             "categories": [
                 "Health"
             ],
-            "image": "assets/img/smile-dent-img-1.jpg",
+            "image": "assets/img/arc-stock-43.jpg",
             "home": "smile-dent-home",
             "pages": [
                 "smile-dent-home",
                 "smile-dent-about",
                 "smile-dent-services",
-                "smile-dent-blog",
-                "smile-dent-contact"
+                "smile-dent-virtual-services",
+                "smile-dent-playbooks",
+                "smile-dent-foundation",
+                "smile-dent-partners"
             ],
             "footer": [
                 "smile-dent-about",
                 "smile-dent-services",
-                "smile-dent-contact"
+                "smile-dent-playbooks",
+                "smile-dent-partners"
             ],
             "source": "https://startersites.io/blocksy/smile-dent/",
             "kit": {
@@ -1667,24 +1978,27 @@
         },
         "renovation": {
             "title": "Renovation",
-            "desc": "Home renovation contractor \u2014 Home, About, Services, Projects, Contact.",
+            "desc": "Talent & systems site — Home, About, Services, Virtual Services, Playbooks, Foundation, Partners.",
             "categories": [
                 "Business",
                 "Construction"
             ],
-            "image": "assets/img/renovation-img-1.jpg",
+            "image": "assets/img/arc-stock-46.jpg",
             "home": "renovation-home",
             "pages": [
                 "renovation-home",
                 "renovation-about",
                 "renovation-services",
-                "renovation-projects",
-                "renovation-contact"
+                "renovation-virtual-services",
+                "renovation-playbooks",
+                "renovation-foundation",
+                "renovation-partners"
             ],
             "footer": [
                 "renovation-about",
                 "renovation-services",
-                "renovation-contact"
+                "renovation-playbooks",
+                "renovation-partners"
             ],
             "source": "https://startersites.io/blocksy/renovation/",
             "kit": {
@@ -1730,26 +2044,27 @@
         },
         "corporate": {
             "title": "Corporate",
-            "desc": "Corporate services site \u2014 Home, About, Services, Industries, Insights, Contact.",
+            "desc": "Talent & systems site — Home, About, Services, Virtual Services, Playbooks, Foundation, Partners.",
             "categories": [
                 "Business",
                 "Corporate"
             ],
-            "image": "assets/img/business-businessman-senior-mature-office-meeting-2023-11-27-05-34-55-utc-1.jpg",
+            "image": "assets/img/arc-stock-03.jpg",
             "home": "corporate-home",
             "pages": [
                 "corporate-home",
                 "corporate-about",
                 "corporate-services",
-                "corporate-industries",
-                "corporate-insights",
-                "corporate-contact"
+                "corporate-virtual-services",
+                "corporate-playbooks",
+                "corporate-foundation",
+                "corporate-partners"
             ],
             "footer": [
                 "corporate-about",
                 "corporate-services",
-                "corporate-industries",
-                "corporate-contact"
+                "corporate-playbooks",
+                "corporate-partners"
             ],
             "kit": {
                 "colors": [
@@ -1787,6 +2102,266 @@
                         "title": "Corporate Heading",
                         "typography_typography": "custom",
                         "typography_font_family": "Inter",
+                        "typography_font_weight": "800"
+                    }
+                ]
+            }
+        },
+        "orbita": {
+            "title": "Orbita",
+            "desc": "Talent & systems site — Home, About, Services, Virtual Services, Playbooks, Foundation, Partners.",
+            "categories": [
+                "Business",
+                "Technology"
+            ],
+            "image": "assets/img/arc-stock-06.jpg",
+            "home": "orbita-home",
+            "pages": [
+                "orbita-home",
+                "orbita-about",
+                "orbita-services",
+                "orbita-virtual-services",
+                "orbita-playbooks",
+                "orbita-foundation",
+                "orbita-partners"
+            ],
+            "footer": [
+                "orbita-about",
+                "orbita-services",
+                "orbita-playbooks",
+                "orbita-partners"
+            ],
+            "kit": {
+                "colors": [
+                    {
+                        "_id": "orbita_brand",
+                        "title": "Orbita Brand",
+                        "color": "#6366f1"
+                    },
+                    {
+                        "_id": "orbita_dark",
+                        "title": "Orbita Dark",
+                        "color": "#4f46e5"
+                    },
+                    {
+                        "_id": "orbita_navy",
+                        "title": "Orbita Navy",
+                        "color": "#0f172a"
+                    },
+                    {
+                        "_id": "orbita_mint",
+                        "title": "Orbita Mint",
+                        "color": "#f8fafc"
+                    }
+                ],
+                "fonts": [
+                    {
+                        "_id": "orbita_body",
+                        "title": "Orbita Body",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Plus Jakarta Sans",
+                        "typography_font_weight": "400"
+                    },
+                    {
+                        "_id": "orbita_heading",
+                        "title": "Orbita Heading",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Sora",
+                        "typography_font_weight": "700"
+                    }
+                ]
+            }
+        },
+        "nomad": {
+            "title": "Nomad",
+            "desc": "Talent & systems site — Home, About, Services, Virtual Services, Playbooks, Foundation, Partners.",
+            "categories": [
+                "Travel",
+                "Business"
+            ],
+            "image": "assets/img/arc-stock-09.jpg",
+            "home": "nomad-home",
+            "pages": [
+                "nomad-home",
+                "nomad-about",
+                "nomad-services",
+                "nomad-virtual-services",
+                "nomad-playbooks",
+                "nomad-foundation",
+                "nomad-partners"
+            ],
+            "footer": [
+                "nomad-about",
+                "nomad-services",
+                "nomad-playbooks",
+                "nomad-partners"
+            ],
+            "kit": {
+                "colors": [
+                    {
+                        "_id": "nomad_brand",
+                        "title": "Nomad Brand",
+                        "color": "#0d9488"
+                    },
+                    {
+                        "_id": "nomad_dark",
+                        "title": "Nomad Dark",
+                        "color": "#0f766e"
+                    },
+                    {
+                        "_id": "nomad_navy",
+                        "title": "Nomad Navy",
+                        "color": "#152e31"
+                    },
+                    {
+                        "_id": "nomad_mint",
+                        "title": "Nomad Mint",
+                        "color": "#f0fdfa"
+                    }
+                ],
+                "fonts": [
+                    {
+                        "_id": "nomad_body",
+                        "title": "Nomad Body",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Plus Jakarta Sans",
+                        "typography_font_weight": "400"
+                    },
+                    {
+                        "_id": "nomad_heading",
+                        "title": "Nomad Heading",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Sora",
+                        "typography_font_weight": "700"
+                    }
+                ]
+            }
+        },
+        "vitalia": {
+            "title": "Vitalia",
+            "desc": "Talent & systems site — Home, About, Services, Virtual Services, Playbooks, Foundation, Partners.",
+            "categories": [
+                "Health",
+                "Business"
+            ],
+            "image": "assets/img/arc-stock-12.jpg",
+            "home": "vitalia-home",
+            "pages": [
+                "vitalia-home",
+                "vitalia-about",
+                "vitalia-services",
+                "vitalia-virtual-services",
+                "vitalia-playbooks",
+                "vitalia-foundation",
+                "vitalia-partners"
+            ],
+            "footer": [
+                "vitalia-about",
+                "vitalia-services",
+                "vitalia-playbooks",
+                "vitalia-partners"
+            ],
+            "kit": {
+                "colors": [
+                    {
+                        "_id": "vitalia_brand",
+                        "title": "Vitalia Brand",
+                        "color": "#4d7c6f"
+                    },
+                    {
+                        "_id": "vitalia_dark",
+                        "title": "Vitalia Dark",
+                        "color": "#3a6055"
+                    },
+                    {
+                        "_id": "vitalia_navy",
+                        "title": "Vitalia Navy",
+                        "color": "#22302c"
+                    },
+                    {
+                        "_id": "vitalia_mint",
+                        "title": "Vitalia Mint",
+                        "color": "#f4f8f5"
+                    }
+                ],
+                "fonts": [
+                    {
+                        "_id": "vitalia_body",
+                        "title": "Vitalia Body",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Plus Jakarta Sans",
+                        "typography_font_weight": "400"
+                    },
+                    {
+                        "_id": "vitalia_heading",
+                        "title": "Vitalia Heading",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Sora",
+                        "typography_font_weight": "700"
+                    }
+                ]
+            }
+        },
+        "hirewell": {
+            "title": "Hirewell",
+            "desc": "Talent & systems site — Home, About, Services, Virtual Services, Playbooks, Foundation, Partners.",
+            "categories": [
+                "Business",
+                "Corporate"
+            ],
+            "image": "assets/img/arc-stock-15.jpg",
+            "home": "hirewell-home",
+            "pages": [
+                "hirewell-home",
+                "hirewell-about",
+                "hirewell-services",
+                "hirewell-virtual-services",
+                "hirewell-playbooks",
+                "hirewell-foundation",
+                "hirewell-partners"
+            ],
+            "footer": [
+                "hirewell-about",
+                "hirewell-services",
+                "hirewell-playbooks",
+                "hirewell-partners"
+            ],
+            "kit": {
+                "colors": [
+                    {
+                        "_id": "hirewell_brand",
+                        "title": "Hirewell Brand",
+                        "color": "#2563eb"
+                    },
+                    {
+                        "_id": "hirewell_dark",
+                        "title": "Hirewell Dark",
+                        "color": "#1d4ed8"
+                    },
+                    {
+                        "_id": "hirewell_navy",
+                        "title": "Hirewell Navy",
+                        "color": "#0f172a"
+                    },
+                    {
+                        "_id": "hirewell_mint",
+                        "title": "Hirewell Mint",
+                        "color": "#f8fafc"
+                    }
+                ],
+                "fonts": [
+                    {
+                        "_id": "hirewell_body",
+                        "title": "Hirewell Body",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_weight": "400"
+                    },
+                    {
+                        "_id": "hirewell_heading",
+                        "title": "Hirewell Heading",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Sora",
                         "typography_font_weight": "800"
                     }
                 ]

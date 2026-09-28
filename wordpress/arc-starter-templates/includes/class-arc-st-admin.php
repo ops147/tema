@@ -602,6 +602,29 @@ final class Arc_ST_Admin {
 			wp_die( 'Template not found.' );
 		}
 		$html = Arc_ST_Templates::assets_to_plugin_urls( $html );
+		$design = Arc_ST_Templates::design_system( $slug );
+		$fonts  = array();
+		foreach ( (array) $design['fonts'] as $font ) {
+			$fonts[] = 'family=' . rawurlencode( $font ) . ':wght@400;700';
+		}
+		$karibase_assets = '<link rel="stylesheet" href="' . esc_url( ARC_ST_URL . 'assets/css/karibase-templates.css' ) . '" />'
+			. '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?' . esc_attr( implode( '&', array_unique( $fonts ) ) ) . '&amp;display=swap" />'
+			. '<style>.arc-tpl{' . $design['tokens'] . '}</style>';
+		$html = preg_replace( '/<\/head>/i', $karibase_assets . '</head>', $html, 1 );
+		$html = preg_replace_callback(
+			'/<body\b([^>]*)>/i',
+			static function ( $match ) {
+				$attrs = $match[1];
+				if ( preg_match( '/\bclass="([^"]*)"/', $attrs ) ) {
+					$attrs = preg_replace( '/\bclass="([^"]*)"/', 'class="$1 arc-tpl"', $attrs, 1 );
+				} else {
+					$attrs .= ' class="arc-tpl"';
+				}
+				return '<body' . $attrs . '>';
+			},
+			$html,
+			1
+		);
 		$html = preg_replace_callback(
 			'/href="([\w-]+)\.html"/',
 			array( __CLASS__, 'preview_link' ),

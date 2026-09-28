@@ -2,19 +2,89 @@
 // Globals are prefixed (arcSt*) and everything else lives inside an IIFE so
 // this file can never collide with another plugin or theme script.
 
+// ---------------------------------------------------------------------------
+// Mobile nav — data-attribute driven (data-arc-nav-toggle / #mnav) so it keeps
+// working even after the block editor strips inline onclick handlers.
+// Slide animation is done with inline styles — no CSS dependency.
+// ---------------------------------------------------------------------------
+(function () {
+  function setupNav() {
+    const nav = document.getElementById('mnav');
+    const btn = document.querySelector('[data-arc-nav-toggle]');
+    if (!nav || !btn || nav.dataset.arcBound) return;
+    nav.dataset.arcBound = '1';
+
+    const icons = btn.querySelectorAll('[data-arc-icon]');
+    const setIcon = (open) => {
+      icons.forEach((i) => i.classList.toggle('hidden', (i.dataset.arcIcon === 'close') !== open));
+    };
+
+    const setExpanded = (open) => btn.setAttribute('aria-expanded', String(open));
+
+    const slide = (open) => {
+      nav.style.overflow = 'hidden';
+      nav.style.transition = 'max-height .28s ease, opacity .22s ease';
+      if (open) {
+        nav.classList.remove('hidden');
+        nav.style.maxHeight = '0px';
+        nav.style.opacity = '0';
+        requestAnimationFrame(() => {
+          nav.style.maxHeight = nav.scrollHeight + 'px';
+          nav.style.opacity = '1';
+        });
+      } else {
+        nav.style.maxHeight = nav.scrollHeight + 'px';
+        requestAnimationFrame(() => {
+          nav.style.maxHeight = '0px';
+          nav.style.opacity = '0';
+        });
+        nav.addEventListener('transitionend', function done(e) {
+          if (e.propertyName !== 'max-height') return;
+          nav.removeEventListener('transitionend', done);
+          nav.classList.add('hidden');
+          nav.style.cssText = '';
+        });
+      }
+      setExpanded(open);
+      setIcon(open);
+    };
+
+    const isOpen = () => !nav.classList.contains('hidden');
+    const toggle = () => slide(!isOpen());
+    const close = () => { if (isOpen()) slide(false); };
+
+    btn.addEventListener('click', (e) => { e.stopPropagation(); toggle(); });
+    // Close on nav link tap, outside click, Escape, or resize to desktop.
+    nav.addEventListener('click', (e) => { if (e.target.closest('a')) close(); });
+    document.addEventListener('click', (e) => { if (!nav.contains(e.target) && !btn.contains(e.target)) close(); });
+    document.addEventListener('keydown', (e) => { if ('Escape' === e.key) close(); });
+    window.addEventListener('resize', () => { if (window.innerWidth >= 1024) close(); });
+  }
+
+  if ('loading' === document.readyState) {
+    document.addEventListener('DOMContentLoaded', setupNav);
+  } else {
+    setupNav();
+  }
+})();
+
+// Header dark-mode toggle — flips the `dark` class on <html> and remembers
+// the choice. Kept global for pages imported before data-arc-dark-toggle.
+function arcStToggleDark() {
+  const dark = document.documentElement.classList.toggle('dark');
+  try { localStorage.setItem('arcStDark', dark ? '1' : '0'); } catch (e) {}
+}
+
+document.addEventListener('click', (e) => {
+  if (e.target.closest('[data-arc-dark-toggle]')) arcStToggleDark();
+});
+
+// Back-compat for older imports still carrying inline onclick.
 function arcStToggleMobileNav(button) {
   const nav = document.getElementById('mnav');
   if (!nav) return;
   nav.classList.toggle('hidden');
-  button.setAttribute('aria-expanded', String(!nav.classList.contains('hidden')));
-}
-
-// Header dark-mode toggle — flips the `dark` class on <html> and remembers
-// the choice. Templates can then style dark: variants (or a consumer theme
-// can hook the same class) without extra wiring.
-function arcStToggleDark() {
-  const dark = document.documentElement.classList.toggle('dark');
-  try { localStorage.setItem('arcStDark', dark ? '1' : '0'); } catch (e) {}
+  if (button) button.setAttribute('aria-expanded', String(!nav.classList.contains('hidden')));
 }
 
 try {
@@ -228,6 +298,26 @@ try {
   }
 })();
 
+// Forms without an action attribute are static previews — run the demo
+// submit behavior. Imported pages get method/action from the importer, so
+// those submissions pass through untouched to admin-post.php.
+document.addEventListener('submit', (e) => {
+  const form = e.target;
+  if (!(form instanceof HTMLFormElement) || form.getAttribute('action')) return;
+  if ('contact-form' === form.id) {
+    e.preventDefault();
+    arcStHandleContactSubmit(form);
+  } else if (form.classList.contains('arc-st-subscribe')) {
+    e.preventDefault();
+    const input = form.querySelector('input[type="email"]');
+    if (input) input.value = '';
+    const note = document.createElement('p');
+    note.className = 'mt-3 text-center text-sm font-semibold text-brand';
+    note.textContent = 'Thanks for subscribing!';
+    form.appendChild(note);
+  }
+});
+
 // Contact page: swap the form for the success card (used when the page
 // reloads with ?arc_contact=sent after the admin-post submission).
 function arcStHandleContactSubmit(form) {
@@ -356,4 +446,35 @@ function arcStHandleContactSubmit(form) {
   );
 
   document.querySelectorAll('[data-reveal]').forEach((el) => revealObserver.observe(el));
+
+  // Number reveals: <span data-count="90">90</span> counts 0 → target when it
+  // scrolls into view. Optional data-count-duration / data-count-delay (ms).
+  const countObserver = new IntersectionObserver(
+    (entries, observer) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        const el = entry.target;
+        observer.unobserve(el);
+
+        const target = parseFloat(el.dataset.count);
+        if (isNaN(target)) continue;
+        const duration = parseInt(el.dataset.countDuration || '1200', 10);
+        const delay = parseInt(el.dataset.countDelay || '0', 10);
+        const start = () => {
+          const t0 = performance.now();
+          const tick = (now) => {
+            const k = Math.min(1, (now - t0) / duration);
+            const ease = 1 - Math.pow(1 - k, 3); // ease-out cubic
+            el.textContent = String(Math.round(target * ease));
+            if (k < 1) requestAnimationFrame(tick);
+          };
+          requestAnimationFrame(tick);
+        };
+        delay > 0 ? setTimeout(start, delay) : start();
+      }
+    },
+    { threshold: 0.5 }
+  );
+
+  document.querySelectorAll('[data-count]').forEach((el) => countObserver.observe(el));
 })();

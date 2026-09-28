@@ -1,0 +1,395 @@
+<!-- ARC Starter Templates: bundled template document. Edit this file directly, then re-import in wp-admin. -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hirewell — Elite Talent. Bulletproof Systems.</title>
+    <meta name="description" content="Build the team your business needs without adding unnecessary overhead. Hirewell places trained accounting and administrative professionals inside your business — then helps document the processes they run so execution doesn't depend on one person." />
+    <script src="Js/site.js" defer></script>
+    <link rel="stylesheet" href="Css/tailwind.css" onerror="this.onerror=null;var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4';document.head.appendChild(s);" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+<style type="text/tailwindcss">
+@import "tailwindcss";
+
+@theme {
+  --color-slate-600: #53616B;
+  --color-gold: #E4CF43;
+  --color-leaf: #7FB34D;
+  /* ===== Design tokens — hirewell (arc-careers blue). ===== */
+  --color-brand: #59B8A9;
+  --color-brand-dark: #3E8E80;
+  --color-accent: #D6F73A;
+  --color-navy: #0F1C2E;
+  --color-mint: #F5F8F6;
+  --color-cream: #EAF1E8;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
+
+  /* ===== Entrance animations — data-reveal="<name>" ===== */
+  --animate-fade-in: arc-fade-in 0.3s ease both;
+  --animate-fade-in-up: arc-fade-in-up 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-fade-in-down: arc-fade-in-down 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-fade-in-left: arc-fade-in-left 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-fade-in-right: arc-slide-in-right 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-zoom-in: arc-pop-in 0.28s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  --animate-blur-in: blur-in 0.8s ease-out both;
+  --animate-flip-in: arc-pop-in 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  --animate-bounce-in: arc-pop-in 0.34s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+
+  /* ===== Ambient ===== */
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-slow: float 9s ease-in-out infinite;
+  --animate-pulse-slow: arc-pulse-glow 1.8s ease-in-out infinite;
+  --animate-spin-slow: spin-slow 14s linear infinite;
+  --animate-bounce-soft: bounce-soft 2.4s ease-in-out infinite;
+  --animate-marquee: marquee 32s linear infinite;
+
+  @keyframes arc-fade-in-up { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes arc-fade-in { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes arc-fade-in-down { from { opacity: 0; transform: translateY(-12px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes arc-fade-in-left { from { opacity: 0; transform: translateX(-24px); } to { opacity: 1; transform: translateX(0); } }
+  @keyframes arc-slide-in-right { from { opacity: 0; transform: translateX(24px); } to { opacity: 1; transform: translateX(0); } }
+  @keyframes arc-pop-in { 0% { opacity: 0; transform: scale(0.92); } 100% { opacity: 1; transform: scale(1); } }
+  @keyframes arc-shimmer { 0% { background-position: -400px 0; } 100% { background-position: 400px 0; } }
+  @keyframes arc-pulse-glow { 0%, 100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.35); } 50% { box-shadow: 0 0 0 8px rgba(37, 99, 235, 0); } }
+  @keyframes blur-in { from { opacity: 0; filter: blur(10px); } to { opacity: 1; filter: blur(0); } }
+  @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+  @keyframes spin-slow { to { transform: rotate(360deg); } }
+  @keyframes bounce-soft { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+  @keyframes marquee { to { transform: translateX(-50%); } }
+}
+
+/* Scroll reveal — same contract as every kit (site.js drives it). */
+@layer base {
+  html.js [data-reveal],
+  html.js [data-reveal-stagger] > * { opacity: 0; }
+  html.js .is-revealed { opacity: 1; }
+}
+
+/* Shared component layer — portal style ported from arc-careers. */
+@layer components {
+  .btn-primary { display:inline-flex; align-items:center; gap:.5rem; border-radius:9999px; background:var(--color-accent); padding:.8rem 1.75rem; font-size:.9rem; font-weight:700; letter-spacing:.02em; text-transform:uppercase; color:var(--color-navy); transition:all .2s; }
+  .btn-primary:hover { background:var(--color-navy); color:#fff; transform:translateY(-2px); box-shadow:0 10px 15px -3px rgb(15 28 46 / .25); }
+  .btn-outline { display:inline-flex; align-items:center; gap:.5rem; border-radius:9999px; border:1px solid var(--color-navy); padding:.8rem 1.75rem; font-size:.9rem; font-weight:600; color:var(--color-navy); transition:all .2s; }
+  .btn-outline:hover { background:var(--color-navy); color:#fff; transform:translateY(-2px); }
+  .btn-ghost-light { display:inline-flex; align-items:center; gap:.5rem; border-radius:9999px; border:1px solid rgba(255,255,255,.25); padding:.8rem 1.75rem; font-size:.9rem; font-weight:600; color:#fff; transition:all .2s; }
+  .btn-ghost-light:hover { border-color:#fff; transform:translateY(-2px); }
+  .eyebrow { font-size:.8rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--color-brand); }
+  .field { width:100%; border-radius:.6rem; border:1px solid #e2e8f0; background:#fff; padding:.8rem 1rem; font-size:.9rem; color:var(--color-navy); outline:none; transition:border-color .2s, box-shadow .2s; }
+  .field:focus { border-color:var(--color-brand); box-shadow:0 0 0 3px rgb(89 184 169 / .22); }
+  /* Hover-lift card — shared replacement for "transition hover:-translate-y-1 hover:shadow-lg". */
+  .card-lift { transition:transform .25s ease, box-shadow .25s ease; }
+  .card-lift:hover { transform:translateY(-4px); box-shadow:0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1); }
+}
+
+    </style>
+  </head>
+  <body class="font-sans text-slate-600 antialiased">
+    <style>:root{--color-brand:#2563eb;--color-brand-dark:#1d4ed8;--color-accent:#38bdf8;--color-navy:#0f172a;--color-mint:#f8fafc;--color-cream:#eff6ff;--font-sans:"Inter",ui-sans-serif,system-ui,sans-serif;--font-display:"Sora",ui-sans-serif,system-ui,sans-serif;}</style>
+    <!-- ===== Header ===== -->
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-navy/95 backdrop-blur" data-reveal="down">
+      <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 py-3 lg:px-8">
+        <a href="hirewell-home.html" class="flex min-w-0 shrink-0 items-center gap-2.5">
+          <span class="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent font-display text-sm font-bold text-navy sm:h-10 sm:w-10">H</span>
+          <span class="hidden min-[400px]:block leading-none">
+            <span class="block text-[15px] font-extrabold tracking-wide text-white font-display">HIREWELL</span>
+            <span class="block text-[10px] font-bold tracking-[0.3em] text-brand">TALENT · SYSTEMS · PLAYBOOKS</span>
+          </span>
+        </a>
+        <nav class="hidden items-center gap-3 whitespace-nowrap text-[12px] font-medium text-slate-300 lg:flex xl:gap-5 xl:text-[13px]">
+          <a href="hirewell-home.html" class="font-semibold text-white">Home</a>
+          <a href="hirewell-services.html" class="transition hover:text-white">Services</a>
+          <a href="hirewell-virtual-services.html" class="transition hover:text-white">Virtual Services</a>
+          <a href="hirewell-playbooks.html" class="transition hover:text-white">Playbooks</a>
+          <a href="hirewell-about.html" class="transition hover:text-white">About</a>
+          <a href="hirewell-foundation.html" class="transition hover:text-white">Foundation</a>
+          <a href="hirewell-partners.html" class="transition hover:text-white">Partners</a>
+        </nav>
+        <button type="button" class="hidden lg:inline-flex items-center justify-center rounded-full p-2 text-slate-400 transition hover:bg-white/10 hover:text-white" aria-label="Toggle dark mode" data-arc-dark-toggle>
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+        </button>
+        <a href="hirewell-partners.html" class="btn-primary hidden lg:inline-flex">Build Your Team</a>
+        <button type="button" class="inline-flex items-center justify-center rounded-lg p-2 text-slate-300 transition hover:bg-white/10 hover:text-white lg:hidden" aria-label="Toggle menu" aria-expanded="false" aria-controls="mnav" data-arc-nav-toggle>
+          <svg data-arc-icon="open" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg data-arc-icon="close" class="hidden h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+      <div id="mnav" class="hidden border-t border-white/10 bg-navy lg:hidden">
+        <nav class="flex flex-col px-4 sm:px-6 py-3 text-[15px] font-medium text-slate-200">
+          <a href="hirewell-home.html" class="rounded-lg px-3 py-2.5 transition hover:bg-white/5 hover:text-white font-semibold text-white border-b border-white/10">Home</a>
+          <a href="hirewell-services.html" class="rounded-lg px-3 py-2.5 transition hover:bg-white/5 hover:text-white border-b border-white/10">Services</a>
+          <a href="hirewell-virtual-services.html" class="rounded-lg px-3 py-2.5 transition hover:bg-white/5 hover:text-white border-b border-white/10">Virtual Services</a>
+          <a href="hirewell-playbooks.html" class="rounded-lg px-3 py-2.5 transition hover:bg-white/5 hover:text-white border-b border-white/10">Playbooks</a>
+          <a href="hirewell-about.html" class="rounded-lg px-3 py-2.5 transition hover:bg-white/5 hover:text-white border-b border-white/10">About</a>
+          <a href="hirewell-foundation.html" class="rounded-lg px-3 py-2.5 transition hover:bg-white/5 hover:text-white border-b border-white/10">Foundation</a>
+          <a href="hirewell-partners.html" class="rounded-lg px-3 py-2.5 transition hover:bg-white/5 hover:text-white">Partners</a>
+          <a href="hirewell-partners.html" class="btn-primary mt-2 mb-3 justify-center">Build Your Team</a>
+        </nav>
+      </div>
+    </header>
+    <!-- ===== Hero ===== -->
+    <section class="relative overflow-hidden bg-navy">
+      <div class="pointer-events-none absolute -top-40 -right-40 h-[480px] w-[480px] rounded-full bg-brand/25 blur-3xl motion-safe:animate-pulse-slow"></div>
+      <div class="pointer-events-none absolute -bottom-52 -left-32 h-[420px] w-[420px] rounded-full bg-accent/15 blur-3xl motion-safe:animate-float-slow"></div>
+      <div class="relative mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 py-20 lg:grid-cols-2 lg:px-8 lg:py-28">
+        <div>
+          <h1 class="text-4xl leading-tight font-bold text-white font-display sm:text-5xl lg:text-6xl" data-reveal="left">Elite Talent. <span class="text-brand">Bulletproof Systems.</span></h1>
+          <p class="mt-6 max-w-xl text-lg leading-8 text-slate-300" data-reveal="left" data-reveal-delay="120">Build the team your business needs without adding unnecessary overhead. Hirewell places trained accounting and administrative professionals inside your business — then helps document the processes they run so execution doesn't depend on one person.</p>
+          <div class="mt-9 flex flex-wrap items-center gap-4" data-reveal="left" data-reveal-delay="240">
+            <a href="hirewell-partners.html" class="btn-primary">Build Your Team</a>
+            <a href="hirewell-services.html" class="btn-ghost-light">Explore Our Services
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+          <div class="mt-9 flex flex-wrap items-center gap-x-6 gap-y-3" data-reveal="left" data-reveal-delay="360">
+            <span class="flex items-center gap-2 text-sm font-semibold text-white"><svg class="h-4 w-4 text-brand" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Fluent English</span>
+            <span class="flex items-center gap-2 text-sm font-semibold text-white"><svg class="h-4 w-4 text-brand" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Your time zone</span>
+            <span class="flex items-center gap-2 text-sm font-semibold text-white"><svg class="h-4 w-4 text-brand" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Ready in 7 days</span>
+          </div>
+        </div>
+        <div class="relative " data-reveal="right" data-reveal-delay="200">
+          <img src="Img/arc-stock-15.jpg" alt="Hirewell team" class="mx-auto w-full max-w-lg rounded-3xl object-cover" loading="lazy" />
+                    <div class="absolute bottom-6 left-2 rounded-2xl bg-white p-5 shadow-xl sm:left-6 motion-safe:animate-float">
+            <p class="text-3xl font-bold text-navy font-display"><span data-count="90">90</span> <span class="text-brand">days</span></p>
+            <p class="mt-1 text-sm font-medium text-slate-500">to a documented, repeatable role</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-cream">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 py-20 lg:px-8 lg:py-24">
+        <div class="mx-auto max-w-2xl text-center" data-reveal>
+          <p class="eyebrow">The ARC operating model</p>
+          <h2 class="mt-3 text-3xl font-bold text-navy font-display sm:text-4xl">Talent + Process + Accountability.</h2>
+        </div>
+        <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-reveal-stagger="100">
+                    <div class="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-slate-100 card-lift">
+            <h3 class="text-lg font-bold text-navy font-display">Talent</h3>
+            <p class="mt-3 text-sm leading-6">The right person in the seat — fluent English, your working hours, inside your existing team.</p>
+          </div>
+          <div class="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-slate-100 card-lift">
+            <h3 class="text-lg font-bold text-navy font-display">Process</h3>
+            <p class="mt-3 text-sm leading-6">Every recurring task documented into a clear, repeatable playbook.</p>
+          </div>
+          <div class="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-slate-100 card-lift">
+            <h3 class="text-lg font-bold text-navy font-display">Accountability</h3>
+            <p class="mt-3 text-sm leading-6">Clear ownership. The work is managed, measured and improved — not just done.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 py-20 lg:px-8 lg:py-28">
+        <div class="grid items-center gap-12 lg:grid-cols-2">
+          <div class="relative " data-reveal="left">
+            <img src="Img/arc-stock-35.jpg" alt="Documented processes" class="w-full rounded-3xl object-cover" loading="lazy" />
+            <div class="absolute -bottom-6 -right-4 hidden rounded-2xl bg-navy p-6 text-white shadow-xl sm:block motion-safe:animate-float">
+              <p class="text-3xl font-bold font-display"><span class="text-accent" data-count="90">90</span> days</p>
+              <p class="mt-1 text-sm">to a documented, repeatable role</p>
+            </div>
+          </div>
+          <div data-reveal="right" data-reveal-delay="120">
+            <p class="eyebrow">The difference</p>
+            <h2 class="mt-3 text-3xl font-bold text-navy font-display sm:text-4xl">People Are Only Half the Solution.</h2>
+            <p class="mt-5 leading-7">A person can absorb work. A documented system keeps that work from becoming a new dependency. Within the first 90 days, we document the recurring workflows behind the role — reconciliations, AR, AP, reporting, approvals and other critical operations.</p>
+            <p class="mt-4 leading-7">You get a person who can execute and a process your company can repeat — hosted in your own <a href="hirewell-playbooks.html" class="font-semibold text-brand transition hover:text-navy">playbooks intranet</a>.</p>
+            <div class="mt-8 flex flex-wrap items-center gap-x-3 gap-y-4" data-reveal-stagger="80"><span class="inline-flex items-center rounded-xl border px-4 py-2 text-sm font-semibold border-slate-200 bg-white text-navy shadow-sm">Person</span>
+              <svg class="h-4 w-4 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              <span class="inline-flex items-center rounded-xl border px-4 py-2 text-sm font-semibold border-slate-200 bg-white text-navy shadow-sm">Responsibilities</span>
+              <svg class="h-4 w-4 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              <span class="inline-flex items-center rounded-xl border px-4 py-2 text-sm font-semibold border-slate-200 bg-white text-navy shadow-sm">Workflow</span>
+              <svg class="h-4 w-4 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              <span class="inline-flex items-center rounded-xl border px-4 py-2 text-sm font-semibold border-slate-200 bg-white text-navy shadow-sm">Playbook</span>
+              <svg class="h-4 w-4 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              <span class="inline-flex items-center rounded-xl border px-4 py-2 text-sm font-semibold border-slate-200 bg-white text-navy shadow-sm">Repeatable Execution</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 py-16 lg:px-8">
+        <div class="grid grid-cols-2 gap-4 lg:grid-cols-4" data-reveal-stagger="90">
+          <div class="rounded-xl border border-gray-200 bg-white p-5 text-center shadow-sm card-lift">
+            <p class="font-display text-2xl font-bold text-navy"><span data-count="7">7</span> days</p>
+            <p class="mt-1 text-[11px] font-semibold uppercase tracking-wide text-slate-400">To staff a clear role</p>
+          </div>
+          <div class="rounded-xl border border-gray-200 bg-white p-5 text-center shadow-sm card-lift">
+            <p class="font-display text-2xl font-bold text-navy"><span data-count="90">90</span> days</p>
+            <p class="mt-1 text-[11px] font-semibold uppercase tracking-wide text-slate-400">Playbook & SOP window</p>
+          </div>
+          <div class="rounded-xl border border-gray-200 bg-white p-5 text-center shadow-sm card-lift">
+            <p class="font-display text-2xl font-bold text-navy">LATAM</p>
+            <p class="mt-1 text-[11px] font-semibold uppercase tracking-wide text-slate-400">U.S. time-zone aligned</p>
+          </div>
+          <div class="rounded-xl border border-gray-200 bg-white p-5 text-center shadow-sm card-lift">
+            <p class="font-display text-2xl font-bold text-navy">Fluent</p>
+            <p class="mt-1 text-[11px] font-semibold uppercase tracking-wide text-slate-400">English — direct collaboration</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 py-20 lg:px-8 lg:py-28">
+        <div class="mx-auto max-w-2xl text-center" data-reveal>
+          <p class="eyebrow">What we do</p>
+          <h2 class="mt-3 text-3xl font-bold text-navy font-display sm:text-4xl">The People You Need. The Systems Behind Them.</h2>
+        </div>
+        <div class="mt-14 grid gap-8 md:grid-cols-2" data-reveal-stagger="150">
+                    <div class="group flex flex-col overflow-hidden rounded-2xl bg-slate-50 shadow-sm ring-1 ring-slate-100 card-lift">
+            <img src="Img/arc-stock-20.jpg" alt="Finance &amp; Accounting Talent" class="h-56 w-full object-cover" loading="lazy" />
+            <div class="flex flex-1 flex-col p-8">
+              <h3 class="text-2xl font-bold text-navy font-display">Finance &amp; Accounting Talent</h3>
+              <p class="mt-3 flex-1 leading-7">From transactional support through controller-level capacity — general accounting, AR/AP, reconciliations, month-end close and reporting.</p>
+              <a href="hirewell-services.html" class="btn-primary mt-6 w-fit">Find Accounting Talent</a>
+            </div>
+          </div>
+          <div class="group flex flex-col overflow-hidden rounded-2xl bg-slate-50 shadow-sm ring-1 ring-slate-100 card-lift">
+            <img src="Img/arc-stock-25.jpg" alt="Virtual Assistants" class="h-56 w-full object-cover" loading="lazy" />
+            <div class="flex flex-1 flex-col p-8">
+              <h3 class="text-2xl font-bold text-navy font-display">Virtual Assistants</h3>
+              <p class="mt-3 flex-1 leading-7">Executive support, operations, client coordination and back-office execution — recurring work owned end to end, with a playbook behind it.</p>
+              <a href="hirewell-virtual-services.html" class="btn-primary mt-6 w-fit">Find Your VA</a>
+            </div>
+          </div>
+        </div>
+        <p class="mt-10 text-center text-sm font-medium text-slate-500" data-reveal>
+          Systems &amp; Playbooks —
+          <a href="hirewell-playbooks.html" class="font-semibold text-brand transition hover:text-navy">the mechanism that makes both repeatable →</a>
+        </p>
+      </div>
+    </section>
+
+    <section style="background:linear-gradient(135deg,#59B8A9 0%,#62A65F 55%,#7FB34D 100%)">
+      <div class="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-4 sm:px-6 py-14 md:flex-row md:items-center lg:px-8">
+        <div data-reveal="left">
+          <h2 class="text-3xl font-bold text-navy font-display sm:text-4xl">Ready in Days. Not Months.</h2>
+          <p class="mt-3 max-w-xl leading-7 text-navy/85">As little as 7 days to staff a clear role. Hirewell maintains a bench of trained professionals so adding capacity never takes a full recruiting cycle.</p>
+        </div>
+        <a href="hirewell-partners.html" class="inline-flex shrink-0 items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-navy transition hover:bg-slate-100" data-reveal="right" data-reveal-delay="150">Build Your Team</a>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 py-20 lg:grid-cols-2 lg:px-8 lg:py-28">
+        <div data-reveal="left">
+          <p class="eyebrow">Latin American talent</p>
+          <h2 class="mt-3 text-3xl font-bold text-navy font-display sm:text-4xl">Your Time Zone. Fluent English. No Compromise.</h2>
+          <p class="mt-5 leading-7">Our LATAM professionals are selected for fluent English, compatible U.S. working hours, and the ability to operate inside your existing team. Real collaboration — not task dumping across time zones.</p>
+          <ul class="mt-7 space-y-4" data-reveal-stagger="90">
+            <li class="flex gap-3">
+                <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-sm leading-6"><strong class="font-semibold text-navy">Same-day overlap</strong> — full U.S. time-zone coverage, not overnight handoffs</span>
+              </li>
+            <li class="flex gap-3">
+                <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-sm leading-6"><strong class="font-semibold text-navy">Fluent English</strong> — written and spoken, client-facing ready</span>
+              </li>
+            <li class="flex gap-3">
+                <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-sm leading-6"><strong class="font-semibold text-navy">Trained before day one</strong> — the <a href="${cfg.key}-foundation.html" class="font-semibold text-brand">Foundation</a> prepares talent on tools, English and playbook discipline</span>
+              </li>
+          </ul>
+        </div>
+        <div data-reveal="right" data-reveal-delay="150">
+          <img src="Img/arc-stock-40.jpg" alt="Latin American professionals collaborating" class="w-full rounded-3xl object-cover shadow-xl" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-cream">
+      <div class="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-4 sm:px-6 py-14 md:flex-row md:items-center lg:px-8">
+        <div data-reveal="left">
+          <p class="eyebrow">Partners</p>
+          <h2 class="mt-3 text-3xl font-bold text-navy font-display sm:text-4xl">Built to Support Your Advisors Too.</h2>
+          <p class="mt-3 max-w-xl leading-7">Fractional CFOs, accounting firms, consultants and operating partners use Hirewell to give clients execution capacity — you keep the relationship, we help build the team.</p>
+        </div>
+        <a href="hirewell-partners.html" class="btn-outline shrink-0 " data-reveal="right" data-reveal-delay="150">Become an ARC Partner</a>
+      </div>
+    </section>
+
+    <section class="bg-navy">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 py-20 lg:px-8 lg:py-24">
+        <div class="mx-auto max-w-2xl text-center" data-reveal>
+          <p class="eyebrow">Automation</p>
+          <h2 class="mt-3 text-3xl font-bold text-white font-display sm:text-4xl">Automation That Protects Time and Margin.</h2>
+          <p class="mt-4 leading-7 text-slate-300">Once the process is clear, we identify the manual steps that software should be doing instead of people. Less repetition, fewer errors, more output from the same capacity.</p>
+        </div>
+        <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-reveal-stagger="100">
+                    <div class="rounded-2xl border border-white/10 bg-white/5 p-7">
+            <h3 class="text-lg font-bold text-white font-display">Identify</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-300">Every playbook review surfaces tasks that repeat on a schedule — the best candidates for automation.</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-7">
+            <h3 class="text-lg font-bold text-white font-display">Implement</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-300">We connect the tools you already run — forms, spreadsheets, CRM, email — so data moves without retyping.</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-7">
+            <h3 class="text-lg font-bold text-white font-display">Improve</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-300">Documented processes are measurable processes. We refine the workflow, then the automation, every quarter.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== CTA ===== -->
+    <section class="bg-cream">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 py-14 lg:px-8">
+        <div class="flex flex-col items-start gap-6 rounded-3xl bg-navy p-10 md:flex-row md:items-center md:justify-between lg:p-14">
+          <div data-reveal="left">
+            <h2 class="text-3xl font-bold text-white font-display sm:text-4xl">Stop Hiring Around Broken Processes.</h2>
+            <p class="mt-3 max-w-xl leading-7 text-slate-300">Get the people and operating structure your business needs to execute.</p>
+          </div>
+          <a href="hirewell-partners.html" class="btn-primary shrink-0" data-reveal="right" data-reveal-delay="150">Build Your Team</a>
+        </div>
+      </div>
+    </section>
+    <!-- ===== Footer ===== -->
+    <footer class="bg-navy text-slate-300">
+      <div class="mx-auto grid max-w-7xl gap-10 border-t border-white/10 px-4 sm:px-6 py-16 md:grid-cols-2 lg:grid-cols-4 lg:px-8" data-reveal-stagger="120">
+        <div>
+          <a href="hirewell-home.html" class="flex items-center gap-2.5">
+            <span class="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent font-display text-sm font-bold text-navy sm:h-10 sm:w-10">H</span>
+            <span class="leading-none">
+              <span class="block text-[15px] font-extrabold tracking-wide text-white font-display">HIREWELL</span>
+              <span class="block text-[10px] font-bold tracking-[0.3em] text-brand">TALENT · SYSTEMS · PLAYBOOKS</span>
+            </span>
+          </a>
+          <p class="mt-5 text-sm leading-6 text-slate-400">Trained Latin American professionals — fluent English, your time zone — plus the documented systems that make their work repeatable.</p>
+        </div>
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-white">Site</h3>
+          <ul class="mt-5 space-y-3 text-sm">
+            <li><a href="hirewell-home.html" class="transition hover:text-white">Home</a></li>
+            <li><a href="hirewell-about.html" class="transition hover:text-white">About</a></li>
+            <li><a href="hirewell-foundation.html" class="transition hover:text-white">Foundation</a></li>
+            <li><a href="hirewell-partners.html" class="transition hover:text-white">Partners</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-white">What we do</h3>
+          <ul class="mt-5 space-y-3 text-sm">
+            <li><a href="hirewell-services.html" class="transition hover:text-white">Services</a></li>
+            <li><a href="hirewell-virtual-services.html" class="transition hover:text-white">Virtual Services</a></li>
+            <li><a href="hirewell-playbooks.html" class="transition hover:text-white">Playbooks</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-white">Get started</h3>
+          <p class="mt-5 text-sm leading-6 text-slate-400">Qualified professionals in as little as 7 days. Documented playbooks within 90.</p>
+          <a href="hirewell-partners.html" class="btn-primary mt-5">Start a Conversation</a>
+        </div>
+      </div>
+      <div class="border-t border-white/10">
+        <div class="mx-auto flex max-w-7xl flex-col gap-2 px-4 sm:px-6 py-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+          <p>© 2026 Hirewell. All rights reserved.</p>
+          <p>People. Process. Playbooks.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -5,7 +5,7 @@ Tags: starter templates, elementor, templates, tailwind, page templates
 Requires at least: 6.0
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.4.1
+Stable tag: 1.7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,17 +14,17 @@ templates, block patterns, and classic pages.
 
 == Description ==
 
-ARC Starter Templates ships the Ash River Collective marketing site as a
-single starter template — a solace-extra style screen where you pick the
-template and a step-by-step wizard imports everything.
+ARC Starter Templates ships a library of starter sites built on the
+Ash River Collective model — pick a demo card and a step-by-step wizard
+imports everything.
 
-The eight ARC pages (Home, Services, Finance & Accounting Talent, Virtual
-Assistants, About, Partners, Foundation, Contact) are created as published
-WP pages with cross-links rewritten and their images uploaded to the Media
-Library. With Elementor active each page is a native container/widget
-layout on the Canvas template — every heading, paragraph, image and button
-is editable; without Elementor pages fall back to editable HTML inside
-your active theme.
+Every demo is the same seven-page talent & systems site in its own visual
+skin: Home, About, Services, Virtual Services, Playbooks, Foundation and
+Partners. Pages are created as published WP pages with cross-links
+rewritten and their images uploaded to the Media Library. With Elementor
+active each page is a native container/widget layout on the Canvas
+template — every heading, paragraph, image and button is editable; without
+Elementor pages fall back to editable HTML inside your active theme.
 
 == Features ==
 
@@ -85,7 +85,7 @@ made to those pages are overwritten.
 
 = What does the wizard configure? =
 
-It uploads the bundled images to the Media Library, creates the eight pages,
+It uploads the bundled images to the Media Library, creates the seven pages,
 optionally sets the Home page as your front page and fills empty registered
 menu locations with the "ARC Main" and "ARC Footer" menus. With Elementor
 active it also enables flexbox containers and adds the brand colors to the
@@ -116,9 +116,20 @@ An import lock also prevents two admins from running imports at once.
 
 == Changelog ==
 
+= 1.7.0 =
+* Unified demo structure: every starter site now ships the same seven
+  pages — Home, About, Services, Virtual Services, Playbooks, Foundation
+  and Partners — each in its own design skin (colors, fonts, imagery).
+* New Playbooks page presents the intranet module: per-company SOP library
+  with tag filters, a processes view, permissions and branding.
+* The Partners page now hosts the working contact form; the standalone
+  Contact and Finance Talent pages were folded into Partners and Services.
+* Canonical template slugs (<demo>-<page>) and link wiring across all
+  147 bundled documents; regenerate with npm run build:templates.
+
 = 1.6.2 =
 * Remote template source: a configured repository URL makes the plugin pull
-  templates/manifest.json, the per-page HTML documents and assets/img/*
+  templates/manifest.json, the per-page HTML documents and the assets/img
   images from the repo on demand into a disk cache (uploads/arc-st-remote/),
   so the plugin can ship without the bundled payload. Fresh imports flush
   the cache; the bundled copy remains the fallback when the remote is
@@ -144,56 +155,19 @@ An import lock also prevents two admins from running imports at once.
   editor (assets/css/editor.css, enqueued through enqueue_block_assets).
 
 = 1.4.1 =
-* Cross-page links now resolve in every import path: the wizard's begin step
-  and WP-CLI create all selected pages before filling any, so buttons and CTAs
-  inside imported pages link to real permalinks instead of dead "#" hrefs.
-* Editable without Elementor: classic-mode imports now store native Gutenberg
-  blocks (groups, headings, paragraphs, images with Media Library ids, lists,
-  quotes; raw markup in HTML blocks) — every text and image is editable in the
-  block editor, matching the Elementor-mode editing experience.
-* Preview is a real demo: internal links inside the preview navigate between
-  all template pages (each with its own nonce), and the contact form can no
-  longer send real submissions from the preview.
-* Imported content is wrapped in a wp:html/wp:group block so the block editor
-  treats each template page as clean editable markup.
+* Cross-page links resolve in every import path; classic-mode imports store
+  native editable Gutenberg blocks; preview navigation between template pages.
 
 = 1.4.0 =
-* One-click import: the library card's "Import Site" button now lands on
-  the wizard and starts the complete run immediately — all pages, images,
-  menus, front page and brand settings, no extra clicks. An unfinished
-  previous run is resumed automatically. Opening the wizard directly
-  still shows the manual Start with all options (dry-run, page selection,
-  reset).
-* Dependency-free tooling: scripts/lint-php.js (token-level PHP syntax
-  check, no packages) and scripts/zip.ps1|zip.sh packaging that ships
-  only runtime files.
+* One-click import from the library card; dependency-free lint/zip tooling.
 
-= 1.3.1 =
-* Footer menu assignment recognizes Astra-style locations (fixes ARC Footer
-  never attaching on Lienzo Astra's menu-2).
-* Imported pages are created with comments and pings closed.
-* Classic-mode rendering bypasses wpautop/wptexturize on ARC pages.
+= 1.3.x =
+* Resilient imports (run lock, Resume/Retry), Astra footer menus, Elementor
+  button widgets, site identity, WP-CLI, contact form submissions.
 
-= 1.3.0 =
-* Import resilience: run lock, server-side Resume/Retry, per-file media
-  error reporting, requirements notice.
-* Wizard: per-page selection, dry-run, front-page toggle, live log.
-* Elementor: native button widgets, Outfit kit globals, CSS cache rebuild.
-* Site identity: custom logo + site icon from the imported logo.
-* Library: contact/consent settings, last-import report, remove action,
-  iframe preview. WP-CLI commands, translations, zip packaging.
-
-= 1.2.0 =
-* Contact form submits for real (admin-post, honeypot, sanitized fields).
-* "ARC Footer" menu; front-page checkbox; imported-page links on done screen.
-* Elementor kit brand colors; attachment alt text; hardened re-import.
-
-= 1.1.0 =
-* Solace-extra style Starter Templates screen and AJAX import wizard.
-* Single bundled template (the complete ARC site, 8 pages).
-
-= 1.0.0 =
-* First release: page importer, block patterns, Media Library uploads.
+= 1.0.0 – 1.2.0 =
+* First releases: page importer, block patterns, Media Library uploads,
+  Starter Templates screen, footer menus, Elementor kit colors.
 
 == Notes ==
 

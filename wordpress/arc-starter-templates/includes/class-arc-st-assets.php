@@ -86,9 +86,16 @@ final class Arc_ST_Assets {
 	 * Shared enqueue for both contexts.
 	 */
 	private static function enqueue() {
+		$slug     = self::page_template_slug();
+		$design   = Arc_ST_Templates::design_system( $slug );
+		$families = array();
+		foreach ( (array) $design['fonts'] as $font ) {
+			$families[] = 'family=' . rawurlencode( $font ) . ':wght@400;700';
+		}
+		$font_url = 'https://fonts.googleapis.com/css2?' . implode( '&', array_unique( $families ) ) . '&display=swap';
 		wp_enqueue_style(
 			'arc-st-fonts',
-			'https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap',
+			$font_url,
 			array(),
 			null // phpcs:ignore -- third-party font CDN, no local version.
 		);
@@ -99,9 +106,19 @@ final class Arc_ST_Assets {
 			ARC_ST_VERSION
 		);
 		wp_enqueue_style(
+			'arc-st-karibase-templates',
+			ARC_ST_URL . 'assets/css/karibase-templates.css',
+			array( 'arc-st-tailwind' ),
+			ARC_ST_VERSION
+		);
+		wp_add_inline_style(
+			'arc-st-karibase-templates',
+			'.arc-tpl{' . $design['tokens'] . '}'
+		);
+		wp_enqueue_style(
 			'arc-st-bridge',
 			ARC_ST_URL . 'assets/css/elementor-bridge.css',
-			array( 'arc-st-tailwind' ),
+			array( 'arc-st-tailwind', 'arc-st-karibase-templates' ),
 			ARC_ST_VERSION
 		);
 		wp_enqueue_script(
@@ -112,6 +129,23 @@ final class Arc_ST_Assets {
 			true
 		);
 		wp_script_add_data( 'arc-st-site', 'strategy', 'defer' );
+	}
+
+	/**
+	 * Template slug for the current frontend page or editor request.
+	 *
+	 * @return string
+	 */
+	private static function page_template_slug() {
+		$post_id = 0;
+		$post    = get_post();
+		if ( $post ) {
+			$post_id = (int) $post->ID;
+		}
+		if ( is_admin() && isset( $_GET['post'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			$post_id = absint( wp_unslash( $_GET['post'] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		}
+		return $post_id ? (string) get_post_meta( $post_id, Arc_ST_Importer::META_SLUG, true ) : '';
 	}
 
 	/**

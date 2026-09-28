@@ -185,8 +185,13 @@ function lienzo_arc_replace_in_html( $html, $pairs ) {
 
 	$xp = new DOMXPath( $doc );
 
+	// Third-party plugin markup (intranet, time clock, projects, careers
+	// portals) embedded inside an imported page is never touched — only
+	// the template's own copy gets swapped.
+	$foreign = 'not(ancestor::*[contains(@class,"arc-etc") or contains(@class,"ixp-") or contains(@class,"ix-") or contains(@class,"intranet") or contains(@class,"arc-portal")])';
+
 	// Pass 1: matches fully inside a single text node.
-	foreach ( $xp->query( '//text()[not(ancestor::script) and not(ancestor::style)]' ) as $node ) {
+	foreach ( $xp->query( '//text()[not(ancestor::script) and not(ancestor::style) and ' . $foreign . ']' ) as $node ) {
 		$node->nodeValue = strtr( $node->nodeValue, $pairs );
 	}
 
@@ -195,6 +200,12 @@ function lienzo_arc_replace_in_html( $html, $pairs ) {
 	// whitespace-flexible patterns, then the span is spliced back into the
 	// covered nodes — first node takes the new text, the rest are trimmed.
 	$targets = $xp->query( '//h1|//h2|//h3|//h4|//h5|//h6|//p|//a|//li|//button|//summary|//figcaption|//blockquote' );
+	$targets = array_filter(
+		iterator_to_array( $targets ),
+		function ( $el ) use ( $xp ) {
+			return 0 === $xp->query( 'ancestor::*[contains(@class,"arc-etc") or contains(@class,"ixp-") or contains(@class,"ix-") or contains(@class,"intranet") or contains(@class,"arc-portal")]', $el )->length;
+		}
+	);
 	foreach ( $targets as $el ) {
 		$nodes = array();
 		foreach ( $xp->query( './/text()[not(ancestor::script) and not(ancestor::style)]', $el ) as $t ) {
@@ -473,10 +484,10 @@ add_action( 'updated_post_meta', 'lienzo_arc_apply_copy_on_import', 10, 3 );
 function lienzo_arc_palette_presets() {
 	return array(
 		'arc'       => array(
-			'brand' => '#6FAF67', 'brand-dark' => '#438F69', 'accent' => '#58B8A9',
-			'navy'  => '#0F1C2E', 'mint'       => '#F5F8F4', 'cream'  => '#EAF1E8',
-			'leaf'  => '#A8C85A', 'gold'       => '#D7C94F',
-			'cta_bg' => '#A8C85A', 'cta_text'  => '#0F1C2E',
+			'brand' => '#59B8A9', 'brand-dark' => '#3E8E80', 'accent' => '#D6F73A',
+			'navy'  => '#0F1C2E', 'mint'       => '#F5F8F6', 'cream'  => '#EAF1E8',
+			'leaf'  => '#7FB34D', 'gold'       => '#E4CF43',
+			'cta_bg' => '#D6F73A', 'cta_text'  => '#0F1C2E',
 		),
 		'corporate' => array(
 			'brand' => '#2563EB', 'brand-dark' => '#1D4ED8', 'accent' => '#38BDF8',

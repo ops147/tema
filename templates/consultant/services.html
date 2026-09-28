@@ -4,23 +4,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ash River Collective — Services</title>
-    <meta name="description" content="ARC combines trained talent, documented processes, and operational systems to help growing companies execute consistently." />
+    <title>Services – Consultant</title>
+    <meta name="description" content="Finance & accounting talent, virtual assistants and documented playbooks — support built around the work, not a fixed package." />
     <script src="Js/site.js" defer></script>
     <link rel="stylesheet" href="Css/tailwind.css" onerror="this.onerror=null;var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4';document.head.appendChild(s);" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Public%20Sans:wght@300;400;500;600;700;800&family=DM%20Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-    <style type="text/tailwindcss">
+<style type="text/tailwindcss">
 @import "tailwindcss";
 
 @theme {
+  --color-slate-600: #53616B;
+  --color-gold: #E4CF43;
+  --color-leaf: #7FB34D;
   /* ===== Design tokens — global "site settings". Change here, applies everywhere. ===== */
-  --color-brand: #6FAF67;
-  --color-brand-dark: #438F69;
-  --color-accent: #58B8A9;
+  --color-brand: #59B8A9;
+  --color-brand-dark: #3E8E80;
+  --color-accent: #D6F73A;
   --color-navy: #0F1C2E;
-  --color-mint: #F5F8F4;
+  --color-mint: #F5F8F6;
   --color-cream: #EAF1E8;
   --font-sans: "Public Sans", ui-sans-serif, system-ui, sans-serif;
   --font-display: "DM Sans", ui-sans-serif, system-ui, sans-serif;
@@ -72,15 +75,15 @@
 
 /* Shared component layer — single source for all pages. Do not redeclare in page <style> blocks. */
 @layer components {
-  .btn-primary { display:inline-flex; align-items:center; gap:.5rem; border-radius:9999px; background:#A8C85A; padding:.8rem 1.75rem; font-size:.9rem; font-weight:600; color:#0F1C2E; transition:all .2s; }
-  .btn-primary:hover { background:#0F1C2E; color:#fff; transform:translateY(-2px); box-shadow:0 10px 15px -3px rgb(20 42 30 / .25); }
-  .btn-outline { display:inline-flex; align-items:center; gap:.5rem; border-radius:9999px; border:1px solid #438F69; padding:.8rem 1.75rem; font-size:.9rem; font-weight:600; color:#0F1C2E; transition:all .2s; }
-  .btn-outline:hover { border-color:#438F69; background:#438F69; color:#fff; transform:translateY(-2px); }
+  .btn-primary { display:inline-flex; align-items:center; gap:.5rem; border-radius:9999px; background:var(--color-accent); padding:.8rem 1.75rem; font-size:.9rem; font-weight:700; letter-spacing:.02em; text-transform:uppercase; color:var(--color-navy); transition:all .2s; }
+  .btn-primary:hover { background:var(--color-navy); color:#fff; transform:translateY(-2px); box-shadow:0 10px 15px -3px rgb(15 28 46 / .25); }
+  .btn-outline { display:inline-flex; align-items:center; gap:.5rem; border-radius:9999px; border:1px solid var(--color-navy); padding:.8rem 1.75rem; font-size:.9rem; font-weight:600; color:var(--color-navy); transition:all .2s; }
+  .btn-outline:hover { background:var(--color-navy); color:#fff; transform:translateY(-2px); }
   .btn-ghost-light { display:inline-flex; align-items:center; gap:.5rem; border-radius:9999px; border:1px solid rgba(255,255,255,.25); padding:.8rem 1.75rem; font-size:.9rem; font-weight:600; color:#fff; transition:all .2s; }
   .btn-ghost-light:hover { border-color:#fff; transform:translateY(-2px); }
   .eyebrow { font-size:.8rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--color-brand); }
   .field { width:100%; border-radius:.6rem; border:1px solid #e2e8f0; background:#fff; padding:.8rem 1rem; font-size:.9rem; color:var(--color-navy); outline:none; transition:border-color .2s, box-shadow .2s; }
-  .field:focus { border-color:var(--color-brand); box-shadow:0 0 0 3px rgb(111 175 103 / .22); }
+  .field:focus { border-color:var(--color-brand); box-shadow:0 0 0 3px rgb(89 184 169 / .22); }
   /* Hover-lift card — shared replacement for "transition hover:-translate-y-1 hover:shadow-lg". */
   .card-lift { transition:transform .25s ease, box-shadow .25s ease; }
   .card-lift:hover { transform:translateY(-4px); box-shadow:0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1); }
@@ -89,190 +92,223 @@
     </style>
   </head>
   <body class="font-sans text-slate-600 antialiased">
-    <style>@import url('https://fonts.googleapis.com/css2?family=Public%20Sans:wght@300;400;500;600;700;800&family=DM%20Sans:wght@300;400;500;600;700;800&display=swap');:root{--color-brand:#6FAF67;--color-brand-dark:#438F69;--color-accent:#58B8A9;--color-navy:#0F1C2E;--color-mint:#F5F8F4;--color-cream:#EAF1E8;--font-sans:"Public Sans",ui-sans-serif,system-ui,sans-serif;--font-display:"DM Sans",ui-sans-serif,system-ui,sans-serif;}</style>
     <!-- ===== Header ===== -->
-    <header class="sticky top-0 z-50 border-b border-slate-100 bg-white/95 backdrop-blur" data-reveal="down">
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-navy/95 backdrop-blur" data-reveal="down">
       <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 py-3 lg:px-8">
-        <a href="consultant-home.html" class="flex min-w-0 shrink-0 items-center gap-2.5"><img src="Img/logo-green.png" alt="Ash River Collective" class="h-9 w-9 shrink-0 sm:h-10 sm:w-10" /><span class="leading-none">
-            <span class="block text-lg font-extrabold tracking-tight text-navy font-display">ASH RIVER</span>
-            <span class="block text-[10px] font-bold tracking-[0.3em] text-brand">COLLECTIVE</span>
-          </span></a>
-        <nav class="hidden items-center gap-3 whitespace-nowrap text-[12px] font-medium text-slate-700 lg:flex xl:gap-5 xl:text-[13px]">
-          <a href="consultant-home.html" class="transition hover:text-brand">Home</a>
-          <a href="consultant-about.html" class="transition hover:text-brand">About</a>
-          <a href="consultant-services.html" class="font-semibold text-brand">Services</a>
-          <a href="consultant-blog.html" class="transition hover:text-brand">Insights</a>
-          <a href="consultant-contact.html" class="transition hover:text-brand">Contact</a>
+        <a href="consultant-home.html" class="flex min-w-0 shrink-0 items-center gap-2.5">
+          <span class="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent font-display text-sm font-bold text-navy sm:h-10 sm:w-10">C</span>
+          <span class="hidden min-[400px]:block leading-none">
+            <span class="block text-[15px] font-extrabold tracking-wide text-white font-display">CONSULTANT</span>
+            <span class="block text-[10px] font-bold tracking-[0.3em] text-brand">TALENT · SYSTEMS · PLAYBOOKS</span>
+          </span>
+        </a>
+        <nav class="hidden items-center gap-3 whitespace-nowrap text-[12px] font-medium text-slate-300 lg:flex xl:gap-5 xl:text-[13px]">
+          <a href="consultant-home.html" class="transition hover:text-white">Home</a>
+          <a href="consultant-services.html" class="font-semibold text-white">Services</a>
+          <a href="consultant-virtual-services.html" class="transition hover:text-white">Virtual Services</a>
+          <a href="consultant-playbooks.html" class="transition hover:text-white">Playbooks</a>
+          <a href="consultant-about.html" class="transition hover:text-white">About</a>
+          <a href="consultant-foundation.html" class="transition hover:text-white">Foundation</a>
+          <a href="consultant-partners.html" class="transition hover:text-white">Partners</a>
         </nav>
-        <form role="search" method="get" action="" class="hidden xl:flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3.5 py-1.5 text-[12px] text-slate-500">
-          <svg class="h-3.5 w-3.5 shrink-0 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path stroke-linecap="round" d="m20 20-3.5-3.5"/></svg>
-          <input type="search" name="s" placeholder="Search site…" aria-label="Search site" class="w-24 bg-transparent outline-none placeholder:text-slate-400" />
-        </form>
-        <button type="button" class="hidden lg:inline-flex items-center justify-center rounded-full p-2 text-slate-500 transition hover:bg-slate-100 hover:text-navy" aria-label="Toggle dark mode" onclick="arcStToggleDark()">
+        <button type="button" class="hidden lg:inline-flex items-center justify-center rounded-full p-2 text-slate-400 transition hover:bg-white/10 hover:text-white" aria-label="Toggle dark mode" data-arc-dark-toggle>
           <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
         </button>
-        <a href="consultant-contact.html" class="btn-primary hidden lg:inline-flex">Build Your Team</a>
-        <button type="button" class="inline-flex rounded-lg p-2 text-slate-700 hover:bg-slate-100 lg:hidden" aria-label="Toggle menu" aria-expanded="false" onclick="arcStToggleMobileNav(this)">
-          <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <a href="consultant-partners.html" class="btn-primary hidden lg:inline-flex">Build Your Team</a>
+        <button type="button" class="inline-flex items-center justify-center rounded-lg p-2 text-slate-300 transition hover:bg-white/10 hover:text-white lg:hidden" aria-label="Toggle menu" aria-expanded="false" aria-controls="mnav" data-arc-nav-toggle>
+          <svg data-arc-icon="open" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg data-arc-icon="close" class="hidden h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
         </button>
       </div>
-      <div id="mnav" class="hidden border-t border-slate-100 bg-white lg:hidden">
-        <nav class="flex flex-col px-4 sm:px-6 py-3 text-[15px] font-medium text-slate-700">
-          <form role="search" method="get" action="" class="mb-2 flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-3.5 py-2.5 text-sm text-slate-500">
-            <svg class="h-4 w-4 shrink-0 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path stroke-linecap="round" d="m20 20-3.5-3.5"/></svg>
-            <input type="search" name="s" placeholder="Search site…" aria-label="Search site" class="w-full bg-transparent outline-none placeholder:text-slate-400" />
-          </form>
-          <a href="consultant-home.html" class="border-b border-slate-50 py-3">Home</a>
-          <a href="consultant-about.html" class="border-b border-slate-50 py-3">About</a>
-          <a href="consultant-services.html" class="border-b border-slate-50 py-3 font-semibold text-brand">Services</a>
-          <a href="consultant-blog.html" class="border-b border-slate-50 py-3">Insights</a>
-          <a href="consultant-contact.html" class="py-3">Contact</a>
-          <a href="consultant-contact.html" class="btn-primary mt-2 mb-3 justify-center">Build Your Team</a>
+      <div id="mnav" class="hidden border-t border-white/10 bg-navy lg:hidden">
+        <nav class="flex flex-col px-4 sm:px-6 py-3 text-[15px] font-medium text-slate-200">
+          <a href="consultant-home.html" class="rounded-lg px-3 py-2.5 transition hover:bg-white/5 hover:text-white border-b border-white/10">Home</a>
+          <a href="consultant-services.html" class="rounded-lg px-3 py-2.5 transition hover:bg-white/5 hover:text-white font-semibold text-white border-b border-white/10">Services</a>
+          <a href="consultant-virtual-services.html" class="rounded-lg px-3 py-2.5 transition hover:bg-white/5 hover:text-white border-b border-white/10">Virtual Services</a>
+          <a href="consultant-playbooks.html" class="rounded-lg px-3 py-2.5 transition hover:bg-white/5 hover:text-white border-b border-white/10">Playbooks</a>
+          <a href="consultant-about.html" class="rounded-lg px-3 py-2.5 transition hover:bg-white/5 hover:text-white border-b border-white/10">About</a>
+          <a href="consultant-foundation.html" class="rounded-lg px-3 py-2.5 transition hover:bg-white/5 hover:text-white border-b border-white/10">Foundation</a>
+          <a href="consultant-partners.html" class="rounded-lg px-3 py-2.5 transition hover:bg-white/5 hover:text-white">Partners</a>
+          <a href="consultant-partners.html" class="btn-primary mt-2 mb-3 justify-center">Build Your Team</a>
         </nav>
       </div>
     </header>
-
-    <!-- ===== Page header ===== -->
+    <!-- ===== Page hero ===== -->
     <section class="relative overflow-hidden bg-navy">
-      <div class="pointer-events-none absolute -top-32 -right-24 h-80 w-80 rounded-full bg-brand/20 blur-3xl"></div>
-      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 py-16 lg:px-8 lg:py-20">
-        <p class="eyebrow" data-reveal>Talent + Process + Accountability</p>
-        <h1 class="mt-3 max-w-3xl text-4xl font-bold text-white font-display sm:text-5xl" data-reveal data-reveal-delay="80">Build Capacity Without Building More Chaos.</h1>
-        <p class="mt-5 max-w-2xl text-lg leading-8 text-slate-300" data-reveal data-reveal-delay="160">ARC combines trained talent, documented processes, and operational systems to help growing companies execute consistently.</p>
+      <div class="pointer-events-none absolute -top-40 -right-40 h-[420px] w-[420px] rounded-full bg-brand/25 blur-3xl motion-safe:animate-pulse-slow"></div>
+      <div class="pointer-events-none absolute -bottom-44 -left-32 h-[380px] w-[380px] rounded-full bg-accent/15 blur-3xl motion-safe:animate-float-slow"></div>
+      <div class="relative mx-auto max-w-3xl px-4 py-16 text-center sm:px-6 sm:py-20 lg:py-24">
+        <h1 class="text-3xl font-bold text-white font-display sm:text-5xl" data-reveal>Install the Back Office <span class="text-brand">You Actually Need.</span></h1>
+        <p class="mx-auto mt-5 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg" data-reveal data-reveal-delay="120">Consultant builds support around the work — not around a fixed package. Add accounting capacity, administrative execution, documented processes, automation, or a combination.</p>
+        <a href="consultant-partners.html" class="btn-primary mt-8 mx-auto" data-reveal data-reveal-delay="240">Build Your Support Plan</a>
+        <p class="mt-8 text-sm text-slate-400" data-reveal="fade" data-reveal-delay="360">
+          <a href="consultant-home.html" class="font-medium text-brand transition hover:text-white">Home</a>
+          <span class="mx-2 text-slate-500">/</span> Services
+        </p>
       </div>
     </section>
 
-<section class="py-16 sm:py-20 lg:py-24">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-2xl text-center" data-reveal>
-          
-          <h2 class="mt-3 text-3xl font-bold font-display text-navy sm:text-4xl">What ARC Offers</h2>
-          
-        </div>
-        <div class="mt-14 space-y-5" data-reveal-stagger="90">
-          <div class="card-lift flex flex-col gap-4 rounded-2xl border border-slate-100 bg-white p-6 shadow-sm sm:flex-row sm:items-center sm:gap-8 sm:p-7">
-            <span class="text-3xl font-extrabold text-brand/25 font-display">01</span>
-            <div class="flex-1">
-              <h3 class="text-lg font-bold text-navy font-display">Diagnose</h3>
-              <p class="mt-1 text-sm leading-6 text-slate-500">We identify the work, bottlenecks, responsibilities, and capacity gaps affecting execution.</p>
-            </div>
-            <a href="consultant-contact.html" class="btn-outline shrink-0 !px-5 !py-2.5 text-sm">Tell Us What You Need</a>
+    <div class="flex flex-col">
+    <!-- ===== Service blocks ===== -->
+    <section class="bg-white">
+      <div class="mx-auto max-w-7xl space-y-24 px-4 sm:px-6 py-20 lg:px-8 lg:py-28">
+                <div class="grid items-center gap-12 lg:grid-cols-1">
+          <div class="" data-reveal="left">
+            <img src="Img/arc-stock-45.jpg" alt="Finance & Accounting Talent" class="w-full rounded-3xl object-cover shadow-xl" loading="lazy" />
           </div>
-          <div class="card-lift flex flex-col gap-4 rounded-2xl border border-slate-100 bg-white p-6 shadow-sm sm:flex-row sm:items-center sm:gap-8 sm:p-7">
-            <span class="text-3xl font-extrabold text-brand/25 font-display">02</span>
-            <div class="flex-1">
-              <h3 class="text-lg font-bold text-navy font-display">Install</h3>
-              <p class="mt-1 text-sm leading-6 text-slate-500">We place the right talent and establish the processes required for the role to operate effectively.</p>
-            </div>
-            <a href="consultant-contact.html" class="btn-outline shrink-0 !px-5 !py-2.5 text-sm">Tell Us What You Need</a>
-          </div>
-          <div class="card-lift flex flex-col gap-4 rounded-2xl border border-slate-100 bg-white p-6 shadow-sm sm:flex-row sm:items-center sm:gap-8 sm:p-7">
-            <span class="text-3xl font-extrabold text-brand/25 font-display">03</span>
-            <div class="flex-1">
-              <h3 class="text-lg font-bold text-navy font-display">Execute</h3>
-              <p class="mt-1 text-sm leading-6 text-slate-500">Your team runs the work while processes, responsibilities, and recurring workflows become increasingly documented and repeatable.</p>
-            </div>
-            <a href="consultant-contact.html" class="btn-outline shrink-0 !px-5 !py-2.5 text-sm">Tell Us What You Need</a>
-          </div>
-          <div class="card-lift flex flex-col gap-4 rounded-2xl border border-slate-100 bg-white p-6 shadow-sm sm:flex-row sm:items-center sm:gap-8 sm:p-7">
-            <span class="text-3xl font-extrabold text-brand/25 font-display">04</span>
-            <div class="flex-1">
-              <h3 class="text-lg font-bold text-navy font-display">Diagnose</h3>
-              <p class="mt-1 text-sm leading-6 text-slate-500">We identify the work, bottlenecks, responsibilities, and capacity gaps affecting execution.</p>
-            </div>
-            <a href="consultant-contact.html" class="btn-outline shrink-0 !px-5 !py-2.5 text-sm">Tell Us What You Need</a>
-          </div>
-          <div class="card-lift flex flex-col gap-4 rounded-2xl border border-slate-100 bg-white p-6 shadow-sm sm:flex-row sm:items-center sm:gap-8 sm:p-7">
-            <span class="text-3xl font-extrabold text-brand/25 font-display">05</span>
-            <div class="flex-1">
-              <h3 class="text-lg font-bold text-navy font-display">Install</h3>
-              <p class="mt-1 text-sm leading-6 text-slate-500">We place the right talent and establish the processes required for the role to operate effectively.</p>
-            </div>
-            <a href="consultant-contact.html" class="btn-outline shrink-0 !px-5 !py-2.5 text-sm">Tell Us What You Need</a>
-          </div>
-          <div class="card-lift flex flex-col gap-4 rounded-2xl border border-slate-100 bg-white p-6 shadow-sm sm:flex-row sm:items-center sm:gap-8 sm:p-7">
-            <span class="text-3xl font-extrabold text-brand/25 font-display">06</span>
-            <div class="flex-1">
-              <h3 class="text-lg font-bold text-navy font-display">Execute</h3>
-              <p class="mt-1 text-sm leading-6 text-slate-500">Your team runs the work while processes, responsibilities, and recurring workflows become increasingly documented and repeatable.</p>
-            </div>
-            <a href="consultant-contact.html" class="btn-outline shrink-0 !px-5 !py-2.5 text-sm">Tell Us What You Need</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-<section class="bg-mint py-16 sm:py-20 lg:py-24">
-      <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
-<div class="relative" data-reveal="left">
-            <img src="Img/consultant-img-2.jpg" alt="Ash River Collective" class="w-full rounded-3xl object-cover shadow-xl lg:aspect-[4/3]" loading="lazy" />
-          </div>
-          <div data-reveal="right">
-            <p class="eyebrow">How ARC Works</p>
-            <h2 class="mt-3 text-3xl font-bold font-display text-navy sm:text-4xl">Diagnose. Install. Execute.</h2>
-            <p class="mt-5 leading-8 text-slate-500">ARC combines trained talent, documented processes, and operational systems to help growing companies execute consistently.</p>
-            <ul class="mt-6 space-y-3 text-[15px] text-slate-600">
-              <li class="flex gap-3"><span class="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand/10 text-brand"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span>Reconciliations and close processes</span></li>
-              <li class="flex gap-3"><span class="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand/10 text-brand"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span>AR / AP workflows and follow-up</span></li>
-              <li class="flex gap-3"><span class="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand/10 text-brand"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span>Reporting and recurring deliverables</span></li>
+          <div class="" data-reveal="right" data-reveal-delay="120">
+            <p class="eyebrow">Service 01</p>
+            <h2 class="mt-3 text-3xl font-bold text-navy font-display sm:text-4xl">Finance &amp; Accounting Talent</h2>
+            <p class="mt-5 leading-7">Put the right level of finance talent in the seat — scale the team based on the work instead of carrying unnecessary overhead.</p>
+            <p class="mt-4 text-sm font-medium text-navy">General Accountant · Senior Accountant · AR/AP Specialist · Accounting Manager · Controller · Fractional Controller</p>
+            <ul class="mt-6 space-y-4" data-reveal-stagger="90">
+              <li class="flex gap-3">
+                <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-sm leading-6">From transactional support through controller-level capacity</span>
+              </li>
+              <li class="flex gap-3">
+                <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-sm leading-6">Fluent English, U.S. working hours, inside your existing systems</span>
+              </li>
+              <li class="flex gap-3">
+                <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-sm leading-6">Ready in as little as 7 days when the fit is clear</span>
+              </li>
             </ul>
-            
           </div>
-      </div>
-    </section>
-
-    <section class="relative overflow-hidden bg-navy py-16 sm:py-20">
-      <div class="pointer-events-none absolute -top-40 right-0 h-96 w-96 rounded-full bg-brand/25 blur-3xl motion-safe:animate-pulse-slow"></div>
-      <div class="relative mx-auto max-w-4xl px-4 text-center sm:px-6">
-        <h2 class="text-3xl font-bold text-white font-display sm:text-4xl" data-reveal>Tell Us What You Need</h2>
-        <p class="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-300" data-reveal data-reveal-delay="100">Tell us what work needs to get done — we reply within one business day.</p>
-        <div class="mt-8 flex flex-wrap justify-center gap-4" data-reveal data-reveal-delay="200">
-          <a href="consultant-contact.html" class="btn-primary">Talk With ARC <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
-          
+        </div>
+        <div class="grid items-center gap-12 lg:grid-cols-1">
+          <div class="lg:order-2" data-reveal="left">
+            <img src="Img/arc-stock-04.jpg" alt="Virtual Assistants" class="w-full rounded-3xl object-cover shadow-xl" loading="lazy" />
+          </div>
+          <div class="lg:order-1" data-reveal="right" data-reveal-delay="120">
+            <p class="eyebrow">Service 02</p>
+            <h2 class="mt-3 text-3xl font-bold text-navy font-display sm:text-4xl">Virtual Assistants</h2>
+            <p class="mt-5 leading-7">Recurring administrative and operational work owned end to end — with a documented process behind every seat.</p>
+            <p class="mt-4 text-sm font-medium text-navy">Executive Support · Sales Support · Operations Support · Client Support</p>
+            <ul class="mt-6 space-y-4" data-reveal-stagger="90">
+              <li class="flex gap-3">
+                <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-sm leading-6">Recurring tasks become documented workflows</span>
+              </li>
+              <li class="flex gap-3">
+                <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-sm leading-6">Manage, measure, transfer and scale the role</span>
+              </li>
+              <li class="flex gap-3">
+                <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-sm leading-6">Ready to start in as little as 7 days</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="grid items-center gap-12 lg:grid-cols-1">
+          <div class="" data-reveal="left">
+            <img src="Img/arc-stock-09.jpg" alt="Systems & Playbooks" class="w-full rounded-3xl object-cover shadow-xl" loading="lazy" />
+          </div>
+          <div class="" data-reveal="right" data-reveal-delay="120">
+            <p class="eyebrow">Service 03</p>
+            <h2 class="mt-3 text-3xl font-bold text-navy font-display sm:text-4xl">Systems &amp; Playbooks</h2>
+            <p class="mt-5 leading-7">Make the process transferable. Recurring work converted into clear SOPs and playbooks — hosted in your own intranet.</p>
+            <p class="mt-4 text-sm font-medium text-navy">SOP development · finance playbooks · process mapping · automation identification</p>
+            <ul class="mt-6 space-y-4" data-reveal-stagger="90">
+              <li class="flex gap-3">
+                <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-sm leading-6">First 90 days: document the workflows behind the role</span>
+              </li>
+              <li class="flex gap-3">
+                <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-sm leading-6">The business keeps the operating knowledge — not trapped in one employee's head</span>
+              </li>
+              <li class="flex gap-3">
+                <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-sm leading-6">Automations flagged where software beats manual work</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- ===== Method ===== -->
+    <section class="bg-navy">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 py-20 lg:px-8 lg:py-24">
+        <div class="mx-auto max-w-2xl text-center" data-reveal>
+          <p class="eyebrow">How we work</p>
+          <h2 class="mt-3 text-3xl font-bold text-white font-display sm:text-4xl">Diagnose. Install. Document. Improve.</h2>
+          <p class="mt-4 leading-7 text-slate-300">The same model every time: map the work, install the capacity, document the process, then keep improving the system around it.</p>
+        </div>
+        <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-2" data-reveal-stagger="120">
+                    <div class="rounded-2xl border border-white/10 bg-white/5 p-8">
+            <h3 class="font-display text-lg font-bold text-brand">01 · Diagnose</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-300">Diagnose the constraint — map the role, the recurring tasks and the systems involved.</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-8">
+            <h3 class="font-display text-lg font-bold text-brand">02 · Install</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-300">Install the right capacity — the trained professional who runs the work inside your team.</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-8">
+            <h3 class="font-display text-lg font-bold text-brand">03 · Document</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-300">Document the recurring process into playbooks inside your own intranet.</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-8">
+            <h3 class="font-display text-lg font-bold text-brand">04 · Improve</h3>
+            <p class="mt-3 text-sm leading-6 text-slate-300">Improve the system around the work — review, refine and automate quarter after quarter.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+    <!-- ===== CTA ===== -->
+    <section class="bg-navy">
+      <div class="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6 sm:py-20 lg:px-8">
+        <h2 class="text-3xl font-bold text-white font-display sm:text-4xl" data-reveal>What Is the Most Expensive Work Still Being Done Manually?</h2>
+        <p class="mx-auto mt-4 max-w-xl leading-7 text-slate-300" data-reveal data-reveal-delay="120">Bring us the role, backlog, or broken workflow. We will help define the right operating response.</p>
+        <a href="consultant-partners.html" class="btn-primary mx-auto mt-8" data-reveal data-reveal-delay="240">Talk to ARC</a>
+      </div>
+    </section>
     <!-- ===== Footer ===== -->
     <footer class="bg-navy text-slate-300">
-      <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 py-16 md:grid-cols-2 lg:grid-cols-4 lg:px-8" data-reveal-stagger="120">
+      <div class="mx-auto grid max-w-7xl gap-10 border-t border-white/10 px-4 sm:px-6 py-16 md:grid-cols-2 lg:grid-cols-4 lg:px-8" data-reveal-stagger="120">
         <div>
-          <a href="consultant-home.html" class="flex items-center gap-2.5"><img src="Img/logo-green.png" alt="Ash River Collective" class="h-10 w-10 shrink-0" />
-            <span class="text-lg font-extrabold tracking-tight text-white font-display">ASH RIVER</span>
+          <a href="consultant-home.html" class="flex items-center gap-2.5">
+            <span class="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent font-display text-sm font-bold text-navy sm:h-10 sm:w-10">C</span>
+            <span class="leading-none">
+              <span class="block text-[15px] font-extrabold tracking-wide text-white font-display">CONSULTANT</span>
+              <span class="block text-[10px] font-bold tracking-[0.3em] text-brand">TALENT · SYSTEMS · PLAYBOOKS</span>
+            </span>
           </a>
-          <p class="mt-5 text-sm leading-6 text-slate-400">Elite Talent. Bulletproof Systems. Accounting talent, virtual assistants, and documented operating systems built around the work your business needs to get done.</p>
+          <p class="mt-5 text-sm leading-6 text-slate-400">Trained Latin American professionals — fluent English, your time zone — plus the documented systems that make their work repeatable.</p>
         </div>
         <div>
-          <h4 class="text-sm font-bold uppercase tracking-wider text-white">Company</h4>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-white">Site</h3>
           <ul class="mt-5 space-y-3 text-sm">
-              <li><a href="consultant-home.html" class="transition hover:text-brand">Home</a></li>
-              <li><a href="consultant-about.html" class="transition hover:text-brand">About</a></li>
-              <li><a href="consultant-services.html" class="transition hover:text-brand">Services</a></li>
+            <li><a href="consultant-home.html" class="transition hover:text-white">Home</a></li>
+            <li><a href="consultant-about.html" class="transition hover:text-white">About</a></li>
+            <li><a href="consultant-foundation.html" class="transition hover:text-white">Foundation</a></li>
+            <li><a href="consultant-partners.html" class="transition hover:text-white">Partners</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="text-sm font-bold uppercase tracking-wider text-white">Services</h4>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-white">What we do</h3>
           <ul class="mt-5 space-y-3 text-sm">
-              <li><a href="consultant-blog.html" class="transition hover:text-brand">Insights</a></li>
-              <li><a href="consultant-contact.html" class="transition hover:text-brand">Contact</a></li>
+            <li><a href="consultant-services.html" class="transition hover:text-white">Services</a></li>
+            <li><a href="consultant-virtual-services.html" class="transition hover:text-white">Virtual Services</a></li>
+            <li><a href="consultant-playbooks.html" class="transition hover:text-white">Playbooks</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="text-sm font-bold uppercase tracking-wider text-white">Contact</h4>
-          <ul class="mt-5 space-y-3 text-sm text-slate-400 [&_svg]:mt-0.5 [&_svg]:h-5 [&_svg]:w-5 [&_svg]:shrink-0 [&_svg]:text-brand">
-            <li class="flex gap-3"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1116 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Remote-first · U.S. time zones</span></li>
-            <li class="flex gap-3"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path stroke-linecap="round" stroke-linejoin="round" d="M3 7l9 6 9-6"/></svg><a href="mailto:hello@ashrivercollective.com" class="transition hover:text-brand">hello@ashrivercollective.com</a></li>
-            <li class="flex gap-3"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 2 .7 2.9a2 2 0 01-.5 2.1L8 10a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.5c.9.3 1.9.6 2.9.7a2 2 0 011.7 2z"/></svg><span>+1 (555) 013-4224</span></li>
-          </ul>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-white">Get started</h3>
+          <p class="mt-5 text-sm leading-6 text-slate-400">Qualified professionals in as little as 7 days. Documented playbooks within 90.</p>
+          <a href="consultant-partners.html" class="btn-primary mt-5">Start a Conversation</a>
         </div>
       </div>
       <div class="border-t border-white/10">
-        <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 sm:px-6 py-6 text-xs text-slate-500 sm:flex-row lg:px-8">
-          <p>© 2026 Ash River Collective. All rights reserved.</p>
-          <p>Starter template · Built with ARC Starter Templates</p>
+        <div class="mx-auto flex max-w-7xl flex-col gap-2 px-4 sm:px-6 py-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+          <p>© 2026 Consultant. All rights reserved.</p>
+          <p>People. Process. Playbooks.</p>
         </div>
       </div>
     </footer>
-      <div id="arc-st-chat"></div>
-</body>
+  </body>
 </html>

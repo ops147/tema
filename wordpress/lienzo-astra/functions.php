@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-define( 'LIENZOASTRA_VERSION', '1.2.3' );
+define( 'LIENZOASTRA_VERSION', '1.2.4' );
 define( 'LIENZOASTRA_DIR', get_template_directory() );
 define( 'LIENZOASTRA_URI', get_template_directory_uri() );
 define( 'LIENZOASTRA_OPTION', 'lienzoastra_settings' );
@@ -40,6 +40,7 @@ function lienzo_is_arc_portal_page() {
 require_once LIENZOASTRA_DIR . '/inc/setup.php';
 require_once LIENZOASTRA_DIR . '/inc/arc-templates.php';
 require_once LIENZOASTRA_DIR . '/inc/arc-copy.php';
+require_once LIENZOASTRA_DIR . '/inc/arc-links.php';
 require_once LIENZOASTRA_DIR . '/inc/assets.php';
 require_once LIENZOASTRA_DIR . '/inc/settings-page.php';
 require_once LIENZOASTRA_DIR . '/inc/customizer.php';

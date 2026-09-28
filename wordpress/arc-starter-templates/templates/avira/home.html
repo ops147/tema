@@ -4,23 +4,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ash River Collective — Home</title>
-    <meta name="description" content="Build the team your business needs without adding unnecessary overhead. Ash River Collective places trained accounting and administrative professionals inside your business — then helps document the processes they run so execution doesn't depend on one person." />
+    <title>Avira — Elite Talent. Bulletproof Systems.</title>
+    <meta name="description" content="Build the team your business needs without adding unnecessary overhead. Avira places trained accounting and administrative professionals inside your business — then helps document the processes they run so execution doesn't depend on one person." />
     <script src="Js/site.js" defer></script>
     <link rel="stylesheet" href="Css/tailwind.css" onerror="this.onerror=null;var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4';document.head.appendChild(s);" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Radio%20Canada%20Big:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-    <style type="text/tailwindcss">
+<style type="text/tailwindcss">
 @import "tailwindcss";
 
 @theme {
+  --color-slate-600: #53616B;
+  --color-gold: #E4CF43;
+  --color-leaf: #7FB34D;
   /* ===== Design tokens — global "site settings". Change here, applies everywhere. ===== */
-  --color-brand: #6FAF67;
-  --color-brand-dark: #438F69;
-  --color-accent: #58B8A9;
+  --color-brand: #59B8A9;
+  --color-brand-dark: #3E8E80;
+  --color-accent: #D6F73A;
   --color-navy: #0F1C2E;
-  --color-mint: #F5F8F4;
+  --color-mint: #F5F8F6;
   --color-cream: #EAF1E8;
   --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Radio Canada Big", ui-sans-serif, system-ui, sans-serif;
@@ -72,15 +75,15 @@
 
 /* Shared component layer — single source for all pages. Do not redeclare in page <style> blocks. */
 @layer components {
-  .btn-primary { display:inline-flex; align-items:center; gap:.5rem; border-radius:9999px; background:#A8C85A; padding:.8rem 1.75rem; font-size:.9rem; font-weight:600; color:#0F1C2E; transition:all .2s; }
-  .btn-primary:hover { background:#0F1C2E; color:#fff; transform:translateY(-2px); box-shadow:0 10px 15px -3px rgb(20 42 30 / .25); }
-  .btn-outline { display:inline-flex; align-items:center; gap:.5rem; border-radius:9999px; border:1px solid #438F69; padding:.8rem 1.75rem; font-size:.9rem; font-weight:600; color:#0F1C2E; transition:all .2s; }
-  .btn-outline:hover { border-color:#438F69; background:#438F69; color:#fff; transform:translateY(-2px); }
+  .btn-primary { display:inline-flex; align-items:center; gap:.5rem; border-radius:9999px; background:var(--color-accent); padding:.8rem 1.75rem; font-size:.9rem; font-weight:700; letter-spacing:.02em; text-transform:uppercase; color:var(--color-navy); transition:all .2s; }
+  .btn-primary:hover { background:var(--color-navy); color:#fff; transform:translateY(-2px); box-shadow:0 10px 15px -3px rgb(15 28 46 / .25); }
+  .btn-outline { display:inline-flex; align-items:center; gap:.5rem; border-radius:9999px; border:1px solid var(--color-navy); padding:.8rem 1.75rem; font-size:.9rem; font-weight:600; color:var(--color-navy); transition:all .2s; }
+  .btn-outline:hover { background:var(--color-navy); color:#fff; transform:translateY(-2px); }
   .btn-ghost-light { display:inline-flex; align-items:center; gap:.5rem; border-radius:9999px; border:1px solid rgba(255,255,255,.25); padding:.8rem 1.75rem; font-size:.9rem; font-weight:600; color:#fff; transition:all .2s; }
   .btn-ghost-light:hover { border-color:#fff; transform:translateY(-2px); }
   .eyebrow { font-size:.8rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--color-brand); }
   .field { width:100%; border-radius:.6rem; border:1px solid #e2e8f0; background:#fff; padding:.8rem 1rem; font-size:.9rem; color:var(--color-navy); outline:none; transition:border-color .2s, box-shadow .2s; }
-  .field:focus { border-color:var(--color-brand); box-shadow:0 0 0 3px rgb(111 175 103 / .22); }
+  .field:focus { border-color:var(--color-brand); box-shadow:0 0 0 3px rgb(89 184 169 / .22); }
   /* Hover-lift card — shared replacement for "transition hover:-translate-y-1 hover:shadow-lg". */
   .card-lift { transition:transform .25s ease, box-shadow .25s ease; }
   .card-lift:hover { transform:translateY(-4px); box-shadow:0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1); }
@@ -89,293 +92,303 @@
     </style>
   </head>
   <body class="font-sans text-slate-600 antialiased">
-    <style>@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Radio%20Canada%20Big:wght@300;400;500;600;700;800&display=swap');:root{--color-brand:#6FAF67;--color-brand-dark:#438F69;--color-accent:#58B8A9;--color-navy:#0F1C2E;--color-mint:#F5F8F4;--color-cream:#EAF1E8;--font-sans:"Manrope",ui-sans-serif,system-ui,sans-serif;--font-display:"Radio Canada Big",ui-sans-serif,system-ui,sans-serif;}</style>
     <!-- ===== Header ===== -->
-    <header class="sticky top-0 z-50 border-b border-slate-100 bg-white/95 backdrop-blur" data-reveal="down">
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-navy/95 backdrop-blur" data-reveal="down">
       <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 py-3 lg:px-8">
-        <a href="avira-home.html" class="flex min-w-0 shrink-0 items-center gap-2.5"><img src="Img/logo-green.png" alt="Ash River Collective" class="h-9 w-9 shrink-0 sm:h-10 sm:w-10" /><span class="leading-none">
-            <span class="block text-lg font-extrabold tracking-tight text-navy font-display">ASH RIVER</span>
-            <span class="block text-[10px] font-bold tracking-[0.3em] text-brand">COLLECTIVE</span>
-          </span></a>
-        <nav class="hidden items-center gap-3 whitespace-nowrap text-[12px] font-medium text-slate-700 lg:flex xl:gap-5 xl:text-[13px]">
-          <a href="avira-home.html" class="font-semibold text-brand">Home</a>
-          <a href="avira-about.html" class="transition hover:text-brand">About</a>
-          <a href="avira-solutions.html" class="transition hover:text-brand">Services</a>
-          <a href="avira-case-studies.html" class="transition hover:text-brand">Results</a>
-          <a href="avira-find-your-coach.html" class="transition hover:text-brand">Build Your Team</a>
-          <a href="avira-pricing.html" class="transition hover:text-brand">Engagement</a>
-          <a href="avira-faq.html" class="transition hover:text-brand">FAQ</a>
-          <a href="avira-blog.html" class="transition hover:text-brand">Insights</a>
-          <a href="avira-contact-us.html" class="transition hover:text-brand">Contact</a>
+        <a href="avira-home.html" class="flex min-w-0 shrink-0 items-center gap-2.5">
+          <span class="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent font-display text-sm font-bold text-navy sm:h-10 sm:w-10">A</span>
+          <span class="hidden min-[400px]:block leading-none">
+            <span class="block text-[15px] font-extrabold tracking-wide text-white font-display">AVIRA</span>
+            <span class="block text-[10px] font-bold tracking-[0.3em] text-brand">TALENT · SYSTEMS · PLAYBOOKS</span>
+          </span>
+        </a>
+        <nav class="hidden items-center gap-3 whitespace-nowrap text-[12px] font-medium text-slate-300 lg:flex xl:gap-5 xl:text-[13px]">
+          <a href="avira-home.html" class="font-semibold text-white">Home</a>
+          <a href="avira-services.html" class="transition hover:text-white">Services</a>
+          <a href="avira-virtual-services.html" class="transition hover:text-white">Virtual Services</a>
+          <a href="avira-playbooks.html" class="transition hover:text-white">Playbooks</a>
+          <a href="avira-about.html" class="transition hover:text-white">About</a>
+          <a href="avira-foundation.html" class="transition hover:text-white">Foundation</a>
+          <a href="avira-partners.html" class="transition hover:text-white">Partners</a>
         </nav>
-        <form role="search" method="get" action="" class="hidden xl:flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3.5 py-1.5 text-[12px] text-slate-500">
-          <svg class="h-3.5 w-3.5 shrink-0 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path stroke-linecap="round" d="m20 20-3.5-3.5"/></svg>
-          <input type="search" name="s" placeholder="Search site…" aria-label="Search site" class="w-24 bg-transparent outline-none placeholder:text-slate-400" />
-        </form>
-        <button type="button" class="hidden lg:inline-flex items-center justify-center rounded-full p-2 text-slate-500 transition hover:bg-slate-100 hover:text-navy" aria-label="Toggle dark mode" onclick="arcStToggleDark()">
+        <button type="button" class="hidden lg:inline-flex items-center justify-center rounded-full p-2 text-slate-400 transition hover:bg-white/10 hover:text-white" aria-label="Toggle dark mode" data-arc-dark-toggle>
           <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
         </button>
-        <a href="avira-find-your-coach.html" class="btn-primary hidden lg:inline-flex">Build Your Team</a>
-        <button type="button" class="inline-flex rounded-lg p-2 text-slate-700 hover:bg-slate-100 lg:hidden" aria-label="Toggle menu" aria-expanded="false" onclick="arcStToggleMobileNav(this)">
-          <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <a href="avira-partners.html" class="btn-primary hidden lg:inline-flex">Build Your Team</a>
+        <button type="button" class="inline-flex items-center justify-center rounded-lg p-2 text-slate-300 transition hover:bg-white/10 hover:text-white lg:hidden" aria-label="Toggle menu" aria-expanded="false" aria-controls="mnav" data-arc-nav-toggle>
+          <svg data-arc-icon="open" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg data-arc-icon="close" class="hidden h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
         </button>
       </div>
-      <div id="mnav" class="hidden border-t border-slate-100 bg-white lg:hidden">
-        <nav class="flex flex-col px-4 sm:px-6 py-3 text-[15px] font-medium text-slate-700">
-          <form role="search" method="get" action="" class="mb-2 flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-3.5 py-2.5 text-sm text-slate-500">
-            <svg class="h-4 w-4 shrink-0 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path stroke-linecap="round" d="m20 20-3.5-3.5"/></svg>
-            <input type="search" name="s" placeholder="Search site…" aria-label="Search site" class="w-full bg-transparent outline-none placeholder:text-slate-400" />
-          </form>
-          <a href="avira-home.html" class="border-b border-slate-50 py-3 font-semibold text-brand">Home</a>
-          <a href="avira-about.html" class="border-b border-slate-50 py-3">About</a>
-          <a href="avira-solutions.html" class="border-b border-slate-50 py-3">Services</a>
-          <a href="avira-case-studies.html" class="border-b border-slate-50 py-3">Results</a>
-          <a href="avira-find-your-coach.html" class="border-b border-slate-50 py-3">Build Your Team</a>
-          <a href="avira-pricing.html" class="border-b border-slate-50 py-3">Engagement</a>
-          <a href="avira-faq.html" class="border-b border-slate-50 py-3">FAQ</a>
-          <a href="avira-blog.html" class="border-b border-slate-50 py-3">Insights</a>
-          <a href="avira-contact-us.html" class="py-3">Contact</a>
-          <a href="avira-find-your-coach.html" class="btn-primary mt-2 mb-3 justify-center">Build Your Team</a>
+      <div id="mnav" class="hidden border-t border-white/10 bg-navy lg:hidden">
+        <nav class="flex flex-col px-4 sm:px-6 py-3 text-[15px] font-medium text-slate-200">
+          <a href="avira-home.html" class="rounded-lg px-3 py-2.5 transition hover:bg-white/5 hover:text-white font-semibold text-white border-b border-white/10">Home</a>
+          <a href="avira-services.html" class="rounded-lg px-3 py-2.5 transition hover:bg-white/5 hover:text-white border-b border-white/10">Services</a>
+          <a href="avira-virtual-services.html" class="rounded-lg px-3 py-2.5 transition hover:bg-white/5 hover:text-white border-b border-white/10">Virtual Services</a>
+          <a href="avira-playbooks.html" class="rounded-lg px-3 py-2.5 transition hover:bg-white/5 hover:text-white border-b border-white/10">Playbooks</a>
+          <a href="avira-about.html" class="rounded-lg px-3 py-2.5 transition hover:bg-white/5 hover:text-white border-b border-white/10">About</a>
+          <a href="avira-foundation.html" class="rounded-lg px-3 py-2.5 transition hover:bg-white/5 hover:text-white border-b border-white/10">Foundation</a>
+          <a href="avira-partners.html" class="rounded-lg px-3 py-2.5 transition hover:bg-white/5 hover:text-white">Partners</a>
+          <a href="avira-partners.html" class="btn-primary mt-2 mb-3 justify-center">Build Your Team</a>
         </nav>
       </div>
     </header>
-
     <!-- ===== Hero ===== -->
     <section class="relative overflow-hidden bg-navy">
       <div class="pointer-events-none absolute -top-40 -right-40 h-[480px] w-[480px] rounded-full bg-brand/25 blur-3xl motion-safe:animate-pulse-slow"></div>
-      <div class="pointer-events-none absolute -bottom-52 -left-32 h-[420px] w-[420px] rounded-full bg-brand/15 blur-3xl motion-safe:animate-float-slow"></div>
+      <div class="pointer-events-none absolute -bottom-52 -left-32 h-[420px] w-[420px] rounded-full bg-accent/15 blur-3xl motion-safe:animate-float-slow"></div>
       <div class="relative mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 py-20 lg:grid-cols-2 lg:px-8 lg:py-28">
         <div>
-          <p class="eyebrow" data-reveal>Talent + Process + Accountability</p>
-          <h1 class="mt-4 text-4xl leading-tight font-bold text-white font-display sm:text-5xl lg:text-6xl" data-reveal data-reveal-delay="80">Elite Talent. <span class="text-brand">Bulletproof Systems.</span></h1>
-          <p class="mt-6 max-w-xl text-lg leading-8 text-slate-300" data-reveal data-reveal-delay="160">Build the team your business needs without adding unnecessary overhead. Ash River Collective places trained accounting and administrative professionals inside your business — then helps document the processes they run so execution doesn't depend on one person.</p>
-          <div class="mt-8 flex flex-wrap gap-4" data-reveal data-reveal-delay="240">
-            <a href="avira-contact-us.html" class="btn-primary">Build Your Team <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
-            <a href="avira-about.html" class="btn-ghost-light">Explore Our Services</a>
+          <h1 class="text-4xl leading-tight font-bold text-white font-display sm:text-5xl lg:text-6xl" data-reveal="left">Elite Talent. <span class="text-brand">Bulletproof Systems.</span></h1>
+          <p class="mt-6 max-w-xl text-lg leading-8 text-slate-300" data-reveal="left" data-reveal-delay="120">Build the team your business needs without adding unnecessary overhead. Avira places trained accounting and administrative professionals inside your business — then helps document the processes they run so execution doesn't depend on one person.</p>
+          <div class="mt-9 flex flex-wrap items-center gap-4" data-reveal="left" data-reveal-delay="240">
+            <a href="avira-partners.html" class="btn-primary">Build Your Team</a>
+            <a href="avira-services.html" class="btn-ghost-light">Explore Our Services
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+          <div class="mt-9 flex flex-wrap items-center gap-x-6 gap-y-3" data-reveal="left" data-reveal-delay="360">
+            <span class="flex items-center gap-2 text-sm font-semibold text-white"><svg class="h-4 w-4 text-brand" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Fluent English</span>
+            <span class="flex items-center gap-2 text-sm font-semibold text-white"><svg class="h-4 w-4 text-brand" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Your time zone</span>
+            <span class="flex items-center gap-2 text-sm font-semibold text-white"><svg class="h-4 w-4 text-brand" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>Ready in 7 days</span>
           </div>
         </div>
-        <div class="relative" data-reveal="left" data-reveal-delay="200">
-          <img src="Img/avira-img-1.png" alt="Ash River Collective" class="w-full rounded-3xl object-cover shadow-2xl ring-1 ring-white/10 lg:aspect-[4/3]" loading="eager" />
+        <div class="relative " data-reveal="right" data-reveal-delay="200">
+          <img src="Img/arc-stock-37.jpg" alt="Avira team" class="mx-auto w-full max-w-lg rounded-3xl object-cover" loading="lazy" />
+                    <div class="absolute bottom-6 left-2 rounded-2xl bg-white p-5 shadow-xl sm:left-6 motion-safe:animate-float">
+            <p class="text-3xl font-bold text-navy font-display"><span data-count="90">90</span> <span class="text-brand">days</span></p>
+            <p class="mt-1 text-sm font-medium text-slate-500">to a documented, repeatable role</p>
+          </div>
         </div>
       </div>
     </section>
+    <section style="background:linear-gradient(135deg,#59B8A9 0%,#62A65F 55%,#7FB34D 100%)">
+      <div class="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-4 sm:px-6 py-14 md:flex-row md:items-center lg:px-8">
+        <div data-reveal="left">
+          <h2 class="text-3xl font-bold text-navy font-display sm:text-4xl">Ready in Days. Not Months.</h2>
+          <p class="mt-3 max-w-xl leading-7 text-navy/85">As little as 7 days to staff a clear role. Avira maintains a bench of trained professionals so adding capacity never takes a full recruiting cycle.</p>
+        </div>
+        <a href="avira-partners.html" class="inline-flex shrink-0 items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-navy transition hover:bg-slate-100" data-reveal="right" data-reveal-delay="150">Build Your Team</a>
+      </div>
+    </section>
 
-<section class="py-16 sm:py-20 lg:py-24">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section class="bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 py-20 lg:px-8 lg:py-28">
         <div class="mx-auto max-w-2xl text-center" data-reveal>
           <p class="eyebrow">What we do</p>
-          <h2 class="mt-3 text-3xl font-bold font-display text-navy sm:text-4xl">The People You Need. The Systems Behind Them.</h2>
-          <p class="mt-4 text-slate-500">ARC combines trained talent, documented processes, and operational systems to help growing companies execute consistently.</p>
+          <h2 class="mt-3 text-3xl font-bold text-navy font-display sm:text-4xl">The People You Need. The Systems Behind Them.</h2>
         </div>
-        <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-reveal-stagger="120">
-          <div class="card-lift rounded-2xl border border-slate-100 bg-white p-7 shadow-sm">
-            <span class="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand/10 text-brand"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 21v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2M23 21v-2a4 4 0 00-3-3.9M16 3.1a4 4 0 010 7.8"/><circle cx="9" cy="7" r="4"/></svg></span>
-            <h3 class="mt-5 text-lg font-bold text-navy font-display">Finance &amp; Accounting Talent</h3>
-            <p class="mt-2 text-sm leading-6 text-slate-500">Accountants, accounting managers, controllers, AR/AP specialists, and finance professionals who work your hours, speak fluent English, and integrate into your existing operation.</p>
+        <div class="mt-14 grid gap-8 md:grid-cols-2" data-reveal-stagger="150">
+                    <div class="group flex flex-col overflow-hidden rounded-2xl bg-slate-50 shadow-sm ring-1 ring-slate-100 card-lift">
+            <img src="Img/arc-stock-42.jpg" alt="Finance &amp; Accounting Talent" class="h-56 w-full object-cover" loading="lazy" />
+            <div class="flex flex-1 flex-col p-8">
+              <h3 class="text-2xl font-bold text-navy font-display">Finance &amp; Accounting Talent</h3>
+              <p class="mt-3 flex-1 leading-7">From transactional support through controller-level capacity — general accounting, AR/AP, reconciliations, month-end close and reporting.</p>
+              <a href="avira-services.html" class="btn-primary mt-6 w-fit">Find Accounting Talent</a>
+            </div>
           </div>
-          <div class="card-lift rounded-2xl border border-slate-100 bg-white p-7 shadow-sm">
-            <span class="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand/10 text-brand"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 21v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2M23 21v-2a4 4 0 00-3-3.9M16 3.1a4 4 0 010 7.8"/><circle cx="9" cy="7" r="4"/></svg></span>
-            <h3 class="mt-5 text-lg font-bold text-navy font-display">Virtual Assistants</h3>
-            <p class="mt-2 text-sm leading-6 text-slate-500">Administrative professionals who take recurring execution off your plate — scheduling, reporting, follow-up, CRM management, documentation, and operational support.</p>
-          </div>
-          <div class="card-lift rounded-2xl border border-slate-100 bg-white p-7 shadow-sm">
-            <span class="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand/10 text-brand"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7.5-4.7-10-9.3C.4 8.6 2.4 5 5.7 5c2 0 3.4 1 4.3 2.4h4C15 6 16.4 5 18.4 5c3.3 0 5.3 3.6 3.7 6.7C19.5 16.3 12 21 12 21z"/></svg></span>
-            <h3 class="mt-5 text-lg font-bold text-navy font-display">Systems &amp; Playbooks</h3>
-            <p class="mt-2 text-sm leading-6 text-slate-500">We document the recurring processes behind the work so your business can operate consistently without depending on one person.</p>
-          </div>
-          <div class="card-lift rounded-2xl border border-slate-100 bg-white p-7 shadow-sm">
-            <span class="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand/10 text-brand"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path stroke-linecap="round" stroke-linejoin="round" d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg></span>
-            <h3 class="mt-5 text-lg font-bold text-navy font-display">General Accountants</h3>
-            <p class="mt-2 text-sm leading-6 text-slate-500">Day-to-day accounting execution, reconciliations, transaction management, month-end support, and recurring accounting tasks.</p>
-          </div>
-          <div class="card-lift rounded-2xl border border-slate-100 bg-white p-7 shadow-sm">
-            <span class="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand/10 text-brand"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a8 8 0 01-8 8H5l-2 2V12a8 8 0 018-8h2a8 8 0 018 8z"/></svg></span>
-            <h3 class="mt-5 text-lg font-bold text-navy font-display">AR/AP Specialists</h3>
-            <p class="mt-2 text-sm leading-6 text-slate-500">Receivables, payables, invoice processing, collections follow-up, vendor coordination, and supporting documentation.</p>
-          </div>
-          <div class="card-lift rounded-2xl border border-slate-100 bg-white p-7 shadow-sm">
-            <span class="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand/10 text-brand"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3l8 4v5c0 5-3.4 8.4-8 9-4.6-.6-8-4-8-9V7l8-4z"/></svg></span>
-            <h3 class="mt-5 text-lg font-bold text-navy font-display">Controllers</h3>
-            <p class="mt-2 text-sm leading-6 text-slate-500">Financial controls, reporting, close management, team oversight, and higher-level accounting operations.</p>
+          <div class="group flex flex-col overflow-hidden rounded-2xl bg-slate-50 shadow-sm ring-1 ring-slate-100 card-lift">
+            <img src="Img/arc-stock-01.jpg" alt="Virtual Assistants" class="h-56 w-full object-cover" loading="lazy" />
+            <div class="flex flex-1 flex-col p-8">
+              <h3 class="text-2xl font-bold text-navy font-display">Virtual Assistants</h3>
+              <p class="mt-3 flex-1 leading-7">Executive support, operations, client coordination and back-office execution — recurring work owned end to end, with a playbook behind it.</p>
+              <a href="avira-virtual-services.html" class="btn-primary mt-6 w-fit">Find Your VA</a>
+            </div>
           </div>
         </div>
+        <p class="mt-10 text-center text-sm font-medium text-slate-500" data-reveal>
+          Systems &amp; Playbooks —
+          <a href="avira-playbooks.html" class="font-semibold text-brand transition hover:text-navy">the mechanism that makes both repeatable →</a>
+        </p>
       </div>
     </section>
 
-<section class="py-16 sm:py-20 lg:py-24">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section class="bg-cream">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 py-20 lg:px-8 lg:py-24">
         <div class="mx-auto max-w-2xl text-center" data-reveal>
-          <p class="eyebrow">Featured</p>
-          <h2 class="mt-3 text-3xl font-bold font-display text-navy sm:text-4xl">Notes on Talent and Process</h2>
-          
+          <p class="eyebrow">The ARC operating model</p>
+          <h2 class="mt-3 text-3xl font-bold text-navy font-display sm:text-4xl">Talent + Process + Accountability.</h2>
         </div>
-        <div class="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3" data-reveal-stagger="120">
-          <article class="card-lift group overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm">
-            <div class="overflow-hidden"><img src="Img/avira-img-1.png" alt="Latest update" class="aspect-[16/10] w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" /></div>
-            <div class="p-6">
-              <span class="inline-block rounded-full bg-brand/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-brand">Reconciliations and close processes</span>
-              <h3 class="mt-3 text-lg font-bold text-navy font-display">Latest update</h3>
-              <p class="mt-2 text-sm leading-6 text-slate-500">A short read on talent, process, and building execution capacity.</p>
-              
-              <a href="#" class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand transition hover:gap-3">Read more <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
-            </div>
-          </article>
-          <article class="card-lift group overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm">
-            <div class="overflow-hidden"><img src="Img/avira-img-2.jpg" alt="Behind the scenes" class="aspect-[16/10] w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" /></div>
-            <div class="p-6">
-              <span class="inline-block rounded-full bg-brand/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-brand">AR / AP workflows and follow-up</span>
-              <h3 class="mt-3 text-lg font-bold text-navy font-display">Hiring another person doesn't fix an undocumented operation</h3>
-              <p class="mt-2 text-sm leading-6 text-slate-500">Why the seat matters less than the system around it — and what to document first.</p>
-              
-              <a href="#" class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand transition hover:gap-3">Read more <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
-            </div>
-          </article>
-          <article class="card-lift group overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm">
-            <div class="overflow-hidden"><img src="Img/avira-img-3.jpg" alt="What we learned" class="aspect-[16/10] w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" /></div>
-            <div class="p-6">
-              <span class="inline-block rounded-full bg-brand/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-brand">Reporting and recurring deliverables</span>
-              <h3 class="mt-3 text-lg font-bold text-navy font-display">The 90-day playbook for a new finance hire</h3>
-              <p class="mt-2 text-sm leading-6 text-slate-500">How recurring workflows become SOPs inside the first quarter of a placement.</p>
-              
-              <a href="#" class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand transition hover:gap-3">Read more <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-<section class="bg-mint py-16 sm:py-20 lg:py-24">
-      <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
-<div class="relative" data-reveal="left">
-            <img src="Img/avira-img-2.jpg" alt="Ash River Collective" class="w-full rounded-3xl object-cover shadow-xl lg:aspect-[4/3]" loading="lazy" />
+        <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-2" data-reveal-stagger="100">
+                    <div class="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-slate-100 card-lift">
+            <h3 class="text-lg font-bold text-navy font-display">Talent</h3>
+            <p class="mt-3 text-sm leading-6">The right person in the seat — fluent English, your working hours, inside your existing team.</p>
           </div>
-          <div data-reveal="right">
-            <p class="eyebrow">About Ash River Collective</p>
-            <h2 class="mt-3 text-3xl font-bold font-display text-navy sm:text-4xl">The People You Need. The Systems Behind Them.</h2>
-            <p class="mt-5 leading-8 text-slate-500">ARC combines trained talent, documented processes, and operational systems to help growing companies execute consistently.</p>
-            <ul class="mt-6 space-y-3 text-[15px] text-slate-600">
-              <li class="flex gap-3"><span class="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand/10 text-brand"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span>Reconciliations and close processes</span></li>
-              <li class="flex gap-3"><span class="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand/10 text-brand"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span>AR / AP workflows and follow-up</span></li>
-              <li class="flex gap-3"><span class="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand/10 text-brand"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span>Reporting and recurring deliverables</span></li>
-            </ul>
-            <a href="avira-about.html" class="btn-primary mt-8">Build Your Team <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+          <div class="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-slate-100 card-lift">
+            <h3 class="text-lg font-bold text-navy font-display">Process</h3>
+            <p class="mt-3 text-sm leading-6">Every recurring task documented into a clear, repeatable playbook.</p>
           </div>
-      </div>
-    </section>
-
-    <section class="bg-navy py-14 sm:py-16">
-      <div class="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-4 sm:px-6 lg:grid-cols-4 lg:px-8" data-reveal-stagger="120">
-        <div class="text-center">
-          <p class="text-4xl font-extrabold text-brand font-display sm:text-5xl">7 days</p>
-          <p class="mt-2 text-sm font-medium uppercase tracking-wide text-slate-400">Qualified talent available</p>
-        </div>
-        <div class="text-center">
-          <p class="text-4xl font-extrabold text-brand font-display sm:text-5xl">90 days</p>
-          <p class="mt-2 text-sm font-medium uppercase tracking-wide text-slate-400">To documented workflows</p>
-        </div>
-        <div class="text-center">
-          <p class="text-4xl font-extrabold text-brand font-display sm:text-5xl">6 role types</p>
-          <p class="mt-2 text-sm font-medium uppercase tracking-wide text-slate-400">From AR/AP to Controller</p>
-        </div>
-        <div class="text-center">
-          <p class="text-4xl font-extrabold text-brand font-display sm:text-5xl">U.S. hours</p>
-          <p class="mt-2 text-sm font-medium uppercase tracking-wide text-slate-400">Time-zone aligned</p>
+          <div class="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-slate-100 card-lift">
+            <h3 class="text-lg font-bold text-navy font-display">Accountability</h3>
+            <p class="mt-3 text-sm leading-6">Clear ownership. The work is managed, measured and improved — not just done.</p>
+          </div>
         </div>
       </div>
     </section>
 
-<section class="py-16 sm:py-20 lg:py-24">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section class="bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 py-20 lg:px-8 lg:py-28">
+        <div class="grid items-center gap-12 lg:grid-cols-1">
+          <div class="relative " data-reveal="left">
+            <img src="Img/arc-stock-11.jpg" alt="Documented processes" class="w-full rounded-3xl object-cover" loading="lazy" />
+            <div class="absolute -bottom-6 -right-4 hidden rounded-2xl bg-navy p-6 text-white shadow-xl sm:block motion-safe:animate-float">
+              <p class="text-3xl font-bold font-display"><span class="text-accent" data-count="90">90</span> days</p>
+              <p class="mt-1 text-sm">to a documented, repeatable role</p>
+            </div>
+          </div>
+          <div data-reveal="right" data-reveal-delay="120">
+            <p class="eyebrow">The difference</p>
+            <h2 class="mt-3 text-3xl font-bold text-navy font-display sm:text-4xl">People Are Only Half the Solution.</h2>
+            <p class="mt-5 leading-7">A person can absorb work. A documented system keeps that work from becoming a new dependency. Within the first 90 days, we document the recurring workflows behind the role — reconciliations, AR, AP, reporting, approvals and other critical operations.</p>
+            <p class="mt-4 leading-7">You get a person who can execute and a process your company can repeat — hosted in your own <a href="avira-playbooks.html" class="font-semibold text-brand transition hover:text-navy">playbooks intranet</a>.</p>
+            <div class="mt-8 flex flex-wrap items-center gap-x-3 gap-y-4" data-reveal-stagger="80"><span class="inline-flex items-center rounded-xl border px-4 py-2 text-sm font-semibold border-slate-200 bg-white text-navy shadow-sm">Person</span>
+              <svg class="h-4 w-4 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              <span class="inline-flex items-center rounded-xl border px-4 py-2 text-sm font-semibold border-slate-200 bg-white text-navy shadow-sm">Responsibilities</span>
+              <svg class="h-4 w-4 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              <span class="inline-flex items-center rounded-xl border px-4 py-2 text-sm font-semibold border-slate-200 bg-white text-navy shadow-sm">Workflow</span>
+              <svg class="h-4 w-4 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              <span class="inline-flex items-center rounded-xl border px-4 py-2 text-sm font-semibold border-slate-200 bg-white text-navy shadow-sm">Playbook</span>
+              <svg class="h-4 w-4 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              <span class="inline-flex items-center rounded-xl border px-4 py-2 text-sm font-semibold border-slate-200 bg-white text-navy shadow-sm">Repeatable Execution</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-cream">
+      <div class="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-4 sm:px-6 py-14 md:flex-row md:items-center lg:px-8">
+        <div data-reveal="left">
+          <p class="eyebrow">Partners</p>
+          <h2 class="mt-3 text-3xl font-bold text-navy font-display sm:text-4xl">Built to Support Your Advisors Too.</h2>
+          <p class="mt-3 max-w-xl leading-7">Fractional CFOs, accounting firms, consultants and operating partners use Avira to give clients execution capacity — you keep the relationship, we help build the team.</p>
+        </div>
+        <a href="avira-partners.html" class="btn-outline shrink-0 " data-reveal="right" data-reveal-delay="150">Become an ARC Partner</a>
+      </div>
+    </section>
+
+    <section class="bg-navy">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 py-20 lg:px-8 lg:py-24">
         <div class="mx-auto max-w-2xl text-center" data-reveal>
-          <p class="eyebrow">Client outcomes</p>
-          <h2 class="mt-3 text-3xl font-bold font-display text-navy sm:text-4xl">What Clients Say</h2>
-          
+          <p class="eyebrow">Automation</p>
+          <h2 class="mt-3 text-3xl font-bold text-white font-display sm:text-4xl">Automation That Protects Time and Margin.</h2>
+          <p class="mt-4 leading-7 text-slate-300">Once the process is clear, we identify the manual steps that software should be doing instead of people. Less repetition, fewer errors, more output from the same capacity.</p>
         </div>
-        <div class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3" data-reveal-stagger="120">
-          <figure class="card-lift flex flex-col rounded-2xl border border-slate-100 bg-white p-7 shadow-sm">
-            <div class="flex gap-0.5 text-brand"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg></div>
-            <blockquote class="mt-4 flex-1 text-[15px] leading-7 text-slate-600">“ARC placed an accounting manager inside our operation in days, not months. The documented close process alone was worth it.”</blockquote>
-            <figcaption class="mt-5 border-t border-slate-100 pt-4">
-              <p class="text-sm font-bold text-navy">Operations Lead</p>
-              <p class="text-xs text-slate-400">Professional services firm</p>
-            </figcaption>
-          </figure>
-          <figure class="card-lift flex flex-col rounded-2xl border border-slate-100 bg-white p-7 shadow-sm">
-            <div class="flex gap-0.5 text-brand"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg></div>
-            <blockquote class="mt-4 flex-1 text-[15px] leading-7 text-slate-600">“Our VA owns the recurring admin work end to end. Follow-up, reporting, CRM — it just happens now.”</blockquote>
-            <figcaption class="mt-5 border-t border-slate-100 pt-4">
-              <p class="text-sm font-bold text-navy">Fractional CFO</p>
-              <p class="text-xs text-slate-400">Distribution company</p>
-            </figcaption>
-          </figure>
-          <figure class="card-lift flex flex-col rounded-2xl border border-slate-100 bg-white p-7 shadow-sm">
-            <div class="flex gap-0.5 text-brand"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8-5.3-2.8-5.3 2.8 1-5.8L1.5 7.7l5.9-.9z"/></svg></div>
-            <blockquote class="mt-4 flex-1 text-[15px] leading-7 text-slate-600">“They didn't just fill a seat. They documented the role so the next person could run it without us.”</blockquote>
-            <figcaption class="mt-5 border-t border-slate-100 pt-4">
-              <p class="text-sm font-bold text-navy">Founder</p>
-              <p class="text-xs text-slate-400">Partner firm</p>
-            </figcaption>
-          </figure>
+        <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-2" data-reveal-stagger="100">
+                    <div class="rounded-2xl border border-white/10 bg-white/5 p-7">
+            <h3 class="text-lg font-bold text-white font-display">Identify</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-300">Every playbook review surfaces tasks that repeat on a schedule — the best candidates for automation.</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-7">
+            <h3 class="text-lg font-bold text-white font-display">Implement</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-300">We connect the tools you already run — forms, spreadsheets, CRM, email — so data moves without retyping.</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-7">
+            <h3 class="text-lg font-bold text-white font-display">Improve</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-300">Documented processes are measurable processes. We refine the workflow, then the automation, every quarter.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="relative overflow-hidden bg-navy py-16 sm:py-20">
-      <div class="pointer-events-none absolute -top-40 right-0 h-96 w-96 rounded-full bg-brand/25 blur-3xl motion-safe:animate-pulse-slow"></div>
-      <div class="relative mx-auto max-w-4xl px-4 text-center sm:px-6">
+    <section class="bg-white">
+      <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 py-20 lg:grid-cols-1 lg:px-8 lg:py-28">
+        <div data-reveal="left">
+          <p class="eyebrow">Latin American talent</p>
+          <h2 class="mt-3 text-3xl font-bold text-navy font-display sm:text-4xl">Your Time Zone. Fluent English. No Compromise.</h2>
+          <p class="mt-5 leading-7">Our LATAM professionals are selected for fluent English, compatible U.S. working hours, and the ability to operate inside your existing team. Real collaboration — not task dumping across time zones.</p>
+          <ul class="mt-7 space-y-4" data-reveal-stagger="90">
+            <li class="flex gap-3">
+                <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-sm leading-6"><strong class="font-semibold text-navy">Same-day overlap</strong> — full U.S. time-zone coverage, not overnight handoffs</span>
+              </li>
+            <li class="flex gap-3">
+                <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-sm leading-6"><strong class="font-semibold text-navy">Fluent English</strong> — written and spoken, client-facing ready</span>
+              </li>
+            <li class="flex gap-3">
+                <svg class="mt-0.5 h-5 w-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span class="text-sm leading-6"><strong class="font-semibold text-navy">Trained before day one</strong> — the <a href="${cfg.key}-foundation.html" class="font-semibold text-brand">Foundation</a> prepares talent on tools, English and playbook discipline</span>
+              </li>
+          </ul>
+        </div>
+        <div data-reveal="right" data-reveal-delay="150">
+          <img src="Img/arc-stock-16.jpg" alt="Latin American professionals collaborating" class="w-full rounded-3xl object-cover shadow-xl" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 py-16 lg:px-8">
+        <div class="grid grid-cols-2 gap-4 lg:grid-cols-2" data-reveal-stagger="90">
+          <div class="rounded-xl border border-gray-200 bg-white p-5 text-center shadow-sm card-lift">
+            <p class="font-display text-2xl font-bold text-navy"><span data-count="7">7</span> days</p>
+            <p class="mt-1 text-[11px] font-semibold uppercase tracking-wide text-slate-400">To staff a clear role</p>
+          </div>
+          <div class="rounded-xl border border-gray-200 bg-white p-5 text-center shadow-sm card-lift">
+            <p class="font-display text-2xl font-bold text-navy"><span data-count="90">90</span> days</p>
+            <p class="mt-1 text-[11px] font-semibold uppercase tracking-wide text-slate-400">Playbook & SOP window</p>
+          </div>
+          <div class="rounded-xl border border-gray-200 bg-white p-5 text-center shadow-sm card-lift">
+            <p class="font-display text-2xl font-bold text-navy">LATAM</p>
+            <p class="mt-1 text-[11px] font-semibold uppercase tracking-wide text-slate-400">U.S. time-zone aligned</p>
+          </div>
+          <div class="rounded-xl border border-gray-200 bg-white p-5 text-center shadow-sm card-lift">
+            <p class="font-display text-2xl font-bold text-navy">Fluent</p>
+            <p class="mt-1 text-[11px] font-semibold uppercase tracking-wide text-slate-400">English — direct collaboration</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== CTA ===== -->
+    <section class="bg-navy">
+      <div class="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6 sm:py-20 lg:px-8">
         <h2 class="text-3xl font-bold text-white font-display sm:text-4xl" data-reveal>Stop Hiring Around Broken Processes.</h2>
-        <p class="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-300" data-reveal data-reveal-delay="100">ARC combines trained talent, documented processes, and operational systems to help growing companies execute consistently.</p>
-        <div class="mt-8 flex flex-wrap justify-center gap-4" data-reveal data-reveal-delay="200">
-          <a href="avira-contact-us.html" class="btn-primary">Talk With ARC <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
-          <a href="avira-about.html" class="btn-ghost-light">Learn more</a>
-        </div>
+        <p class="mx-auto mt-4 max-w-xl leading-7 text-slate-300" data-reveal data-reveal-delay="120">Get the people and operating structure your business needs to execute.</p>
+        <a href="avira-partners.html" class="btn-primary mx-auto mt-8" data-reveal data-reveal-delay="240">Build Your Team</a>
       </div>
     </section>
-
     <!-- ===== Footer ===== -->
     <footer class="bg-navy text-slate-300">
-      <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 py-16 md:grid-cols-2 lg:grid-cols-4 lg:px-8" data-reveal-stagger="120">
+      <div class="mx-auto grid max-w-7xl gap-10 border-t border-white/10 px-4 sm:px-6 py-16 md:grid-cols-2 lg:grid-cols-4 lg:px-8" data-reveal-stagger="120">
         <div>
-          <a href="avira-home.html" class="flex items-center gap-2.5"><img src="Img/logo-green.png" alt="Ash River Collective" class="h-10 w-10 shrink-0" />
-            <span class="text-lg font-extrabold tracking-tight text-white font-display">ASH RIVER</span>
+          <a href="avira-home.html" class="flex items-center gap-2.5">
+            <span class="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent font-display text-sm font-bold text-navy sm:h-10 sm:w-10">A</span>
+            <span class="leading-none">
+              <span class="block text-[15px] font-extrabold tracking-wide text-white font-display">AVIRA</span>
+              <span class="block text-[10px] font-bold tracking-[0.3em] text-brand">TALENT · SYSTEMS · PLAYBOOKS</span>
+            </span>
           </a>
-          <p class="mt-5 text-sm leading-6 text-slate-400">Elite Talent. Bulletproof Systems. Accounting talent, virtual assistants, and documented operating systems built around the work your business needs to get done.</p>
+          <p class="mt-5 text-sm leading-6 text-slate-400">Trained Latin American professionals — fluent English, your time zone — plus the documented systems that make their work repeatable.</p>
         </div>
         <div>
-          <h4 class="text-sm font-bold uppercase tracking-wider text-white">Company</h4>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-white">Site</h3>
           <ul class="mt-5 space-y-3 text-sm">
-              <li><a href="avira-home.html" class="transition hover:text-brand">Home</a></li>
-              <li><a href="avira-about.html" class="transition hover:text-brand">About</a></li>
-              <li><a href="avira-solutions.html" class="transition hover:text-brand">Services</a></li>
-              <li><a href="avira-case-studies.html" class="transition hover:text-brand">Results</a></li>
-              <li><a href="avira-find-your-coach.html" class="transition hover:text-brand">Build Your Team</a></li>
+            <li><a href="avira-home.html" class="transition hover:text-white">Home</a></li>
+            <li><a href="avira-about.html" class="transition hover:text-white">About</a></li>
+            <li><a href="avira-foundation.html" class="transition hover:text-white">Foundation</a></li>
+            <li><a href="avira-partners.html" class="transition hover:text-white">Partners</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="text-sm font-bold uppercase tracking-wider text-white">Services</h4>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-white">What we do</h3>
           <ul class="mt-5 space-y-3 text-sm">
-              <li><a href="avira-pricing.html" class="transition hover:text-brand">Engagement</a></li>
-              <li><a href="avira-faq.html" class="transition hover:text-brand">FAQ</a></li>
-              <li><a href="avira-blog.html" class="transition hover:text-brand">Insights</a></li>
-              <li><a href="avira-contact-us.html" class="transition hover:text-brand">Contact</a></li>
+            <li><a href="avira-services.html" class="transition hover:text-white">Services</a></li>
+            <li><a href="avira-virtual-services.html" class="transition hover:text-white">Virtual Services</a></li>
+            <li><a href="avira-playbooks.html" class="transition hover:text-white">Playbooks</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="text-sm font-bold uppercase tracking-wider text-white">Contact</h4>
-          <ul class="mt-5 space-y-3 text-sm text-slate-400 [&_svg]:mt-0.5 [&_svg]:h-5 [&_svg]:w-5 [&_svg]:shrink-0 [&_svg]:text-brand">
-            <li class="flex gap-3"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1116 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Remote-first · U.S. time zones</span></li>
-            <li class="flex gap-3"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path stroke-linecap="round" stroke-linejoin="round" d="M3 7l9 6 9-6"/></svg><a href="mailto:hello@ashrivercollective.com" class="transition hover:text-brand">hello@ashrivercollective.com</a></li>
-            <li class="flex gap-3"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 2 .7 2.9a2 2 0 01-.5 2.1L8 10a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.5c.9.3 1.9.6 2.9.7a2 2 0 011.7 2z"/></svg><span>+1 (555) 013-4224</span></li>
-          </ul>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-white">Get started</h3>
+          <p class="mt-5 text-sm leading-6 text-slate-400">Qualified professionals in as little as 7 days. Documented playbooks within 90.</p>
+          <a href="avira-partners.html" class="btn-primary mt-5">Start a Conversation</a>
         </div>
       </div>
       <div class="border-t border-white/10">
-        <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 sm:px-6 py-6 text-xs text-slate-500 sm:flex-row lg:px-8">
-          <p>© 2026 Ash River Collective. All rights reserved.</p>
-          <p>Starter template · Built with ARC Starter Templates</p>
+        <div class="mx-auto flex max-w-7xl flex-col gap-2 px-4 sm:px-6 py-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+          <p>© 2026 Avira. All rights reserved.</p>
+          <p>People. Process. Playbooks.</p>
         </div>
       </div>
     </footer>
-      <div id="arc-st-chat"></div>
-</body>
+  </body>
 </html>
