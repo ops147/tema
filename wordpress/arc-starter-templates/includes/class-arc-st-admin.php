@@ -126,7 +126,13 @@ final class Arc_ST_Admin {
 			array( 'admin_page_' . self::PAGE_WIZARD, 'arc-st-hidden_page_' . self::PAGE_WIZARD ),
 			true
 		) || self::PAGE_WIZARD === $page;
-		if ( ! $is_library && ! $is_wizard ) {
+		$is_chat    = class_exists( 'Arc_ST_Chat' ) && Arc_ST_Chat::PAGE === $page;
+		if ( ! $is_library && ! $is_wizard && ! $is_chat ) {
+			return;
+		}
+
+		if ( $is_chat ) {
+			wp_enqueue_style( 'arc-st-chat-admin', ARC_ST_URL . 'admin/css/chat.css', array(), ARC_ST_VERSION );
 			return;
 		}
 

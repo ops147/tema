@@ -21,6 +21,8 @@
 		lienzoastra_color_background: '--lienzoastra-color-background',
 		lienzoastra_footer_color_background: '--lienzoastra-footer-bg',
 		lienzoastra_footer_color_text: '--lienzoastra-footer-text',
+		lienzoastra_footer_align: '--lienzoastra-footer-align',
+		lienzoastra_heading_text_transform: '--lienzoastra-heading-transform',
 	};
 
 	// Design Option setting -> block editor preset variable, so synced
@@ -44,6 +46,12 @@
 		lienzoastra_dropdown_bg_color: [ '--lienzoastra-dropdown-bg', '#ffffff' ],
 		lienzoastra_dropdown_text_color: [ '--lienzoastra-dropdown-color', 'inherit' ],
 		lienzoastra_footer_link_color: [ '--lienzoastra-footer-link', 'var(--lienzoastra-footer-text)' ],
+		lienzoastra_font_weight_heading: [ '--lienzoastra-heading-weight', 'inherit' ],
+		lienzoastra_site_boxed_bg: [ '--lienzoastra-boxed-bg', '#f1f5f9' ],
+		lienzoastra_btn_bg: [ '--lienzoastra-btn-bg', 'var(--lienzoastra-color-link)' ],
+		lienzoastra_btn_text: [ '--lienzoastra-btn-text', '#ffffff' ],
+		lienzoastra_btn_bg_hover: [ '--lienzoastra-btn-bg-hover', 'var(--lienzoastra-color-link-hover)' ],
+		lienzoastra_btn_text_hover: [ '--lienzoastra-btn-text-hover', 'var(--lienzoastra-btn-text)' ],
 	};
 
 	// Settings that become a <length> custom property (suffix appended).
@@ -55,6 +63,10 @@
 		lienzoastra_menu_item_spacing: [ '--lienzoastra-menu-gap', 'px' ],
 		lienzoastra_menu_font_size: [ '--lienzoastra-menu-font-size', 'px' ],
 		lienzoastra_footer_padding: [ '--lienzoastra-footer-padding', 'px' ],
+		lienzoastra_heading_letter_spacing: [ '--lienzoastra-heading-letter-spacing', 'px' ],
+		lienzoastra_btn_radius: [ '--lienzoastra-btn-radius', 'px' ],
+		lienzoastra_btn_padding_v: [ '--lienzoastra-btn-padding-v', 'px' ],
+		lienzoastra_btn_padding_h: [ '--lienzoastra-btn-padding-h', 'px' ],
 	};
 
 	Object.keys( bindings ).forEach( function ( setting ) {

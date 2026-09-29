@@ -10,6 +10,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 function lienzoastra_cleanup_after_switch( $new_name, $new_theme, $old_theme ) {
+	// Off by default: WordPress keeps theme_mods per theme so switching back
+	// restores the Customizer exactly as it was — wiping them on switch makes
+	// that impossible. Opt in with:
+	//   add_filter( 'lienzoastra_cleanup_on_switch', '__return_true' );
+	if ( ! apply_filters( 'lienzoastra_cleanup_on_switch', false ) ) {
+		return;
+	}
+
 	if ( ! $old_theme instanceof WP_Theme ) {
 		return;
 	}

@@ -1,15 +1,20 @@
 {
   "name": "arc-starter-templates",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "1.7.0",
+  "description": "Starter-templates library with Karibase-styled sites, an AJAX import wizard and Elementor/Gutenberg output for WordPress.",
   "scripts": {
     "build:css": "tailwindcss -i assets/css/tailwind.input.css -o assets/css/tailwind.css",
-    "build:templates": "node scripts/build-template-sites.js"
+    "build:templates": "node scripts/build-template-sites.js",
+    "lint": "node scripts/lint.js",
+    "zip": "node scripts/zip.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "wordpress",
+    "starter-templates",
+    "elementor"
+  ],
+  "author": "Ash River Collective",
+  "license": "GPL-2.0-or-later",
   "type": "commonjs",
   "devDependencies": {
     "@tailwindcss/cli": "^4.3.3",

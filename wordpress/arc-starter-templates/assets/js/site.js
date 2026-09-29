@@ -97,10 +97,13 @@ try {
 // Floating chat bot — mounts on template pages (#arc-st-chat mount point or
 // the arc-tpl body class on imported pages). Answers come from the plugin's
 // Chat Bot admin screen via REST; a bundled set covers static/no-WP renders.
+// Keyword matching folds accents and requires whole-word/whole-phrase hits,
+// so "va" no longer fires inside "available" nor "hi" inside "this".
 // ---------------------------------------------------------------------------
 
 (function () {
   const MOUNT_ID = 'arc-st-chat';
+  const LOG_KEY = 'arcStChatLog';
 
   const FALLBACK_CONFIG = {
     enabled: 1,
@@ -117,6 +120,7 @@ try {
       { kw: 'foundation, nonprofit, training', a: "The Ash River Foundation trains and connects talent in underserved communities — because opportunity shouldn't depend on geography." },
       { kw: 'hi, hello, hey, hola', a: 'Hello! Ask me about roles, pricing, timelines or how ARC works — or type "human" to reach the team.' },
     ],
+    labels: {},
   };
 
   const CSS = `
@@ -145,7 +149,20 @@ try {
 #arc-st-chat .arc-msg { max-width: 82%; padding: 9px 12px; border-radius: 12px; font-size: 13px; line-height: 1.45; word-wrap: break-word; }
 #arc-st-chat .arc-msg.bot { background: #fff; color: #1e293b; align-self: flex-start; border: 1px solid #EAF1E8; border-start-start-radius: 4px; }
 #arc-st-chat .arc-msg.me { background: #438F69; color: #fff; align-self: flex-end; border-start-end-radius: 4px; }
-#arc-st-chat .arc-msg.typing { color: #94a3b8; font-style: italic; }
+#arc-st-chat .arc-msg-time { display: block; margin-top: 4px; font-size: 10px; opacity: .55; }
+#arc-st-chat .arc-msg.typing { display: inline-flex; gap: 4px; align-items: center; }
+#arc-st-chat .arc-msg.typing i { width: 6px; height: 6px; border-radius: 50%; background: #94a3b8; animation: arcChatBlink 1.1s infinite; }
+#arc-st-chat .arc-msg.typing i:nth-child(2) { animation-delay: .18s; }
+#arc-st-chat .arc-msg.typing i:nth-child(3) { animation-delay: .36s; }
+@keyframes arcChatBlink { 0%, 80%, 100% { opacity: .25; transform: translateY(0); } 40% { opacity: 1; transform: translateY(-3px); } }
+#arc-st-chat .arc-chips { padding: 0 14px 10px; background: #F5F8F4; }
+#arc-st-chat .arc-chips-label { font-size: 11px; color: #64748b; margin: 0 0 6px; }
+#arc-st-chat .arc-chips-row { display: flex; flex-wrap: wrap; gap: 6px; }
+#arc-st-chat .arc-chip {
+  border: 1px solid #58B8A9; background: #fff; color: #0F1C2E; border-radius: 9999px;
+  font-size: 12px; font-weight: 600; padding: 5px 11px; cursor: pointer; transition: all .15s;
+}
+#arc-st-chat .arc-chip:hover { background: #58B8A9; color: #fff; }
 #arc-st-chat .arc-chat-form { display: flex; gap: 8px; padding: 10px; border-top: 1px solid #EAF1E8; background: #fff; }
 #arc-st-chat .arc-chat-form input {
   flex: 1; border: 1px solid #dbe3db; border-radius: 8px; padding: 9px 12px; font-size: 13px;
@@ -177,16 +194,33 @@ try {
     }
   }
 
+  // Accent-folding word normalizer: "Cotización — precios!" -> " cotizacion
+  // precios " so keyword checks compare whole words/phrases, never substrings
+  // inside other words.
+  function norm(s) {
+    let out = String(s || '').toLowerCase();
+    if (out.normalize) out = out.normalize('NFD').replace(/[̀-ͯ]/g, '');
+    out = out.replace(/[^\p{L}\p{N}]+/gu, ' ').replace(/\s+/g, ' ').trim();
+    return ' ' + out + ' ';
+  }
+
   function answer(cfg, text) {
-    const msg = ' ' + text.toLowerCase() + ' ';
-    let best = null, bestScore = 0;
+    const msg = norm(text);
+    let best = null, bestScore = 0, bestLen = 0;
     (cfg.pairs || []).forEach((p) => {
-      const score = String(p.kw || '')
+      let score = 0, len = 0;
+      String(p.kw || '')
         .split(',')
-        .map((k) => k.trim().toLowerCase())
+        .map((k) => norm(k).trim())
         .filter(Boolean)
-        .reduce((n, k) => n + (msg.includes(k) ? 1 : 0), 0);
-      if (score > bestScore) { bestScore = score; best = p; }
+        .forEach((k) => {
+          if (msg.includes(' ' + k + ' ')) { score++; len += k.length; }
+        });
+      // Most keyword hits wins; equal hits → the pair with the longest total
+      // match is the more specific answer.
+      if (score > bestScore || (score === bestScore && score > 0 && len > bestLen)) {
+        bestScore = score; bestLen = len; best = p;
+      }
     });
     return best ? best.a : cfg.fallback;
   }
@@ -221,6 +255,17 @@ try {
     }
 
     function build(cfg) {
+      const L = Object.assign(
+        {
+          placeholder: 'Type your message…',
+          send: 'Send',
+          open: 'Open chat',
+          close: 'Close',
+          suggestions: 'You can ask about:',
+        },
+        cfg.labels || {}
+      );
+
       const style = document.createElement('style');
       style.textContent = CSS;
       document.head.appendChild(style);
@@ -234,59 +279,133 @@ try {
       root.innerHTML =
         '<div class="arc-chat-panel" role="dialog" aria-label="Chat">' +
           '<div class="arc-chat-head"><span class="dot"></span><strong></strong>' +
-            '<button type="button" class="arc-chat-close" aria-label="Close">&times;</button></div>' +
+            '<button type="button" class="arc-chat-close"></button></div>' +
           '<div class="arc-chat-msgs" aria-live="polite"></div>' +
-          '<form class="arc-chat-form"><input type="text" placeholder="Type your message…" aria-label="Message" autocomplete="off" />' +
-            '<button type="submit">Send</button></form>' +
+          '<div class="arc-chips" hidden><p class="arc-chips-label"></p><div class="arc-chips-row"></div></div>' +
+          '<form class="arc-chat-form"><input type="text" autocomplete="off" />' +
+            '<button type="submit"></button></form>' +
         '</div>' +
-        '<button type="button" class="arc-chat-btn" aria-label="Open chat">' +
+        '<button type="button" class="arc-chat-btn">' +
           '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a8 8 0 0 1-8 8H5l-2 2V12a8 8 0 0 1 8-8h2a8 8 0 0 1 8 8Z"/></svg>' +
         '</button>';
 
       root.querySelector('.arc-chat-head strong').textContent = cfg.title || 'Chat';
+      const closeBtn = root.querySelector('.arc-chat-close');
+      closeBtn.textContent = '×';
+      closeBtn.setAttribute('aria-label', L.close);
+      const openBtn = root.querySelector('.arc-chat-btn');
+      openBtn.setAttribute('aria-label', L.open);
 
       const msgs = root.querySelector('.arc-chat-msgs');
+      const chips = root.querySelector('.arc-chips');
       const form = root.querySelector('.arc-chat-form');
       const input = form.querySelector('input');
+      const sendBtn = form.querySelector('button');
+      input.placeholder = L.placeholder;
+      input.setAttribute('aria-label', L.placeholder);
+      sendBtn.textContent = L.send;
 
-      function addMsg(text, cls) {
+      // Transcript persistence — the session id already lives in
+      // sessionStorage, so the log survives navigation between pages.
+      let transcript = [];
+      try { transcript = JSON.parse(sessionStorage.getItem(LOG_KEY) || '[]') || []; } catch (e) {}
+      const persist = () => {
+        try { sessionStorage.setItem(LOG_KEY, JSON.stringify(transcript.slice(-60))); } catch (e) {}
+      };
+
+      function stamp() {
+        return new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      }
+
+      function addMsg(text, cls, noSave, ts) {
         const div = document.createElement('div');
         div.className = 'arc-msg ' + cls;
-        div.textContent = text;
+        div.appendChild(document.createTextNode(text));
+        if (cls !== 'bot typing') {
+          const t = document.createElement('time');
+          t.className = 'arc-msg-time';
+          t.textContent = ts || stamp();
+          div.appendChild(t);
+        }
+        msgs.appendChild(div);
+        msgs.scrollTop = msgs.scrollHeight;
+        if (!noSave && cls !== 'bot typing') {
+          transcript.push({ t: text, c: cls, ts: ts || stamp() });
+          persist();
+        }
+        return div;
+      }
+
+      function typingBubble() {
+        const div = document.createElement('div');
+        div.className = 'arc-msg bot typing';
+        div.innerHTML = '<i></i><i></i><i></i>';
         msgs.appendChild(div);
         msgs.scrollTop = msgs.scrollHeight;
         return div;
       }
 
-      let greeted = false;
-      function open() {
-        root.classList.add('open');
-        if (!greeted) {
-          greeted = true;
-          addMsg(cfg.greeting, 'bot');
-          log('bot', cfg.greeting);
+      function sendText(text) {
+        if (!text) return;
+        addMsg(text, 'me');
+        log('visitor', text);
+        chips.hidden = true;
+        const typing = typingBubble();
+        const reply = answer(cfg, text);
+        setTimeout(() => {
+          typing.remove();
+          addMsg(reply, 'bot');
+          log('bot', reply);
+        }, 550);
+      }
+
+      // Quick-reply chips: first keyword of each configured pair, so the
+      // suggestions always track what the admin actually maintains.
+      function showChips() {
+        const seen = new Set();
+        const row = chips.querySelector('.arc-chips-row');
+        (cfg.pairs || []).slice(0, 8).forEach((p) => {
+          const kw = String(p.kw || '').split(',').map((k) => k.trim()).filter(Boolean)[0];
+          if (!kw || seen.has(kw.toLowerCase())) return;
+          seen.add(kw.toLowerCase());
+          const b = document.createElement('button');
+          b.type = 'button';
+          b.className = 'arc-chip';
+          b.textContent = kw;
+          b.addEventListener('click', () => sendText(kw));
+          row.appendChild(b);
+        });
+        if (row.children.length) {
+          chips.querySelector('.arc-chips-label').textContent = L.suggestions;
+          chips.hidden = false;
         }
       }
 
-      root.querySelector('.arc-chat-btn').addEventListener('click', () =>
+      let opened = false;
+      function open() {
+        root.classList.add('open');
+        if (opened) return;
+        opened = true;
+        if (transcript.length) {
+          transcript.forEach((m) => addMsg(m.t, m.c, true, m.ts));
+        } else {
+          addMsg(cfg.greeting, 'bot');
+          log('bot', cfg.greeting);
+          showChips();
+        }
+      }
+
+      openBtn.addEventListener('click', () =>
         root.classList.contains('open') ? root.classList.remove('open') : open()
       );
-      root.querySelector('.arc-chat-close').addEventListener('click', () => root.classList.remove('open'));
+      closeBtn.addEventListener('click', () => root.classList.remove('open'));
 
       form.addEventListener('submit', (e) => {
         e.preventDefault();
         const text = input.value.trim();
         if (!text) return;
         input.value = '';
-        addMsg(text, 'me');
-        log('visitor', text);
-        const typing = addMsg('…', 'bot typing');
-        const reply = answer(cfg, text);
-        setTimeout(() => {
-          typing.remove();
-          addMsg(reply, 'bot');
-          log('bot', reply);
-        }, 450);
+        sendText(text);
       });
     }
   }

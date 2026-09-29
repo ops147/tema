@@ -3,7 +3,7 @@
 Contributors: ashrivercollective
 Tags: starter templates, elementor, templates, tailwind, page templates
 Requires at least: 6.0
-Tested up to: 6.7
+Tested up to: 6.8
 Requires PHP: 7.4
 Stable tag: 1.7.0
 License: GPLv2 or later
@@ -179,3 +179,7 @@ An import lock also prevents two admins from running imports at once.
   CAPTCHA plugin if the site needs stronger filtering.
 * Updates: the plugin is not hosted on WordPress.org — updates ship as a
   ZIP (npm run zip) and are installed via Plugins → Add New → Upload.
+  Dev tooling is dependency-free: npm run lint (PHP syntax check),
+  npm run pot (regenerates languages/arc-starter-templates.pot) and
+  npm run zip -- --slim (0.1 MB package without templates/images for
+  installs that pull the payload from a configured remote repository).

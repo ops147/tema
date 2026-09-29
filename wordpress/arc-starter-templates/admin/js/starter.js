@@ -6,6 +6,11 @@
 (function () {
 	'use strict';
 
+	// The library enqueues this file AND prints it inline as a fallback for
+	// security layers that block plugin JS URLs — run only once.
+	if (window.arcStStarterLoaded) return;
+	window.arcStStarterLoaded = true;
+
 	var cards = document.querySelectorAll('.arc-st-demo');
 	var search = document.querySelector('.arc-st-search-input');
 	var cats = document.querySelectorAll('.arc-st-cats input[type="checkbox"]');

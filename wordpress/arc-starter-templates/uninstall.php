@@ -23,3 +23,12 @@ delete_option( 'arc_st_entries_db' );
 delete_option( 'arc_st_chat_db' );
 delete_transient( 'arc_st_import_lock' );
 delete_transient( 'arc_st_activated' );
+
+// Custom tables (form entries + chat logs) are plugin-only data — dropped
+// on uninstall so no orphaned tables are left behind.
+wp_clear_scheduled_hook( 'arc_st_chat_prune' );
+global $wpdb;
+// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+$wpdb->query( 'DROP TABLE IF EXISTS ' . $wpdb->prefix . 'arc_st_entries' );
+// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+$wpdb->query( 'DROP TABLE IF EXISTS ' . $wpdb->prefix . 'arc_st_chat_logs' );

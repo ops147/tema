@@ -4,7 +4,7 @@ Tags: elementor, woocommerce, block-patterns, custom-colors, translation-ready
 Requires at least: 6.0
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.2.0
+Stable tag: 1.2.4
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -68,6 +68,12 @@ not by including Astra's own code.
 * Design Options > WooCommerce (when active): products per row, products
   per page and a header cart icon with live count badge; plus a dedicated
   woocommerce.php wrapper so shop pages use the theme's own markup.
+* Design Options > Buttons: global button styling (colors, hover states,
+  corner radius, padding) applied to block buttons, forms, WooCommerce
+  and Elementor buttons.
+* More Design Options controls: dark-mode color overrides, heading font
+  weight/transform/letter-spacing, boxed site layout, header shadow &
+  transparency, animated menu underline and footer alignment.
 * Same fonts/colors in the block editor as on the front end, preconnect
   hints for Google Fonts, and prev/next post navigation on single posts.
 * Starter-site import pages are provided by the ARC Starter Templates
@@ -113,7 +119,7 @@ Every function or filter was renamed keeping the same suffix —
 
 All identifiers use the `lienzo` / `Lienzo` / `LIENZO` prefix. To ship it under
 your own name, rename the folder and run a case-preserving find & replace on
-those three spellings (also in `languages/lienzo.pot` and `style.css`).
+those three spellings (also in `languages/lienzo-astra.pot` and `style.css`).
 
 == Installation ==
 
@@ -153,19 +159,12 @@ GPL-3.0-or-later. This derivative keeps the same license.
 
 = 1.2.1 =
 * New: theme template overrides for ARC Starter Templates — a modified
-  template placed at arc-starter-templates/<demo>/<page>.html inside the
-  theme wins over the plugin's bundled copy (locate_template() hierarchy),
-  so templates can be edited in the theme and re-imported; Appearance >
-  Lienzo Astra lists the overrides in effect and documents the workflow —
-  imported pages are native Gutenberg blocks and the demo palette/Outfit
-  font are synced into the block editor via the plugin's theme.json layer.
-* Fix: the theme only steps aside on ARC template pages while the plugin
-  is active — with the plugin off, imported pages get the theme styles
-  back instead of rendering completely unstyled. Header layout: the
-  custom logo is capped at 180px when no Logo width is set in Design
-  Options (an uncapped logo pushed the nav onto a second line), the logo
-  link renders as a block in the static header, and menu links get a
-  slightly larger 500-weight style with more gap.
+  template at arc-starter-templates/<demo>/<page>.html inside the theme
+  wins over the plugin's bundled copy; Appearance > Lienzo Astra lists
+  the overrides in effect.
+* Fix: the theme only steps aside on ARC pages while the plugin is
+  active; custom logo capped at 180px without a Logo width setting, plus
+  static-header link styling tweaks.
 
 = 1.2.0 =
 * New: ARC Starter Templates integration — imported ARC pages render
@@ -196,13 +195,7 @@ GPL-3.0-or-later. This derivative keeps the same license.
 * SEO upgrade: canonical URLs, OG/Twitter article & image metadata,
   JSON-LD graph, robots preview directives.
 
-= 1.0.0 (Lienzo Astra) =
-* New: unified theme built on Lienzo 1.1.0 — "Design Options" Customizer
-  panel (colors, typography, layout, header & footer) inspired by Astra's
-  UX, reimplemented with no Astra code. Identifiers/text domain moved to
-  `lienzo-astra`.
-
-= 1.1.0 (Lienzo) & 1.0.0 =
-* Initial release rebuilt from Hello Elementor 3.5.1 + 3 Elementor
-  widgets, SEO module, dark mode, back-to-top, reading progress,
-  breadcrumbs, performance/security tweaks — each behind its own filter.
+= 1.0.0 & earlier =
+* Lienzo Astra: unified theme built on Lienzo 1.1.0 — "Design Options"
+  Customizer panel inspired by Astra's UX, reimplemented with no Astra code.
+* Lienzo 1.x: rebuilt from Hello Elementor 3.5.1.
