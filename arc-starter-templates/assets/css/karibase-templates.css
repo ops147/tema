@@ -1,0 +1,128 @@
+/*
+ * Karibase design layer for ARC Starter Templates.
+ * Built from Karibase's UCLA-blue/gold tokens, Inter-based typography,
+ * accessible focus treatment, soft borders, 14px surfaces and compact controls.
+ * Demo-specific brand colors and fonts are supplied on .arc-tpl by PHP.
+ */
+.arc-tpl {
+  --kb-primary-color: var(--color-brand, #2774ae);
+  --kb-primary-dark: var(--color-brand-dark, #1e5a8a);
+  --kb-secondary-color: var(--color-accent, #ffd100);
+  --kb-text-primary: var(--color-navy, #101828);
+  --kb-text-secondary: #475467;
+  --kb-surface: #fff;
+  --kb-surface-muted: #f8fafc;
+  --kb-border-color: #e4e7ec;
+  --kb-radius: 14px;
+  --kb-shadow: 0 10px 30px rgb(16 24 40 / 10%);
+  color: var(--kb-text-secondary);
+  font-family: var(--font-sans, Inter, ui-sans-serif, system-ui, sans-serif);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.arc-tpl :is(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--font-display, var(--font-sans, Inter, sans-serif));
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.arc-tpl :is(a, button, input, select, textarea):focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--kb-primary-color) 38%, transparent);
+  outline-offset: 3px;
+}
+
+.arc-tpl .btn-primary,
+.arc-tpl .btn-outline,
+.arc-tpl .btn-ghost-light {
+  min-height: 44px;
+  border-radius: 12px;
+  font-weight: 600;
+  letter-spacing: 0.005em;
+  transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease, border-color 180ms ease, color 180ms ease;
+}
+
+.arc-tpl .btn-primary {
+  background: var(--kb-primary-color);
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--kb-primary-color) 24%, transparent);
+  color: #fff;
+}
+
+.arc-tpl .btn-primary:hover {
+  background: var(--kb-primary-dark);
+  box-shadow: 0 8px 18px color-mix(in srgb, var(--kb-primary-color) 28%, transparent);
+  transform: translateY(-2px);
+}
+
+.arc-tpl .btn-outline {
+  border-color: color-mix(in srgb, var(--kb-primary-color) 36%, #e4e7ec);
+  color: var(--kb-text-primary);
+}
+
+.arc-tpl .btn-outline:hover {
+  border-color: var(--kb-primary-color);
+  background: color-mix(in srgb, var(--kb-primary-color) 7%, #fff);
+  color: var(--kb-primary-dark);
+}
+
+.arc-tpl .btn-ghost-light {
+  border-color: rgb(255 255 255 / 32%);
+  background: rgb(255 255 255 / 5%);
+  color: #fff;
+}
+
+.arc-tpl .btn-ghost-light:hover {
+  border-color: rgb(255 255 255 / 66%);
+  background: rgb(255 255 255 / 10%);
+}
+
+.arc-tpl .eyebrow {
+  color: var(--kb-primary-dark);
+  letter-spacing: 0.12em;
+}
+
+.arc-tpl .field,
+.arc-tpl input:not([type="checkbox"]):not([type="radio"]):not([type="hidden"]):not([type="submit"]),
+.arc-tpl select,
+.arc-tpl textarea {
+  border-color: var(--kb-border-color);
+  border-radius: 10px;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.arc-tpl .field:focus,
+.arc-tpl input:focus,
+.arc-tpl select:focus,
+.arc-tpl textarea:focus {
+  border-color: var(--kb-primary-color);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--kb-primary-color) 16%, transparent);
+  outline: none;
+}
+
+.arc-tpl .card-lift {
+  border-radius: var(--kb-radius);
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.arc-tpl .card-lift:hover {
+  border-color: color-mix(in srgb, var(--kb-primary-color) 22%, #e4e7ec);
+  box-shadow: var(--kb-shadow);
+  transform: translateY(-4px);
+}
+
+
+.arc-tpl header.sticky {
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .arc-tpl *,
+  .arc-tpl *::before,
+  .arc-tpl *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
